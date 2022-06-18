@@ -1,9 +1,10 @@
 import type { Component } from "solid-js";
+import { Info } from "./sections/Info";
 
 const App: Component = () => {
   return (
     <div>
-      <p class="text-2xl text-[#EFAE04]">Chief2</p>
+      <Info />
     </div>
   );
 };
