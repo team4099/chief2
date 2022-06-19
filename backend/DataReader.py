@@ -5,7 +5,6 @@ import pandas as pd
 from pyzbar.pyzbar import decode
 from Logger import Logger
 
-
 class DataReader:
     _HEADERS_CSV = (
         "Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,"
