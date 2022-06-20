@@ -1,12 +1,11 @@
 import { createSignal, createMemo, createRoot } from "solid-js";
 
 function createModalState() {
-  const [visible, setVisible] = createSignal(true);
-  const show = () => setVisible(true);
-  const hide = () => setVisible(false);
-  return { visible, show, hide };
+  const [modalVisible, setmodalVisible] = createSignal(true);
+  const showModal = () => setmodalVisible(true);
+  const hideModal = () => setmodalVisible(false);
+  return { modalVisible, showModal, hideModal };
 }
-
 export const modalState = createRoot(createModalState);
 
 function createScoutIDState() {
@@ -15,3 +14,21 @@ function createScoutIDState() {
   return { scoutID, loggedIn, setScoutID };
 }
 export const scoutIDState = createRoot(createScoutIDState);
+
+function createInfoState() {
+  const [matchKey, setMatchKey] = createSignal("");
+  const [alliance, setAlliance] = createSignal("");
+  const [driverStation, setDriverStation] = createSignal("");
+  const [teamNumber, setTeamNumber] = createSignal("");
+  return {
+    matchKey,
+    alliance,
+    driverStation,
+    teamNumber,
+    setMatchKey,
+    setAlliance,
+    setDriverStation,
+    setTeamNumber,
+  };
+}
+export const infoState = createRoot(createInfoState);

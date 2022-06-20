@@ -1,7 +1,6 @@
 import { Component } from "solid-js";
-import { useScoutID } from "../util/scoutid";
 import { modalState, scoutIDState } from "../util/globalstate";
-const { visible, show } = modalState;
+const { modalVisible, showModal } = modalState;
 const { scoutID } = scoutIDState;
 
 export const NavBar: Component = () => {
@@ -12,7 +11,7 @@ export const NavBar: Component = () => {
       <p class="text-white font-bold text-xl flex-1 ">Chief2</p>
       <button
         onClick={() => {
-          show();
+          showModal();
         }}
         class={`text-white font-bold text-m ${
           scoutID() === "none"
