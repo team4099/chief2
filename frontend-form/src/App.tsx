@@ -1,10 +1,20 @@
 import type { Component } from "solid-js";
+import { NavBar } from "./components";
+import { ChangeScoutModal } from "./components/ChangeScoutModal";
 import { Info } from "./sections/Info";
+import { modalState, scoutIDState } from "./util/globalstate";
+const { modalVisible } = modalState;
+const { loggedIn } = scoutIDState;
 
 const App: Component = () => {
   return (
     <div>
-      <Info />
+      <NavBar />
+      {(!loggedIn() || modalVisible()) && <ChangeScoutModal />}
+      <div class="relative my-1">
+        <div class="mb-10" />
+        <Info />
+      </div>
     </div>
   );
 };

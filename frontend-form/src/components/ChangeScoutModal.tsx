@@ -1,6 +1,6 @@
 import { Component, createSignal } from "solid-js";
 import { modalState, scoutIDState } from "../util/globalstate";
-const { visible, show, hide } = modalState;
+const { modalVisible, showModal, hideModal } = modalState;
 const { scoutID, setScoutID } = scoutIDState;
 
 export const ChangeScoutModal: Component = () => {
@@ -14,8 +14,8 @@ export const ChangeScoutModal: Component = () => {
           <p class="font-bold text-xl my-2 flex-1">Set Scout</p>
           <button
             onClick={() => {
-              hide();
-              console.log(visible());
+              hideModal();
+              console.log(modalVisible());
             }}
             class="text-white font-bold text-m bg-red-500 hover:bg-red-400 p-2 transition-all rounded-xl"
           >
@@ -27,8 +27,15 @@ export const ChangeScoutModal: Component = () => {
           onSubmit={(e) => {
             e.preventDefault();
             e.stopImmediatePropagation();
+
+            if (input() === "") {
+              alert("Please enter a scout ID");
+              e.preventDefault();
+              return;
+            }
+
             setScoutID(input());
-            hide();
+            hideModal();
           }}
         >
           <input
@@ -39,6 +46,7 @@ export const ChangeScoutModal: Component = () => {
             class="border-solid border-[#7b7b7b] border rounded-xl p-2 my-2"
           />
           <input
+          id="scout-submit"
             type="submit"
             value="Set new Scout ID"
             class="text-white font-bold text-m bg-team-gold hover:bg-team-gold-hover p-4 transition-all rounded-xl my-2"
