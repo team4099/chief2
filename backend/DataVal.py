@@ -504,6 +504,6 @@ class DataVal:
         
     
 
-DataVal(wifi_connection=True).validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
+#DataVal(wifi_connection=True).validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
 
 
