@@ -1,0 +1,1658 @@
+{
+    "2022chcmp_f1m1": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_f1m2": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_qf1m1": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc384",
+            "frc686",
+            "frc614"
+        ]
+    },
+    "2022chcmp_qf1m2": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc384",
+            "frc686",
+            "frc614"
+        ]
+    },
+    "2022chcmp_qf2m1": {
+        "red": [
+            "frc422",
+            "frc1111",
+            "frc449"
+        ],
+        "blue": [
+            "frc1629",
+            "frc623",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_qf2m2": {
+        "red": [
+            "frc422",
+            "frc1111",
+            "frc449"
+        ],
+        "blue": [
+            "frc1629",
+            "frc623",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_qf3m1": {
+        "red": [
+            "frc1885",
+            "frc1731",
+            "frc7429"
+        ],
+        "blue": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_qf3m2": {
+        "red": [
+            "frc1885",
+            "frc1731",
+            "frc7429"
+        ],
+        "blue": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_qf3m3": {
+        "red": [
+            "frc1885",
+            "frc1731",
+            "frc7429"
+        ],
+        "blue": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_qf4m1": {
+        "red": [
+            "frc401",
+            "frc4099",
+            "frc5724"
+        ],
+        "blue": [
+            "frc5587",
+            "frc4541",
+            "frc1086"
+        ]
+    },
+    "2022chcmp_qf4m2": {
+        "red": [
+            "frc401",
+            "frc4099",
+            "frc5724"
+        ],
+        "blue": [
+            "frc5587",
+            "frc4541",
+            "frc1086"
+        ]
+    },
+    "2022chcmp_qf4m3": {
+        "red": [
+            "frc401",
+            "frc4099",
+            "frc5724"
+        ],
+        "blue": [
+            "frc5587",
+            "frc4541",
+            "frc1086"
+        ]
+    },
+    "2022chcmp_qm1": {
+        "red": [
+            "frc8726",
+            "frc836",
+            "frc2363"
+        ],
+        "blue": [
+            "frc4638",
+            "frc8230",
+            "frc3748"
+        ]
+    },
+    "2022chcmp_qm10": {
+        "red": [
+            "frc3136",
+            "frc2421",
+            "frc3274"
+        ],
+        "blue": [
+            "frc2537",
+            "frc2914",
+            "frc384"
+        ]
+    },
+    "2022chcmp_qm100": {
+        "red": [
+            "frc8622",
+            "frc7770",
+            "frc449"
+        ],
+        "blue": [
+            "frc4821",
+            "frc3274",
+            "frc5549"
+        ]
+    },
+    "2022chcmp_qm101": {
+        "red": [
+            "frc6194",
+            "frc614",
+            "frc422"
+        ],
+        "blue": [
+            "frc1629",
+            "frc4638",
+            "frc5724"
+        ]
+    },
+    "2022chcmp_qm102": {
+        "red": [
+            "frc836",
+            "frc3748",
+            "frc2914"
+        ],
+        "blue": [
+            "frc4541",
+            "frc1885",
+            "frc5587"
+        ]
+    },
+    "2022chcmp_qm103": {
+        "red": [
+            "frc8592",
+            "frc1111",
+            "frc6504"
+        ],
+        "blue": [
+            "frc384",
+            "frc6802",
+            "frc2377"
+        ]
+    },
+    "2022chcmp_qm104": {
+        "red": [
+            "frc1719",
+            "frc4242",
+            "frc5804"
+        ],
+        "blue": [
+            "frc4472",
+            "frc116",
+            "frc2068"
+        ]
+    },
+    "2022chcmp_qm105": {
+        "red": [
+            "frc1086",
+            "frc1262",
+            "frc3136"
+        ],
+        "blue": [
+            "frc2363",
+            "frc1610",
+            "frc620"
+        ]
+    },
+    "2022chcmp_qm106": {
+        "red": [
+            "frc4099",
+            "frc5338",
+            "frc4286"
+        ],
+        "blue": [
+            "frc8726",
+            "frc1895",
+            "frc1731"
+        ]
+    },
+    "2022chcmp_qm107": {
+        "red": [
+            "frc2421",
+            "frc888",
+            "frc1908"
+        ],
+        "blue": [
+            "frc5549",
+            "frc7770",
+            "frc623"
+        ]
+    },
+    "2022chcmp_qm108": {
+        "red": [
+            "frc1123",
+            "frc1599",
+            "frc8230"
+        ],
+        "blue": [
+            "frc4821",
+            "frc8622",
+            "frc2199"
+        ]
+    },
+    "2022chcmp_qm109": {
+        "red": [
+            "frc686",
+            "frc122",
+            "frc1727"
+        ],
+        "blue": [
+            "frc3939",
+            "frc6326",
+            "frc7429"
+        ]
+    },
+    "2022chcmp_qm11": {
+        "red": [
+            "frc1719",
+            "frc4821",
+            "frc686"
+        ],
+        "blue": [
+            "frc836",
+            "frc4638",
+            "frc2377"
+        ]
+    },
+    "2022chcmp_qm110": {
+        "red": [
+            "frc3274",
+            "frc2537",
+            "frc401"
+        ],
+        "blue": [
+            "frc612",
+            "frc449",
+            "frc2186"
+        ]
+    },
+    "2022chcmp_qm111": {
+        "red": [
+            "frc6194",
+            "frc4638",
+            "frc384"
+        ],
+        "blue": [
+            "frc4242",
+            "frc1885",
+            "frc1111"
+        ]
+    },
+    "2022chcmp_qm112": {
+        "red": [
+            "frc3748",
+            "frc1086",
+            "frc4541"
+        ],
+        "blue": [
+            "frc422",
+            "frc1719",
+            "frc3136"
+        ]
+    },
+    "2022chcmp_qm113": {
+        "red": [
+            "frc5587",
+            "frc620",
+            "frc6802"
+        ],
+        "blue": [
+            "frc1731",
+            "frc614",
+            "frc4286"
+        ]
+    },
+    "2022chcmp_qm114": {
+        "red": [
+            "frc2068",
+            "frc2421",
+            "frc623"
+        ],
+        "blue": [
+            "frc2363",
+            "frc8592",
+            "frc1629"
+        ]
+    },
+    "2022chcmp_qm115": {
+        "red": [
+            "frc2914",
+            "frc8230",
+            "frc8622"
+        ],
+        "blue": [
+            "frc888",
+            "frc5804",
+            "frc2377"
+        ]
+    },
+    "2022chcmp_qm116": {
+        "red": [
+            "frc1895",
+            "frc836",
+            "frc686"
+        ],
+        "blue": [
+            "frc1599",
+            "frc1262",
+            "frc5549"
+        ]
+    },
+    "2022chcmp_qm117": {
+        "red": [
+            "frc1610",
+            "frc449",
+            "frc401"
+        ],
+        "blue": [
+            "frc1908",
+            "frc1123",
+            "frc1727"
+        ]
+    },
+    "2022chcmp_qm118": {
+        "red": [
+            "frc7770",
+            "frc612",
+            "frc3274"
+        ],
+        "blue": [
+            "frc2199",
+            "frc8726",
+            "frc6326"
+        ]
+    },
+    "2022chcmp_qm119": {
+        "red": [
+            "frc5724",
+            "frc4472",
+            "frc6504"
+        ],
+        "blue": [
+            "frc4099",
+            "frc116",
+            "frc2537"
+        ]
+    },
+    "2022chcmp_qm12": {
+        "red": [
+            "frc1086",
+            "frc2068",
+            "frc8230"
+        ],
+        "blue": [
+            "frc2199",
+            "frc401",
+            "frc623"
+        ]
+    },
+    "2022chcmp_qm120": {
+        "red": [
+            "frc4821",
+            "frc7429",
+            "frc122"
+        ],
+        "blue": [
+            "frc5338",
+            "frc2186",
+            "frc3939"
+        ]
+    },
+    "2022chcmp_qm13": {
+        "red": [
+            "frc2186",
+            "frc5549",
+            "frc8592"
+        ],
+        "blue": [
+            "frc5804",
+            "frc5587",
+            "frc6194"
+        ]
+    },
+    "2022chcmp_qm14": {
+        "red": [
+            "frc6802",
+            "frc3939",
+            "frc1610"
+        ],
+        "blue": [
+            "frc1885",
+            "frc8622",
+            "frc8726"
+        ]
+    },
+    "2022chcmp_qm15": {
+        "red": [
+            "frc6326",
+            "frc4472",
+            "frc3748"
+        ],
+        "blue": [
+            "frc1111",
+            "frc1731",
+            "frc1262"
+        ]
+    },
+    "2022chcmp_qm16": {
+        "red": [
+            "frc4242",
+            "frc612",
+            "frc4099"
+        ],
+        "blue": [
+            "frc614",
+            "frc888",
+            "frc2363"
+        ]
+    },
+    "2022chcmp_qm17": {
+        "red": [
+            "frc4286",
+            "frc384",
+            "frc1599"
+        ],
+        "blue": [
+            "frc2537",
+            "frc1629",
+            "frc122"
+        ]
+    },
+    "2022chcmp_qm18": {
+        "red": [
+            "frc1895",
+            "frc5724",
+            "frc7429"
+        ],
+        "blue": [
+            "frc449",
+            "frc1908",
+            "frc3136"
+        ]
+    },
+    "2022chcmp_qm19": {
+        "red": [
+            "frc116",
+            "frc4541",
+            "frc1727"
+        ],
+        "blue": [
+            "frc7770",
+            "frc5338",
+            "frc2421"
+        ]
+    },
+    "2022chcmp_qm2": {
+        "red": [
+            "frc623",
+            "frc4821",
+            "frc5587"
+        ],
+        "blue": [
+            "frc6194",
+            "frc686",
+            "frc1610"
+        ]
+    },
+    "2022chcmp_qm20": {
+        "red": [
+            "frc620",
+            "frc6504",
+            "frc1123"
+        ],
+        "blue": [
+            "frc422",
+            "frc3274",
+            "frc2914"
+        ]
+    },
+    "2022chcmp_qm21": {
+        "red": [
+            "frc8230",
+            "frc6802",
+            "frc1885"
+        ],
+        "blue": [
+            "frc2068",
+            "frc5587",
+            "frc5549"
+        ]
+    },
+    "2022chcmp_qm22": {
+        "red": [
+            "frc1719",
+            "frc836",
+            "frc1731"
+        ],
+        "blue": [
+            "frc1111",
+            "frc2199",
+            "frc1610"
+        ]
+    },
+    "2022chcmp_qm23": {
+        "red": [
+            "frc1262",
+            "frc2377",
+            "frc2186"
+        ],
+        "blue": [
+            "frc8726",
+            "frc623",
+            "frc4242"
+        ]
+    },
+    "2022chcmp_qm24": {
+        "red": [
+            "frc384",
+            "frc5804",
+            "frc122"
+        ],
+        "blue": [
+            "frc3748",
+            "frc686",
+            "frc614"
+        ]
+    },
+    "2022chcmp_qm25": {
+        "red": [
+            "frc4286",
+            "frc1629",
+            "frc612"
+        ],
+        "blue": [
+            "frc4099",
+            "frc3136",
+            "frc4821"
+        ]
+    },
+    "2022chcmp_qm26": {
+        "red": [
+            "frc8592",
+            "frc1908",
+            "frc2537"
+        ],
+        "blue": [
+            "frc8622",
+            "frc1086",
+            "frc5338"
+        ]
+    },
+    "2022chcmp_qm27": {
+        "red": [
+            "frc401",
+            "frc422",
+            "frc4541"
+        ],
+        "blue": [
+            "frc449",
+            "frc3939",
+            "frc6194"
+        ]
+    },
+    "2022chcmp_qm28": {
+        "red": [
+            "frc2363",
+            "frc2914",
+            "frc1895"
+        ],
+        "blue": [
+            "frc5724",
+            "frc7770",
+            "frc1727"
+        ]
+    },
+    "2022chcmp_qm29": {
+        "red": [
+            "frc3274",
+            "frc620",
+            "frc7429"
+        ],
+        "blue": [
+            "frc1599",
+            "frc888",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_qm3": {
+        "red": [
+            "frc3939",
+            "frc1719",
+            "frc2068"
+        ],
+        "blue": [
+            "frc1908",
+            "frc4099",
+            "frc2186"
+        ]
+    },
+    "2022chcmp_qm30": {
+        "red": [
+            "frc4638",
+            "frc6326",
+            "frc1123"
+        ],
+        "blue": [
+            "frc6504",
+            "frc116",
+            "frc2421"
+        ]
+    },
+    "2022chcmp_qm31": {
+        "red": [
+            "frc5549",
+            "frc8230",
+            "frc1111"
+        ],
+        "blue": [
+            "frc2186",
+            "frc614",
+            "frc1610"
+        ]
+    },
+    "2022chcmp_qm32": {
+        "red": [
+            "frc1719",
+            "frc5587",
+            "frc2199"
+        ],
+        "blue": [
+            "frc122",
+            "frc612",
+            "frc1885"
+        ]
+    },
+    "2022chcmp_qm33": {
+        "red": [
+            "frc1086",
+            "frc384",
+            "frc1908"
+        ],
+        "blue": [
+            "frc1262",
+            "frc4821",
+            "frc8726"
+        ]
+    },
+    "2022chcmp_qm34": {
+        "red": [
+            "frc6194",
+            "frc4541",
+            "frc2377"
+        ],
+        "blue": [
+            "frc4286",
+            "frc2068",
+            "frc6802"
+        ]
+    },
+    "2022chcmp_qm35": {
+        "red": [
+            "frc3136",
+            "frc2537",
+            "frc4242"
+        ],
+        "blue": [
+            "frc2914",
+            "frc1727",
+            "frc401"
+        ]
+    },
+    "2022chcmp_qm36": {
+        "red": [
+            "frc449",
+            "frc5338",
+            "frc686"
+        ],
+        "blue": [
+            "frc4472",
+            "frc2363",
+            "frc8622"
+        ]
+    },
+    "2022chcmp_qm37": {
+        "red": [
+            "frc1731",
+            "frc5804",
+            "frc7770"
+        ],
+        "blue": [
+            "frc6504",
+            "frc7429",
+            "frc4638"
+        ]
+    },
+    "2022chcmp_qm38": {
+        "red": [
+            "frc620",
+            "frc5724",
+            "frc4099"
+        ],
+        "blue": [
+            "frc2421",
+            "frc8592",
+            "frc3748"
+        ]
+    },
+    "2022chcmp_qm39": {
+        "red": [
+            "frc888",
+            "frc1123",
+            "frc1895"
+        ],
+        "blue": [
+            "frc836",
+            "frc6326",
+            "frc1629"
+        ]
+    },
+    "2022chcmp_qm4": {
+        "red": [
+            "frc2377",
+            "frc2199",
+            "frc7770"
+        ],
+        "blue": [
+            "frc5338",
+            "frc4472",
+            "frc614"
+        ]
+    },
+    "2022chcmp_qm40": {
+        "red": [
+            "frc116",
+            "frc3939",
+            "frc422"
+        ],
+        "blue": [
+            "frc1599",
+            "frc3274",
+            "frc623"
+        ]
+    },
+    "2022chcmp_qm41": {
+        "red": [
+            "frc1610",
+            "frc4821",
+            "frc1086"
+        ],
+        "blue": [
+            "frc2068",
+            "frc122",
+            "frc614"
+        ]
+    },
+    "2022chcmp_qm42": {
+        "red": [
+            "frc5587",
+            "frc8726",
+            "frc2537"
+        ],
+        "blue": [
+            "frc5549",
+            "frc4541",
+            "frc1719"
+        ]
+    },
+    "2022chcmp_qm43": {
+        "red": [
+            "frc5338",
+            "frc2914",
+            "frc1111"
+        ],
+        "blue": [
+            "frc4286",
+            "frc401",
+            "frc686"
+        ]
+    },
+    "2022chcmp_qm44": {
+        "red": [
+            "frc1262",
+            "frc1727",
+            "frc6194"
+        ],
+        "blue": [
+            "frc5804",
+            "frc6504",
+            "frc3136"
+        ]
+    },
+    "2022chcmp_qm45": {
+        "red": [
+            "frc2363",
+            "frc1885",
+            "frc4638"
+        ],
+        "blue": [
+            "frc6802",
+            "frc1908",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_qm46": {
+        "red": [
+            "frc7770",
+            "frc7429",
+            "frc1629"
+        ],
+        "blue": [
+            "frc4242",
+            "frc8622",
+            "frc836"
+        ]
+    },
+    "2022chcmp_qm47": {
+        "red": [
+            "frc1895",
+            "frc3748",
+            "frc116"
+        ],
+        "blue": [
+            "frc8230",
+            "frc8592",
+            "frc3274"
+        ]
+    },
+    "2022chcmp_qm48": {
+        "red": [
+            "frc384",
+            "frc623",
+            "frc4099"
+        ],
+        "blue": [
+            "frc6326",
+            "frc449",
+            "frc620"
+        ]
+    },
+    "2022chcmp_qm49": {
+        "red": [
+            "frc2199",
+            "frc2186",
+            "frc888"
+        ],
+        "blue": [
+            "frc1731",
+            "frc2421",
+            "frc422"
+        ]
+    },
+    "2022chcmp_qm5": {
+        "red": [
+            "frc5804",
+            "frc6802",
+            "frc8622"
+        ],
+        "blue": [
+            "frc5724",
+            "frc1086",
+            "frc401"
+        ]
+    },
+    "2022chcmp_qm50": {
+        "red": [
+            "frc3939",
+            "frc1599",
+            "frc5724"
+        ],
+        "blue": [
+            "frc1123",
+            "frc2377",
+            "frc612"
+        ]
+    },
+    "2022chcmp_qm51": {
+        "red": [
+            "frc5587",
+            "frc6504",
+            "frc1262"
+        ],
+        "blue": [
+            "frc5549",
+            "frc401",
+            "frc5338"
+        ]
+    },
+    "2022chcmp_qm52": {
+        "red": [
+            "frc4821",
+            "frc614",
+            "frc1111"
+        ],
+        "blue": [
+            "frc4541",
+            "frc2537",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_qm53": {
+        "red": [
+            "frc1629",
+            "frc1610",
+            "frc2068"
+        ],
+        "blue": [
+            "frc2914",
+            "frc7429",
+            "frc8726"
+        ]
+    },
+    "2022chcmp_qm54": {
+        "red": [
+            "frc4242",
+            "frc4472",
+            "frc4638"
+        ],
+        "blue": [
+            "frc8592",
+            "frc4286",
+            "frc1086"
+        ]
+    },
+    "2022chcmp_qm55": {
+        "red": [
+            "frc6326",
+            "frc686",
+            "frc3274"
+        ],
+        "blue": [
+            "frc1908",
+            "frc8230",
+            "frc1719"
+        ]
+    },
+    "2022chcmp_qm56": {
+        "red": [
+            "frc620",
+            "frc2421",
+            "frc2199"
+        ],
+        "blue": [
+            "frc8622",
+            "frc1895",
+            "frc6194"
+        ]
+    },
+    "2022chcmp_qm57": {
+        "red": [
+            "frc3939",
+            "frc623",
+            "frc1123"
+        ],
+        "blue": [
+            "frc612",
+            "frc3748",
+            "frc384"
+        ]
+    },
+    "2022chcmp_qm58": {
+        "red": [
+            "frc1727",
+            "frc1731",
+            "frc888"
+        ],
+        "blue": [
+            "frc1885",
+            "frc2377",
+            "frc5724"
+        ]
+    },
+    "2022chcmp_qm59": {
+        "red": [
+            "frc122",
+            "frc422",
+            "frc1599"
+        ],
+        "blue": [
+            "frc4099",
+            "frc2363",
+            "frc7770"
+        ]
+    },
+    "2022chcmp_qm6": {
+        "red": [
+            "frc6326",
+            "frc1731",
+            "frc5549"
+        ],
+        "blue": [
+            "frc1123",
+            "frc4242",
+            "frc8592"
+        ]
+    },
+    "2022chcmp_qm60": {
+        "red": [
+            "frc836",
+            "frc449",
+            "frc6802"
+        ],
+        "blue": [
+            "frc3136",
+            "frc2186",
+            "frc116"
+        ]
+    },
+    "2022chcmp_qm61": {
+        "red": [
+            "frc1610",
+            "frc8726",
+            "frc4472"
+        ],
+        "blue": [
+            "frc401",
+            "frc6504",
+            "frc4821"
+        ]
+    },
+    "2022chcmp_qm62": {
+        "red": [
+            "frc3274",
+            "frc1908",
+            "frc5804"
+        ],
+        "blue": [
+            "frc5587",
+            "frc4242",
+            "frc4286"
+        ]
+    },
+    "2022chcmp_qm63": {
+        "red": [
+            "frc1629",
+            "frc5549",
+            "frc2199"
+        ],
+        "blue": [
+            "frc4638",
+            "frc620",
+            "frc1262"
+        ]
+    },
+    "2022chcmp_qm64": {
+        "red": [
+            "frc612",
+            "frc6194",
+            "frc2421"
+        ],
+        "blue": [
+            "frc7429",
+            "frc5338",
+            "frc8230"
+        ]
+    },
+    "2022chcmp_qm65": {
+        "red": [
+            "frc2377",
+            "frc2068",
+            "frc1895"
+        ],
+        "blue": [
+            "frc2537",
+            "frc888",
+            "frc3748"
+        ]
+    },
+    "2022chcmp_qm66": {
+        "red": [
+            "frc5724",
+            "frc8622",
+            "frc1731"
+        ],
+        "blue": [
+            "frc623",
+            "frc1719",
+            "frc122"
+        ]
+    },
+    "2022chcmp_qm67": {
+        "red": [
+            "frc4541",
+            "frc2186",
+            "frc2363"
+        ],
+        "blue": [
+            "frc116",
+            "frc1123",
+            "frc384"
+        ]
+    },
+    "2022chcmp_qm68": {
+        "red": [
+            "frc6802",
+            "frc6326",
+            "frc614"
+        ],
+        "blue": [
+            "frc2914",
+            "frc1599",
+            "frc449"
+        ]
+    },
+    "2022chcmp_qm69": {
+        "red": [
+            "frc1086",
+            "frc836",
+            "frc7770"
+        ],
+        "blue": [
+            "frc1727",
+            "frc1111",
+            "frc3939"
+        ]
+    },
+    "2022chcmp_qm7": {
+        "red": [
+            "frc7429",
+            "frc422",
+            "frc1885"
+        ],
+        "blue": [
+            "frc1262",
+            "frc1895",
+            "frc4286"
+        ]
+    },
+    "2022chcmp_qm70": {
+        "red": [
+            "frc8592",
+            "frc4099",
+            "frc422"
+        ],
+        "blue": [
+            "frc686",
+            "frc3136",
+            "frc1885"
+        ]
+    },
+    "2022chcmp_qm71": {
+        "red": [
+            "frc1629",
+            "frc5587",
+            "frc1908"
+        ],
+        "blue": [
+            "frc8230",
+            "frc5804",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_qm72": {
+        "red": [
+            "frc612",
+            "frc1610",
+            "frc2537"
+        ],
+        "blue": [
+            "frc3748",
+            "frc6194",
+            "frc4242"
+        ]
+    },
+    "2022chcmp_qm73": {
+        "red": [
+            "frc122",
+            "frc5724",
+            "frc5338"
+        ],
+        "blue": [
+            "frc2068",
+            "frc3274",
+            "frc4638"
+        ]
+    },
+    "2022chcmp_qm74": {
+        "red": [
+            "frc8622",
+            "frc401",
+            "frc116"
+        ],
+        "blue": [
+            "frc4541",
+            "frc384",
+            "frc1731"
+        ]
+    },
+    "2022chcmp_qm75": {
+        "red": [
+            "frc2421",
+            "frc1719",
+            "frc2914"
+        ],
+        "blue": [
+            "frc1599",
+            "frc1895",
+            "frc4821"
+        ]
+    },
+    "2022chcmp_qm76": {
+        "red": [
+            "frc623",
+            "frc1111",
+            "frc7429"
+        ],
+        "blue": [
+            "frc6504",
+            "frc2199",
+            "frc6802"
+        ]
+    },
+    "2022chcmp_qm77": {
+        "red": [
+            "frc614",
+            "frc8726",
+            "frc8592"
+        ],
+        "blue": [
+            "frc1727",
+            "frc422",
+            "frc836"
+        ]
+    },
+    "2022chcmp_qm78": {
+        "red": [
+            "frc1885",
+            "frc4099",
+            "frc1262"
+        ],
+        "blue": [
+            "frc7770",
+            "frc1123",
+            "frc2186"
+        ]
+    },
+    "2022chcmp_qm79": {
+        "red": [
+            "frc888",
+            "frc4286",
+            "frc449"
+        ],
+        "blue": [
+            "frc686",
+            "frc1086",
+            "frc3939"
+        ]
+    },
+    "2022chcmp_qm8": {
+        "red": [
+            "frc1111",
+            "frc1629",
+            "frc620"
+        ],
+        "blue": [
+            "frc116",
+            "frc122",
+            "frc449"
+        ]
+    },
+    "2022chcmp_qm80": {
+        "red": [
+            "frc3136",
+            "frc5549",
+            "frc620"
+        ],
+        "blue": [
+            "frc2377",
+            "frc2363",
+            "frc6326"
+        ]
+    },
+    "2022chcmp_qm81": {
+        "red": [
+            "frc4638",
+            "frc122",
+            "frc4541"
+        ],
+        "blue": [
+            "frc8230",
+            "frc5724",
+            "frc4242"
+        ]
+    },
+    "2022chcmp_qm82": {
+        "red": [
+            "frc4472",
+            "frc612",
+            "frc5587"
+        ],
+        "blue": [
+            "frc1895",
+            "frc384",
+            "frc2421"
+        ]
+    },
+    "2022chcmp_qm83": {
+        "red": [
+            "frc5338",
+            "frc2199",
+            "frc1599"
+        ],
+        "blue": [
+            "frc1610",
+            "frc3748",
+            "frc5804"
+        ]
+    },
+    "2022chcmp_qm84": {
+        "red": [
+            "frc422",
+            "frc623",
+            "frc1908"
+        ],
+        "blue": [
+            "frc1111",
+            "frc2537",
+            "frc836"
+        ]
+    },
+    "2022chcmp_qm85": {
+        "red": [
+            "frc614",
+            "frc1262",
+            "frc1123"
+        ],
+        "blue": [
+            "frc6802",
+            "frc6194",
+            "frc1719"
+        ]
+    },
+    "2022chcmp_qm86": {
+        "red": [
+            "frc449",
+            "frc8592",
+            "frc4821"
+        ],
+        "blue": [
+            "frc1885",
+            "frc2914",
+            "frc6504"
+        ]
+    },
+    "2022chcmp_qm87": {
+        "red": [
+            "frc1731",
+            "frc3136",
+            "frc2363"
+        ],
+        "blue": [
+            "frc3274",
+            "frc3939",
+            "frc1629"
+        ]
+    },
+    "2022chcmp_qm88": {
+        "red": [
+            "frc401",
+            "frc7770",
+            "frc8726"
+        ],
+        "blue": [
+            "frc686",
+            "frc620",
+            "frc888"
+        ]
+    },
+    "2022chcmp_qm89": {
+        "red": [
+            "frc2377",
+            "frc5549",
+            "frc116"
+        ],
+        "blue": [
+            "frc7429",
+            "frc4099",
+            "frc1086"
+        ]
+    },
+    "2022chcmp_qm9": {
+        "red": [
+            "frc6504",
+            "frc1727",
+            "frc1599"
+        ],
+        "blue": [
+            "frc888",
+            "frc4541",
+            "frc612"
+        ]
+    },
+    "2022chcmp_qm90": {
+        "red": [
+            "frc2186",
+            "frc4286",
+            "frc8622"
+        ],
+        "blue": [
+            "frc1727",
+            "frc2068",
+            "frc6326"
+        ]
+    },
+    "2022chcmp_qm91": {
+        "red": [
+            "frc5804",
+            "frc4638",
+            "frc1895"
+        ],
+        "blue": [
+            "frc623",
+            "frc1610",
+            "frc4541"
+        ]
+    },
+    "2022chcmp_qm92": {
+        "red": [
+            "frc384",
+            "frc4242",
+            "frc5338"
+        ],
+        "blue": [
+            "frc422",
+            "frc6802",
+            "frc5724"
+        ]
+    },
+    "2022chcmp_qm93": {
+        "red": [
+            "frc122",
+            "frc6194",
+            "frc2914"
+        ],
+        "blue": [
+            "frc4472",
+            "frc1262",
+            "frc836"
+        ]
+    },
+    "2022chcmp_qm94": {
+        "red": [
+            "frc3748",
+            "frc1885",
+            "frc3939"
+        ],
+        "blue": [
+            "frc614",
+            "frc1629",
+            "frc6504"
+        ]
+    },
+    "2022chcmp_qm95": {
+        "red": [
+            "frc8726",
+            "frc3136",
+            "frc888"
+        ],
+        "blue": [
+            "frc1123",
+            "frc1111",
+            "frc5587"
+        ]
+    },
+    "2022chcmp_qm96": {
+        "red": [
+            "frc401",
+            "frc2363",
+            "frc1719"
+        ],
+        "blue": [
+            "frc7429",
+            "frc2377",
+            "frc8592"
+        ]
+    },
+    "2022chcmp_qm97": {
+        "red": [
+            "frc2186",
+            "frc686",
+            "frc2068"
+        ],
+        "blue": [
+            "frc620",
+            "frc116",
+            "frc612"
+        ]
+    },
+    "2022chcmp_qm98": {
+        "red": [
+            "frc1908",
+            "frc4286",
+            "frc6326"
+        ],
+        "blue": [
+            "frc2421",
+            "frc1599",
+            "frc1086"
+        ]
+    },
+    "2022chcmp_qm99": {
+        "red": [
+            "frc2537",
+            "frc1727",
+            "frc8230"
+        ],
+        "blue": [
+            "frc2199",
+            "frc1731",
+            "frc4099"
+        ]
+    },
+    "2022chcmp_sf1m1": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc1629",
+            "frc623",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_sf1m2": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc1629",
+            "frc623",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_sf1m3": {
+        "red": [
+            "frc2363",
+            "frc836",
+            "frc620"
+        ],
+        "blue": [
+            "frc1629",
+            "frc623",
+            "frc4472"
+        ]
+    },
+    "2022chcmp_sf2m1": {
+        "red": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ],
+        "blue": [
+            "frc401",
+            "frc4099",
+            "frc5724"
+        ]
+    },
+    "2022chcmp_sf2m2": {
+        "red": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ],
+        "blue": [
+            "frc401",
+            "frc4099",
+            "frc5724"
+        ]
+    },
+    "2022chcmp_sf2m3": {
+        "red": [
+            "frc1610",
+            "frc122",
+            "frc5804"
+        ],
+        "blue": [
+            "frc401",
+            "frc4099",
+            "frc5724"
+        ]
+    }
+}

@@ -1,4 +1,4 @@
 node_modules/*
 .idea/
-backend/config.json
+backend/config/config.json
 __pycache__/
