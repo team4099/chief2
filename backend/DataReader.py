@@ -74,5 +74,7 @@ class DataReader:
             code = cv2.waitKey(10)
             if code == ord('q'):
                 break
+        
+        print(result)
 
         return qrcodes
