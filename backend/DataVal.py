@@ -1,6 +1,7 @@
 from Logger import Logger
 import pandas as pd
 
+
 class DataVal:
     def __init__(
             self,
