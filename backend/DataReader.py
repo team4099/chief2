@@ -19,10 +19,10 @@ class DataReader:
 
             barcodeData = obj.data.decode("utf-8")
             barcodeType = obj.type
-            string = "Data " + str(barcodeData) + " | Type " + str(barcodeType)
+            string = "scout1"
             
             cv2.putText(image, string, (x,y), cv2.FONT_HERSHEY_SIMPLEX,0.8,(255,0,0), 2)
-            print("Barcode: "+barcodeData +" | Type: "+barcodeType)
+            # print("Barcode: "+barcodeData +" | Type: "+barcodeType)
 
             return barcodeData
 
@@ -36,6 +36,8 @@ class DataReader:
             code = cv2.waitKey(10)
             if code == ord('q'):
                 break
+        
+        print(result)
 
         return result
 
