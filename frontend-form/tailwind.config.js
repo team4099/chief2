@@ -5,7 +5,13 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'team-gold': "#EFAE04",
+        'team-gold-hover': "#FEBD13",
+        'team-black': "#363636",
+      },
+    },
   },
   plugins: [],
 };
