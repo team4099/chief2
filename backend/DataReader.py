@@ -36,11 +36,11 @@ class DataReader:
             code = cv2.waitKey(10)
             if code == ord('q'):
                 break
-        
-        print(result)
 
         return result
 
 cam = int(input("Cam #: "))
-print(DataReader(cam).read_qrcode())
+DataReader(cam).read_qrcode()
+# print(DataReader(cam).read_qrcode())
+
 
