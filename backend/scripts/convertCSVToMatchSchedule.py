@@ -18,6 +18,12 @@ except NameError:
     raise NameError
 logger.info("Successfully retreived configuration variablees.")
 
+"""
+
+If TBA is really not up, please edit the match schedule on this: https://docs.google.com/spreadsheets/d/1I5zE3oVeroPNFlDTpc4PspzlP8qkUWnA9Cngd_7N7K8/edit#gid=0
+and download the sheet as a csv and put it in data subdirectory.
+
+"""
 logger.info("Opening match_schedule_sheet.csv")
 
 match_schedule_dict = {}
