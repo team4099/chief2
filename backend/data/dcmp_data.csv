@@ -1,4 +1,4 @@
-scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,auto_misses,auto_human_score,auto_human_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,final_climb_type,defense_pct,counter_defense_pct,defense_rating,counter_defense_rating,driver_rating
+scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,final_climb_type,defense_pct,counter_defense_pct,defense_rating,counter_defense_rating,driver_rating
 pranav,qm3,1719,Red,2,1,5,5,0,1,Tarmac,,1,5,Elsewhere,,1,,,1,No Climb,,,,,
 paolo,qm3,1908,Blue,1,1,0,0,0,1,Tarmac,1,2,0,Fender;Opposing Tarmac,0,1,0,0,1,Mid,0,,0,,
 Samuel,qm3,3939,Red,1,1,,,,,,0,1,3,Tarmac;Launchpad;Terminal,1,,,,,No Climb,0,,0,3,3
