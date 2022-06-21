@@ -8,8 +8,8 @@ export const ChangeScoutModal: Component = () => {
   const [input, setInput] = createSignal("");
 
   return (
-    <div class="fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex">
-      <div class="relative p-4 bg-white w-full max-w-md my-auto mx-4 flex flex-col rounded-xl">
+    <div class="fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex px-2">
+      <div class="relative p-4 bg-white w-full max-w-md my-auto mx-auto flex flex-col rounded-xl">
         <div class="flex flex-row my-2">
           <p class="font-bold text-xl my-2 flex-1">Set Scout</p>
           <button
