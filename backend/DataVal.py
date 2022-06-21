@@ -40,7 +40,8 @@ class DataVal:
         #self.check_for_higher_than_six_ball_auto(submission)
         #self.check_for_missing_shooting_zones(submission)
         #self.check_for_invalid_climb_data(submission)
-        self.check_for_invalid_defense_data(submission)
+        #self.check_for_invalid_defense_data(submission)
+        self.check_for_auto_shots_but_no_tax(submission)
 
 
     def validate_data(
@@ -49,7 +50,6 @@ class DataVal:
             match_schedule_JSON: str
     ):
         """
-        <write purpose here>
         :param filepath: Filepath to csv that contains all the data. Ex: "data/dcmp_data.csv"
         :return: None
         """
@@ -119,7 +119,6 @@ class DataVal:
             submission: dict
     ):
         """
-
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -160,7 +159,6 @@ class DataVal:
             submission: dict
     ):
         """
-
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -196,7 +194,6 @@ class DataVal:
             submission: dict
     ):
         """
-        <write purpose here>
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -204,13 +201,25 @@ class DataVal:
         if balls_shot_in_auto > 6:
             self.logger.warn(f"In {submission['match_key']}, frc{int(submission['team_number'])} shot {int(balls_shot_in_auto)} balls in Autonomous.")
 
+    def check_for_auto_shots_but_no_tax(
+            self,
+            submission: dict
+    ):
+        """
+        :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
+        :return: None
+        """
+        balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
+        taxi = submission["taxied"]
+        if balls_shot_in_auto > 1 and (pd.isna(taxi) or not taxi):
+            self.logger.warn(f"In {submission['match_key']}, frc{int(submission['team_number'])} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
+
 
     # Data specific validation
     def check_team_numbers_for_each_match(
             self, scouting_data: list
     ):
         """
-
         :param scoutingData: list of all submissions from csv, each submission is a dictionary, Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
         :return: None
         """
