@@ -21,6 +21,10 @@ class DataVal:
             self.logger.warn("Wifi Connection was not found. Will not check against TBA")
         self.match_schedule = None
 
+        with open("config/config.json") as config:
+            config = json.load(config)
+        self.event_key = config["YEAR"] + config["EVENT_KEY"]
+
     def validate_submission(
             self,
             submission: dict,
@@ -37,7 +41,7 @@ class DataVal:
     def validate_data(
             self,
             filepath: str,
-            match_schedule: str
+            match_schedule_JSON: str
     ):
         """
         :param filepath: Filepath to csv that contains all the data. Ex: "data/dcmp_data.csv"
@@ -50,8 +54,8 @@ class DataVal:
         print(scoutingdict)
 
         self.logger.info("Reading match schedule JSON")
-        with open(match_schedule) as match_JSON:
-            match_schedule = json.load(match_JSON)
+        with open(match_schedule_JSON) as f:
+            match_schedule = json.load(f)
         self.logger.info("Success!JSON match schdeule has been read.")
         self.match_schedule = match_schedule
 
@@ -67,13 +71,10 @@ class DataVal:
 
     def check_submission_with_match_schedule(
             self, 
-            submission
+            submission: dict
     ):
-        with open("config/config.json") as config:
-            config = json.load(config)
-        event_key = config["YEAR"] + config["EVENT_KEY"]
         match_key = str(submission["match_key"]).strip().lower()
-        event_and_match_key = f"{event_key}_{match_key}"
+        event_and_match_key = f"{self.event_key}_{match_key}"
 
         #check match key format regex
         match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
@@ -88,15 +89,15 @@ class DataVal:
             #check if robot was in match
             team_number = int(submission["team_number"])
             alliance = submission["alliance"]
-            if f"frc{team_number}" not in self.match_schedule[f"{event_key}_{match_key}"][alliance.lower()]:
-                self.logger.error(f"frc{int(submission['team_number'])} was NOT IN MATCH {submission['match_key']}, on the {alliance} alliance")
+            if f"frc{team_number}" not in self.match_schedule[f"{self.event_key}_{match_key}"][alliance.lower()]:
+                self.logger.error(f"frc{int(team_number)} was NOT IN MATCH {submission['match_key']}, on the {alliance} alliance")
 
             else:
                 #check for correct driver station
                 scouted_driver_station = submission["driver_station"]
                 schedule_driver_station = self.match_schedule[event_and_match_key][alliance.lower()].index(f"frc{team_number}") +1
                 if scouted_driver_station != schedule_driver_station:
-                    self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INCONSISTENT DRIVER STATION with schedule")
+                    self.logger.error(f"In {submission['match_key']}, frc{team_number} INCONSISTENT DRIVER STATION with schedule")
 
     def check_for_higher_than_six_ball_auto(
             self,
@@ -122,13 +123,13 @@ class DataVal:
         :return: None
         """
 
-        pass
+        
         
 
 
         
     
 
-DataVal().validate_data(filepath="data/dcmp_data.csv", match_schedule="data/match_schedule.json")
+DataVal().validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
 
 
