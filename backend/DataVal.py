@@ -56,12 +56,8 @@ class DataVal:
         self.logger.info("Reading data from CSV")
         scoutingdf = pd.read_csv(filepath)
         self.logger.info("Success! CSV data has been read.")
-<<<<<<< HEAD
         scouting_data = scoutingdf.to_dict(orient='records')
 
-=======
-        scoutingdict = scoutingdf.to_dict(orient='records')
->>>>>>> 7d9682bebe2f094c73d34d8ef5f41b34a9cda686
 
         self.logger.info("Reading match schedule JSON")
         with open(match_schedule_JSON) as f:
@@ -86,20 +82,11 @@ class DataVal:
             self, 
             submission: dict
     ):
-<<<<<<< HEAD
         """
         :param filepath: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
         :return: None
         """
 
-=======
-
-        """
-        <write purpose here>
-        :param submission:
-        :return:
-        """
->>>>>>> 7d9682bebe2f094c73d34d8ef5f41b34a9cda686
         match_key = str(submission["match_key"]).strip().lower()
         event_and_match_key = f"{self.event_key}_{match_key}"
 
@@ -225,13 +212,8 @@ class DataVal:
             self, scouting_data: list
     ):
         """
-<<<<<<< HEAD
 
         :param scoutingData: list of all submissions from csv, each submission is a dictionary, Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
-=======
-        <write purpose here>
-        :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
->>>>>>> 7d9682bebe2f094c73d34d8ef5f41b34a9cda686
         :return: None
         """
 
