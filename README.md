@@ -1,5 +1,5 @@
 # chief2
-A scouting system to ingest match data and generate visualizations for the FRC 2021-2022 Rapid React competition.
+Team 4099's scouting system to ingest match data and generate visualizations for the FRC 2021-2022 Rapid React competition.
 
 ## Running
 To run the frontend:
