@@ -12,8 +12,8 @@ class Logger():
         colors = {'DEBUG': 'grey',
                   'INFO': 'green',
                   'WARNING': 'bold_yellow',
-                  'ERROR': 'bold_orange',
-                  'CRITICAL': 'bold_red'}
+                  'ERROR': 'bold_red',
+                  'CRITICAL': 'bold_purple'}
         formatter = ColoredFormatter(cformat, date_format,
                                               log_colors=colors)
 
