@@ -2,7 +2,7 @@ from Logger import Logger
 import pandas as pd
 import json
 import re
-
+import os
 
 class DataVal:
     def __init__(
@@ -17,8 +17,10 @@ class DataVal:
         self.logger.info("Starting Validation Process")
         if wifi_connection:
             self.logger.info("Wifi Connection Exists. Will cross check against TBA")
+            #os.system('python scripts/getMatchSchedule.py')
         else:
             self.logger.warn("Wifi Connection was not found. Will not check against TBA")
+            #os.system('python scripts/convertCSVToMatchSchedule.py')
         self.match_schedule = None
 
         with open("config/config.json") as config:
@@ -30,6 +32,7 @@ class DataVal:
             submission: dict,
     ):
         """
+        <write purpose here>
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -46,26 +49,31 @@ class DataVal:
             match_schedule_JSON: str
     ):
         """
+        <write purpose here>
         :param filepath: Filepath to csv that contains all the data. Ex: "data/dcmp_data.csv"
         :return: None
         """
         self.logger.info("Reading data from CSV")
         scoutingdf = pd.read_csv(filepath)
         self.logger.info("Success! CSV data has been read.")
+<<<<<<< HEAD
         scouting_data = scoutingdf.to_dict(orient='records')
 
+=======
+        scoutingdict = scoutingdf.to_dict(orient='records')
+>>>>>>> 7d9682bebe2f094c73d34d8ef5f41b34a9cda686
 
         self.logger.info("Reading match schedule JSON")
         with open(match_schedule_JSON) as f:
             match_schedule = json.load(f)
-        self.logger.info("Success!JSON match schdeule has been read.")
+        self.logger.info("Success! JSON match schdeule has been read.")
         self.match_schedule = match_schedule
 
         #individual submission checks called from validate_submission method
         for submission in scouting_data:
             if pd.isna(submission["team_number"]):
                 self.logger.critical(f"NO TEAM NUMBER for match {submission['match_key']}")
-                next
+                continue
             else:
                 self.validate_submission(submission)
         
@@ -78,11 +86,20 @@ class DataVal:
             self, 
             submission: dict
     ):
+<<<<<<< HEAD
         """
         :param filepath: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
         :return: None
         """
 
+=======
+
+        """
+        <write purpose here>
+        :param submission:
+        :return:
+        """
+>>>>>>> 7d9682bebe2f094c73d34d8ef5f41b34a9cda686
         match_key = str(submission["match_key"]).strip().lower()
         event_and_match_key = f"{self.event_key}_{match_key}"
 
@@ -194,7 +211,7 @@ class DataVal:
             submission: dict
     ):
         """
-
+        <write purpose here>
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -208,8 +225,13 @@ class DataVal:
             self, scouting_data: list
     ):
         """
+<<<<<<< HEAD
 
         :param scoutingData: list of all submissions from csv, each submission is a dictionary, Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
+=======
+        <write purpose here>
+        :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
+>>>>>>> 7d9682bebe2f094c73d34d8ef5f41b34a9cda686
         :return: None
         """
 
