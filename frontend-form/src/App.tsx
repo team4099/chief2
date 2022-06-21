@@ -11,10 +11,10 @@ const App: Component = () => {
     <div>
       <NavBar />
       {(!loggedIn() || modalVisible()) && <ChangeScoutModal />}
-      <div class="relative my-1">
-        <div class="mb-10" />
-        <Info />
-      </div>
+      {/* <div class="relative mb"> */}
+      <div class="relative z-0 mb-10" />
+      <Info />
+      {/* </div> */}
     </div>
   );
 };

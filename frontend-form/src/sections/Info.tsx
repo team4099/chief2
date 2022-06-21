@@ -93,16 +93,16 @@ export const Info: Component = () => {
           <fieldset class="flex flex-row">
             <legend class="font-bold">Driver Station</legend>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="blue" name="station" />
-              <label for="blue">1</label>
+              <input type="radio" id="station-1" name="station" />
+              <label for="station-1">1</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="red" name="station" class="none" />
-              <label for="red">2</label>
+              <input type="radio" id="station-2" name="station" class="none" />
+              <label for="station-2">2</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="red" name="station" />
-              <label for="red">3</label>
+              <input type="radio" id="station-3" name="station" />
+              <label for="station-3">3</label>
             </label>
           </fieldset>
         </div>
