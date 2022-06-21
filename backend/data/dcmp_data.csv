@@ -1,5 +1,5 @@
-scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,final_climb_type,defense_pct,counter_defense_pct,defense_rating,counter_defense_rating,driver_rating
-pranav,qm3,1719,Red,2,1,5,5,0,1,Tarmac,,1,5,Elsewhere,,1,,,1,No Climb,,,,,
+Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,Auto Misses,Taxied,Auto Shooting Zones,Teleop Lower Hub,Teleop Upper Hub,Teleop Misses,Teleop Shooting Zones,Low Attempted,Mid Attempted,High Attempted,Traversal Attempted,Climb Time,Final Climb Type,How much do they play defense?,Defense Rating,How much were they playing through defense?,Counter Defense Rating,Driver Rating
+pranav,qm3,1719,Red,2,1,0,0,0,1,Tarmac,,1,5,Elsewhere,,1,,,1,No Climb,,,,,
 paolo,qm3,1908,Blue,1,1,0,0,0,1,Tarmac,1,2,0,Fender;Opposing Tarmac,0,1,0,0,1,Mid,0,,0,,
 Samuel,qm3,3939,Red,1,1,,,,,,0,1,3,Tarmac;Launchpad;Terminal,1,,,,,No Climb,0,,0,3,3
 anil,qm3 ,2186,Blue,3,1,0,1,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,0,,0,,
@@ -215,8 +215,8 @@ veronica,qm41,1610,Red,1,1,0,1,1,1,Elsewhere,0,5,4,Tarmac;Opposing Tarmac,0,1,0,
 jay ,qm41,614,Blue,3,1,0,1,0,1,Tarmac,7,2,1,Fender;Opposing Fender,0,1,1,0,4,High,0.5,3,0.5,3,4
 matthew ,qm41,4821,Red,2,1,0,1,0,0,Fender,0,7,1,Fender,,,,,,No Climb,0,,0.25,3,3
 agneya,qm42,122,Blue,2,1,,1,3,1,,,7,3,,0,1,0,0,,Mid,0,,0,,5
-matthew,qm32.5,5587,Red,2,1,0,3,0,1,Tarmac;Elsewhere,0,4,,Elsewhere,,1,,,,No Climb,0,,0,,3
-jay,qm32.5,1885,Blue,3,1,0,1,0,1,Fender,0,10,2,Fender;Opposing Fender,0,1,1,1,5,Traversal,0.25,2,0.5,4,5
+matthew,qm32m5,5587,Red,2,1,0,3,0,1,Tarmac;Elsewhere,0,4,,Elsewhere,,1,,,,No Climb,0,,0,,3
+jay,qm32m5,1885,Blue,3,1,0,1,0,1,Fender,0,10,2,Fender;Opposing Fender,0,1,1,1,5,Traversal,0.25,2,0.5,4,5
 crystal,qm3,4099,Blue,2,1,0,2,0,1,Fender,0,9,4,Fender;Opposing Fender,0,1,1,1,6,Traversal,0,,0,,5
 crystal,qm16,4099,Red,3,1,0,3,0,1,Fender,0,12,0,Fender,0,1,1,1,7,Traversal,0,,0,,5
 crystal,qm25,4099,Blue,1,1,0,4,0,1,Fender,0,9,2,Fender,0,1,1,0,3,High,0,,0,,5
@@ -521,13 +521,13 @@ sarah,qm90,6326,Blue,3,1,0,1,0,1,Fender,0,0,3,Fender;Opposing Fender,0,0,0,0,,No
 Samuel,qm90,4286,Red,2,1,,,,,,4,0,1,Tarmac,0,1,0,0,2,Mid,0,,0.25,2,2
 veronica,qm90,2068,Blue,2,1,0,2,0,1,Tarmac,0,6,1,Elsewhere,0,0,0,0,,No Climb,0,1,0,2,3
 varun,qm90,1727,Blue,1,1,0,0,0,1,,,6,0,Fender;Opposing Fender;Elsewhere,0,1,1,0,6,No Climb,0,2,0,,3
-sarah,qm90.1,7770,Blue,3,1,1,0,0,1,Fender,2,0,2,Fender;Opposing Fender,0,1,1,1,6,Traversal,0,,0,,3
-Samuel,qm90.1,122,Red,2,1,,,,1,,0,7,2,Tarmac;Elsewhere,0,1,0,0,2,Mid,0,,0.5,1,3
-aarav,qm90.2,686,Blue,1,1,2,0,0,1,Fender,6,0,1,Fender,0,1,1,1,4,Traversal,0,1,0.25,3,4
-Adeline,qm90.2,4099,Red,2,1,0,0,1,1,Fender,0,10,4,Fender;Opposing Fender,0,1,0,0,1,Mid,0,,0,,5
-varun,qm90.2,3136,Blue,2,1,,,1,1,Tarmac,0,9,3,,0,1,0,0,3,Mid,0,,0.75,3,4
-paolo,qm90.2,422,Red,3,1,0,2,0,1,Elsewhere,0,9,4,Elsewhere,0,1,1,1,9,Traversal,0,,0,,3
-hannah,qm90.2,8592,Red,1,1,0,1,0,1,Elsewhere,0,3,0,Elsewhere,0,1,0,0,,No Climb,0.5,2,0,,3
+sarah,qm90m1,7770,Blue,3,1,1,0,0,1,Fender,2,0,2,Fender;Opposing Fender,0,1,1,1,6,Traversal,0,,0,,3
+Samuel,qm90m1,122,Red,2,1,,,,1,,0,7,2,Tarmac;Elsewhere,0,1,0,0,2,Mid,0,,0.5,1,3
+aarav,qm90m2,686,Blue,1,1,2,0,0,1,Fender,6,0,1,Fender,0,1,1,1,4,Traversal,0,1,0.25,3,4
+Adeline,qm90m2,4099,Red,2,1,0,0,1,1,Fender,0,10,4,Fender;Opposing Fender,0,1,0,0,1,Mid,0,,0,,5
+varun,qm90m2,3136,Blue,2,1,,,1,1,Tarmac,0,9,3,,0,1,0,0,3,Mid,0,,0.75,3,4
+paolo,qm90m2,422,Red,3,1,0,2,0,1,Elsewhere,0,9,4,Elsewhere,0,1,1,1,9,Traversal,0,,0,,3
+hannah,qm90m2,8592,Red,1,1,0,1,0,1,Elsewhere,0,3,0,Elsewhere,0,1,0,0,,No Climb,0.5,2,0,,3
 adeline,qm91,4638,Red,2,1,0,1,0,1,Elsewhere,0,5,1,Tarmac;Opposing Tarmac,0,1,1,1,4,Traversal,0,,0,,2
 aarav,qm91,623,Blue,1,1,0,1,0,1,Tarmac,0,8,3,Tarmac;Opposing Tarmac,0,1,1,1,4,Traversal,0.25,2,0.25,4,5
 hannah,qm91,5804,Red,1,1,0,2,0,1,Tarmac,0,10,2,Tarmac;Opposing Tarmac,0,1,1,0,4,High,0,,0,,4
@@ -648,10 +648,10 @@ katya,qm110,612,Blue,1,1,0,,0,1,,0,0,0,,0,1,0,0,,No Climb,,,0.25,2,
 sylvia,qm110,2537,Red,2,1,0,0,1,1,Tarmac,0,5,2,Tarmac;Opposing Tarmac;Elsewhere,0,0,0,0,,No Climb,0,,0,,3
 veronica,qm110,401,Red,3,1,0,5,0,1,Tarmac,0,12,2,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0,1,0,2,5
 rachel,qm110,3274,Red,1,1,1,0,0,1,Elsewhere,0,0,0,,0,1,1,1,3,No Climb,1,5,0,,4
-rachel,qm98.5,1908,Red,1,1,0,1,0,1,Fender,2,6,3,Fender;Opposing Fender,0,1,0,0,1,Mid,0,,0,,3
-adeline,qm98.5,4286,Red,2,1,1,0,0,1,Fender,10,0,1,Fender,0,1,0,0,1,Mid,0,,0.25,4,3
-katya,qm98.5,2421,Blue,1,1,0,1,1,1,Elsewhere,0,3,2,Elsewhere,0,1,1,1,6,Traversal,0,,0.25,,
-veronica,qm98.5,6326,Red,3,1,0,1,0,1,Tarmac,0,0,2,,0,0,0,0,,No Climb,0.25,3,0,1,3
+rachel,qm98m5,1908,Red,1,1,0,1,0,1,Fender,2,6,3,Fender;Opposing Fender,0,1,0,0,1,Mid,0,,0,,3
+adeline,qm98m5,4286,Red,2,1,1,0,0,1,Fender,10,0,1,Fender,0,1,0,0,1,Mid,0,,0.25,4,3
+katya,qm98m5,2421,Blue,1,1,0,1,1,1,Elsewhere,0,3,2,Elsewhere,0,1,1,1,6,Traversal,0,,0.25,,
+veronica,qm98m5,6326,Red,3,1,0,1,0,1,Tarmac,0,0,2,,0,0,0,0,,No Climb,0.25,3,0,1,3
 trevor,qm111,4638,Red,2,1,0,0,0,1,,1,3,2,,0,1,1,1,6,High,0,,0,,2
 sanjay,qm111,6194,Red,1,1,0,1,1,1,Fender,0,0,3,Fender;Tarmac,0,1,0,0,2,Mid,1,4,0,,2
 Paul,qm111,1111,Blue,3,1,,2,,1,Tarmac,,15,3,Tarmac,,,,,,No Climb,0.25,4,0.25,5,5
@@ -709,116 +709,116 @@ katya,qm120,122,Red,3,1,0,1,1,1,Elsewhere,0,6,8,Elsewhere,1,0,0,0,,No Climb,0,,0
 paolo,qm120,2186,Blue,2,1,0,1,0,1,Elsewhere,1,1,2,Elsewhere,0,1,0,0,1,Mid,0,,0,,3
 tr,qm120,7429,Red,2,1,,,,1,,0,4,1,Fender;Tarmac,0,1,1,0,2,No Climb,0,,0,,3
 Samuel,qm120,5338,Blue,1,1,1,0,0,1,Fender;Tarmac,5,0,0,Tarmac;Elsewhere,0,1,1,1,9,Traversal,0,,0.25,1,3
-agneya,qf1.1,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,4,Traversal,1,3,0,,4
-julia,qf1.1,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,7,Traversal,1,4,0,,4
-aarav,qf1.1,384,Blue,1,1,0,1,1,1,Elsewhere,0,7,4,Tarmac,0,1,0,0,1,Mid,0,1,0,2,3
-Neel,qf1.1,686,Blue,2,1,0,2,1,1,Tarmac,0,9,3,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.25,4,0.5,3,4
-paolo,qf1.1,686,Blue,2,1,0,0,0,0,,0,0,0,,0,1,1,1,5,High,1,4,0,,3
-katya,qf1.1,2363,Red,1,1,0,4,0,1,Elsewhere,1,6,2,Elsewhere,0,1,0,0,1,Mid,0,,0.75,3,
-veronica,qf1.1,384,Blue,1,1,0,2,1,1,Tarmac;Elsewhere,,9,4,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,2,Mid,0,1,0.25,3,3
-rachel,qf1.1,2363,Red,2,1,0,4,0,1,Fender;Tarmac,1,5,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0.25,3,1,4,4
-suzy,qf1.1,2363,Red,2,1,0,4,0,1,Fender;Tarmac,1,5,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0.25,3,1,4,4
-varun,qf1.1,614,Blue,3,1,0,2,0,1,Tarmac,0,0,0,,0,1,1,0,4,High,1,5,0,,4
-sanjay,qf1.1,614,Blue,3,1,0,1,0,1,Fender,0,0,0,,0,1,1,0,5,High,1,5,0,,3
-sylvia,qf1.1,2363,Red,1,1,0,5,0,1,Tarmac,0,6,2,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.25,3,0.25,4,5
-julia,qf2.1,449,Red,3,1,0,2,0,1,Tarmac,0,10,1,Elsewhere,0,1,1,1,6,Traversal,0,,0.25,4,3
-paolo,qf2.1,623,Blue,2,1,0,2,0,1,Tarmac,1,7,2,Tarmac;Elsewhere,0,1,1,1,6,Traversal,0,,0,,3
-veronica,qf2.1,1629,Blue,1,1,0,2,0,1,Fender,0,9,0,Fender;Opposing Fender;Tarmac,0,1,1,1,9,Traversal,0,1,0,2,3
-hannah,qf2.1,422,Red,1,1,0,2,1,1,Tarmac,0,11,1,Tarmac;Opposing Tarmac,0,1,1,1,3,Traversal,0,,0,,4
-varun,qf2.1,4472,Blue,3,1,0,3,0,1,Tarmac;Elsewhere,0,9,4,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0,,0,,3
-rachel,qf2.1,1111,Red,2,1,0,1,1,1,Tarmac,0,2,0,Tarmac;Opposing Tarmac,0,0,0,0,,No Climb,0.25,3,0,,3
-sanjay,qf2.1,4472,Blue,3,1,0,2,0,1,Elsewhere,0,10,3,Elsewhere,0,1,0,0,2,Mid,0.25,3,0.75,2,4
-sylvia,qf2.1,422,Red,1,1,0,2,1,1,Tarmac,0,8,0,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,6,Traversal,0,,0,,5
-aarav,qf3.1,1610,Blue,1,1,1,1,0,1,Tarmac,1,12.5,1,Fender;Opposing Fender,0,1,0,0,1,Mid,0.25,3,0.25,3,4
-agneya,qf3.1,7429,Red,3,1,0,1,1,1,Tarmac,0,7,0,Elsewhere,0,0,0,0,,No Climb,0,,0.25,1,3
-rachel,qf3.1,1731,Red,2,1,0,1,1,1,Tarmac,0,0,0,,0,1,1,1,5,Traversal,1,4,0,,4
-Neel,qf3.1,122,Blue,2,1,0,2,0,1,Tarmac,0,1,0,Tarmac,0,1,0,0,1,Mid,1,5,0.75,4,5
-sylvia,qf3.1,1885,Red,1,1,0,0,1,0,Tarmac,0,1,4,Tarmac;Opposing Tarmac,0,1,1,1,4,Traversal,0.25,3,0.75,2,3
-varun,qf3.1,5804,Blue,3,1,0,2,0,1,Tarmac,0,5,2,Tarmac;Opposing Tarmac,0,1,1,1,9,Traversal,0.25,3,0.5,3,3
-paolo,qf4.1,4541,Blue,2,1,0,1,1,1,Elsewhere,0,4,,,0,1,1,1,6,Traversal,0,,0,,3
-julia,qf4.1,5724,Red,3,1,0,0,1,1,Elsewhere,0,5.5,3,Elsewhere,1,0,0,0,2,Low,0,,0,,3
-suzy,qf4.1,4099,Red,2,1,0,1,1,1,Fender,0,10,4,Fender;Opposing Fender,0,1,1,0,3,High,0,,0.5,3,4
-hannah,qf4.1,401,Red,1,1,1,2,0,1,Tarmac;Opposing Tarmac;Elsewhere,0,6,7,Tarmac,0,1,1,1,6,Traversal,0,,0,,4
-veronica,qf4.1,5587,Blue,1,1,0,2.5,0,1,Tarmac;Elsewhere,0,6,2,Tarmac;Elsewhere,0,0,0,0,,No Climb,0,1,0,2,3
-sanjay,qf4.1,1086,Blue,3,1,0,1.5,0,1,Tarmac,,11,2,Tarmac,0,0,0,0,,No Climb,0.25,3,0.5,2,2
-agneya,qf1.2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,Traversal,1,5,0,,4
-aarav,qf1.2,384,Blue,1,1,0,0,0,1,,0,10,2,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,0.25,2,0.25,2,4
-julia,qf1.2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,8,Traversal,0.5,4,0,,4
-Hannah ,qf1.2,2363,Red,1,1,0,2,2,1,Tarmac;Elsewhere,0,7,2,Tarmac;Launchpad;Elsewhere,0,1,0,0,1,,0,,0.25,2,4
-sanjay,qf1.2,614,Blue,3,1,0,0,2,1,Tarmac,0,4,1,,0,1,0,0,2,Mid,0.75,5,0,,4
-sylvia,qf1.2,2363,Red,1,1,0,3,1,1,Tarmac,0,6,3,Tarmac,0,1,0,0,1,Mid,0,,0.5,4,5
-Neel,qf1.2,686,Blue,2,1,0,0,0,1,,0,0,0,,0,1,0,0,1,Mid,1,5,0,3,4
-paolo,qf1.2,686,Blue,2,1,0,0,0,1,,0,0,0,,0,1,0,0,1,Mid,1,3,0,,3
-suzy,qf1.2,836,Red,2,1,0,0,2,1,Tarmac,0,3,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,0,3,High,0,,0.75,3,4
-veronica,qf1.2,384,Blue,1,1,0,1,1,1,Tarmac;Elsewhere,0,14,2,Tarmac;Opposing Tarmac;Elsewhere,1,0,0,0,1,Low,0,2,0.5,4,4
-rachel,qf1.2,836,Red,2,1,0,0,2,1,Tarmac,0,3,1,Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,0,3,High,0,,0.75,3,4
-varun,qf1.2,614,Blue,3,1,,1,1,1,,,3,1,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.75,5,0,3,5
-paolo,qf2.2,623,Blue,2,1,0,1,1,1,Tarmac,0,10,2,Tarmac,0,1,1,1,6,Traversal,0,,0.5,3,3
-hannah,qf2.2,422,Red,1,1,0,1,2,1,Tarmac;Elsewhere,0,11,4,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,3,Traversal,0,,0,,4
-sanjay,qf2.2,4472,Blue,3,1,0,3,0,1,Elsewhere,0,4,4,Elsewhere,0,1,0,0,,No Climb,0,,0.75,3,4
-aarav,qf2.2,1629,Blue,1,1,0,2,0,1,Fender,0,6,0,Fender;Opposing Fender,0,1,1,1,5,Traversal,0.25,3,0.25,4,4
-agneya,qf2.2,448,Red,3,1,0,0,1,1,Fender,0,7,0,Fender;Opposing Fender,0,1,0,0,3,Mid,0.5,4,0.25,2,4
-varun,qf2.2,4472,Blue,3,1,0,3,0,1,,0,10,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,,No Climb,0,,0.25,3,4
-Neel,qf2.2,623,Blue,2,1,0,1,1,1,Tarmac,0,8,2,Tarmac,0,1,1,1,6,Traversal,0.25,3,0.25,2,3
-sylvia,qf2.2,422,Red,1,1,0,1,2,1,Tarmac,0,10,5,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,0.25,3,,,5
-rachel,qf2.2,1111,Red,2,1,0,2,0,1,Tarmac,0,10,4,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,1,4,0,,5
-suzy,qf2.2,1111,Red,2,1,0,2,0,1,Tarmac,0,10,4,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,1,4,0,,5
-julia,qf2.2,449,Red,3,1,0,0,1,1,,0,7,,,0,1,0,0,4,,0,,0,,3
-veronica,qf2.2,1629,Blue,1,1,0,2,0,1,Fender,0,4,2,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,1,Traversal,0,1,0.25,2,3
-sanjay,qf3.2,5804,Blue,2,1,0,2,0,1,Tarmac,0,7,0,Tarmac;Opposing Tarmac,0,0,0,0,,No Climb,0.5,4,0.5,3,4
-Neel,qf3.2,122,Blue,2,1,0,2,0,1,Tarmac,0,0,0,,0,1,0,0,,Mid,1,4,0,,5
-hannah,qf3.2,1885,Red,1,1,0,1,0,1,Tarmac,0,5,1,Fender;Opposing Fender,0,1,1,1,3,Traversal,0,,0.75,2,3
-aarav,qf3.2,1610,Blue,1,1,0,1,0,1,,0,11,4,Fender;Opposing Fender,0,1,0,0,2,Mid,0.25,3,0.25,4,3
-Suzy,qf3.2,1731,Red,2,1,0,4,0,1,Fender;Tarmac,0,4,5,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,5,Traversal,0.25,3,0.75,4,4
-julia ,qf3.2,7429,Red,3,1,0,1,0,0,Tarmac,0,0,0,,0,1,0,0,,No Climb,1,4,0,,4
-sanjay,qf4.2,1086,Blue,3,1,0,1,0,1,Tarmac,0,11,3,Elsewhere,0,0,0,0,,Mid,0.25,2,0.25,3,4
-aarav,qf4.2,5587,Blue,1,1,0,0,2,1,Tarmac,0,7,1,Tarmac;Opposing Tarmac,0,1,1,1,5,Traversal,0.5,3,0.5,2,4
-agneya,qf4.2,5724,Red,3,1,0,1,0,1,Elsewhere,,3.5,1,Elsewhere,1,0,0,0,2,Low,0.75,5,0,4,5
-rachel,qf4.2,4099,Red,2,1,0,1,1,1,Fender,0,14,2,Fender,0,1,,,,No Climb,0,,0.25,4,4
-paolo,qf4.2,4541,Blue,2,1,0,2,0,1,Elsewhere,0,3,2,,0,1,1,0,3,No Climb,0,,0,,3
-sylvia,qf4.2,401,Red,1,1,1,1,2,1,Elsewhere,0,5,1,Elsewhere,0,1,0,0,1,Mid,,,0.25,3,4
-julia,qf3.3,7429,Red,3,1,0,0,0,0,Tarmac,0,0,1,,0,0,0,0,,No Climb,0.75,,0,,3
-aarav,qf3.3,1610,Blue,1,1,1,0,0,1,Fender,0,11,4,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.25,2,0.25,2,4
-sanjay,qf3.3,5804,Blue,3,1,0,2,0,1,Tarmac,0,8,1,Elsewhere,0,1,1,0,1,Mid,0.5,4,0.5,4,4
-paolo,qf3.3,122,Blue,2,1,0,2,1,1,Elsewhere,0,0,0,,1,0,0,0,,No Climb,1,4,0,,3
-agneya,qf3.3,7429,Red,3,1,0,0,0,1,,,0,1,,0,0,0,0,,No Climb,0.75,5,0,,4
-Suzy,qf3.3,1731,Red,2,1,0,3,2,1,Tarmac,0,6,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,4,Traversal,0,,0.75,2,3
-rachel,qf3.3,1731,Red,2,1,0,3,2,1,Tarmac,0,6,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,4,Traversal,0,,0.75,2,3
-sylvia,qf3.3,1885,Red,1,1,0,1,1,1,Tarmac,0,4,1,Tarmac,0,1,1,1,5,Traversal,0,,0.25,3,3
-Samuel,qf3.3,1885,Red,1,1,0,1,1,1,Tarmac,0,4,1,Tarmac;Elsewhere,0,1,1,1,3,Traversal,0,,0.75,1,3
-veronica,qf4.3,5587,Blue,1,1,0,3,0,1,Elsewhere,0,6,4,Tarmac;Elsewhere,0,1,0,1,4,Traversal,0,1,0,2,3
-varun,qf4.3,1086,Blue,3,1,,2,,1,,,8,0,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,2,Mid,0,3,0,,3
-julia,qf4.3,5274,Red,3,1,0,1,0,1,Elsewhere,0,9,0,,1,0,0,0,2,Low,0,,0,,3
-rachel,qf4.3,4099,Red,2,1,0,4,1,1,Fender,0,9,3,Fender,0,1,1,0,3,High,0,,0,,4
-suzy,qf4.3,4099,Red,2,1,0,4,1,1,Fender,0,9,3,Fender,0,1,1,0,3,High,0,,0,,4
-paolo,qf4.3,4541,Blue,2,1,0,0,0,1,,0,0,0,,0,1,1,1,7,Traversal,1,3,0,,3
-aarav,qf4.3,5587,Blue,1,1,0,2,0,1,Tarmac,0,6,2,Fender;Opposing Fender,0,1,0,1,5,Traversal,0.25,3,0.25,4,3
-agneya,qf4.3,5724,Red,3,1,0,1,0,1,,,9,1,,1,0,0,0,1,Low,0.75,4,0.25,,4
-sylvia,qf4.3,401,Red,1,1,0,2,1,1,Elsewhere,0,11,5,Elsewhere,0,1,0,0,1,Mid,,,,,4
-aarav,sf1.1,1629,Blue,1,1,0,1,0,1,Fender,0,2,1,Elsewhere,0,1,,,5,Traversal,0,1,0,1,1
-paolo,sf1.1,623,Blue,2,1,0,2,0,1,Tarmac,0,4,4,Tarmac,0,1,0,0,1,Mid,0,,0,,3
-sanjay,sf1.1,4472,Blue,3,1,0,3,0,1,Elsewhere,0,7,1,Elsewhere,1,0,0,0,1,Low,0.25,3,0.5,3,4
-julia,sf1.1,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,Traversal,0.75,5,0,,4
-rachel,sf1.1,836,Red,2,1,0,2,0,1,Tarmac,0,9,3,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,0,3,High,0,,0,,3
-sylvia,sf1.1,2363,Red,1,1,0,4,0,1,Elsewhere,0,11,6,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0,,0,,5
-sanjay,sf2.1,5724,Blue,3,1,0,1,0,1,Elsewhere,0,4,1,Elsewhere,0,1,0,0,2,Mid,0.5,5,0.25,4,4
-varun,sf2.1,5724,Blue,3,1,0,1,0,1,,0,8,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,2,,0.25,5,0,,5
-rachel,sf2.1,122,Red,2,1,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,1,5,0,,5
-suzy,sf2.1,122,Red,2,1,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,1,5,0,,5
-aarav,sf2.1,401,Blue,1,1,0,2,0,1,Fender,0,2,1,Tarmac,0,0,0,0,,No Climb,0.25,,0,1,1
-neel,sf2.1,4099,Blue,2,1,0,4,0,1,Fender,0,10,2,Fender,0,1,1,,2,High,0,3,1,5,5
-agneya,sf2.1,5804,Red,3,1,0,1,1,1,Tarmac,,9,1,Fender;Opposing Fender,0,1,1,1,6,Traversal,0.5,5,0,,5
-julia ,sf2.1,5804,Red,3,1,0,1,1,1,Tarmac,0,9,0,,0,1,1,1,1,Traversal,0,,0,,3
-veronica,sf2.1,401,Blue,1,1,0,1,0,1,Tarmac,0,1,2,Tarmac,0,0,0,0,,No Climb,0,2,0,2,3
-sylvia,sf2.1,1610,Red,1,1,1,0,0,1,Tarmac,0,4,1,Tarmac,0,0,0,0,,No Climb,,,,,
-paolo,sf2.1,4099,Blue,2,1,0,3,1,1,Fender,0,2,3,Fender,0,1,1,1,6,High,0,,0.75,3,4
-Samuel,sf2.1,1610,Red,1,1,0,1,0,1,Tarmac,0,3,1,Tarmac,,,,,,No Climb,0,,0,,4
-sanjay,sf1.2,4472,Blue,3,1,0,1,1,1,Elsewhere,0,7,3,Elsewhere,0,1,0,0,1,Mid,0.25,3,0.5,4,5
-agneya,sf1.2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,Traversal,1,5,0,,5
-paolo,sf1.2,623,Blue,2,1,0,2,0,1,Tarmac,0,6,1,Tarmac;Elsewhere,0,1,1,1,8,Traversal,0,,0,,3
-Neel,sf1.2,623,Blue,2,1,0,2,0,1,Opposing Tarmac,0,8,0,Tarmac,0,1,1,1,5,Traversal,0,3,0.5,4,4
-varun,sf1.2,4472,Blue,3,1,,1,2,1,,,8,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0,,0,,4
-julia,sf1.2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,,0.75,5,0,,4
+agneya,qf1m1,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,4,Traversal,1,3,0,,4
+julia,qf1m1,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,7,Traversal,1,4,0,,4
+aarav,qf1m1,384,Blue,1,1,0,1,1,1,Elsewhere,0,7,4,Tarmac,0,1,0,0,1,Mid,0,1,0,2,3
+Neel,qf1m1,686,Blue,2,1,0,2,1,1,Tarmac,0,9,3,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.25,4,0.5,3,4
+paolo,qf1m1,686,Blue,2,1,0,0,0,0,,0,0,0,,0,1,1,1,5,High,1,4,0,,3
+katya,qf1m1,2363,Red,1,1,0,4,0,1,Elsewhere,1,6,2,Elsewhere,0,1,0,0,1,Mid,0,,0.75,3,
+veronica,qf1m1,384,Blue,1,1,0,2,1,1,Tarmac;Elsewhere,,9,4,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,2,Mid,0,1,0.25,3,3
+rachel,qf1m1,2363,Red,2,1,0,4,0,1,Fender;Tarmac,1,5,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0.25,3,1,4,4
+suzy,qf1m1,2363,Red,2,1,0,4,0,1,Fender;Tarmac,1,5,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0.25,3,1,4,4
+varun,qf1m1,614,Blue,3,1,0,2,0,1,Tarmac,0,0,0,,0,1,1,0,4,High,1,5,0,,4
+sanjay,qf1m1,614,Blue,3,1,0,1,0,1,Fender,0,0,0,,0,1,1,0,5,High,1,5,0,,3
+sylvia,qf1m1,2363,Red,1,1,0,5,0,1,Tarmac,0,6,2,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.25,3,0.25,4,5
+julia,qf2m1,449,Red,3,1,0,2,0,1,Tarmac,0,10,1,Elsewhere,0,1,1,1,6,Traversal,0,,0.25,4,3
+paolo,qf2m1,623,Blue,2,1,0,2,0,1,Tarmac,1,7,2,Tarmac;Elsewhere,0,1,1,1,6,Traversal,0,,0,,3
+veronica,qf2m1,1629,Blue,1,1,0,2,0,1,Fender,0,9,0,Fender;Opposing Fender;Tarmac,0,1,1,1,9,Traversal,0,1,0,2,3
+hannah,qf2m1,422,Red,1,1,0,2,1,1,Tarmac,0,11,1,Tarmac;Opposing Tarmac,0,1,1,1,3,Traversal,0,,0,,4
+varun,qf2m1,4472,Blue,3,1,0,3,0,1,Tarmac;Elsewhere,0,9,4,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0,,0,,3
+rachel,qf2m1,1111,Red,2,1,0,1,1,1,Tarmac,0,2,0,Tarmac;Opposing Tarmac,0,0,0,0,,No Climb,0.25,3,0,,3
+sanjay,qf2m1,4472,Blue,3,1,0,2,0,1,Elsewhere,0,10,3,Elsewhere,0,1,0,0,2,Mid,0.25,3,0.75,2,4
+sylvia,qf2m1,422,Red,1,1,0,2,1,1,Tarmac,0,8,0,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,6,Traversal,0,,0,,5
+aarav,qf3m1,1610,Blue,1,1,1,1,0,1,Tarmac,1,12.5,1,Fender;Opposing Fender,0,1,0,0,1,Mid,0.25,3,0.25,3,4
+agneya,qf3m1,7429,Red,3,1,0,1,1,1,Tarmac,0,7,0,Elsewhere,0,0,0,0,,No Climb,0,,0.25,1,3
+rachel,qf3m1,1731,Red,2,1,0,1,1,1,Tarmac,0,0,0,,0,1,1,1,5,Traversal,1,4,0,,4
+Neel,qf3m1,122,Blue,2,1,0,2,0,1,Tarmac,0,1,0,Tarmac,0,1,0,0,1,Mid,1,5,0.75,4,5
+sylvia,qf3m1,1885,Red,1,1,0,0,1,0,Tarmac,0,1,4,Tarmac;Opposing Tarmac,0,1,1,1,4,Traversal,0.25,3,0.75,2,3
+varun,qf3m1,5804,Blue,3,1,0,2,0,1,Tarmac,0,5,2,Tarmac;Opposing Tarmac,0,1,1,1,9,Traversal,0.25,3,0.5,3,3
+paolo,qf4m1,4541,Blue,2,1,0,1,1,1,Elsewhere,0,4,,,0,1,1,1,6,Traversal,0,,0,,3
+julia,qf4m1,5724,Red,3,1,0,0,1,1,Elsewhere,0,5.5,3,Elsewhere,1,0,0,0,2,Low,0,,0,,3
+suzy,qf4m1,4099,Red,2,1,0,1,1,1,Fender,0,10,4,Fender;Opposing Fender,0,1,1,0,3,High,0,,0.5,3,4
+hannah,qf4m1,401,Red,1,1,1,2,0,1,Tarmac;Opposing Tarmac;Elsewhere,0,6,7,Tarmac,0,1,1,1,6,Traversal,0,,0,,4
+veronica,qf4m1,5587,Blue,1,1,0,2.5,0,1,Tarmac;Elsewhere,0,6,2,Tarmac;Elsewhere,0,0,0,0,,No Climb,0,1,0,2,3
+sanjay,qf4m1,1086,Blue,3,1,0,1.5,0,1,Tarmac,,11,2,Tarmac,0,0,0,0,,No Climb,0.25,3,0.5,2,2
+agneya,qf1m2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,Traversal,1,5,0,,4
+aarav,qf1m2,384,Blue,1,1,0,0,0,1,,0,10,2,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,0.25,2,0.25,2,4
+julia,qf1m2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,8,Traversal,0.5,4,0,,4
+Hannah ,qf1m2,2363,Red,1,1,0,2,2,1,Tarmac;Elsewhere,0,7,2,Tarmac;Launchpad;Elsewhere,0,1,0,0,1,,0,,0.25,2,4
+sanjay,qf1m2,614,Blue,3,1,0,0,2,1,Tarmac,0,4,1,,0,1,0,0,2,Mid,0.75,5,0,,4
+sylvia,qf1m2,2363,Red,1,1,0,3,1,1,Tarmac,0,6,3,Tarmac,0,1,0,0,1,Mid,0,,0.5,4,5
+Neel,qf1m2,686,Blue,2,1,0,0,0,1,,0,0,0,,0,1,0,0,1,Mid,1,5,0,3,4
+paolo,qf1m2,686,Blue,2,1,0,0,0,1,,0,0,0,,0,1,0,0,1,Mid,1,3,0,,3
+suzy,qf1m2,836,Red,2,1,0,0,2,1,Tarmac,0,3,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,0,3,High,0,,0.75,3,4
+veronica,qf1m2,384,Blue,1,1,0,1,1,1,Tarmac;Elsewhere,0,14,2,Tarmac;Opposing Tarmac;Elsewhere,1,0,0,0,1,Low,0,2,0.5,4,4
+rachel,qf1m2,836,Red,2,1,0,0,2,1,Tarmac,0,3,1,Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,0,3,High,0,,0.75,3,4
+varun,qf1m2,614,Blue,3,1,,1,1,1,,,3,1,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.75,5,0,3,5
+paolo,qf2m2,623,Blue,2,1,0,1,1,1,Tarmac,0,10,2,Tarmac,0,1,1,1,6,Traversal,0,,0.5,3,3
+hannah,qf2m2,422,Red,1,1,0,1,2,1,Tarmac;Elsewhere,0,11,4,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,3,Traversal,0,,0,,4
+sanjay,qf2m2,4472,Blue,3,1,0,3,0,1,Elsewhere,0,4,4,Elsewhere,0,1,0,0,,No Climb,0,,0.75,3,4
+aarav,qf2m2,1629,Blue,1,1,0,2,0,1,Fender,0,6,0,Fender;Opposing Fender,0,1,1,1,5,Traversal,0.25,3,0.25,4,4
+agneya,qf2m2,448,Red,3,1,0,0,1,1,Fender,0,7,0,Fender;Opposing Fender,0,1,0,0,3,Mid,0.5,4,0.25,2,4
+varun,qf2m2,4472,Blue,3,1,0,3,0,1,,0,10,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,,No Climb,0,,0.25,3,4
+Neel,qf2m2,623,Blue,2,1,0,1,1,1,Tarmac,0,8,2,Tarmac,0,1,1,1,6,Traversal,0.25,3,0.25,2,3
+sylvia,qf2m2,422,Red,1,1,0,1,2,1,Tarmac,0,10,5,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,0.25,3,,,5
+rachel,qf2m2,1111,Red,2,1,0,2,0,1,Tarmac,0,10,4,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,1,4,0,,5
+suzy,qf2m2,1111,Red,2,1,0,2,0,1,Tarmac,0,10,4,Tarmac;Opposing Tarmac,1,0,0,0,1,Low,1,4,0,,5
+julia,qf2m2,449,Red,3,1,0,0,1,1,,0,7,,,0,1,0,0,4,,0,,0,,3
+veronica,qf2m2,1629,Blue,1,1,0,2,0,1,Fender,0,4,2,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,1,Traversal,0,1,0.25,2,3
+sanjay,qf3m2,5804,Blue,2,1,0,2,0,1,Tarmac,0,7,0,Tarmac;Opposing Tarmac,0,0,0,0,,No Climb,0.5,4,0.5,3,4
+Neel,qf3m2,122,Blue,2,1,0,2,0,1,Tarmac,0,0,0,,0,1,0,0,,Mid,1,4,0,,5
+hannah,qf3m2,1885,Red,1,1,0,1,0,1,Tarmac,0,5,1,Fender;Opposing Fender,0,1,1,1,3,Traversal,0,,0.75,2,3
+aarav,qf3m2,1610,Blue,1,1,0,1,0,1,,0,11,4,Fender;Opposing Fender,0,1,0,0,2,Mid,0.25,3,0.25,4,3
+Suzy,qf3m2,1731,Red,2,1,0,4,0,1,Fender;Tarmac,0,4,5,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,5,Traversal,0.25,3,0.75,4,4
+julia ,qf3m2,7429,Red,3,1,0,1,0,0,Tarmac,0,0,0,,0,1,0,0,,No Climb,1,4,0,,4
+sanjay,qf4m2,1086,Blue,3,1,0,1,0,1,Tarmac,0,11,3,Elsewhere,0,0,0,0,,Mid,0.25,2,0.25,3,4
+aarav,qf4m2,5587,Blue,1,1,0,0,2,1,Tarmac,0,7,1,Tarmac;Opposing Tarmac,0,1,1,1,5,Traversal,0.5,3,0.5,2,4
+agneya,qf4m2,5724,Red,3,1,0,1,0,1,Elsewhere,,3.5,1,Elsewhere,1,0,0,0,2,Low,0.75,5,0,4,5
+rachel,qf4m2,4099,Red,2,1,0,1,1,1,Fender,0,14,2,Fender,0,1,,,,No Climb,0,,0.25,4,4
+paolo,qf4m2,4541,Blue,2,1,0,2,0,1,Elsewhere,0,3,2,,0,1,1,0,3,No Climb,0,,0,,3
+sylvia,qf4m2,401,Red,1,1,1,1,2,1,Elsewhere,0,5,1,Elsewhere,0,1,0,0,1,Mid,,,0.25,3,4
+julia,qf3m3,7429,Red,3,1,0,0,0,0,Tarmac,0,0,1,,0,0,0,0,,No Climb,0.75,,0,,3
+aarav,qf3m3,1610,Blue,1,1,1,0,0,1,Fender,0,11,4,Tarmac;Opposing Tarmac,0,1,0,0,1,Mid,0.25,2,0.25,2,4
+sanjay,qf3m3,5804,Blue,3,1,0,2,0,1,Tarmac,0,8,1,Elsewhere,0,1,1,0,1,Mid,0.5,4,0.5,4,4
+paolo,qf3m3,122,Blue,2,1,0,2,1,1,Elsewhere,0,0,0,,1,0,0,0,,No Climb,1,4,0,,3
+agneya,qf3m3,7429,Red,3,1,0,0,0,1,,,0,1,,0,0,0,0,,No Climb,0.75,5,0,,4
+Suzy,qf3m3,1731,Red,2,1,0,3,2,1,Tarmac,0,6,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,4,Traversal,0,,0.75,2,3
+rachel,qf3m3,1731,Red,2,1,0,3,2,1,Tarmac,0,6,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,4,Traversal,0,,0.75,2,3
+sylvia,qf3m3,1885,Red,1,1,0,1,1,1,Tarmac,0,4,1,Tarmac,0,1,1,1,5,Traversal,0,,0.25,3,3
+Samuel,qf3m3,1885,Red,1,1,0,1,1,1,Tarmac,0,4,1,Tarmac;Elsewhere,0,1,1,1,3,Traversal,0,,0.75,1,3
+veronica,qf4m3,5587,Blue,1,1,0,3,0,1,Elsewhere,0,6,4,Tarmac;Elsewhere,0,1,0,1,4,Traversal,0,1,0,2,3
+varun,qf4m3,1086,Blue,3,1,,2,,1,,,8,0,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,2,Mid,0,3,0,,3
+julia,qf4m3,5274,Red,3,1,0,1,0,1,Elsewhere,0,9,0,,1,0,0,0,2,Low,0,,0,,3
+rachel,qf4m3,4099,Red,2,1,0,4,1,1,Fender,0,9,3,Fender,0,1,1,0,3,High,0,,0,,4
+suzy,qf4m3,4099,Red,2,1,0,4,1,1,Fender,0,9,3,Fender,0,1,1,0,3,High,0,,0,,4
+paolo,qf4m3,4541,Blue,2,1,0,0,0,1,,0,0,0,,0,1,1,1,7,Traversal,1,3,0,,3
+aarav,qf4m3,5587,Blue,1,1,0,2,0,1,Tarmac,0,6,2,Fender;Opposing Fender,0,1,0,1,5,Traversal,0.25,3,0.25,4,3
+agneya,qf4m3,5724,Red,3,1,0,1,0,1,,,9,1,,1,0,0,0,1,Low,0.75,4,0.25,,4
+sylvia,qf4m3,401,Red,1,1,0,2,1,1,Elsewhere,0,11,5,Elsewhere,0,1,0,0,1,Mid,,,,,4
+aarav,sf1m1,1629,Blue,1,1,0,1,0,1,Fender,0,2,1,Elsewhere,0,1,,,5,Traversal,0,1,0,1,1
+paolo,sf1m1,623,Blue,2,1,0,2,0,1,Tarmac,0,4,4,Tarmac,0,1,0,0,1,Mid,0,,0,,3
+sanjay,sf1m1,4472,Blue,3,1,0,3,0,1,Elsewhere,0,7,1,Elsewhere,1,0,0,0,1,Low,0.25,3,0.5,3,4
+julia,sf1m1,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,Traversal,0.75,5,0,,4
+rachel,sf1m1,836,Red,2,1,0,2,0,1,Tarmac,0,9,3,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,1,1,0,3,High,0,,0,,3
+sylvia,sf1m1,2363,Red,1,1,0,4,0,1,Elsewhere,0,11,6,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0,,0,,5
+sanjay,sf2m1,5724,Blue,3,1,0,1,0,1,Elsewhere,0,4,1,Elsewhere,0,1,0,0,2,Mid,0.5,5,0.25,4,4
+varun,sf2m1,5724,Blue,3,1,0,1,0,1,,0,8,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,2,,0.25,5,0,,5
+rachel,sf2m1,122,Red,2,1,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,1,5,0,,5
+suzy,sf2m1,122,Red,2,1,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,1,5,0,,5
+aarav,sf2m1,401,Blue,1,1,0,2,0,1,Fender,0,2,1,Tarmac,0,0,0,0,,No Climb,0.25,,0,1,1
+neel,sf2m1,4099,Blue,2,1,0,4,0,1,Fender,0,10,2,Fender,0,1,1,,2,High,0,3,1,5,5
+agneya,sf2m1,5804,Red,3,1,0,1,1,1,Tarmac,,9,1,Fender;Opposing Fender,0,1,1,1,6,Traversal,0.5,5,0,,5
+julia ,sf2m1,5804,Red,3,1,0,1,1,1,Tarmac,0,9,0,,0,1,1,1,1,Traversal,0,,0,,3
+veronica,sf2m1,401,Blue,1,1,0,1,0,1,Tarmac,0,1,2,Tarmac,0,0,0,0,,No Climb,0,2,0,2,3
+sylvia,sf2m1,1610,Red,1,1,1,0,0,1,Tarmac,0,4,1,Tarmac,0,0,0,0,,No Climb,,,,,
+paolo,sf2m1,4099,Blue,2,1,0,3,1,1,Fender,0,2,3,Fender,0,1,1,1,6,High,0,,0.75,3,4
+Samuel,sf2m1,1610,Red,1,1,0,1,0,1,Tarmac,0,3,1,Tarmac,,,,,,No Climb,0,,0,,4
+sanjay,sf1m2,4472,Blue,3,1,0,1,1,1,Elsewhere,0,7,3,Elsewhere,0,1,0,0,1,Mid,0.25,3,0.5,4,5
+agneya,sf1m2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,Traversal,1,5,0,,5
+paolo,sf1m2,623,Blue,2,1,0,2,0,1,Tarmac,0,6,1,Tarmac;Elsewhere,0,1,1,1,8,Traversal,0,,0,,3
+Neel,sf1m2,623,Blue,2,1,0,2,0,1,Opposing Tarmac,0,8,0,Tarmac,0,1,1,1,5,Traversal,0,3,0.5,4,4
+varun,sf1m2,4472,Blue,3,1,,1,2,1,,,8,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,0,0,1,Mid,0,,0,,4
+julia,sf1m2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,,0.75,5,0,,4
 ,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -857,37 +857,37 @@ julia,sf1.2,620,Red,3,1,0,0,0,1,,0,0,0,,0,1,1,1,6,,0.75,5,0,,4
 ,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,
-suzy,sf1.2,836,Red,2,,0,2,0,1,Tarmac,0,4,4,Fender;Tarmac;Opposing Tarmac,0,1,1,0,,High,0.25,3,0.75,4,3
-rachel,sf1.2,836,Red,2,,0,2,0,1,Tarmac,0,4,4,Fender;Tarmac;Opposing Tarmac,0,1,1,0,,High,0.25,3,0.75,4,3
-sylvia,sf1.2,2363,Red,1,,0,4,0,1,Tarmac,0,14,2,Tarmac;Opposing Tarmac,0,1,0,0,,No Climb,0,,0,,5
-veronica,sf1.2,1629,Blue,1,,0,2,0,1,Tarmac,0,0,0,,0,1,1,1,,Traversal,0.25,4,0.5,4,4
-aarav,sf1.2,1629,Blue,1,,,1,,,,0,0,0,,0,1,1,1,,Traversal,0.25,2,0.25,3,3
-Samuel,Sf1.2,2363,Red,1,,0,4,0,1,,,15,1,,0,1,,,,Mid,0,,0,,5
-sanjay,sf2.2,5724,Blue,3,,0,1,0,1,Elsewhere,0,4,3,Elsewhere,1,0,0,0,,Low,0.25,4,0.5,3,4
-paolo,sf2.2,4099,Blue,2,,0,2,0,1,Fender,0,1,2,Fender,0,1,1,1,,Traversal,0.5,3,0.5,3,4
-Samuel,Sf2.2,1610,Red,1,,1,0,0,1,Tarmac,,5,2,,0,1,0,0,,Mid,0,,0,,4
-suzy,sf2.2,122,Red,2,,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,0,,0,,3
-rachel,sf2.2,122,Red,2,,0,0,2,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,0,,0,,3
-julia,sf2.2,5804,Red,3,,0,2,0,1,,,5,2,Tarmac;Opposing Tarmac,0,1,0,0,,Mid,0.5,,0.25,,4
-agneya,sf2.2,5804,Red,3,,0,2,0,1,,,3,2,,0,1,0,0,,Mid,,5,0,4,5
-aarav,sf2.2,401,Blue,1,,0,1,0,1,Tarmac,0,2,1,Fender,0,0,0,0,,No Climb,0.25,3,0.25,4,3
-veronica,sf2.2,401,Blue,1,,0,1,0,1,Tarmac,2,5,5,Tarmac;Elsewhere,0,1,0,0,,No Climb,0,1,0.25,1,3
-varun,sf2.2,5724,Blue,3,,,1,0,1,,,8,1,Tarmac;Opposing Tarmac;Elsewhere,1,0,0,0,,Low,0.25,4,0,,4
-sylvia,qf2.2,1610,Red,1,,2,0,0,1,Tarmac,1,6,2,Tarmac,0,1,0,0,,Mid,0.25,,0.25,,3
-Neel,sf2.2,4099,Blue,2,,0,3,0,1,Fender,5,10,2,Fender,,1,1,1,,Traversal,0.75,4,0.25,3,5
-Neel,sf1.3,623,Blue,2,,0,2,0,1,Tarmac,0,9,2,Tarmac,0,1,1,1,,Traversal,0.25,3,0.5,4,3
-paolo,sf1.3,623,Blue,2,,0,1,1,1,Tarmac,0,6,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,,Traversal,0,,0,,3
-sanjay,sf1.3,4472,Blue,3,,0,2,1,1,Elsewhere,0,11,3,Elsewhere,0,1,0,0,,Mid,0.25,3,0.5,3,4
-julia ,sf1.3,620,Red,3,,0,0,0,1,,0,0,0,,0,1,1,1,,High,1,4,0,,4
-agneya,sf1.3,620,Red,3,,0,1,1,1,Elsewhere,0,0,0,,0,1,1,1,,High,1,5,,,5
-sylvia,sf1.3,2363,Red,1,,0,3,1,1,Tarmac,0,15,1,Tarmac;Opposing Tarmac,0,1,0,0,,Mid,0.25,4,,,5
-varun,sf1.3,4472,Blue,3,,,2,1,1,Elsewhere,,11,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,0,0,0,,Mid,0,,0,,4
-suzy,sf1.3,836,Red,2,,0,2,0,1,Tarmac,0,3,1,Fender;Tarmac,0,1,1,0,,High,0,,0.5,4,5
-rachel,sf1.2,836,Red,2,,0,2,0,1,Tarmac,0,3,1,Fender;Tarmac,0,1,1,0,,High,0,,0.5,4,5
-aarav,sf1.3,1629,Blue,1,,0,1,0,1,Fender,0,0,0,,0,1,0,0,,Mid,0.5,4,0.5,2,4
-veronica,sf1.3,1629,Blue,1,,0,0,1,1,Fender,0,0,0,,0,1,0,0,,Mid,0.5,3,0.25,2,3
-aarav,sf2.3,401,Blue,1,,0,0,0,1,,0,0,0,,1,0,0,0,,No Climb,0,1,,1,3
-rachel,2.3,122,Red,2,,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,1,5,0,,5
-Suzy,sf2.3,122,Red,2,,0,3,0,1,Tarmac,0,1,0,Opposing Tarmac,0,0,0,0,,No Climb,1,5,0.25,3,5
-veronica,sf2.3,401,Blue,1,,0,1,0,1,Tarmac,0,1,0,Tarmac,0,0,0,0,,No Climb,0.5,3,0.25,2,3
-Neel,Sf2.3,4099,Blue,2,,0,3,0,1,Fender,0,4,2,Fender,0,1,1,1,,Traversal,0.75,4,0.25,3,5
+suzy,sf1m2,836,Red,2,,0,2,0,1,Tarmac,0,4,4,Fender;Tarmac;Opposing Tarmac,0,1,1,0,,High,0.25,3,0.75,4,3
+rachel,sf1m2,836,Red,2,,0,2,0,1,Tarmac,0,4,4,Fender;Tarmac;Opposing Tarmac,0,1,1,0,,High,0.25,3,0.75,4,3
+sylvia,sf1m2,2363,Red,1,,0,4,0,1,Tarmac,0,14,2,Tarmac;Opposing Tarmac,0,1,0,0,,No Climb,0,,0,,5
+veronica,sf1m2,1629,Blue,1,,0,2,0,1,Tarmac,0,0,0,,0,1,1,1,,Traversal,0.25,4,0.5,4,4
+aarav,sf1m2,1629,Blue,1,,,1,,,,0,0,0,,0,1,1,1,,Traversal,0.25,2,0.25,3,3
+Samuel,Sf1m2,2363,Red,1,,0,4,0,1,,,15,1,,0,1,,,,Mid,0,,0,,5
+sanjay,sf2m2,5724,Blue,3,,0,1,0,1,Elsewhere,0,4,3,Elsewhere,1,0,0,0,,Low,0.25,4,0.5,3,4
+paolo,sf2m2,4099,Blue,2,,0,2,0,1,Fender,0,1,2,Fender,0,1,1,1,,Traversal,0.5,3,0.5,3,4
+Samuel,Sf2m2,1610,Red,1,,1,0,0,1,Tarmac,,5,2,,0,1,0,0,,Mid,0,,0,,4
+suzy,sf2m2,122,Red,2,,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,0,,0,,3
+rachel,sf2m2,122,Red,2,,0,0,2,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,0,,0,,3
+julia,sf2m2,5804,Red,3,,0,2,0,1,,,5,2,Tarmac;Opposing Tarmac,0,1,0,0,,Mid,0.5,,0.25,,4
+agneya,sf2m2,5804,Red,3,,0,2,0,1,,,3,2,,0,1,0,0,,Mid,,5,0,4,5
+aarav,sf2m2,401,Blue,1,,0,1,0,1,Tarmac,0,2,1,Fender,0,0,0,0,,No Climb,0.25,3,0.25,4,3
+veronica,sf2m2,401,Blue,1,,0,1,0,1,Tarmac,2,5,5,Tarmac;Elsewhere,0,1,0,0,,No Climb,0,1,0.25,1,3
+varun,sf2m2,5724,Blue,3,,,1,0,1,,,8,1,Tarmac;Opposing Tarmac;Elsewhere,1,0,0,0,,Low,0.25,4,0,,4
+sylvia,qf2m2,1610,Red,1,,2,0,0,1,Tarmac,1,6,2,Tarmac,0,1,0,0,,Mid,0.25,,0.25,,3
+Neel,sf2m2,4099,Blue,2,,0,3,0,1,Fender,5,10,2,Fender,,1,1,1,,Traversal,0.75,4,0.25,3,5
+Neel,sf1m3,623,Blue,2,,0,2,0,1,Tarmac,0,9,2,Tarmac,0,1,1,1,,Traversal,0.25,3,0.5,4,3
+paolo,sf1m3,623,Blue,2,,0,1,1,1,Tarmac,0,6,3,Tarmac;Opposing Tarmac;Elsewhere,0,1,1,1,,Traversal,0,,0,,3
+sanjay,sf1m3,4472,Blue,3,,0,2,1,1,Elsewhere,0,11,3,Elsewhere,0,1,0,0,,Mid,0.25,3,0.5,3,4
+julia ,sf1m3,620,Red,3,,0,0,0,1,,0,0,0,,0,1,1,1,,High,1,4,0,,4
+agneya,sf1m3,620,Red,3,,0,1,1,1,Elsewhere,0,0,0,,0,1,1,1,,High,1,5,,,5
+sylvia,sf1m3,2363,Red,1,,0,3,1,1,Tarmac,0,15,1,Tarmac;Opposing Tarmac,0,1,0,0,,Mid,0.25,4,,,5
+varun,sf1m3,4472,Blue,3,,,2,1,1,Elsewhere,,11,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,0,0,0,0,,Mid,0,,0,,4
+suzy,sf1m3,836,Red,2,,0,2,0,1,Tarmac,0,3,1,Fender;Tarmac,0,1,1,0,,High,0,,0.5,4,5
+rachel,sf1m2,836,Red,2,,0,2,0,1,Tarmac,0,3,1,Fender;Tarmac,0,1,1,0,,High,0,,0.5,4,5
+aarav,sf1m3,1629,Blue,1,,0,1,0,1,Fender,0,0,0,,0,1,0,0,,Mid,0.5,4,0.5,2,4
+veronica,sf1m3,1629,Blue,1,,0,0,1,1,Fender,0,0,0,,0,1,0,0,,Mid,0.5,3,0.25,2,3
+aarav,sf2m3,401,Blue,1,,0,0,0,1,,0,0,0,,1,0,0,0,,No Climb,0,1,,1,3
+rachel,2m3,122,Red,2,,0,2,0,1,Tarmac,0,0,0,,0,0,0,0,,No Climb,1,5,0,,5
+Suzy,sf2m3,122,Red,2,,0,3,0,1,Tarmac,0,1,0,Opposing Tarmac,0,0,0,0,,No Climb,1,5,0.25,3,5
+veronica,sf2m3,401,Blue,1,,0,1,0,1,Tarmac,0,1,0,Tarmac,0,0,0,0,,No Climb,0.5,3,0.25,2,3
+Neel,Sf2m3,4099,Blue,2,,0,3,0,1,Fender,0,4,2,Fender,0,1,1,1,,Traversal,0.75,4,0.25,3,5
