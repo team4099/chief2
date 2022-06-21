@@ -9,8 +9,8 @@ class Logger():
         format_str = '%(asctime)s.%(msecs)d | %(levelname)-8s |  [%(filename)s:%(lineno)d] %(message)s'
         date_format = '%Y-%m-%d %H:%M:%S'
         cformat = '%(log_color)s' + format_str
-        colors = {'DEBUG': 'grey',
-                  'INFO': 'green',
+        colors = {'DEBUG': 'green',
+                  'INFO': 'blue',
                   'WARNING': 'bold_yellow',
                   'ERROR': 'bold_red',
                   'CRITICAL': 'bold_purple'}
