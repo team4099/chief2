@@ -56,14 +56,14 @@ class DataVal:
         self.logger.info("Reading match schedule JSON")
         with open(match_schedule_JSON) as f:
             match_schedule = json.load(f)
-        self.logger.info("Success!JSON match schdeule has been read.")
+        self.logger.info("Success! JSON match schdeule has been read.")
         self.match_schedule = match_schedule
 
 
         for submission in scoutingdict:
             if pd.isna(submission["team_number"]):
                 self.logger.critical(f"NO TEAM NUMBER for match {submission['match_key']}")
-                next
+                next()
             else:
                 self.validate_submission(submission)
 
@@ -73,6 +73,12 @@ class DataVal:
             self, 
             submission: dict
     ):
+
+        """
+
+        :param submission:
+        :return:
+        """
         match_key = str(submission["match_key"]).strip().lower()
         event_and_match_key = f"{self.event_key}_{match_key}"
 
