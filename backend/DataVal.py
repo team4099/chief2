@@ -2,7 +2,7 @@ from Logger import Logger
 import pandas as pd
 import json
 import re
-
+import os
 
 class DataVal:
     def __init__(
@@ -17,8 +17,10 @@ class DataVal:
         self.logger.info("Starting Validation Process")
         if wifi_connection:
             self.logger.info("Wifi Connection Exists. Will cross check against TBA")
+            #os.system('python scripts/getMatchSchedule.py')
         else:
             self.logger.warn("Wifi Connection was not found. Will not check against TBA")
+            #os.system('python scripts/convertCSVToMatchSchedule.py')
         self.match_schedule = None
 
         with open("config/config.json") as config:
@@ -53,7 +55,6 @@ class DataVal:
         scoutingdf = pd.read_csv(filepath)
         self.logger.info("Success! CSV data has been read.")
         scoutingdict = scoutingdf.to_dict(orient='records')
-        print(scoutingdict)
 
         self.logger.info("Reading match schedule JSON")
         with open(match_schedule_JSON) as f:
@@ -65,7 +66,7 @@ class DataVal:
         for submission in scoutingdict:
             if pd.isna(submission["team_number"]):
                 self.logger.critical(f"NO TEAM NUMBER for match {submission['match_key']}")
-                next()
+                continue
             else:
                 self.validate_submission(submission)
 
