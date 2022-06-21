@@ -10,7 +10,7 @@ class Logger():
         date_format = '%Y-%m-%d %H:%M:%S'
         cformat = '%(log_color)s' + format_str
         colors = {'DEBUG': 'green',
-                  'INFO': 'blue',
+                  'INFO': 'white',
                   'WARNING': 'bold_yellow',
                   'ERROR': 'bold_red',
                   'CRITICAL': 'bold_purple'}

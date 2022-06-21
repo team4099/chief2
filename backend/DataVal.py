@@ -169,8 +169,6 @@ class DataVal:
         counter_pct = float(submission["counter_defense_pct"])
         counter_rating = float(submission["counter_defense_rating"])
 
-        print(defense_pct, counter_pct)
-
         #check for 0% defense pct but given rating
         if (pd.isna(defense_pct) or defense_pct == 0) and (pd.notna(defense_rating) and defense_rating != 0):
             self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} rated for defense but NO DEFENSE PCT")
