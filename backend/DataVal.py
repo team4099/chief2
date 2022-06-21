@@ -35,8 +35,8 @@ class DataVal:
         """
         self.check_submission_with_match_schedule(submission)
         self.check_for_higher_than_six_ball_auto(submission)
-        
-        
+        self.check_for_missing_shooting_zones(submission)
+
 
     def validate_data(
             self,
@@ -50,8 +50,8 @@ class DataVal:
         self.logger.info("Reading data from CSV")
         scoutingdf = pd.read_csv(filepath)
         self.logger.info("Success! CSV data has been read.")
-        scoutingdict = scoutingdf.to_dict(orient='records')
-        print(scoutingdict)
+        scouting_data = scoutingdf.to_dict(orient='records')
+
 
         self.logger.info("Reading match schedule JSON")
         with open(match_schedule_JSON) as f:
@@ -59,13 +59,16 @@ class DataVal:
         self.logger.info("Success!JSON match schdeule has been read.")
         self.match_schedule = match_schedule
 
-
-        for submission in scoutingdict:
+        #individual submission checks called from validate_submission method
+        for submission in scouting_data:
             if pd.isna(submission["team_number"]):
                 self.logger.critical(f"NO TEAM NUMBER for match {submission['match_key']}")
                 next
             else:
                 self.validate_submission(submission)
+        
+        #checks on whole data
+        self.check_team_numbers_for_each_match(scouting_data)
 
     # Submission specific validation
 
@@ -73,6 +76,11 @@ class DataVal:
             self, 
             submission: dict
     ):
+        """
+        :param filepath: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
+        :return: None
+        """
+
         match_key = str(submission["match_key"]).strip().lower()
         event_and_match_key = f"{self.event_key}_{match_key}"
 
@@ -99,6 +107,27 @@ class DataVal:
                 if scouted_driver_station != schedule_driver_station:
                     self.logger.error(f"In {submission['match_key']}, frc{team_number} INCONSISTENT DRIVER STATION with schedule")
 
+
+    def check_for_missing_shooting_zones(
+            self,
+            submission: dict
+    ):
+        """
+
+        :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
+        :return: None
+        """
+        #checks auto shooting zones
+        balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
+        if pd.notna(balls_shot_in_auto) and balls_shot_in_auto > 0 and pd.isna(submission["auto_shooting_zones"]):
+            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING AUTO SHOOTING ZONES")
+
+        #checks teleop shooting zones
+        balls_shot_in_teleop = float(submission["teleop_lower_hub"]) + float(submission["teleop_upper_hub"]) + float(submission["teleop_misses"])
+        if pd.notna(balls_shot_in_teleop) and balls_shot_in_teleop > 0 and pd.isna(submission["teleop_shooting_zones"]):
+            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING TELEOP SHOOTING ZONES")
+
+
     def check_for_higher_than_six_ball_auto(
             self,
             submission: dict
@@ -114,14 +143,51 @@ class DataVal:
 
 
     # Data specific validation
-    def check_for_double_scouting(
-            self, scoutingdict: dict
+    def check_team_numbers_for_each_match(
+            self, scouting_data: list
     ):
         """
 
-        :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
+        :param scoutingData: list of all submissions from csv, each submission is a dictionary, Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
         :return: None
         """
+
+        #sort data into groups by match 
+        match_key_groups = {}
+
+        for submission in scouting_data:
+            if pd.notna(submission["match_key"]):
+                match_key = submission["match_key"].strip().lower()
+                if match_key in match_key_groups:
+                    match_key_groups[match_key].append(submission)
+                else:
+                    match_key_groups[match_key] = [submission]
+
+
+        for match_key in match_key_groups:
+
+            #check for double scouting
+            teams_scouted = {}
+            for submission in match_key_groups[match_key]:
+                if pd.notna(submission["team_number"]):
+                    team_number = int(submission["team_number"])
+                    if team_number in teams_scouted:
+                        teams_scouted[f"frc{team_number}"] += 1
+                        self.logger.error(f"In {match_key}, frc{team_number} was SCOUTED TWICE")
+                    else:
+                        teams_scouted[f"frc{team_number}"] = 1
+            
+
+            #check for missing robot
+            if f"{self.event_key}_{match_key}" in self.match_schedule:
+                teams = self.match_schedule[f"{self.event_key}_{match_key}"]["red"] + self.match_schedule[f"{self.event_key}_{match_key}"]["blue"]
+                for team in teams:
+                    if team not in teams_scouted:
+                        self.logger.error(f"In {match_key}, {team} was NOT SCOUTED")
+                    
+
+        
+        
 
         
         
