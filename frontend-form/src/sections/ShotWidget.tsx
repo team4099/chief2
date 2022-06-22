@@ -5,7 +5,7 @@ export const ShotWidget: Component = () => {
   const [shotCounter, setCounter] = createSignal(0)
 
   return(
-    <div class="h-14 border border-[#7b7b7b]">
+    <div class="h-14 border border-[#7b7b7b] bg-gray-200">
       <button
         type="button"
         class="w-1/3 h-full text-3xl border-solid border-[#7b7b7b] border rounded-r-md float-left bg-red-400"
