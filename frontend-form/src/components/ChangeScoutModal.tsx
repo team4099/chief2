@@ -8,8 +8,8 @@ export const ChangeScoutModal: Component = () => {
   const [input, setInput] = createSignal("");
 
   return (
-    <div class="fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex">
-      <div class="relative p-4 bg-white w-full max-w-md my-auto mx-4 flex flex-col rounded-xl">
+    <div class="fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex px-2">
+      <div class="mx-auto relative p-4 bg-white w-full max-w-md my-auto flex flex-col rounded-xl">
         <div class="flex flex-row my-2">
           <p class="font-bold text-xl my-2 flex-1">Set Scout</p>
           <button
@@ -46,7 +46,7 @@ export const ChangeScoutModal: Component = () => {
             class="border-solid border-[#7b7b7b] border rounded-xl p-2 my-2"
           />
           <input
-          id="scout-submit"
+            id="scout-submit"
             type="submit"
             value="Set new Scout ID"
             class="text-white font-bold text-m bg-team-gold hover:bg-team-gold-hover p-4 transition-all rounded-xl my-2"
