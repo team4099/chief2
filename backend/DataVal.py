@@ -84,15 +84,15 @@ class DataVal:
         """
         match_key = submission["match_key"].strip().lower()
         valid_match_key = DataVal.valid_match_key(match_key)
-        #self.check_submission_with_match_schedule(submission)
-        #self.check_for_higher_than_six_ball_auto(submission)
-        #self.check_for_missing_shooting_zones(submission)
-        #self.check_for_invalid_climb_data(submission)
-        #self.check_for_invalid_defense_data(submission)
-        #self.check_for_auto_shots_but_no_tax(submission)
+        self.check_submission_with_match_schedule(submission)
+        self.check_for_higher_than_six_ball_auto(submission)
+        self.check_for_missing_shooting_zones(submission)
+        self.check_for_invalid_climb_data(submission)
+        self.check_for_invalid_defense_data(submission)
+        self.check_for_auto_shots_but_no_tax(submission)
 
-        #if self.wifi_connection and valid_match_key:
-            #self.check_submission_with_tba(submission)
+        if self.wifi_connection and valid_match_key:
+            self.check_submission_with_tba(submission)
             
 
 
@@ -155,12 +155,12 @@ class DataVal:
 
         #checks on whole data
 
-        #self.check_team_numbers_for_each_match(scouting_data)
+        self.check_team_numbers_for_each_match(scouting_data)
 
         self.check_for_outliers(scouting_data)
 
-        #if self.wifi_connection:
-            #self.check_shooting_total_with_tba(scouting_data)
+        if self.wifi_connection:
+            self.check_shooting_total_with_tba(scouting_data)
 
     
 
@@ -455,7 +455,7 @@ class DataVal:
             self,
             scouting_data: list
     ):
-        Z_THRESSHOLD = 3
+        Z_THRESSHOLD = 1.96
 
         for team in self.data_by_teams:
 
@@ -476,15 +476,14 @@ class DataVal:
                 q1 = np.percentile(data, 25, interpolation = 'midpoint')
                 q3 = np.percentile(data, 75, interpolation = 'midpoint')
                 print(q1, q3)
-                
                 #find outliers
                 for submission in self.data_by_teams[team]:
                     value = submission[field]
+                    print(value)
                     if DataVal.z_score_outlier(value, mean, std, Z_THRESSHOLD):
-                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} perform was Z-SCORE OUTLIER")
+                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was Z-SCORE OUTLIER")
                     if DataVal.IQR_outlier(value, q1, q3):
-                        print(value)
-                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} perform was IQR OUTLIER")
+                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was IQR OUTLIER")
 
 
 
@@ -494,7 +493,10 @@ class DataVal:
 
     @classmethod
     def IQR_outlier(cls, value, q1, q3):
-        return value < q1 or value > q3
+        IQR = q3-q1
+        lower_bound = q1 - 1.5*IQR
+        upper_bound = q3 + 1.5*IQR
+        return value < lower_bound or value > upper_bound
 
         
 
