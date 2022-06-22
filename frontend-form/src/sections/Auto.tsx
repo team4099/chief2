@@ -1,5 +1,18 @@
 import { Component } from "solid-js";
 import { ToggleButton, ShotWidget } from "../components";
+import { autoState } from "../util/globalstate";
+const {
+  taxied,
+  setTaxied,
+  autoUpper,
+  setAutoUpper,
+  autoLower,
+  setAutoLower,
+  autoMissed,
+  setAutoMissed,
+  autoHuman,
+  setAutoHuman,
+} = autoState;
 
 export const Auto: Component = () => {
   return (
@@ -8,28 +21,23 @@ export const Auto: Component = () => {
         <p class="font-bold text-center text-3xl">Auto</p>
         <div class="m-4">
           <ToggleButton text="Preloaded Cargo" id="preloadToggle" />
-        </div>ch
-
+        </div>
         <div class="m-4">
           <p class="font-bold">Auto Upper Hub</p>
-          <ShotWidget />
+          <ShotWidget getter={autoUpper} setter={setAutoUpper} />
         </div>
-
         <div class="m-4">
           <p class="font-bold">Auto Lower Hub</p>
-          <ShotWidget />
+          <ShotWidget getter={autoLower} setter={setAutoLower} />
         </div>
-
         <div class="m-4">
           <p class="font-bold">Auto Missed</p>
-          <ShotWidget />
+          <ShotWidget getter={autoMissed} setter={setAutoMissed} />
         </div>
-
         <div class="m-4">
           <p class="font-bold">Auto Scored HP</p>
-          <ShotWidget />
+          <ShotWidget getter={autoHuman} setter={setAutoHuman} />
         </div>
-
         <div class="m-4">
           <ToggleButton text="Taxied?" id="taxiToggle" />
         </div>
