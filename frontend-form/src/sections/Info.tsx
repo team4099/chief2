@@ -16,7 +16,7 @@ export const Info: Component = () => {
   const [matchType, setMatchType] = createSignal("");
   return (
     <div class="items-middle justify-center align-center">
-      <div class="justify-center align-middle items-center shadow-2xl p-8  rounded-xl">
+      <div class="justify-center align-middle items-center shadow-2xl p-8 m-2 rounded-xl">
         <p class="font text-center text-3xl font-bold ">Info</p>
         {/* <div class="m-4">
           <p class="font-bold">Scout ID</p>
