@@ -2,7 +2,7 @@ from Logger import Logger
 import pandas as pd
 import json
 import re
-import os
+import requests
 
 class DataVal:
     def __init__(
@@ -21,27 +21,58 @@ class DataVal:
         else:
             self.logger.warn("Wifi Connection was not found. Will not check against TBA")
             #os.system('python scripts/convertCSVToMatchSchedule.py')
+        
+        self.scouting_data = None
+        self.data_by_match_key = {}
+
         self.match_schedule = None
 
         with open("config/config.json") as config:
             config = json.load(config)
         self.event_key = config["YEAR"] + config["EVENT_KEY"]
+        self.tba_key = config["TBA_KEY"]
+
+        last_modified_since = "Wed, 1 Jan 1000 00:00:01 GMT"
+        self.request_data = {
+            "X-TBA-Auth-Key" : self.tba_key,
+            "If-Modified-Since": last_modified_since
+        }
+        
+        if self.wifi_connection:
+            self.logger.info("Requesting TBA data")
+            post_request_url = f"https://www.thebluealliance.com/api/v3/event/{self.event_key}/matches"
+            match_info = requests.get(
+                post_request_url, params = self.request_data
+            )
+            self.logger.info("TBA data successfully retrieved")
+
+            event_matches  = match_info.json()
+            match_dictionary = {}
+            for match in event_matches:
+                match_dictionary[match["key"]] = match
+            self.tba_match_data = match_dictionary
 
     def validate_submission(
             self,
             submission: dict,
     ):
         """
-        <write purpose here>
+        runs all individual checks on a given match submission
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
+        match_key = submission["match_key"].strip().lower()
+        valid_match_key = self.valid_match_key(match_key)
         #self.check_submission_with_match_schedule(submission)
         #self.check_for_higher_than_six_ball_auto(submission)
         #self.check_for_missing_shooting_zones(submission)
         #self.check_for_invalid_climb_data(submission)
         #self.check_for_invalid_defense_data(submission)
-        self.check_for_auto_shots_but_no_tax(submission)
+        #self.check_for_auto_shots_but_no_tax(submission)
+
+        if self.wifi_connection and valid_match_key:
+            self.check_submission_with_tba(submission)
+            
 
 
     def validate_data(
@@ -50,6 +81,9 @@ class DataVal:
             match_schedule_JSON: str
     ):
         """
+        Loads scouting data and sorts it into the match key dictionary and 
+        Loads match schedule
+        Then runs all individual checks on every match submission and executes multi-submission checks i.e. ensuring all teams were scouted in a given match
         :param filepath: Filepath to csv that contains all the data. Ex: "data/dcmp_data.csv"
         :return: None
         """
@@ -58,7 +92,22 @@ class DataVal:
         self.logger.info("Success! CSV data has been read.")
         scouting_data = scoutingdf.to_dict(orient='records')
 
+        #sort data into groups by match_key 
+        # format {"match_key": {"red": ["list of submissions for given key on red alliance"], "blue": ["list of submissions for given key on blue alliance"]}}
+        for submission in scouting_data:
+            alliance = submission["alliance"].lower()
+            if pd.notna(submission["match_key"]):
+                match_key = submission["match_key"].strip().lower()
+                if match_key in self.data_by_match_key:
+                    if alliance in self.data_by_match_key[match_key]:
+                        self.data_by_match_key[match_key][alliance].append(submission)
+                    else:
+                        self.data_by_match_key[match_key][alliance] = [submission]
+                else:
+                    self.data_by_match_key[match_key] = {}
+                    self.data_by_match_key[match_key][alliance] = [submission]
 
+        #load Match Schedule
         self.logger.info("Reading match schedule JSON")
         with open(match_schedule_JSON) as f:
             match_schedule = json.load(f)
@@ -76,28 +125,49 @@ class DataVal:
         #checks on whole data
         self.check_team_numbers_for_each_match(scouting_data)
 
+        if self.wifi_connection:
+            self.check_shooting_total_with_tba(scouting_data)
+
     # Submission specific validation
+
+    def valid_match_key(
+        self,
+        key
+    ):
+        """
+        checks match key for correct format
+        :param key: match key as a a string
+        :return: Bolean false if match key error, otherwise true
+        """
+
+        #check match key format regex
+        match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
+        if not re.fullmatch(match_key_format, key):
+            return False
+        return True
+        
 
     def check_submission_with_match_schedule(
             self, 
             submission: dict
     ):
         """
+        includes all checks relating match key and team number for single submission, checks key format and ensures it exist in schedule, checks team number against schedule and checks for correct driverstation
         :param filepath: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
         :return: None
         """
-
+        
         match_key = str(submission["match_key"]).strip().lower()
         event_and_match_key = f"{self.event_key}_{match_key}"
 
         #check match key format regex
-        match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
-        if not re.fullmatch(match_key_format, match_key):
+        if not self.valid_match_key(match_key ):
             self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INVALID MATCH KEY ")
-        
+
         #check if match key exists in schedule
         if event_and_match_key not in self.match_schedule:
             self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MATCH KEY NOT FOUND in schedule ")
+            valid_match_key = False
 
         else:
             #check if robot was in match
@@ -112,13 +182,14 @@ class DataVal:
                 schedule_driver_station = self.match_schedule[event_and_match_key][alliance.lower()].index(f"frc{team_number}") +1
                 if scouted_driver_station != schedule_driver_station:
                     self.logger.error(f"In {submission['match_key']}, frc{team_number} INCONSISTENT DRIVER STATION with schedule")
-
+            
 
     def check_for_missing_shooting_zones(
             self,
             submission: dict
     ):
         """
+        checks if robot shot balls in auto or teleop but scouter didn't select any shooting zones
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -137,7 +208,8 @@ class DataVal:
             submission
     ):
         """
-
+        checks if the final and attempted climb are inconsistent, i.e. final climb tranversal but robot didn't attempt traversal
+        also checks robot climbed but no climb time was given
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -159,6 +231,9 @@ class DataVal:
             submission: dict
     ):
         """
+        checks if scouter gave defense or counter defense rating but stated that the robot didn't play defense/counter defense
+        checks if scouter stated that robot played defense or counter defense but didn't give a corresponding rating
+        checks if total defense played + counter defense played > 100% hence impossible
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -194,6 +269,7 @@ class DataVal:
             submission: dict
     ):
         """
+        checks if total balls shot in auto was greater than 6, outputs warning
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -201,11 +277,13 @@ class DataVal:
         if balls_shot_in_auto > 6:
             self.logger.warn(f"In {submission['match_key']}, frc{int(submission['team_number'])} shot {int(balls_shot_in_auto)} balls in Autonomous.")
 
+
     def check_for_auto_shots_but_no_tax(
             self,
             submission: dict
     ):
         """
+        checks if robot shot at least 2 balls in auto but didn't taxi
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
@@ -215,39 +293,68 @@ class DataVal:
             self.logger.warn(f"In {submission['match_key']}, frc{int(submission['team_number'])} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
 
 
+    def check_submission_with_tba(
+        self,
+        submission:dict
+    ):
+
+        """
+        validates taxi state and final climb with tba data
+        :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
+        :return: None
+        """
+        
+        submission_key = submission["match_key"].strip().lower()
+        match_key = f"{self.event_key}_{submission_key}"
+        score_info = self.tba_match_data[match_key]["score_breakdown"]
+
+
+        alliance = submission["alliance"].lower()
+        driver_station = int(submission["driver_station"])
+
+        tba_taxi = score_info[alliance][f"taxiRobot{driver_station}"]
+        tba_climb = score_info[alliance][f"endgameRobot{driver_station}"]
+
+        submission_taxi = submission["taxied"]
+        submission_climb = submission["final_climb_type"]
+        if submission_climb == "No Climb":
+            submission_climb = "None"
+
+        #check for inconsistent taxi
+        if (tba_taxi == "No" and (pd.notna(submission_taxi) and submission_taxi)) or (tba_taxi == "Yes" and (pd.isna(submission_taxi) or not submission_taxi)):
+            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INCORRECT TAXI according to TBA")
+
+        #check for inconsistent climb type
+        if tba_climb != submission_climb:
+            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INCORRECT ClIMB TYPE according to TBA")
+        
+        
+
+
+
     # Data specific validation
     def check_team_numbers_for_each_match(
-            self, scouting_data: list
+            self, 
+            scouting_data: list
     ):
         """
+        flags missing any unscouted teams for any match and teams that where double scouted
         :param scoutingData: list of all submissions from csv, each submission is a dictionary, Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
         :return: None
         """
 
-        #sort data into groups by match 
-        match_key_groups = {}
-
-        for submission in scouting_data:
-            if pd.notna(submission["match_key"]):
-                match_key = submission["match_key"].strip().lower()
-                if match_key in match_key_groups:
-                    match_key_groups[match_key].append(submission)
-                else:
-                    match_key_groups[match_key] = [submission]
-
-
-        for match_key in match_key_groups:
-
+        for match_key in self.data_by_match_key:
             #check for double scouting
             teams_scouted = {}
-            for submission in match_key_groups[match_key]:
-                if pd.notna(submission["team_number"]):
-                    team_number = int(submission["team_number"])
-                    if team_number in teams_scouted:
-                        teams_scouted[f"frc{team_number}"] += 1
-                        self.logger.error(f"In {match_key}, frc{team_number} was SCOUTED TWICE")
-                    else:
-                        teams_scouted[f"frc{team_number}"] = 1
+            for alliance in self.data_by_match_key[match_key]:
+                for submission in self.data_by_match_key[match_key][alliance]:
+                    if pd.notna(submission["team_number"]):
+                        team_number = int(submission["team_number"])
+                        if team_number in teams_scouted:
+                            teams_scouted[f"frc{team_number}"] += 1
+                            self.logger.error(f"In {match_key}, frc{team_number} was SCOUTED TWICE")
+                        else:
+                            teams_scouted[f"frc{team_number}"] = 1
             
 
             #check for missing robot
@@ -256,7 +363,77 @@ class DataVal:
                 for team in teams:
                     if team not in teams_scouted:
                         self.logger.error(f"In {match_key}, {team} was NOT SCOUTED")
+    
+    def check_shooting_total_with_tba(
+            self,
+            scouting_data: list
+    ):
+        """
+        compares shooting total in tba data with total from scouted data
+        :param scoutingData: list of all submissions from csv, each submission is a dictionary, Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27"
+        :return: None
+        """
+        for match_key in self.data_by_match_key:
+            if self.valid_match_key(match_key):
+                for alliance in self.data_by_match_key[match_key]:
+                    submissions = self.data_by_match_key[match_key][alliance]
+                    score_info = self.tba_match_data[f"{self.event_key}_{match_key}"]["score_breakdown"][alliance]
+
+                    #check total auto lower hub
+                    auto_lower_scouting_total = 0
+                    for submission in submissions:
+                        auto_lower_scouting_total += submission["auto_lower_hub"]
+                    if pd.isna(auto_lower_scouting_total):
+                        auto_lower_scouting_total = 0
+                    auto_lower_scouting_total = int(auto_lower_scouting_total)
+
+                    auto_lower_tba_total = score_info["autoCargoLowerNear"] + score_info["autoCargoLowerFar"] + score_info["autoCargoLowerRed"] + score_info["autoCargoLowerBlue"]
+
+                    if auto_lower_scouting_total != auto_lower_tba_total:
+                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO LOWER TOTAL according to TBA, Scouts:{auto_lower_scouting_total}, TBA:{auto_lower_tba_total}")
+
+
+                    #check total auto upper hub
+                    auto_upper_scouting_total = 0
+                    for submission in submissions:
+                        auto_upper_scouting_total += submission["auto_upper_hub"]
+                    if pd.isna(auto_upper_scouting_total):
+                        auto_upper_scouting_total = 0
+                    auto_upper_scouting_total = int(auto_upper_scouting_total)
                     
+                    auto_upper_tba_total = score_info["autoCargoUpperNear"] + score_info["autoCargoUpperFar"] + score_info["autoCargoUpperRed"] + score_info["autoCargoUpperBlue"]
+
+                    if auto_upper_scouting_total != auto_upper_tba_total:
+                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO UPPER TOTAL according to TBA, Scouts:{auto_upper_scouting_total}, TBA:{auto_upper_tba_total}")
+
+                    #check total teleop lower hub
+                    teleop_lower_scouting_total = 0
+                    for submission in submissions:
+                        teleop_lower_scouting_total += submission["teleop_lower_hub"]
+                    if pd.isna(teleop_lower_scouting_total):
+                        teleop_lower_scouting_total = 0
+                    teleop_lower_scouting_total = int(teleop_lower_scouting_total)
+
+                    teleop_lower_tba_total = score_info["teleopCargoLowerNear"] + score_info["teleopCargoLowerFar"] + score_info["teleopCargoLowerRed"] + score_info["teleopCargoLowerBlue"]
+
+                    if teleop_lower_scouting_total != teleop_lower_tba_total:
+                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP LOWER TOTAL according to TBA, Scouts:{teleop_lower_scouting_total}, TBA:{teleop_lower_tba_total}")
+
+
+                    #check total telleop lower hub
+                    teleop_upper_scouting_total = 0
+                    for submission in submissions:
+                        teleop_upper_scouting_total += submission["teleop_upper_hub"]
+                    if pd.isna(teleop_upper_scouting_total):
+                        teleop_upper_scouting_total = 0
+                    teleop_upper_scouting_total = int(teleop_upper_scouting_total)
+                    
+                    teleop_upper_tba_total = score_info["teleopCargoUpperNear"] + score_info["teleopCargoUpperFar"] + score_info["teleopCargoUpperRed"] + score_info["teleopCargoUpperBlue"]
+
+                    if teleop_upper_scouting_total != teleop_upper_tba_total:
+                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP UPPER TOTAL according to TBA, Scouts:{teleop_upper_scouting_total}, TBA:{teleop_upper_tba_total}")
+
+
 
         
 
@@ -264,6 +441,6 @@ class DataVal:
         
     
 
-DataVal().validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
+DataVal(wifi_connection=True).validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
 
 

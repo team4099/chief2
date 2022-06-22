@@ -4,6 +4,7 @@ from backend.Logger import Logger
 
 logger = Logger()
 
+#retrieves event key from config file
 logger.info("Getting configuration variables from config.json")
 try:
     with open("config/config.json") as config:
@@ -19,6 +20,7 @@ except NameError:
     raise NameError
 logger.info("Successfully retreived configuration variablees.")
 
+#setting up tba post request
 last_modified_since = "Wed, 1 Jan 1000 00:00:01 GMT"
 
 post_request_url = f"https://www.thebluealliance.com/api/v3/event/{event_key}/matches/simple"
@@ -34,6 +36,7 @@ match_schedule = requests.get(
 
 all_matches = match_schedule.json()
 
+#convert json data to dictionary with subdictionary for each alliance containing corresponding team numbers
 match_schedule_dict = {}
 for match in all_matches:
     match_schedule_dict[match['key']] = {
@@ -42,6 +45,7 @@ for match in all_matches:
 
     }
 
+#write match schedule to json file
 logger.info("Writing to match_schedule json.")
 with open('data/match_schedule.json', 'w', encoding='utf-8') as f:
     json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)

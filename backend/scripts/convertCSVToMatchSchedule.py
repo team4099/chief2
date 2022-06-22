@@ -4,6 +4,7 @@ from backend.Logger import Logger
 
 logger = Logger()
 
+#opens config file and gets event key
 logger.info("Getting configuration variables from config.json")
 try:
     with open("../config/config.json") as config:
@@ -33,6 +34,8 @@ with open("../data/match_schedule_sheet.csv") as file:
 
     logger.info("Found match_schedule sheet. Converting to JSON object now")
 
+    #generates match schedule dictionary
+    #match keys are the dict key and values are subdict with alliance as keys and list of teams as values
     for match in match_schedule:
         match_schedule_dict[f"{event_key}_{match[0]}"] = {
             "red" : [
@@ -47,6 +50,8 @@ with open("../data/match_schedule_sheet.csv") as file:
             ],
         }
 
+
+#converts to json and stores in data folder
 logger.info("Posting data to match_schedule.json located in the data folder.")
 with open('../data/match_schedule.json', 'w', encoding='utf-8') as f:
     json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)
