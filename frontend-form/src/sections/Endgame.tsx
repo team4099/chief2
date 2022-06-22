@@ -38,10 +38,10 @@ export const Endgame: Component = () => {
 
         <div style="text-align:center">
           <p style="line-height:2;">&nbsp</p>
-          <p style="font-size:20px;display: inline;">Final Climb Time:&nbsp</p>
+          <p style="font-size:20px;display: inline;">Final Climb Time (In seconds):&nbsp</p>
 
           <input
-            type="text"
+            type="number"
             id="final-time"
             style="display: inline;border: 2px solid black;border-radius: 5px;"
           />
@@ -50,16 +50,24 @@ export const Endgame: Component = () => {
         <div style="text-align:center">
           <p style="font-size:20px;display: inline;">Final Climb Type:&nbsp</p>
 
-          <select
-            id="finalclimb"
-            style="display: inline;border: 2px solid black;border-radius: 5px;"
-          >
-            <option value="low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-            <option value="Traversal">Traversal</option>
-
-          </select>
+          <fieldset class="flex flex-row">
+            <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+              <input type="radio" id="low" name="climb" />
+              <label for="station-1">Low</label>
+            </label>
+            <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+              <input type="radio" id="medium" name="climb" />
+              <label for="station-2">Medium</label>
+            </label>
+            <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+              <input type="radio" id="high" name="climb" />
+              <label for="station-3">High</label>
+            </label>
+            <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+              <input type="radio" id="traversal" name="climb" />
+              <label for="station-3">Traversal</label>
+            </label>
+          </fieldset>
         </div>
 
         
