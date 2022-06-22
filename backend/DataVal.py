@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import re
 import requests
+import numpy as np
 
 class DataVal:
     def __init__(
@@ -24,6 +25,7 @@ class DataVal:
         
         self.scouting_data = None
         self.data_by_match_key = {}
+        self.data_by_teams = {}
 
         self.match_schedule = None
 
@@ -52,6 +54,25 @@ class DataVal:
                 match_dictionary[match["key"]] = match
             self.tba_match_data = match_dictionary
 
+
+    @classmethod
+    def valid_match_key(
+        cls,
+        key
+    ):
+        """
+        checks match key for correct format
+        :param key: match key as a a string
+        :return: Bolean false if match key error, otherwise true
+        """
+
+        #check match key format regex
+        match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
+        if not re.fullmatch(match_key_format, key):
+            return False
+        return True
+
+
     def validate_submission(
             self,
             submission: dict,
@@ -62,7 +83,7 @@ class DataVal:
         :return: None
         """
         match_key = submission["match_key"].strip().lower()
-        valid_match_key = self.valid_match_key(match_key)
+        valid_match_key = DataVal.valid_match_key(match_key)
         #self.check_submission_with_match_schedule(submission)
         #self.check_for_higher_than_six_ball_auto(submission)
         #self.check_for_missing_shooting_zones(submission)
@@ -70,8 +91,8 @@ class DataVal:
         #self.check_for_invalid_defense_data(submission)
         #self.check_for_auto_shots_but_no_tax(submission)
 
-        if self.wifi_connection and valid_match_key:
-            self.check_submission_with_tba(submission)
+        #if self.wifi_connection and valid_match_key:
+            #self.check_submission_with_tba(submission)
             
 
 
@@ -92,7 +113,7 @@ class DataVal:
         self.logger.info("Success! CSV data has been read.")
         scouting_data = scoutingdf.to_dict(orient='records')
 
-        #sort data into groups by match_key 
+        #sort data into groups by match_key, updating self.data_by_match_key
         # format {"match_key": {"red": ["list of submissions for given key on red alliance"], "blue": ["list of submissions for given key on blue alliance"]}}
         for submission in scouting_data:
             alliance = submission["alliance"].lower()
@@ -106,6 +127,15 @@ class DataVal:
                 else:
                     self.data_by_match_key[match_key] = {}
                     self.data_by_match_key[match_key][alliance] = [submission]
+
+        #sort data by team
+        # format {"team":[list of all submissions for given team]}
+        for submission in scouting_data:
+            team = submission["team_number"]
+            if team in self.data_by_teams:
+                self.data_by_teams[team].append(submission)
+            else:
+                self.data_by_teams[team] = [submission]
 
         #load Match Schedule
         self.logger.info("Reading match schedule JSON")
@@ -122,31 +152,19 @@ class DataVal:
             else:
                 self.validate_submission(submission)
         
+
         #checks on whole data
-        self.check_team_numbers_for_each_match(scouting_data)
 
-        if self.wifi_connection:
-            self.check_shooting_total_with_tba(scouting_data)
+        #self.check_team_numbers_for_each_match(scouting_data)
 
-    # Submission specific validation
+        self.check_for_outliers(scouting_data)
 
-    def valid_match_key(
-        self,
-        key
-    ):
-        """
-        checks match key for correct format
-        :param key: match key as a a string
-        :return: Bolean false if match key error, otherwise true
-        """
+        #if self.wifi_connection:
+            #self.check_shooting_total_with_tba(scouting_data)
 
-        #check match key format regex
-        match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
-        if not re.fullmatch(match_key_format, key):
-            return False
-        return True
-        
+    
 
+    # Submission specific validation  
     def check_submission_with_match_schedule(
             self, 
             submission: dict
@@ -161,13 +179,12 @@ class DataVal:
         event_and_match_key = f"{self.event_key}_{match_key}"
 
         #check match key format regex
-        if not self.valid_match_key(match_key ):
+        if not DataVal.valid_match_key(match_key ):
             self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INVALID MATCH KEY ")
 
         #check if match key exists in schedule
         if event_and_match_key not in self.match_schedule:
             self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MATCH KEY NOT FOUND in schedule ")
-            valid_match_key = False
 
         else:
             #check if robot was in match
@@ -374,7 +391,7 @@ class DataVal:
         :return: None
         """
         for match_key in self.data_by_match_key:
-            if self.valid_match_key(match_key):
+            if DataVal.valid_match_key(match_key):
                 for alliance in self.data_by_match_key[match_key]:
                     submissions = self.data_by_match_key[match_key][alliance]
                     score_info = self.tba_match_data[f"{self.event_key}_{match_key}"]["score_breakdown"][alliance]
@@ -434,6 +451,50 @@ class DataVal:
                         self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP UPPER TOTAL according to TBA, Scouts:{teleop_upper_scouting_total}, TBA:{teleop_upper_tba_total}")
 
 
+    def check_for_outliers(
+            self,
+            scouting_data: list
+    ):
+        Z_THRESSHOLD = 3
+
+        for team in self.data_by_teams:
+
+            data_fields= {"auto_lower_hub": [], 
+                          "auto_upper_hub": [], 
+                          "teleop_lower_hub": [], 
+                          "teleop_upper_hub": []}
+
+            for submission in self.data_by_teams[team]:
+                for field in data_fields:
+                    data_fields[field].append(submission[field])
+
+            for field in data_fields:
+                data =  data_fields[field]
+
+                mean = np.mean(data)
+                std = np.std(data)
+                q1 = np.percentile(data, 25, interpolation = 'midpoint')
+                q3 = np.percentile(data, 75, interpolation = 'midpoint')
+                print(q1, q3)
+                
+                #find outliers
+                for submission in self.data_by_teams[team]:
+                    value = submission[field]
+                    if DataVal.z_score_outlier(value, mean, std, Z_THRESSHOLD):
+                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} perform was Z-SCORE OUTLIER")
+                    if DataVal.IQR_outlier(value, q1, q3):
+                        print(value)
+                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} perform was IQR OUTLIER")
+
+
+
+    @classmethod
+    def z_score_outlier(cls, value, mean, std, threshold):
+        return abs(value - mean)/std > threshold
+
+    @classmethod
+    def IQR_outlier(cls, value, q1, q3):
+        return value < q1 or value > q3
 
         
 
