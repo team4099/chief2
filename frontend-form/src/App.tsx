@@ -1,6 +1,6 @@
-import type { Component } from "solid-js";
-import { NavBar } from "./components";
+import { Component, createContext } from "solid-js";
 import { ChangeScoutModal } from "./components/ChangeScoutModal";
+import { NavBar } from "./components/NavBar";
 import { Info } from "./sections/Info";
 import { modalState, scoutIDState } from "./util/globalstate";
 const { modalVisible } = modalState;
