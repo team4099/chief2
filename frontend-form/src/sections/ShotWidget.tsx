@@ -5,10 +5,10 @@ export const ShotWidget: Component = () => {
   const [shotCounter, setCounter] = createSignal(0)
 
   return(
-    <div class="h-14 border border-[#7b7b7b] bg-gray-200">
+    <div class="h-14 border-[#7b7b7b] bg-gray-200">
       <button
         type="button"
-        class="w-1/3 h-full text-3xl border-solid border-[#7b7b7b] border rounded-r-md float-left bg-red-400"
+        class="w-1/3 h-full text-3xl border-solid border-[#7b7b7b] rounded-r-md float-left bg-red-400"
         onClick = {() => {
           if (shotCounter() > 0){
             setCounter(shotCounter()-1);
@@ -22,7 +22,7 @@ export const ShotWidget: Component = () => {
       </div>
       <button
         type="button"
-        class="text-3xl w-1/3 h-full border-solid border-[#7b7b7b] border rounded-l-md float-right bg-green-400"
+        class="text-3xl w-1/3 h-full border-solid border-[#7b7b7b] rounded-l-md float-right bg-green-400"
         onClick = {() => {
           setCounter(shotCounter()+1);
         }}
