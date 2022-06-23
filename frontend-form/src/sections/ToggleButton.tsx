@@ -21,7 +21,7 @@ export const ToggleButton: Component = (props) => {
     <button
       type="button"
       {...others}
-      class="w-full mt-2 h-12 border-solid border-[#7b7b7b] border rounded-l"
+      class="w-full mt-2 h-12 border-solid border-[#7b7b7b] border rounded"
       style={{
         "background-color": toggleColor()
       }}
