@@ -47,25 +47,27 @@ export const Endgame: Component = () => {
           />
         </div>
 
+        <p style="color:white">agneya was here</p>
+
         <div style="text-align:center">
           <p style="font-size:20px;display: inline;">Final Climb Type:&nbsp</p>
 
           <fieldset class="flex flex-row">
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="low" name="climb" />
-              <label for="station-1">Low</label>
+              <input style="text-align:center" type="radio" id="low" name="climb" />
+              <label for="low">Low</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="medium" name="climb" />
-              <label for="station-2">Medium</label>
+              <input style="text-align:center" type="radio" id="medium" name="climb" />
+              <label for="medium">Medium</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="high" name="climb" />
-              <label for="station-3">High</label>
+              <input style="text-align:center" type="radio" id="high" name="climb" />
+              <label for="high">High</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="traversal" name="climb" />
-              <label for="station-3">Traversal</label>
+              <input style="text-align:center" type="radio" id="traversal" name="climb" />
+              <label for="traversal">Traversal</label>
             </label>
           </fieldset>
         </div>
