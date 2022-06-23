@@ -57,5 +57,5 @@ class DataReader:
 
 
 cam = int(input("Cam #: "))
-DataReader(cam).read_qrcode()
-# print(DataReader(cam).read_qrcode())
+# DataReader(cam).read_qrcode()
+print(DataReader(cam).read_qrcode())
