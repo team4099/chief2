@@ -9,7 +9,7 @@ export const ZoneWidget: Component = () => {
     { text: "Fender", id: "FenderToggle"},
     { text: "Opp. Fender", id: "OppFenderToggle"},
     { text: "Tarmac", id: "TarmacToggle"},
-    { text: "Opposing Tarmac", id: "OppTarmacToggle"},
+    { text: "Opp. Tarmac", id: "OppTarmacToggle"},
     { text: "Launchpad", id: "LaunchpadToggle"},
     { text: "Terminal", id: "TerminalToggle"},
     { text: "Elsewhere", id: "ElsewhereToggle"},
@@ -18,7 +18,7 @@ export const ZoneWidget: Component = () => {
   return(
     <div class="flex flex-wrap gap-4">
       <For each={zones()}>{(zone, i) => 
-        <div class="w-32 mx-auto">
+        <div class="w-24 mx-auto">
           <ToggleButton text={zone.text} id={zone.id} />
         </div>
       }</For>
