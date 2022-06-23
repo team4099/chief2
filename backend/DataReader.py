@@ -57,5 +57,8 @@ class DataReader:
 
 
 cam = int(input("Cam #: "))
+<<<<<<< Updated upstream
 # DataReader(cam).read_qrcode()
+=======
+>>>>>>> Stashed changes
 print(DataReader(cam).read_qrcode())
