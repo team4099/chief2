@@ -1,4 +1,4 @@
-import { Component, createEffect, createSignal, splitProps } from "solid-js";
+import { Component, createSignal } from "solid-js";
 
 export const ShotWidget: Component = () => {
 

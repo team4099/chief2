@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
-import { ToggleButton } from "./ToggleButton"
 import { ShotWidget } from "./ShotWidget"
+import { ZoneWidget } from "./ZoneWidget";
 
 export const Teleop: Component = () => {
 
@@ -22,6 +22,17 @@ export const Teleop: Component = () => {
         <div class="m-4">
           <p class="font-bold">Teleop Missed</p>
           <ShotWidget/>
+        </div>
+
+        <div class="m-4">
+          <p class="font-bold">Teleop Shooting Zones</p>
+          <ZoneWidget />
+        </div>
+
+        <div class="m-4">
+          <p class="font-bold">Teleop Notes</p>
+          <textarea id="" rows="5" cols="20" class="w-full border border-[#7b7b7b] rounded-lg">
+          </textarea>
         </div>
 
       </div>
