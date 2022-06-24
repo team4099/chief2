@@ -13,6 +13,7 @@ const {
   autoHuman,
   setAutoHuman,
 } = autoState;
+import { ZoneWidget } from "./ZoneWidget";
 
 export const Auto: Component = () => {
   return (
@@ -20,7 +21,7 @@ export const Auto: Component = () => {
       <div class="justify-center align-middle items-center shadow-2xl p-8 m-2 rounded-xl">
         <p class="font-bold text-center text-3xl">Auto</p>
         <div class="m-4">
-          <ToggleButton text="Preloaded Cargo" id="preloadToggle" />
+          <ToggleButton text="Preloaded Cargo?" id="preloadToggle" />
         </div>
         <div class="m-4">
           <p class="font-bold">Auto Upper Hub</p>
@@ -40,6 +41,17 @@ export const Auto: Component = () => {
         </div>
         <div class="m-4">
           <ToggleButton text="Taxied?" id="taxiToggle" />
+        </div>
+
+        <div class="m-4">
+          <p class="font-bold">Auto Shooting Zones</p>
+          <ZoneWidget />
+        </div>
+
+        <div class="m-4">
+          <p class="font-bold">Auto Notes</p>
+          <textarea id="" rows="5" cols="20" class="w-full border border-[#7b7b7b] rounded-lg">
+          </textarea>
         </div>
       </div>
     </div>
