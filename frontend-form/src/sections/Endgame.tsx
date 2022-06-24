@@ -5,7 +5,9 @@ export const Endgame: Component = () => {
 
   const [time, setTime] = createSignal(0);
 
-  setInterval(() => {setTime(time() + 1)}, 1000);
+  const timer = setInterval(() => {setTime(time() + 1)}, 1000);
+
+  
 
   return (
     <div class="items-middle justify-center align-center">
