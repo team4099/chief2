@@ -64,18 +64,19 @@ export const Endgame: Component = () => {
               type="number"
               id="final-time"
               class="col-span-3 inline border-2 border-[#7b7b7b] rounded-md"
+              placeholder="Enter number of seconds"
             />
           </div>
           <div class="grid grid-cols-5 my-4">
-            <p class="col-span-2 float-left">Final Time:</p>
+            <p class="col-span-2 float-left">Final Climb:</p>
             <fieldset class="col-span-3 flex flex-col">
-              <label class="w-full mx-auto flex-1 bg-gray-200 mx-1 rounded-lg py-1 mb-1">
+              <label class="w-full flex-1 bg-gray-200 mx-1 rounded-lg py-1 mb-1">
                 <input class="float-left ml-2" type="radio" id="low" name="climb" value="low"/>
                 <label for="low" class="float-left ml-4 mt-1 inline">Low</label>
               </label>
               <label class="w-full flex-1 bg-gray-200 mx-1 rounded-lg py-1 mb-1">
                 <input class="float-left ml-2" type="radio" id="low" name="climb" value="medium"/>
-                <label for="meidum" class="float-left ml-4 mt-1 inline">Medium</label>
+                <label for="medium" class="float-left ml-4 mt-1 inline">Medium</label>
               </label>
               <label class="w-full flex-1 bg-gray-200 mx-1 rounded-lg py-1 mb-1">
                 <input class="float-left ml-2" type="radio" id="low" name="climb" value="high"/>
