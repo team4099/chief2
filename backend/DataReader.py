@@ -1,9 +1,9 @@
 from io import StringIO
-
 import cv2
 import numpy as np
 import pandas as pd
 from pyzbar.pyzbar import decode
+
 
 
 class DataReader:
