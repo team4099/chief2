@@ -4,7 +4,7 @@ import logging
 class Logger():
     def __init__(self):
         self.log = logging.getLogger()
-        self.log.setLevel(logging.INFO)
+        self.log.setLevel(logging.DEBUG)
 
         format_str = '%(asctime)s.%(msecs)d | %(levelname)-8s |  [%(filename)s:%(lineno)d] %(message)s'
         date_format = '%Y-%m-%d %H:%M:%S'
@@ -20,14 +20,12 @@ class Logger():
         stream = logging.StreamHandler()
         stream.setFormatter(formatter)
 
-        self.log = logging.getLogger('pythonConfig')
+        self.log = logging.getLogger('logger')
         self.log.addHandler(stream)
-
-    def debug(self, message):
-        self.log.debug(message)
 
     def info(self, message):
         self.log.info(message)
+        self.log.debug(message)
 
     def warn(self, message):
         self.log.warning(message)
