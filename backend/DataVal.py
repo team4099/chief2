@@ -4,11 +4,13 @@ import json
 import re
 import requests
 import numpy as np
+import os
+import csv
 
 class DataVal:
     def __init__(
             self,
-            wifi_connection: bool = False,
+            wifi_connection: bool
     ):
 
         self.logger = Logger()
@@ -16,18 +18,32 @@ class DataVal:
 
         self.wifi_connection = wifi_connection
         self.logger.info("Starting Validation Process")
-        if wifi_connection:
-            self.logger.info("Wifi Connection Exists. Will cross check against TBA")
-            #os.system('python scripts/getMatchSchedule.py')
-        else:
-            self.logger.warn("Wifi Connection was not found. Will not check against TBA")
-            #os.system('python scripts/convertCSVToMatchSchedule.py')
+
+        if os.path.exists("data/match_schedule.json"):
+            if self.wifi_connection:
+                self.logger.info("Wifi Connection Exists. Will cross check against TBA")
+                DataVal.get_match_schedule(self.logger)
+            else:
+                self.logger.warn("Wifi Connection was not found. Will not check against TBA")
+                DataVal.convert_CSV_To_Match_Schedule(self.logger)
         
+        #load Match Schedule
+
+        self.match_schedule = None
+        if os.path.exists("data/match_schedule.json"):
+            self.logger.info("Reading match schedule JSON")
+            with open("data/match_schedule.json") as f:
+                match_schedule = json.load(f)
+            self.logger.info("Success! JSON match schdeule has been read.")
+            self.match_schedule = match_schedule
+        else:
+            self.logger.info("No match schdule provided")
+
         self.scouting_data = None
         self.data_by_match_key = {}
         self.data_by_teams = {}
 
-        self.match_schedule = None
+        
 
         with open("config/config.json") as config:
             config = json.load(config)
@@ -84,7 +100,10 @@ class DataVal:
         """
         match_key = submission["match_key"].strip().lower()
         valid_match_key = DataVal.valid_match_key(match_key)
-        self.check_submission_with_match_schedule(submission)
+
+        if self.match_schedule:
+            self.check_submission_with_match_schedule(submission)
+            
         self.check_for_higher_than_six_ball_auto(submission)
         self.check_for_missing_shooting_zones(submission)
         self.check_for_invalid_climb_data(submission)
@@ -99,7 +118,6 @@ class DataVal:
     def validate_data(
             self,
             filepath: str,
-            match_schedule_JSON: str
     ):
         """
         Loads scouting data and sorts it into the match key dictionary and 
@@ -136,13 +154,6 @@ class DataVal:
                 self.data_by_teams[team].append(submission)
             else:
                 self.data_by_teams[team] = [submission]
-
-        #load Match Schedule
-        self.logger.info("Reading match schedule JSON")
-        with open(match_schedule_JSON) as f:
-            match_schedule = json.load(f)
-        self.logger.info("Success! JSON match schdeule has been read.")
-        self.match_schedule = match_schedule
 
         #individual submission checks called from validate_submission method
         for submission in scouting_data:
@@ -231,7 +242,7 @@ class DataVal:
         :return: None
         """
         final_climb_type = submission["final_climb_type"]
-        if final_climb_type != "No Climb" and pd.notna(final_climb_type):
+        if final_climb_type != "No Climb" and final_climb_type:
             #check if attempted climb for corresponding final climb type is false
             attempted_climb = submission[f"attempted_{final_climb_type.lower()}"]
             if (pd.isna(attempted_climb)) or attempted_climb == 0:
@@ -255,9 +266,9 @@ class DataVal:
         :return: None
         """
         defense_pct = float(submission["defense_pct"])
-        defense_rating = float(submission["defense_rating"])
+        defense_rating = submission["defense_rating"]
         counter_pct = float(submission["counter_defense_pct"])
-        counter_rating = float(submission["counter_defense_rating"])
+        counter_rating = submission["counter_defense_rating"]
 
         #check for 0% defense pct but given rating
         if (pd.isna(defense_pct) or defense_pct == 0) and (pd.notna(defense_rating) and defense_rating != 0):
@@ -498,12 +509,108 @@ class DataVal:
         upper_bound = q3 + 1.5*IQR
         return value < lower_bound or value > upper_bound
 
-        
+    @staticmethod
+    def get_match_schedule(logger):
+        #retrieves event key from config file
+        logger.info("Getting configuration variables from config.json")
+        try:
+            with open("config/config.json") as config:
+                config = json.load(config)
+            event_key = config["YEAR"] + config["EVENT_KEY"]
+
+            tba_key = config["TBA_KEY"]
+        except FileNotFoundError:
+            logger.critical("config.json not found. Make sure it's located in the data subdirectory.")
+            raise FileNotFoundError
+        except NameError:
+            logger.critical("event year, or event key, or TBA key not found. Please check config.json")
+            raise NameError
+        logger.info("Successfully retreived configuration variablees.")
+
+        #setting up tba post request
+        last_modified_since = "Wed, 1 Jan 1000 00:00:01 GMT"
+
+        post_request_url = "https://www.thebluealliance.com/api/v3/event/{}/matches/simple".format(event_key)
+
+        request_data = {
+            "X-TBA-Auth-Key" : tba_key,
+            "If-Modified-Since": last_modified_since
+        }
+
+        match_schedule = requests.get(
+            post_request_url, params = request_data
+        )
+
+        all_matches = match_schedule.json()
+
+        #convert json data to dictionary with subdictionary for each alliance containing corresponding team numbers
+        match_schedule_dict = {}
+        for match in all_matches:
+            match_schedule_dict[match['key']] = {
+                "red": match['alliances']['red']['team_keys'],
+                "blue": match['alliances']['blue']['team_keys']
+
+            }
+
+        #write match schedule to json file
+        logger.info("Writing to match_schedule json.")
+        with open('data/match_schedule.json', 'w', encoding='utf-8') as f:
+            json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)
+
+    @staticmethod
+    def convert_CSV_To_Match_Schedule(logger):
+        #opens config file and gets event key
+        logger.info("Getting configuration variables from config.json")
+        try:
+            with open("../config/config.json") as config:
+                config = json.load(config)
+            event_key = config["YEAR"] + config["EVENT_KEY"]
+
+        except FileNotFoundError:
+            logger.critical("config.json not found. Make sure it's located in the data subdirectory.")
+            raise FileNotFoundError
+        except NameError:
+            logger.critical("event year, or event key not found. Please check config.json")
+            raise NameError
+        logger.info("Successfully retreived configuration variablees.")
+
+        """
+
+        If TBA is really not up, please edit the match schedule on this: https://docs.google.com/spreadsheets/d/1I5zE3oVeroPNFlDTpc4PspzlP8qkUWnA9Cngd_7N7K8/edit#gid=0
+        and download the sheet as a csv and put it in data subdirectory.
+
+        """
+        logger.info("Opening match_schedule_sheet.csv")
+
+        match_schedule_dict = {}
+        with open("../data/match_schedule_sheet.csv") as file:
+            header = next(file)
+            match_schedule = csv.reader(file)
+
+            logger.info("Found match_schedule sheet. Converting to JSON object now")
+
+            #generates match schedule dictionary
+            #match keys are the dict key and values are subdict with alliance as keys and list of teams as values
+            for match in match_schedule:
+                match_schedule_dict[f"{event_key}_{match[0]}"] = {
+                    "red" : [
+                        match[1],
+                        match[2],
+                        match[3]
+                    ],
+                    "blue": [
+                        match[4],
+                        match[5],
+                        match[6]
+                    ],
+                }
 
 
-        
-    
+        #converts to json and stores in data folder
+        logger.info("Posting data to match_schedule.json located in the data folder.")
+        with open('../data/match_schedule.json', 'w', encoding='utf-8') as f:
+            json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)
 
-#DataVal(wifi_connection=True).validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
+        logger.info("Success!")
 
-
+#DataVal(wifi_connection=True, match_schedule_JSON="data/match_schedule.json").validate_data(filepath="data/dcmp_data.csv")

@@ -1,6 +1,6 @@
 import json
 import requests
-from backend.Logger import Logger
+from Logger import Logger
 
 logger = Logger()
 
@@ -23,7 +23,7 @@ logger.info("Successfully retreived configuration variablees.")
 #setting up tba post request
 last_modified_since = "Wed, 1 Jan 1000 00:00:01 GMT"
 
-post_request_url = f"https://www.thebluealliance.com/api/v3/event/{event_key}/matches/simple"
+post_request_url = "https://www.thebluealliance.com/api/v3/event/{}/matches/simple".format(event_key)
 
 request_data = {
     "X-TBA-Auth-Key" : tba_key,
