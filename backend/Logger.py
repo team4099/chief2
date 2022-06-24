@@ -23,9 +23,11 @@ class Logger():
         self.log = logging.getLogger('logger')
         self.log.addHandler(stream)
 
+    def debug(self, message):
+        self.log.debug(message)
+
     def info(self, message):
         self.log.info(message)
-        self.log.debug(message)
 
     def warn(self, message):
         self.log.warning(message)
