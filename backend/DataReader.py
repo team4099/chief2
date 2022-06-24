@@ -5,7 +5,6 @@ import numpy as np
 import pandas as pd
 from pyzbar.pyzbar import decode
 
-from pynput.keyboard import Key, Listener
 
 class DataReader:
     _HEADERS_CSV = (
@@ -39,6 +38,7 @@ class DataReader:
             barcode_data = self._HEADERS_CSV + "\n" + obj.data.decode("utf-8")
 
             csv_data = pd.read_csv(StringIO(barcode_data))
+            csv_data = csv_data.replace({np.nan: None})
             return {
                 key: csv_data[corresponding_header][0]
                 for key, corresponding_header in zip(self._HEADERS_JSON.split(","), self._HEADERS_CSV.split(","))
@@ -50,7 +50,6 @@ class DataReader:
             _,frame = self.cap.read()
             result = self._decoder(frame)
             cv2.imshow('Image', frame)
-            print(result)
             if result not in qrcodes and result:
                 qrcodes.append(result)
                 print("Scanned")
@@ -63,7 +62,8 @@ class DataReader:
 
         return qrcodes
 
+
 cam = int(input("Cam #: "))
 scanner = DataReader(cam)
 
-print(scanner.read_qrcode())  
+print(scanner.read_qrcode())
