@@ -5,6 +5,7 @@ import pandas as pd
 from pyzbar.pyzbar import decode
 from Logger import Logger
 
+from pynput.keyboard import Key, Listener
 
 class DataReader:
     _HEADERS_CSV = (
