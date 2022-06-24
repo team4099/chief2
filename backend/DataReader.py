@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import pandas as pd
 from pyzbar.pyzbar import decode
-
+from Logger import Logger
 
 
 class DataReader:
@@ -23,7 +23,7 @@ class DataReader:
 
     def __init__(self, cam):
         self.cap = cv2.VideoCapture(cam)
-        self.qrcodes = []
+        self.Logger = Logger()
 
     def _decoder(self, image):
         gray_img = cv2.cvtColor(image, 0)
@@ -46,16 +46,20 @@ class DataReader:
 
     def read_qrcode(self):
         qrcodes = []
+        previous_result = None
         while True:
             _,frame = self.cap.read()
             result = self._decoder(frame)
             cv2.imshow('Image', frame)
+            
             if result not in qrcodes and result:
                 qrcodes.append(result)
-                print("Scanned")
-            elif result in qrcodes:
-                print("Already scanned")
+                self.Logger.info("Scanned Successfully!")
+            elif result in qrcodes and result != previous_result:
+                self.Logger.warn("Already Scanned")
             
+            previous_result = result
+
             code = cv2.waitKey(10)
             if code == ord('q'):
                 break
