@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from pyzbar.pyzbar import decode
 
+from pynput.keyboard import Key, Listener
 
 class DataReader:
     _HEADERS_CSV = (
@@ -23,6 +24,7 @@ class DataReader:
 
     def __init__(self, cam):
         self.cap = cv2.VideoCapture(cam)
+        self.qrcodes = []
 
     def _decoder(self, image):
         gray_img = cv2.cvtColor(image, 0)
@@ -43,18 +45,25 @@ class DataReader:
             }
 
     def read_qrcode(self):
-        result = None
-
-        while not result:
-            ret, frame = self.cap.read()
+        qrcodes = []
+        while True:
+            _,frame = self.cap.read()
             result = self._decoder(frame)
             cv2.imshow('Image', frame)
+            print(result)
+            if result not in qrcodes and result:
+                qrcodes.append(result)
+                print("Scanned")
+            elif result in qrcodes:
+                print("Already scanned")
+            
             code = cv2.waitKey(10)
             if code == ord('q'):
                 break
 
-        return result
-
+        return qrcodes
 
 cam = int(input("Cam #: "))
-print(DataReader(cam).read_qrcode())
+scanner = DataReader(cam)
+
+print(scanner.read_qrcode())  
