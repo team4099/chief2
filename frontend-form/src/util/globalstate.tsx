@@ -1,3 +1,4 @@
+
 import { createSignal, createMemo, createRoot } from "solid-js";
 
 function createModalState() {
@@ -53,3 +54,18 @@ function createAutoState() {
   };
 }
 export const autoState = createRoot(createAutoState);
+
+function createTeleopState() {
+  const [teleopUpper, setTeleopUpper] = createSignal<Number>(0);
+  const [teleopLower, setTeleopLower] = createSignal<Number>(0);
+  const [teleopMissed, setTeleopMissed] = createSignal<Number>(0);
+  return {
+    teleopUpper,
+    setTeleopUpper,
+    teleopLower,
+    setTeleopLower,
+    teleopMissed,
+    setTeleopMissed,
+  };
+}
+export const teleopState = createRoot(createTeleopState);

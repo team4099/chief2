@@ -14,8 +14,8 @@ export const ShotWidget: Component = ({ getter, setter }: ShotWidgetProps) => {
         type="button"
         class="w-1/3 h-full text-3xl rounded-l-xl float-left bg-red-400"
         onClick={() => {
+          console.log(`typeof getter(): ${typeof getter}`);
           if (getter() > 0) {
-            console.log(`typeof getter(): ${typeof getter}`);
             setter(getter() - 1);
           }
         }}

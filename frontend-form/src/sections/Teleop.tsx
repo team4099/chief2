@@ -1,5 +1,14 @@
 import { Component } from "solid-js";
 import { ShotWidget } from "../components";
+import { teleopState } from "../util/globalstate";
+const {
+  teleopUpper,
+  setTeleopUpper,
+  teleopLower,
+  setTeleopLower,
+  teleopMissed,
+  setTeleopMissed,
+} = teleopState;
 
 export const Teleop: Component = () => {
   return (
@@ -9,17 +18,17 @@ export const Teleop: Component = () => {
 
         <div class="m-4">
           <p class="font-bold">Teleop Upper Hub</p>
-          <ShotWidget />
+          <ShotWidget getter={teleopUpper} setter={setTeleopUpper} />
         </div>
 
         <div class="m-4">
           <p class="font-bold">Teleop Lower Hub</p>
-          <ShotWidget />
+          <ShotWidget getter={teleopLower} setter={setTeleopLower} />
         </div>
 
         <div class="m-4">
           <p class="font-bold">Teleop Missed</p>
-          <ShotWidget />
+          <ShotWidget getter={teleopMissed} setter={setTeleopMissed} />
         </div>
       </div>
     </div>
