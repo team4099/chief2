@@ -26,6 +26,10 @@ class DataReader:
         self.Logger = Logger()
 
     def _decoder(self, image):
+        """
+        :param image: The output of the camera on the computer
+        :return: A dictionary containing the header and the corresponding value
+        """
         gray_img = cv2.cvtColor(image, 0)
         barcode = decode(gray_img)
 
@@ -48,7 +52,7 @@ class DataReader:
         qrcodes = []
         previous_result = None
         while True:
-            _,frame = self.cap.read()
+            _, frame = self.cap.read()
             result = self._decoder(frame)
             cv2.imshow('Image', frame)
             
