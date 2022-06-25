@@ -2,10 +2,6 @@ import { Component, createSignal } from "solid-js";
 import { scoutIDState, infoState } from "../util/globalstate";
 const { scoutID } = scoutIDState;
 const {
-  matchKey,
-  alliance,
-  driverStation,
-  teamNumber,
   setMatchKey,
   setAlliance,
   setDriverStation,
@@ -67,14 +63,17 @@ export const Info: Component = () => {
             <option value="blue">Blue</option>
             <option value="red">Red</option>
           </select> */}
-          <fieldset class="flex flex-row">
+          <fieldset
+            class="flex flex-row"
+            onChange={(e) => setAlliance(e.target.value)}
+          >
             <legend class="font-bold">Alliance</legend>
             <label class="flex-1 bg-blue-300 mr-1 rounded-xl px-2 py-1 transition-colors checked:bg-blue-500">
-              <input type="radio" id="blue" name="alliance" />
+              <input type="radio" id="blue" name="alliance" value="Blue" />
               <label for="blue">Blue</label>
             </label>
             <label class="flex-1 bg-red-300 ml-1 rounded-xl px-2 py-1 transition-colors checked:bg-red-500">
-              <input type="radio" id="red" name="alliance" class="" />
+              <input type="radio" id="red" name="alliance" value="Red" />
               <label for="red">Red</label>
             </label>
           </fieldset>
@@ -90,14 +89,17 @@ export const Info: Component = () => {
             <option value="2">2</option>
             <option value="3">3</option>
           </select> */}
-          <fieldset class="flex flex-row">
+          <fieldset
+            class="flex flex-row"
+            onChange={(e) => setDriverStation(e.target.value)}
+          >
             <legend class="font-bold">Driver Station</legend>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-1" name="station" />
+              <input type="radio" id="station-1" name="station" value={1} />
               <label for="station-1">1</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-2" name="station" class="none" />
+              <input type="radio" id="station-2" name="station" />
               <label for="station-2">2</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
@@ -113,6 +115,7 @@ export const Info: Component = () => {
             type="number"
             id="teamNumber"
             class="w-full border-solid border-[#7b7b7b] border rounded-xl p-1"
+            onInput={(e) => setTeamNumber(e.target.value)}
           />
         </div>
       </div>

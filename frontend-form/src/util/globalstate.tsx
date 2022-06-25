@@ -18,8 +18,8 @@ export const scoutIDState = createRoot(createScoutIDState);
 function createInfoState() {
   const [matchKey, setMatchKey] = createSignal<string>();
   const [alliance, setAlliance] = createSignal<string>();
-  const [driverStation, setDriverStation] = createSignal<string>();
-  const [teamNumber, setTeamNumber] = createSignal<string>();
+  const [driverStation, setDriverStation] = createSignal<number>();
+  const [teamNumber, setTeamNumber] = createSignal<number>();
   return {
     matchKey,
     alliance,
@@ -58,9 +58,11 @@ function createAutoShootingZones() {
   // Fender, Opposing Fender, Tarmac, Opposing Tarmac, Launchpad, Terminal, Elsewhere
   // prefix each of these with "auto"
   const [autoFender, setAutoFender] = createSignal<boolean>(false);
-  const [autoOpposingFender, setAutoOpposingFender] = createSignal<boolean>(false);
+  const [autoOpposingFender, setAutoOpposingFender] =
+    createSignal<boolean>(false);
   const [autoTarmac, setAutoTarmac] = createSignal<boolean>(false);
-  const [autoOpposingTarmac, setAutoOpposingTarmac] = createSignal<boolean>(false);
+  const [autoOpposingTarmac, setAutoOpposingTarmac] =
+    createSignal<boolean>(false);
   const [autoLaunchpad, setAutoLaunchpad] = createSignal<boolean>(false);
   const [autoTerminal, setAutoTerminal] = createSignal<boolean>(false);
   const [autoElsewhere, setAutoElsewhere] = createSignal<boolean>(false);
