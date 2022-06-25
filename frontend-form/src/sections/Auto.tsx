@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { ToggleButton, ShotWidget } from "../components";
+import { ToggleButton, ShotWidget, ZoneWidget } from "../components";
 import { autoState } from "../util/globalstate";
 const {
   taxied,
@@ -13,7 +13,6 @@ const {
   autoHuman,
   setAutoHuman,
 } = autoState;
-import { ZoneWidget } from "./ZoneWidget";
 
 export const Auto: Component = () => {
   return (

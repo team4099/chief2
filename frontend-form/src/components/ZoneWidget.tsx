@@ -5,7 +5,7 @@ import {
   splitProps,
   For,
 } from "solid-js";
-import { ToggleButton } from "../components/ToggleButton";
+import { ToggleButton } from "./ToggleButton";
 import { autoShootingZones, teleopShootingZones } from "../util/globalstate";
 const {
   autoFender,

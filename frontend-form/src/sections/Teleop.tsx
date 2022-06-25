@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { ShotWidget } from "../components";
+import { ShotWidget, ZoneWidget } from "../components";
 import { teleopState } from "../util/globalstate";
 const {
   teleopUpper,
@@ -9,7 +9,6 @@ const {
   teleopMissed,
   setTeleopMissed,
 } = teleopState;
-import { Stage, ZoneWidget } from "./ZoneWidget";
 
 export const Teleop: Component = () => {
   return (
@@ -39,10 +38,13 @@ export const Teleop: Component = () => {
 
         <div class="m-4">
           <p class="font-bold">Teleop Notes</p>
-          <textarea id="" rows="5" cols="20" class="w-full border border-[#7b7b7b] rounded-lg">
-          </textarea>
+          <textarea
+            id=""
+            rows="5"
+            cols="20"
+            class="w-full border border-[#7b7b7b] rounded-lg"
+          ></textarea>
         </div>
-
       </div>
     </div>
   );
