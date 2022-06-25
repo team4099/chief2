@@ -4,7 +4,7 @@ import logging
 class Logger():
     def __init__(self):
         self.log = logging.getLogger()
-        self.log.setLevel(logging.INFO)
+        self.log.setLevel(logging.DEBUG)
 
         format_str = '%(asctime)s.%(msecs)d | %(levelname)-8s |  [%(filename)s:%(lineno)d] %(message)s'
         date_format = '%Y-%m-%d %H:%M:%S'
