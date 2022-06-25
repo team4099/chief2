@@ -9,7 +9,7 @@ const {
   teleopMissed,
   setTeleopMissed,
 } = teleopState;
-import { ZoneWidget } from "./ZoneWidget";
+import { Stage, ZoneWidget } from "./ZoneWidget";
 
 export const Teleop: Component = () => {
   return (
@@ -34,7 +34,7 @@ export const Teleop: Component = () => {
 
         <div class="m-4">
           <p class="font-bold">Teleop Shooting Zones</p>
-          <ZoneWidget />
+          <ZoneWidget stage="teleop" />
         </div>
 
         <div class="m-4">

@@ -23,6 +23,8 @@ export const ToggleButton: Component = (props) => {
       }}
       onClick={() => {
         setToggle(!toggleState());
+        props.setter(!props.getter());
+        console.log(`(${props.stage}, ${props.id}) state: ${props.getter()}`);
       }}
     >
       {local.text}

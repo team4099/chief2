@@ -45,13 +45,17 @@ export const Auto: Component = () => {
 
         <div class="m-4">
           <p class="font-bold">Auto Shooting Zones</p>
-          <ZoneWidget />
+          <ZoneWidget stage="auto" />
         </div>
 
         <div class="m-4">
           <p class="font-bold">Auto Notes</p>
-          <textarea id="" rows="5" cols="20" class="w-full border border-[#7b7b7b] rounded-lg">
-          </textarea>
+          <textarea
+            id=""
+            rows="5"
+            cols="20"
+            class="w-full border border-[#7b7b7b] rounded-lg"
+          ></textarea>
         </div>
       </div>
     </div>
