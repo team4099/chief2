@@ -1,0 +1,6 @@
+colorlog
+pandas
+json
+csv
+numpy
+requests
