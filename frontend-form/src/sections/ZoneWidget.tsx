@@ -41,7 +41,7 @@ const {
 } = teleopShootingZones;
 
 type ZoneWidgetProps = {
-  stage: "auto" | "teleop";
+  stage: string;
 };
 
 export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
