@@ -1,36 +1,36 @@
-import { Component, createSignal } from "solid-js";
+import { Accessor, Component, createSignal, For, Setter } from "solid-js";
 
-export const RadioWidget: Component = () => {
+type RadioWidgetProps = {
+  legend: string;
+  group: string;
+  options: string[];
+  getter: Accessor<any>;
+  setter: Setter<any>;
+};
 
-
-  return(
-
-        <div class="m-4">
-            <label class="inline-flex items-center">
-            <input type="radio" class=" h-8 w-8 text-amber-400 border-2 focus:outline-amber-400" name="flexRadioDefault" value="1"></input>
-            <span class="ml-1 mr-2">1</span>
-            </label>
-
-            <label class="inline-flex items-center">
-            <input type="radio" class=" h-8 w-8 text-amber-400 border-2 focus:outline-amber-400" name="flexRadioDefault" value="2"></input>
-            <span class="ml-1 mr-2">2</span>
-            </label>
-
-            <label class="inline-flex items-center">
-            <input type="radio" class=" h-8 w-8 text-amber-400 border-2 focus:outline-amber-400" name="flexRadioDefault" value="3"></input>
-            <span class="ml-1 mr-2">3</span>
-            </label>
-
-            <label class="inline-flex items-center">
-            <input type="radio" class=" h-8 w-8 text-amber-400 border-2 focus:outline-amber-400" name="flexRadioDefault" value="4"></input>
-            <span class="ml-1 mr-2">4</span>
-            </label>
-
-            <label class="inline-flex items-center">
-            <input type="radio" class=" h-8 w-8 text-amber-400 border-2 focus:outline-amber-400" name="flexRadioDefault" value="5"></input>
-            <span class="ml-1 mr-2">5</span>
-            </label>
-        </div>
-        
-    );
+export const RadioWidget: Component = ({
+  legend,
+  group,
+  options,
+  getter,
+  setter,
+}: RadioWidgetProps) => {
+  return (
+    <fieldset class="flex flex-row">
+      <legend class="font-bold">{legend}</legend>
+      <For each={options}>
+        {(option: string) => (
+          <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+            <input
+              type="radio"
+              id={`${group}-1`}
+              name={group}
+              value={option}
+            />
+            <label for={`${group}-1`}>{option}</label>
+          </label>
+        )}
+      </For>
+    </fieldset>
+  );
 };
