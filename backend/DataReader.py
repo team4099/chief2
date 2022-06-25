@@ -27,28 +27,35 @@ class DataReader:
 
     def _decoder(self, image):
         """
+        processes image, extracts qrcodes within frame, and converts data to json
         :param image: The output of the camera on the computer
         :return: A dictionary containing the header and the corresponding value
         """
         gray_img = cv2.cvtColor(image, 0)
-        barcode = decode(gray_img)
+        qrcode = decode(gray_img)
 
-        for obj in barcode:
+        for obj in qrcode:
             points = obj.polygon
             pts = np.array(points, np.int32)
             pts = pts.reshape((-1, 1, 2))
             cv2.polylines(image, [pts], True, (0, 255, 0), 3)
 
-            barcode_data = self._HEADERS_CSV + "\n" + obj.data.decode("utf-8")
+            qrcode_data = self._HEADERS_CSV + "\n" + obj.data.decode("utf-8")
 
-            csv_data = pd.read_csv(StringIO(barcode_data))
+            csv_data = pd.read_csv(StringIO(qrcode_data))
             csv_data = csv_data.replace({np.nan: None})
+            
             return {
                 key: csv_data[corresponding_header][0]
                 for key, corresponding_header in zip(self._HEADERS_JSON.split(","), self._HEADERS_CSV.split(","))
             }
 
     def read_qrcode(self):
+        """
+        opens cv2 window and automatically scans qr codes within frame
+        :return: a list containing the json formatted data of all the scanned qrcodes
+        """
+        
         qrcodes = []
         previous_result = None
         while True:
@@ -69,9 +76,3 @@ class DataReader:
                 break
 
         return qrcodes
-
-
-cam = int(input("Cam #: "))
-scanner = DataReader(cam)
-
-print(scanner.read_qrcode())
