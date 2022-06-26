@@ -5,7 +5,7 @@ import {
   splitProps,
   For,
 } from "solid-js";
-import { ToggleButton } from "./ToggleButton";
+import { ToggleButton } from "./";
 import { autoShootingZones, teleopShootingZones } from "../util/globalstate";
 const {
   autoFender,
@@ -105,7 +105,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
   ]);
 
   return (
-    <div class="flex flex-wrap gap-4">
+    <div class="flex flex-wrap gap-2">
       <For each={zones()}>
         {(zone, i) => (
           <div class="w-24 mx-auto">

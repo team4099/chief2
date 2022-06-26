@@ -130,3 +130,22 @@ function createTeleopShootingZones() {
   };
 }
 export const teleopShootingZones = createRoot(createTeleopShootingZones);
+
+function createMiscState() {
+  // States for defenseTime, defensePlay, defendedTime, and defenseCounter
+  const [defenseTime, setDefenseTime] = createSignal<Number>(0);
+  const [defensePlay, setDefensePlay] = createSignal<Number>(0);
+  const [defendedTime, setDefendedTime] = createSignal<Number>(0);
+  const [defenseCounter, setDefenseCounter] = createSignal<Number>(0);
+  return {
+    defenseTime,
+    setDefenseTime,
+    defensePlay,
+    setDefensePlay,
+    defendedTime,
+    setDefendedTime,
+    defenseCounter,
+    setDefenseCounter,
+  };
+}
+export const miscState = createRoot(createMiscState);

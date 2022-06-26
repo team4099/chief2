@@ -13,14 +13,17 @@
   }
 }
 
-input, select {
+/* input, select {
   min-height: 32px;
-}
+} */
 
-input[type="radio"] {
+/* input[type="radio"] {
   vertical-align: middle;
-}
+} */
 
 #modal-content {
   margin: 0 auto;
 }
+/* input, select {
+  min-height: 32px;
+} */

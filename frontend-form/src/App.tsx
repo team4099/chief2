@@ -8,6 +8,7 @@ const { loggedIn } = scoutIDState;
 import { Auto } from "./sections/Auto";
 import { Teleop } from "./sections/Teleop";
 
+import { Misc } from "./sections/Misc";
 
 const App: Component = () => {
   return (
@@ -15,10 +16,11 @@ const App: Component = () => {
       <NavBar />
       {(!loggedIn() || modalVisible()) && <ChangeScoutModal />}
       {/* <div class="relative mb"> */}
-      <div class="relative z-0 mb-10" />
+      <div class="relative z-0 mb-20" />
       <Info />
       <Auto />
       <Teleop />
+      <Misc />
     </div>
   );
 };

@@ -17,8 +17,8 @@ const {
 export const Auto: Component = () => {
   return (
     <div class="items-middle justify-center align-center">
-      <div class="justify-center align-middle items-center shadow-2xl p-8 m-2 rounded-xl">
-        <p class="font-bold text-center text-3xl">Auto</p>
+      <div class="justify-center align-middle items-center shadow-2xl p-4 m-2 rounded-xl">
+        <p class="font-bold text-center text-2xl">Auto</p>
         <div class="m-4">
           <ToggleButton text="Preloaded Cargo?" id="preloadToggle" />
         </div>
