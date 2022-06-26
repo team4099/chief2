@@ -34,12 +34,15 @@ function createInfoState() {
 export const infoState = createRoot(createInfoState);
 
 function createAutoState() {
+  const [cargoPreload, setCargoPreload] = createSignal<boolean>();
   const [taxied, setTaxied] = createSignal<boolean>();
   const [autoUpper, setAutoUpper] = createSignal<Number>(0);
   const [autoLower, setAutoLower] = createSignal<Number>(0);
   const [autoMissed, setAutoMissed] = createSignal<Number>(0);
   const [autoHuman, setAutoHuman] = createSignal<Number>(0);
   return {
+    cargoPreload,
+    setCargoPreload,
     taxied,
     setTaxied,
     autoUpper,
