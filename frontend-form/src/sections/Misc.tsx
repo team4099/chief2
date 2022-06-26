@@ -11,6 +11,8 @@ const {
   setDefendedTime,
   defenseCounter,
   setDefenseCounter,
+  driverRating,
+  setDriverRating,
 } = miscState;
 
 export const Misc: Component = () => {
@@ -44,7 +46,6 @@ export const Misc: Component = () => {
             options={["1", "2", "3", "4", "5"]}
             getter={defensePlay}
             setter={setDefensePlay}
-
           />
         </div>
         {/* </div>
@@ -81,16 +82,16 @@ export const Misc: Component = () => {
           <select
             id="alliance"
             class="border-solid border rounded-l mr-1 w-full focus:border-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-amber-400"
+            onChange={(e) => {
+              console.log(`(Driver Rating) ${e.target.value}`);
+              setDriverRating(e.target.value);
+            }}
           >
-            <option value="Very Poor" class="bg-amber-400">
-              Very Poor
-            </option>
-            <option value="Poor">Poor</option>
-            <option value="Average">Average</option>
-            <option value="">Poor</option>
-            <option value="Very Poor">Very Poor</option>
-            <option value="Good">Good</option>
-            <option value="Very Good">Very Good</option>
+            <option value="1">Very Poor</option>
+            <option value="2">Poor</option>
+            <option value="3">Average</option>
+            <option value="4">Good</option>
+            <option value="5">Very Good</option>
           </select>
         </div>
 

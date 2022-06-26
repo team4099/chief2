@@ -137,6 +137,7 @@ function createMiscState() {
   const [defensePlay, setDefensePlay] = createSignal<Number>(0);
   const [defendedTime, setDefendedTime] = createSignal<Number>(0);
   const [defenseCounter, setDefenseCounter] = createSignal<Number>(0);
+  const [driverRating, setDriverRating] = createSignal<Number>(0);
   return {
     defenseTime,
     setDefenseTime,
@@ -146,6 +147,8 @@ function createMiscState() {
     setDefendedTime,
     defenseCounter,
     setDefenseCounter,
+    driverRating,
+    setDriverRating,
   };
 }
 export const miscState = createRoot(createMiscState);
