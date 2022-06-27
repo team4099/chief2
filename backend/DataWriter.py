@@ -27,7 +27,16 @@ class DataWriter:
             raise NameError
         self.logger.info("Successfully retrieved configuration variables.")
 
-    def write_data(self, input_json):
+    def write_data(
+            self,
+            input_json: dict
+    ):
+        """
+        Writing submissions (individually) to a CSV
+        :param input_json: submission in dictionary format. this submission in dictionary format will be written to the event specific csv
+        :return:
+        """
+
         result_json = input_json
         csv_formatted = ",".join([str(value or "") for value in result_json.values()])
 
