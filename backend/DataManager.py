@@ -1,18 +1,18 @@
-from h11 import Data
-import DataReader
-import DataVal
+from backend.Logger import Logger
+from DataReader import DataReader
+from DataVal import DataVal
+from DataWriter import DataWriter
 import requests
-import DataWriter
-import pandas as pd
-import numpy as np
-import json
-import csv
+# import json
+
 
 class DataManager:
     def __init__(self, camera: int):
-        self.data_reader = DataReader.DataReader(camera)
+        self.data_reader = DataReader(camera)
         self.check_internet_connection()
-        self.data_val = DataVal.DataVal(self.connected_to_internet)
+        self.data_val = DataVal(self.connected_to_internet)
+        self.data_writer = DataWriter()
+        self.log = Logger().log
 
     def check_internet_connection(self):
         if requests.get("https://google.com").status_code == 401:
@@ -22,13 +22,14 @@ class DataManager:
             self.connected_to_internet = True
 
     def start_scan(self):
+        # with open("data/data.json", "r") as data:
+        #     qrcodes = json.load(data)
 
-        with open("data/data.json", "r") as data:
-            qrcodes = json.load(data)
-
+        qrcodes = self.data_reader.read_qrcode()
         for submission in qrcodes:
-            print(submission)
-            self.data_val.validate_submission(submission)
-        
-
-DataManager(0).start_scan()
+            try:
+                self.data_val.validate_submission(submission)
+                self.log.info("Validation succeeded for submission!")
+            except:
+                self.log.critical("Validation failed.")
+            self.data_writer.write_data(submission)

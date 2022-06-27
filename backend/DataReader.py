@@ -23,7 +23,7 @@ class DataReader:
 
     def __init__(self, cam):
         self.cap = cv2.VideoCapture(cam)
-        self.logger = Logger()
+        self.logger = Logger().log
 
     def _decoder(self, image):
         """
@@ -64,9 +64,9 @@ class DataReader:
             cv2.imshow('Image', frame)
             
             if result not in qrcodes and result:
-                print(result)
+                self.logger.info(result)
                 qrcodes.append(result)
-                self.logger.info("Scanned Successfully!")
+                self.logger.debug("Scanned Successfully!")
             elif result in qrcodes and result != previous_result:
                 self.logger.warn("Already Scanned")
             

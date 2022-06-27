@@ -13,7 +13,7 @@ class DataVal:
             wifi_connection: bool
     ):
 
-        self.logger = Logger()
+        self.logger = Logger().log
         self.logger.info("Logging started")
 
         self.wifi_connection = wifi_connection
@@ -486,11 +486,9 @@ class DataVal:
                 std = np.std(data)
                 q1 = np.percentile(data, 25, interpolation = 'midpoint')
                 q3 = np.percentile(data, 75, interpolation = 'midpoint')
-                print(q1, q3)
                 #find outliers
                 for submission in self.data_by_teams[team]:
                     value = submission[field]
-                    print(value)
                     if DataVal.z_score_outlier(value, mean, std, Z_THRESSHOLD):
                         self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was Z-SCORE OUTLIER")
                     if DataVal.IQR_outlier(value, q1, q3):

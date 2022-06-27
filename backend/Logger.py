@@ -1,5 +1,7 @@
 from colorlog import ColoredFormatter
 import logging
+import datetime
+import os
 
 class Logger():
     def __init__(self):
@@ -21,20 +23,14 @@ class Logger():
         stream.setFormatter(formatter)
 
         self.log = logging.getLogger('logger')
+        if (self.log.hasHandlers()):
+            self.log.handlers.clear()
         self.log.addHandler(stream)
 
-    def debug(self, message):
-        self.log.debug(message)
+        file_handler = logging.FileHandler(f'logs/datalog.log')
+        file_handler.setLevel(logging.DEBUG)
+        file_handler.setFormatter(formatter)
 
-    def info(self, message):
-        self.log.info(message)
+        self.log.addHandler(file_handler)
 
-    def warn(self, message):
-        self.log.warning(message)
-
-    def error(self, message):
-        self.log.error(message)
-
-    def critical(self, message):
-        self.log.critical(message)
 
