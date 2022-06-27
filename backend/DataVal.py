@@ -508,7 +508,9 @@ class DataVal:
         return value < lower_bound or value > upper_bound
 
     @staticmethod
-    def get_match_schedule(logger):
+    def get_match_schedule(
+            logger: Logger.log
+    ):
         #retrieves event key from config file
         logger.info("Getting configuration variables from config.json")
         try:
@@ -556,7 +558,9 @@ class DataVal:
             json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)
 
     @staticmethod
-    def convert_CSV_To_Match_Schedule(logger):
+    def convert_CSV_To_Match_Schedule(
+            logger: Logger.log
+    ):
         #opens config file and gets event key
         logger.info("Getting configuration variables from config.json")
         try:
