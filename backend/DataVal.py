@@ -9,6 +9,7 @@ class DataVal:
     def __init__(
             self,
             wifi_connection: bool = False,
+            match_schedule_JSON: str = ""
     ):
 
         self.logger = Logger()
@@ -23,11 +24,22 @@ class DataVal:
             self.logger.warn("Wifi Connection was not found. Will not check against TBA")
             #os.system('python scripts/convertCSVToMatchSchedule.py')
         
+        #load Match Schedule
+        self.match_schedule = None
+        if match_schedule_JSON:
+            self.logger.info("Reading match schedule JSON")
+            with open(match_schedule_JSON) as f:
+                match_schedule = json.load(f)
+            self.logger.info("Success! JSON match schdeule has been read.")
+            self.match_schedule = match_schedule
+        else:
+            self.logger.info("No match schdule provided")
+
         self.scouting_data = None
         self.data_by_match_key = {}
         self.data_by_teams = {}
 
-        self.match_schedule = None
+        
 
         with open("config/config.json") as config:
             config = json.load(config)
@@ -84,7 +96,10 @@ class DataVal:
         """
         match_key = submission["match_key"].strip().lower()
         valid_match_key = DataVal.valid_match_key(match_key)
-        self.check_submission_with_match_schedule(submission)
+
+        if self.match_schedule:
+            self.check_submission_with_match_schedule(submission)
+            
         self.check_for_higher_than_six_ball_auto(submission)
         self.check_for_missing_shooting_zones(submission)
         self.check_for_invalid_climb_data(submission)
@@ -99,7 +114,6 @@ class DataVal:
     def validate_data(
             self,
             filepath: str,
-            match_schedule_JSON: str
     ):
         """
         Loads scouting data and sorts it into the match key dictionary and 
@@ -136,13 +150,6 @@ class DataVal:
                 self.data_by_teams[team].append(submission)
             else:
                 self.data_by_teams[team] = [submission]
-
-        #load Match Schedule
-        self.logger.info("Reading match schedule JSON")
-        with open(match_schedule_JSON) as f:
-            match_schedule = json.load(f)
-        self.logger.info("Success! JSON match schdeule has been read.")
-        self.match_schedule = match_schedule
 
         #individual submission checks called from validate_submission method
         for submission in scouting_data:
@@ -504,6 +511,6 @@ class DataVal:
         
     
 
-DataVal(wifi_connection=True).validate_data(filepath="data/dcmp_data.csv", match_schedule_JSON="data/match_schedule.json")
+DataVal(wifi_connection=True, match_schedule_JSON="data/match_schedule.json").validate_data(filepath="data/dcmp_data.csv")
 
 
