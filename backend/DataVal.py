@@ -509,7 +509,7 @@ class DataVal:
 
     @staticmethod
     def get_match_schedule(
-            logger: Logger.log
+            logger: Logger
     ):
         #retrieves event key from config file
         logger.info("Getting configuration variables from config.json")
@@ -559,7 +559,7 @@ class DataVal:
 
     @staticmethod
     def convert_CSV_To_Match_Schedule(
-            logger: Logger.log
+            logger: Logger
     ):
         #opens config file and gets event key
         logger.info("Getting configuration variables from config.json")
