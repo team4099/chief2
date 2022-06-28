@@ -18,6 +18,9 @@ export const NavBar: Component = () => {
             ? "bg-red-600 hover:bg-red-500"
             : "bg-team-gold hover:bg-team-gold-hover"
         } p-2 transition-all rounded-xl`}
+        style={{
+          "text-shadow": "4px 4px 12px rgba(0, 0, 0, 0.5)",
+        }}
       >
         {scoutID()}
       </button>

@@ -134,6 +134,33 @@ function createTeleopShootingZones() {
 }
 export const teleopShootingZones = createRoot(createTeleopShootingZones);
 
+function createEndgameState() {
+  type FinalClimbType = "No Climb" | "Low" | "Mid" | "High" | "Traversal";
+  // boolean state for attemptedLow, attemptedMedium, attemptedHigh, attemptedTraversal
+  const [attemptedLow, setAttemptedLow] = createSignal<boolean>(false);
+  const [attemptedMedium, setAttemptedMedium] = createSignal<boolean>(false);
+  const [attemptedHigh, setAttemptedHigh] = createSignal<boolean>(false);
+  const [attemptedTraversal, setAttemptedTraversal] =
+    createSignal<boolean>(false);
+  const [finalClimb, setFinalClimb] = createSignal<FinalClimbType>();
+  const [finalClimbTime, setFinalClimbTime] = createSignal<number>();
+  return {
+    attemptedLow,
+    setAttemptedLow,
+    attemptedMedium,
+    setAttemptedMedium,
+    attemptedHigh,
+    setAttemptedHigh,
+    attemptedTraversal,
+    setAttemptedTraversal,
+    finalClimb,
+    setFinalClimb,
+    finalClimbTime,
+    setFinalClimbTime,
+  };
+}
+export const endgameState = createRoot(createEndgameState);
+
 function createMiscState() {
   // States for defenseTime, defensePlay, defendedTime, and defenseCounter
   const [defenseTime, setDefenseTime] = createSignal<Number>(0);

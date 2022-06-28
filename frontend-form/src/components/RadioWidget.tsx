@@ -34,7 +34,7 @@ export const RadioWidget: Component = ({
                 name={group}
                 value={item}
               />
-              <label for={`${group}-1`}>{item}</label>
+              <label for={`${group}-${index()}`}>{item}</label>
             </label>
           );
         }}
