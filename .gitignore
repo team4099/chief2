@@ -1,6 +1,7 @@
 **/node_modules/*
 **/.yarn/*
 .idea/
+frontend-form/node_modules
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
