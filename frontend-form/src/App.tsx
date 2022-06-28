@@ -1,14 +1,9 @@
 import { Component, createContext } from "solid-js";
-import { ChangeScoutModal } from "./components/ChangeScoutModal";
-import { NavBar } from "./components/NavBar";
-import { Info } from "./sections/Info";
+import { ChangeScoutModal, NavBar } from "./components";
+import { Info, Auto, Teleop, Misc } from "./sections";
 import { modalState, scoutIDState } from "./util/globalstate";
 const { modalVisible } = modalState;
 const { loggedIn } = scoutIDState;
-import { Auto } from "./sections/Auto";
-import { Teleop } from "./sections/Teleop";
-
-import { Misc } from "./sections/Misc";
 
 const App: Component = () => {
   return (
@@ -21,6 +16,7 @@ const App: Component = () => {
       <Auto />
       <Teleop />
       <Misc />
+      {/* <Button>Submit</Button> */}
     </div>
   );
 };
