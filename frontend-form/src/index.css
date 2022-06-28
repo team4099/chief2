@@ -27,3 +27,9 @@
 /* input, select {
   min-height: 32px;
 } */
+
+html {
+  height: 100%;
+  /* overflow: hidden; */
+  touch-action: manipulation;
+}
