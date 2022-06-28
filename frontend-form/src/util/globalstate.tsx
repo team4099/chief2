@@ -140,7 +140,7 @@ function createMiscState() {
   const [defensePlay, setDefensePlay] = createSignal<Number>(0);
   const [defendedTime, setDefendedTime] = createSignal<Number>(0);
   const [defenseCounter, setDefenseCounter] = createSignal<Number>(0);
-  const [driverRating, setDriverRating] = createSignal<Number>(0);
+  const [driverRating, setDriverRating] = createSignal<Number>(3);
   return {
     defenseTime,
     setDefenseTime,

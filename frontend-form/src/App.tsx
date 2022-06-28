@@ -13,10 +13,10 @@ import { Misc } from "./sections/Misc";
 const App: Component = () => {
   return (
     <div>
-      <NavBar />
       {(!loggedIn() || modalVisible()) && <ChangeScoutModal />}
+      <NavBar />
       {/* <div class="relative mb"> */}
-      <div class="relative z-0 mb-20" />
+      <div class="relative z-0 my-20" />
       <Info />
       <Auto />
       <Teleop />

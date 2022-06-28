@@ -41,10 +41,10 @@ export const Auto: Component = () => {
           <p class="font-bold">Auto Missed</p>
           <ShotWidget getter={autoMissed} setter={setAutoMissed} />
         </div>
-        <div class="m-4">
+        {/* <div class="m-4">
           <p class="font-bold">Auto Scored HP</p>
           <ShotWidget getter={autoHuman} setter={setAutoHuman} />
-        </div>
+        </div> */}
         <div class="m-4">
           <ToggleButton
             text="Taxied?"

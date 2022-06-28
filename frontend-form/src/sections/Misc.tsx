@@ -89,7 +89,7 @@ export const Misc: Component = () => {
           >
             <option value="1">Very Poor</option>
             <option value="2">Poor</option>
-            <option value="3">Average</option>
+            <option value="3" selected>Average</option>
             <option value="4">Good</option>
             <option value="5">Very Good</option>
           </select>
