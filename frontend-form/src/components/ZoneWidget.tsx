@@ -45,7 +45,7 @@ type ZoneWidgetProps = {
 };
 
 export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
-  const [zones, setZones] = createSignal([
+  const zones = [
     {
       text: "Fender",
       id: "FenderToggle",
@@ -102,11 +102,11 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       teleopGetter: teleopElsewhere,
       teleopSetter: setTeleopElsewhere,
     },
-  ]);
+  ];
 
   return (
     <div class="flex flex-wrap gap-2">
-      <For each={zones()}>
+      <For each={zones}>
         {(zone, i) => (
           <div class="w-24 mx-auto">
             <ToggleButton
