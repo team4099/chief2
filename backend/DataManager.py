@@ -1,4 +1,4 @@
-from backend.Logger import Logger
+from Logger import Logger
 from DataReader import DataReader
 from DataVal import DataVal
 from DataWriter import DataWriter

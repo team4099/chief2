@@ -25,7 +25,7 @@ class Logger():
             self.log.handlers.clear()
         self.log.addHandler(stream)
 
-        file_handler = logging.FileHandler(f'logs/datalog.log')
+        file_handler = logging.FileHandler('logs/datalog.log')
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(formatter)
 

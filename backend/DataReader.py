@@ -4,26 +4,34 @@ import numpy as np
 import pandas as pd
 from pyzbar.pyzbar import decode
 from Logger import Logger
+import json
 
 
 class DataReader:
-    _HEADERS_CSV = (
-        "Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,"
-        "Auto Misses,Taxied,Auto Shooting Zones,Teleop Lower Hub,Teleop Upper Hub,Teleop Misses,Teleop Shooting Zones,"
-        "Low Attempted,Mid Attempted,High Attempted,Traversal Attempted,Climb Time,Final Climb Type,"
-        "How much do they play defense?,Defense Rating,"
-        "How much were they playing through defense?,Counter Defense Rating,Driver Rating"
-    )
-    _HEADERS_JSON = (
-        "scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,"
-        "auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,"
-        "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,"
-        "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating"
-    )
-
     def __init__(self, cam):
         self.cap = cv2.VideoCapture(cam)
         self.logger = Logger().log
+
+        try:
+            with open("config/config.json") as config:
+                config = json.load(config)
+            self._HEADERS_CSV = "".join(config["HEADERS_CSV"])
+            self._HEADERS_JSON = "".join(config["HEADERS_JSON"])
+        except Exception as e:
+            print(e)
+            self._HEADERS_CSV = (
+                "Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,"
+                "Auto Misses,Taxied,Auto Shooting Zones,Teleop Lower Hub,Teleop Upper Hub,Teleop Misses,Teleop Shooting Zones,"
+                "Low Attempted,Mid Attempted,High Attempted,Traversal Attempted,Climb Time,Final Climb Type,"
+                "How much do they play defense?,Defense Rating,"
+                "How much were they playing through defense?,Counter Defense Rating,Driver Rating"
+            )
+            self._HEADERS_JSON = (
+                "scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,"
+                "auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,"
+                "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,"
+                "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating"
+            )
 
     def _decoder(self, image):
         """
