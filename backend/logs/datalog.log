@@ -1,0 +1,12 @@
+[37m2022-07-08 11:10:46.727 | INFO     |  [DataVal.py:17] Logging started[0m
+[37m2022-07-08 11:10:46.727 | INFO     |  [DataVal.py:20] Starting Validation Process[0m
+[37m2022-07-08 11:10:46.728 | INFO     |  [DataVal.py:24] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-07-08 11:10:46.728 | INFO     |  [DataVal.py:539] Getting configuration variables from config.json[0m
+[37m2022-07-08 11:10:46.728 | INFO     |  [DataVal.py:552] Successfully retreived configuration variablees.[0m
+[37m2022-07-08 11:10:46.987 | INFO     |  [DataVal.py:580] Writing to match_schedule json.[0m
+[37m2022-07-08 11:10:46.991 | INFO     |  [DataVal.py:34] Reading match schedule JSON[0m
+[37m2022-07-08 11:10:46.992 | INFO     |  [DataVal.py:37] Success! JSON match schdeule has been read.[0m
+[37m2022-07-08 11:10:46.992 | INFO     |  [DataVal.py:60] Requesting TBA data[0m
+[37m2022-07-08 11:10:47.415 | INFO     |  [DataVal.py:65] TBA data successfully retrieved[0m
+[37m2022-07-08 11:10:47.420 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-07-08 11:10:47.421 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m

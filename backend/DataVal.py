@@ -210,11 +210,7 @@ class DataVal:
         else:
             #check if robot was in match
 <<<<<<< HEAD
-            team_number = int(submission["team_number"][3:]) if str(submission["team_number"]).startswith("frc") else int(submission["team_number"])
-=======
-            team_number = int(submission["team_number"][3:]) if str(submission["team_number"])[:3] == "frc" else int(submission["team_number"])
->>>>>>> 26501d595bd85c23043efd1d3039e291315a24c6
-            alliance = submission["alliance"]
+                team_number = int(submission["team_number"][3:]) if str(submission["team_number"]).startswith("frc") else int(submission["team_number"])
             if f"frc{team_number}" not in self.match_schedule[f"{self.event_key}_{match_key}"][alliance.lower()]:
                 self.logger.error(f"frc{int(team_number)} was NOT IN MATCH {submission['match_key']}, on the {alliance} alliance")
 
@@ -392,10 +388,7 @@ class DataVal:
                 for submission in self.data_by_match_key[match_key][alliance]:
                     if pd.notna(submission["team_number"]):
 <<<<<<< HEAD
-                        team_number = int(submission["team_number"][3:]) if str(submission["team_number"]).startswith("frc") else int(submission["team_number"])
-=======
-                        team_number = int(submission["team_number"][3:]) if str(submission["team_number"])[:3] == "frc" else int(submission["team_number"])
->>>>>>> 26501d595bd85c23043efd1d3039e291315a24c6
+                        team_number = int(submission["team_number"][3:]) if str(submission["team_number"]).startswith("frc") else int(submission["team_number"])                        
                         if team_number in teams_scouted:
                             teams_scouted[f"frc{team_number}"] += 1
                             self.logger.error(f"In {match_key}, frc{team_number} was SCOUTED TWICE")
