@@ -99,19 +99,41 @@ class DataVal:
         :return: None
         """
         match_key = submission["match_key"].strip().lower()
+
+        self.logger.info(f"Starting MATCH KEY VALIDATION {submission['match_key']}")
         valid_match_key = DataVal.valid_match_key(match_key)
+        self.logger.info(f"Finished MATCH KEY VALIDATION {submission['match_key']}")
 
         if self.match_schedule:
+            self.logger.info(f"Starting MATCH SCHEDULE VALIDATION {submission['match_key']}")
             self.check_submission_with_match_schedule(submission)
-            
+            self.logger.info(f"Finished MATCH SCHEDULE VALIDATION {submission['match_key']}")
+
+
+        self.logger.info(f"Starting AUTO SCORE VALIDATION {submission['match_key']}")    
         self.check_for_higher_than_six_ball_auto(submission)
-        self.check_for_missing_shooting_zones(submission)
-        self.check_for_invalid_climb_data(submission)
-        self.check_for_invalid_defense_data(submission)
+        self.logger.info(f"Finished AUTO SCORE VALIDATION {submission['match_key']}")
+
+        self.logger.info(f"Starting AUTO TAXI VALIDATION {submission['match_key']}")
         self.check_for_auto_shots_but_no_tax(submission)
+        self.logger.info(f"Finished AUTO TAXI VALIDATION {submission['match_key']}")
+
+        self.logger.info(f"Starting SHOOTING ZONE VALIDATION {submission['match_key']}") 
+        self.check_for_missing_shooting_zones(submission)
+        self.logger.info(f"Finished SHOOTING ZONE VALIDATION {submission['match_key']}")
+
+        self.logger.info(f"Starting CLIMB VALIDATION {submission['match_key']}")
+        self.check_for_invalid_climb_data(submission)
+        self.logger.info(f"Finished CLIMB VALIDATION {submission['match_key']}")
+
+        self.logger.info(f"Starting DEFENSE VALIDATION {submission['match_key']}")
+        self.check_for_invalid_defense_data(submission)
+        self.logger.info(f"Finished DEFENSE VALIDATION {submission['match_key']}")
 
         if self.wifi_connection and valid_match_key:
+            self.logger.info(f"Starting TBA VALIDATION {submission['match_key']}")
             self.check_submission_with_tba(submission)
+            self.logger.info(f"Starting TBA VALIDATION {submission['match_key']}")
             
 
 
@@ -166,12 +188,18 @@ class DataVal:
 
         #checks on whole data
 
+        self.logger.info(f"Starting whole data TEAM VALIDATION {submission['match_key']}")
         self.check_team_numbers_for_each_match(scouting_data)
+        self.logger.info(f"Finished whole data TEAM VALIDATION {submission['match_key']}")
 
+        self.logger.info(f"Starting whole data OUTLIER VALIDATION {submission['match_key']}")
         self.check_for_outliers(scouting_data)
+        self.logger.info(f"Finished whole data OUTLIER VALIDATION {submission['match_key']}")
 
         if self.wifi_connection:
+            self.logger.info(f"Starting whole data TBA SHOOTING TOTAL VALIDATION {submission['match_key']}")
             self.check_shooting_total_with_tba(scouting_data)
+            self.logger.info(f"Finished whole data TBA SHOOTING TOTAL VALIDATION {submission['match_key']}")
 
     
 
