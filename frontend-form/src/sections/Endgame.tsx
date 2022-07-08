@@ -134,7 +134,7 @@ export const Endgame: Component = () => {
           <RadioWidget
             legend="Final Climb"
             group="finalClimb"
-            options={["None", "Low", "Mid", "High", "Traversal"]}
+            options={["No Climb", "Low", "Mid", "High", "Traversal"]}
             getter={finalClimb}
             setter={setFinalClimb}
           />

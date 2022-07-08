@@ -167,9 +167,9 @@ export const endgameState = createRoot(createEndgameState);
 
 function createMiscState() {
   // States for defenseTime, defensePlay, defendedTime, and defenseCounter
-  const [defenseTime, setDefenseTime] = createSignal<Number>();
+  const [defenseTime, setDefenseTime] = createSignal<Number>(0);
   const [defensePlay, setDefensePlay] = createSignal<Number>();
-  const [defendedTime, setDefendedTime] = createSignal<Number>();
+  const [defendedTime, setDefendedTime] = createSignal<Number>(0);
   const [defenseCounter, setDefenseCounter] = createSignal<Number>();
   const [driverRating, setDriverRating] = createSignal<Number>(3);
   const [miscNotes, setMiscNotes] = createSignal<string>("")

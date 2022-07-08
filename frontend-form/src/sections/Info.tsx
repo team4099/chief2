@@ -99,11 +99,11 @@ export const Info: Component = () => {
               <label for="station-1">1</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-2" name="station" />
+              <input type="radio" id="station-2" name="station" value={2}/>
               <label for="station-2">2</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-3" name="station" />
+              <input type="radio" id="station-3" name="station" value={3}/>
               <label for="station-3">3</label>
             </label>
           </fieldset>
