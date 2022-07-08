@@ -71,24 +71,6 @@ class DataVal:
             self.tba_match_data = match_dictionary
 
 
-    @classmethod
-    def valid_match_key(
-        cls,
-        key
-    ):
-        """
-        checks match key for correct format
-        :param key: match key as a a string
-        :return: Bolean false if match key error, otherwise true
-        """
-
-        #check match key format regex
-        match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
-        if not re.fullmatch(match_key_format, key):
-            return False
-        return True
-
-
     def validate_submission(
             self,
             submission: dict,
@@ -523,13 +505,28 @@ class DataVal:
                         self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was IQR OUTLIER")
 
 
+    @staticmethod
+    def valid_match_key(
+        key
+    ):
+        """
+        checks match key for correct format
+        :param key: match key as a a string
+        :return: Bolean false if match key error, otherwise true
+        """
 
-    @classmethod
-    def z_score_outlier(cls, value, mean, std, threshold):
+        #check match key format regex
+        match_key_format = re.compile(r"(qm[1-9][0-9]{0,3})|(qf[1-4]m[1-3])|(sf[1-2]m[1-3])|(f[1]m[1-3])")
+        if not re.fullmatch(match_key_format, key):
+            return False
+        return True
+
+    @staticmethod
+    def z_score_outlier(value, mean, std, threshold):
         return abs(value - mean)/std > threshold
 
-    @classmethod
-    def IQR_outlier(cls, value, q1, q3):
+    @staticmethod
+    def IQR_outlier(value, q1, q3):
         IQR = q3-q1
         lower_bound = q1 - 1.5*IQR
         upper_bound = q3 + 1.5*IQR
