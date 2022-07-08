@@ -81,6 +81,7 @@ class DataVal:
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
+
         match_key = submission["match_key"].strip().lower()
 
         if self.debug_mode:

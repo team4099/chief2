@@ -29,3 +29,10 @@ varun,qm6,5549,Red,3,1,,1,,1,Tarmac,,6,,Tarmac;Elsewhere,,1,,,2,Mid,,,,,,notes f
 samuel,qm6,6326,Red,1,1,,,,1,,,2,3,Tarmac;Elsewhere,,,,,,No Climb,,,0.25,3,4,notes for auto,notes for teleop,notes for misc
 veronica,qm6,5549,Red,3,1,,1,,1,Tarmac,,7,,Elsewhere,,1,,,1,Mid,,2,,2,3,notes for auto,notes for teleop,notes for misc
 paolo,qm7,1262,Blue,1,1,,,1,1,Fender,2,1,4,Tarmac;Opposing Tarmac,,,,,,No Climb,,,,,,notes for auto,notes for teleop,notes for misc
+,,,,,,,,,,,,,,,,,,,,,,,,,3,,,
+S,c,o,u,t, ,I,D,,,M,a,t,c,h, ,K,e,y,,,T,e,a,m, ,N,u,m,b,e
+S,M,T,A,D,P,A,A,A,T,A,T,T,T,T,L,M,H,T,C,F,H,D,H,C,D, , , 
+sd,qm3,,,,1,0,0,0,,,,,,,,,0,0,0,,,,,,,,,
+sd,qm3,4099,,,1,0,0,0,,,,,,,,,0,0,0,,,,,,,,,
+sd,qm3,4099,Blue,on,1,3,4,2,1,,,1,,,,,3,2,2,,,,,,,1,,1
+paolo,qm3,1908,Blue,1,1,0,0,0,1,Tarmac,1,2,0,Fender;Opposing Tarmac,0,1,0,0,1,Mid,0,,0,,,notes for auto,notes for teleop,notes for misc

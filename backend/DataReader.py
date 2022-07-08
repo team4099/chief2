@@ -48,15 +48,13 @@ class DataReader:
             pts = pts.reshape((-1, 1, 2))
             cv2.polylines(image, [pts], True, (0, 255, 0), 3)
 
-            qrcode_data = self._HEADERS_CSV + "\n" + obj.data.decode("utf-8")
+            qrcode_data = obj.data.decode("utf-8")
+            print("qrcode_data", qrcode_data)
 
-            csv_data = pd.read_csv(StringIO(qrcode_data))
-            csv_data = csv_data.replace({np.nan: None})
-            
-            return {
-                key: csv_data[corresponding_header][0]
-                for key, corresponding_header in zip(self._HEADERS_JSON.split(","), self._HEADERS_CSV.split(","))
-            }
+            formatted_data = [None if i=="" else i for i in qrcode_data.split(",")]
+            formatted_data = {header:data for header, data in zip(self._HEADERS_JSON.split(","), formatted_data)}
+
+            return formatted_data
 
     def read_qrcode(self):
         """
