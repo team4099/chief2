@@ -13,6 +13,8 @@ const {
   setDefenseCounter,
   driverRating,
   setDriverRating,
+  miscNotes,
+  setMiscNotes
 } = miscState;
 
 export const Misc: Component = () => {
@@ -102,6 +104,7 @@ export const Misc: Component = () => {
             rows="5"
             cols="20"
             class="w-full rounded-md border-[#7b7b7b] focus:round-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-amber-400"
+            onInput={(e) => setMiscNotes(e.target.value)}
           ></textarea>
         </div>
       </div>

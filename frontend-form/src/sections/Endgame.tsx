@@ -13,7 +13,7 @@ const {
   finalClimb,
   setFinalClimb,
   finalClimbTime,
-  setFinalClimbTime,
+  setFinalClimbTime
 } = endgameState;
 
 export const Endgame: Component = () => {

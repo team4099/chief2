@@ -14,6 +14,8 @@ const {
   setAutoMissed,
   autoHuman,
   setAutoHuman,
+  autoNotes,
+  setAutoNotes
 } = autoState;
 
 export const Auto: Component = () => {
@@ -66,6 +68,7 @@ export const Auto: Component = () => {
             rows="5"
             cols="20"
             class="w-full border border-[#7b7b7b] rounded-lg"
+            onInput={(e) => setAutoNotes(e.target.value)}
           ></textarea>
         </div>
       </div>

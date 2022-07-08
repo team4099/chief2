@@ -8,6 +8,8 @@ const {
   setTeleopLower,
   teleopMissed,
   setTeleopMissed,
+  teleopNotes,
+  setTeleopNotes
 } = teleopState;
 
 export const Teleop: Component = () => {
@@ -43,6 +45,7 @@ export const Teleop: Component = () => {
             rows="5"
             cols="20"
             class="w-full border border-[#7b7b7b] rounded-lg"
+            onInput={(e) => setTeleopNotes(e.target.value)}
           ></textarea>
         </div>
       </div>

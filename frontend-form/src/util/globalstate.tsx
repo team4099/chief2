@@ -40,6 +40,7 @@ function createAutoState() {
   const [autoLower, setAutoLower] = createSignal<Number>(0);
   const [autoMissed, setAutoMissed] = createSignal<Number>(0);
   const [autoHuman, setAutoHuman] = createSignal<Number>(0);
+  const [autoNotes, setAutoNotes] = createSignal<string>("");
   return {
     cargoPreload,
     setCargoPreload,
@@ -53,6 +54,8 @@ function createAutoState() {
     setAutoMissed,
     autoHuman,
     setAutoHuman,
+    autoNotes,
+    setAutoNotes
   };
 }
 export const autoState = createRoot(createAutoState);
@@ -90,6 +93,8 @@ function createTeleopState() {
   const [teleopUpper, setTeleopUpper] = createSignal<Number>(0);
   const [teleopLower, setTeleopLower] = createSignal<Number>(0);
   const [teleopMissed, setTeleopMissed] = createSignal<Number>(0);
+  const [teleopNotes, setTeleopNotes] = createSignal<string>("");
+
   return {
     teleopUpper,
     setTeleopUpper,
@@ -97,6 +102,8 @@ function createTeleopState() {
     setTeleopLower,
     teleopMissed,
     setTeleopMissed,
+    teleopNotes,
+    setTeleopNotes
   };
 }
 export const teleopState = createRoot(createTeleopState);
@@ -165,6 +172,7 @@ function createMiscState() {
   const [defendedTime, setDefendedTime] = createSignal<Number>();
   const [defenseCounter, setDefenseCounter] = createSignal<Number>();
   const [driverRating, setDriverRating] = createSignal<Number>(3);
+  const [miscNotes, setMiscNotes] = createSignal<string>("")
   return {
     defenseTime,
     setDefenseTime,
@@ -176,6 +184,8 @@ function createMiscState() {
     setDefenseCounter,
     driverRating,
     setDriverRating,
+    miscNotes,
+    setMiscNotes
   };
 }
 export const miscState = createRoot(createMiscState);
