@@ -191,15 +191,15 @@ class DataVal:
 
         #check match key format regex
         if not DataVal.valid_match_key(match_key ):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INVALID MATCH KEY ")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INVALID MATCH KEY ")
 
         #check if match key exists in schedule
         if event_and_match_key not in self.match_schedule:
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MATCH KEY NOT FOUND in schedule ")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MATCH KEY NOT FOUND in schedule ")
 
         else:
             #check if robot was in match
-            team_number = int(submission["team_number"])
+            team_number = int(submission["team_number"][3:]) if submission["team_number"].startsWith("frc") else int(submission["team_number"])
             alliance = submission["alliance"]
             if f"frc{team_number}" not in self.match_schedule[f"{self.event_key}_{match_key}"][alliance.lower()]:
                 self.logger.error(f"frc{int(team_number)} was NOT IN MATCH {submission['match_key']}, on the {alliance} alliance")
@@ -224,12 +224,12 @@ class DataVal:
         #checks auto shooting zones
         balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
         if pd.notna(balls_shot_in_auto) and balls_shot_in_auto > 0 and pd.isna(submission["auto_shooting_zones"]):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING AUTO SHOOTING ZONES")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING AUTO SHOOTING ZONES")
 
         #checks teleop shooting zones
         balls_shot_in_teleop = float(submission["teleop_lower_hub"]) + float(submission["teleop_upper_hub"]) + float(submission["teleop_misses"])
         if pd.notna(balls_shot_in_teleop) and balls_shot_in_teleop > 0 and pd.isna(submission["teleop_shooting_zones"]):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING TELEOP SHOOTING ZONES")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING TELEOP SHOOTING ZONES")
 
     def check_for_invalid_climb_data(
             self, 
@@ -246,12 +246,12 @@ class DataVal:
             #check if attempted climb for corresponding final climb type is false
             attempted_climb = submission[f"attempted_{final_climb_type.lower()}"]
             if (pd.isna(attempted_climb)) or attempted_climb == 0:
-                self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING ATTEMPTED {final_climb_type.upper()}")
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING ATTEMPTED {final_climb_type.upper()}")
 
             #check if climb time is missing
             climb_time = submission["climb_time"]
             if (pd.isna(climb_time)) or climb_time == 0:
-                self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING CLIMB TIME")
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING CLIMB TIME")
   
 
     def check_for_invalid_defense_data(
@@ -272,23 +272,23 @@ class DataVal:
 
         #check for 0% defense pct but given rating
         if (pd.isna(defense_pct) or defense_pct == 0) and (pd.notna(defense_rating) and defense_rating != 0):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} rated for defense but NO DEFENSE PCT")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} rated for defense but NO DEFENSE PCT")
 
         #check for missing defense rating
         if (pd.isna(defense_rating) or defense_rating == 0) and (pd.notna(defense_pct) and defense_pct != 0):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING DEFENSE RATING")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING DEFENSE RATING")
 
         #check for 0% counter pct but given rating
         if (pd.isna(counter_pct) or counter_pct == 0) and (pd.notna(counter_rating) and counter_rating != 0):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} rated for counter defense but NO COUNTER DEFENSE PCT")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} rated for counter defense but NO COUNTER DEFENSE PCT")
 
         #check for missing counter defense rating
         if (pd.isna(counter_rating) or counter_rating == 0) and (pd.notna(counter_pct) and counter_pct != 0):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} MISSING COUNTER DEFENSE RATING")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING COUNTER DEFENSE RATING")
 
         #inconsistent defense + counter defense pct
         if (defense_pct + counter_pct) > 1:
-             self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} DEFENSE AND COUNTER DEFENSE PCT TOO HIGH")
+             self.logger.error(f"In {submission['match_key']}, {submission['team_number']} DEFENSE AND COUNTER DEFENSE PCT TOO HIGH")
 
 
 
@@ -303,7 +303,7 @@ class DataVal:
         """
         balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
         if balls_shot_in_auto > 6:
-            self.logger.warn(f"In {submission['match_key']}, frc{int(submission['team_number'])} shot {int(balls_shot_in_auto)} balls in Autonomous.")
+            self.logger.warn(f"In {submission['match_key']}, {submission['team_number']} shot {int(balls_shot_in_auto)} balls in Autonomous.")
 
 
     def check_for_auto_shots_but_no_tax(
@@ -318,7 +318,7 @@ class DataVal:
         balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
         taxi = submission["taxied"]
         if balls_shot_in_auto > 1 and (pd.isna(taxi) or not taxi):
-            self.logger.warn(f"In {submission['match_key']}, frc{int(submission['team_number'])} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
+            self.logger.warn(f"In {submission['match_key']}, {submission['team_number']} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
 
 
     def check_submission_with_tba(
@@ -350,11 +350,11 @@ class DataVal:
 
         #check for inconsistent taxi
         if (tba_taxi == "No" and (pd.notna(submission_taxi) and submission_taxi)) or (tba_taxi == "Yes" and (pd.isna(submission_taxi) or not submission_taxi)):
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INCORRECT TAXI according to TBA")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT TAXI according to TBA")
 
         #check for inconsistent climb type
         if tba_climb != submission_climb:
-            self.logger.error(f"In {submission['match_key']}, frc{int(submission['team_number'])} INCORRECT ClIMB TYPE according to TBA")
+            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA")
         
         
 
@@ -377,7 +377,7 @@ class DataVal:
             for alliance in self.data_by_match_key[match_key]:
                 for submission in self.data_by_match_key[match_key][alliance]:
                     if pd.notna(submission["team_number"]):
-                        team_number = int(submission["team_number"])
+                        team_number = int(submission["team_number"][3:]) if submission["team_number"].startsWith("frc") else int(submission["team_number"])
                         if team_number in teams_scouted:
                             teams_scouted[f"frc{team_number}"] += 1
                             self.logger.error(f"In {match_key}, frc{team_number} was SCOUTED TWICE")

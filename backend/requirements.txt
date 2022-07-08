@@ -1,4 +1,4 @@
 colorlog
 pandas
-json
-csv
+opencv-python
+pyzbar
