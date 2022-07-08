@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.2",
+    "qr-creator": "^1.0.0",
     "qr-with-logo": "^1.0.5",
     "solid-js": "^1.4.2"
   }
