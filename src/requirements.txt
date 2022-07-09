@@ -1,0 +1,4 @@
+colorlog
+pandas
+pyzbar
+requests

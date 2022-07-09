@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+    backend:
+      build: .
+      stdin_open: true
+      working_dir: /code
+      volumes:
+        - ./src/:/code
