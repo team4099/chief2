@@ -162,7 +162,7 @@ cd backend
 pip install -r requirements.txt
 python main.py
 ```
-If the above commands do not work:
+If the above commands don't work:
 ```
 cd backend
 pip3 install -r requirements.txt
