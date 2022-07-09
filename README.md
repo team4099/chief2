@@ -12,10 +12,11 @@ A Quick Guide for Installing Python on Common Operating Systems
 3. [Install on Linux](#linux-)
 
 ## **Windows** 
-1. If you have not yet installed Python on your Windows OS, then download and install the latest Python3 installer from [Python Downloads Page](https://www.python.org/downloads/)
+1. If you have not yet installed Python on your Windows OS, then download and install the **latest Python3** installer from [Python Downloads Page](https://www.python.org/downloads/)
    - Make sure to check the box during installation which adds Python to PATH. Labeled something like **Add Python 3.X to PATH**
 
 2. Once Python is installed, you should be able to open a command window, type `python`, hit ENTER, and see a Python prompt opened. Type `quit()` to exit it. You should also be able to run the command `pip` and see its options. If both of these work, then you are ready to go.
+
   - If you cannot run `python` or `pip` from a command prompt, you may need to add the Python installation directory path to the Windows PATH variable
     - The easiest way to do this is to find the new shortcut for Python in your start menu, right-click on the shortcut, and find the folder path for the `python.exe` file
       - For Python2, this will likely be something like `C:\Python27`
