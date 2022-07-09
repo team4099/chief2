@@ -140,9 +140,9 @@ git clone https://github.com/team4099/Scouting-2022.git
 ```
 
 # Zbar
-If you are on MacOS (or Linux) then you need to install zbar. If you have a windows machine you can skip this step.
+If you are on MacOS (or Linux) then you will need to install zbar. If you have a Windows machine then you can skip this step.
 
-If you followed the instructions to install Homebrew, then you should be able to run this command without any errors. If you haven't installed homebrew then scroll up and follow homebrew installation instructions above.
+If you followed the instructions to install Homebrew, then you should be able to run this command without any errors. If you haven't installed homebrew already then scroll up and follow the homebrew installation instructions above.
 
 To intstall zbar, all you have to do is run the following command:
 
