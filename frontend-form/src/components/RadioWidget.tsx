@@ -29,7 +29,7 @@ export const RadioWidget: Component = ({
           return (
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
               <input
-                type="radio"
+                type="checkbox"
                 id={`${group}-${index()}`}
                 name={group}
                 value={item}
@@ -42,3 +42,4 @@ export const RadioWidget: Component = ({
     </fieldset>
   );
 };
+
