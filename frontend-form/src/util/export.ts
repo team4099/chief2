@@ -65,7 +65,8 @@ export default async function exportQR() {
   const autoZones = [[autoFender(), "Fender"], [autoOpposingFender(), "Opposing Fender"], [autoTarmac(), "Tarmac"], [autoOpposingTarmac(), "Opposing Tarmac"], [autoLaunchpad(), "Launchpad"], [autoTerminal(), "Terminal"], [autoElsewhere(), "Elsewhere"]]
   const teleopZones = [[teleopFender(), "Fender"], [teleopOpposingFender(), "Opposing Fender"], [teleopTarmac(), "Tarmac"], [teleopOpposingTarmac(), "Opposing Tarmac"], [teleopLaunchpad(), "Launchpad"], [teleopTerminal(), "Terminal"], [teleopElsewhere(), "Elsewhere"]]
 
-  var autoZoneData, teleopZoneData = ""
+  var autoZoneData = ""
+  var teleopZoneData = ""
 
   autoZones.forEach(function (item, index) {
     if (item[0] != undefined){

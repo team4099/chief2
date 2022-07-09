@@ -27,7 +27,7 @@ export const Info: Component = () => {
         </div> */}
 
         <div class="m-4">
-          <p class="font-bold">Match Key</p>
+          <p class="font-bold">Match Key <span class="text-red-500">*</span></p>
           <div class="flex flex-row">
             <select
               id="matchType"
@@ -67,7 +67,7 @@ export const Info: Component = () => {
             class="flex flex-row"
             onChange={(e) => setAlliance(e.target.value)}
           >
-            <legend class="font-bold">Alliance</legend>
+            <legend class="font-bold">Alliance <span class="text-red-500">*</span></legend>
             <label class="flex-1 bg-blue-300 mr-1 rounded-xl px-2 py-1 transition-colors checked:bg-blue-500">
               <input type="radio" id="blue" name="alliance" value="Blue" />
               <label for="blue">Blue</label>
@@ -93,7 +93,7 @@ export const Info: Component = () => {
             class="flex flex-row"
             onChange={(e) => setDriverStation(e.target.value)}
           >
-            <legend class="font-bold">Driver Station</legend>
+            <legend class="font-bold">Driver Station <span class="text-red-500">*</span></legend>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
               <input type="radio" id="station-1" name="station" value={1} />
               <label for="station-1">1</label>
@@ -110,7 +110,7 @@ export const Info: Component = () => {
         </div>
 
         <div class="m-4">
-          <p class="font-bold">Team Number</p>
+          <p class="font-bold">Team Number <span class="text-red-500">*</span></p>
           <input
             type="number"
             id="teamNumber"
