@@ -19,9 +19,8 @@ const {
 export const Endgame: Component = () => {
   const [time, setTime] = createSignal(0);
   var cleared = false;
-  var timer = setInterval(() => {
-    setTime(time() + 1);
-  }, 1000);
+  var needToStartTimer = true;
+  var timer = 0
 
   const [rungs, setRungs] = createSignal([
     {
@@ -75,21 +74,33 @@ export const Endgame: Component = () => {
             Reset Timer
           </button>
           <button
-            id="reset-timer"
+            id="toggle-timer"
             class="inline col-span-1 h-12 bg-[#d9d9d9] ml-1"
             onClick={() => {
-              if (!cleared) {
-                cleared = true;
-                clearInterval(timer);
-              } else {
+              if (needToStartTimer){
                 cleared = false;
+                changeText("toggle-timer", "Stop Timer");
                 timer = setInterval(() => {
                   setTime(time() + 1);
                 }, 1000);
+                needToStartTimer = false;
+              } else {
+                if (!cleared) {
+                  cleared = true;
+                  clearInterval(timer);
+                  changeText("toggle-timer", "Start Timer");
+                } else {
+                  cleared = false;
+                  changeText("toggle-timer", "Stop Timer");
+                  timer = setInterval(() => {
+                    setTime(time() + 1);
+                  }, 1000);
+                  
+                }
               }
             }}
           >
-            Toggle Timer
+            Start Timer
           </button>
         </div>
 
@@ -194,3 +205,7 @@ export const Endgame: Component = () => {
     </div>
   );
 };
+
+function changeText(id, text){
+  document.getElementById(id).innerHTML = text;
+}
