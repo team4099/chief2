@@ -92,7 +92,7 @@ git clone https://github.com/team4099/Scouting-2022.git
 
 ## Mac OS
 
-Open a terminal window
+Open a new terminal window
 
 ### Step 1 – Install [*Homebrew*](http://brew.sh/)
 
@@ -162,7 +162,7 @@ cd backend
 pip install -r requirements.txt
 python main.py
 ```
-*If the commands above do not work:
+If the above commands do not work:
 ```
 cd backend
 pip3 install -r requirements.txt
