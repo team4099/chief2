@@ -21,7 +21,7 @@ const App: Component = () => {
       <Misc />
       <div class="px-2">
         <button
-          class="text-white font-bold text-m bg-team-gold hover:bg-team-gold-hover p-4 transition-all rounded-xl my-2 w-full"
+          class="text-white  font-bold text-m bg-team-gold hover:bg-team-gold-hover p-4 transition-all rounded-xl my-2 w-full"
           onClick={() => {
             showQRModal();
           }}

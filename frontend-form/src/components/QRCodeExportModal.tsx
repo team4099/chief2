@@ -14,7 +14,7 @@ export const QRCodeExportModal: Component = () => {
           <p class="font-bold text-xl my-2 flex-1">QR Code Export</p>
           <button
             onClick={() => {
-              hideQRModal();
+              hideQRModal(); //
             }}
             class="text-white font-bold text-m bg-red-500 hover:bg-red-400 p-2 transition-all rounded-xl"
           >
