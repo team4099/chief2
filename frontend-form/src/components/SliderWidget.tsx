@@ -26,7 +26,7 @@ export const SliderWidget: Component = () => {
                 />
             </div>
             <div class="basis-1/4 text-center">
-                <output class="text-center">{percent()}%</output>
+                <output class="text-center">{getPercent()}%</output>
             </div>
         </div>
         
@@ -34,3 +34,13 @@ export const SliderWidget: Component = () => {
         
   );
 };
+
+function getPercent(){
+    if (document.getElementById("slider") === null){
+        return 0
+    } else {
+        console.log(document.getElementById("slider"))
+        return document.getElementById("slider").getAttribute('value');
+    }
+    
+}

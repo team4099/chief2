@@ -1,16 +1,13 @@
 /* @refresh reload */
 import "./index.css";
 import { render } from "solid-js/web";
-import { Component } from "solid-js";
 import App from "./App";
-import { ScoutIDContextProvider } from "./util/scoutid";
+// import { registerSW } from "virtual:pwa-register";
 
-const Index: Component = () => {
-  return (
-    <ScoutIDContextProvider >
-      <App />
-    </ScoutIDContextProvider>
-  );
-};
+// const updateSW = registerSW({
+//   onRegisterError(error) {
+//     console.log(error)
+//   },
+// });
 
-render(() => <Index />, document.getElementById("root") as HTMLElement);
+render(() => <App />, document.getElementById("root") as HTMLElement);

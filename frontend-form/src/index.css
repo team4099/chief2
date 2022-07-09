@@ -5,6 +5,7 @@
 @font-face {
   font-family: "Inter";
   src: url('/src/fonts/Inter/Inter.ttf') format("truetype");
+  font-display: swap;
 }
 
 @layer base {
@@ -12,14 +13,6 @@
     font-family: "Inter", sans-serif;
   }
 }
-
-/* input, select {
-  min-height: 32px;
-} */
-
-/* input[type="radio"] {
-  vertical-align: middle;
-} */
 
 #modal-content {
   margin: 0 auto;

@@ -2,6 +2,7 @@ import { Component } from "solid-js";
 import { SliderWidget } from "../components/SliderWidget";
 import { RadioWidget } from "../components";
 import { miscState } from "../util/globalstate";
+
 const {
   defenseTime,
   setDefenseTime,
@@ -13,6 +14,8 @@ const {
   setDefenseCounter,
   driverRating,
   setDriverRating,
+  miscNotes,
+  setMiscNotes
 } = miscState;
 
 export const Misc: Component = () => {
@@ -31,7 +34,7 @@ export const Misc: Component = () => {
           <RadioWidget
             legend="How much do they play defense?"
             group="defenseTime"
-            options={[".25", ".5", ".75", "1.0"]}
+            options={["0.0", ".25", ".5", ".75", "1.0"]}
             getter={defenseTime}
             setter={setDefenseTime}
           />
@@ -43,7 +46,7 @@ export const Misc: Component = () => {
           <RadioWidget
             legend="Defense Rating"
             group="defensePlay"
-            options={["1", "2", "3", "4", "5"]}
+            options={["0", "1", "2", "3", "4", "5"]}
             getter={defensePlay}
             setter={setDefensePlay}
           />
@@ -59,7 +62,7 @@ export const Misc: Component = () => {
           <RadioWidget
             legend="How much were they defended?"
             group="defendedTime"
-            options={[".25", ".5", ".75", "1.0"]}
+            options={["0.0", ".25", ".5", ".75", "1.0"]}
             getter={defendedTime}
             setter={setDefendedTime}
           />
@@ -68,7 +71,7 @@ export const Misc: Component = () => {
           <RadioWidget
             legend="Counter Defense Rating"
             group="defenseCounter"
-            options={["1", "2", "3", "4", "5"]}
+            options={["0", "1", "2", "3", "4", "5"]}
             getter={defenseCounter}
             setter={setDefenseCounter}
           />
@@ -102,6 +105,7 @@ export const Misc: Component = () => {
             rows="5"
             cols="20"
             class="w-full rounded-md border-[#7b7b7b] focus:round-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-amber-400"
+            onInput={(e) => setMiscNotes(e.target.value)}
           ></textarea>
         </div>
       </div>

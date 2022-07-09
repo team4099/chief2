@@ -3,12 +3,13 @@ import solidPlugin from 'vite-plugin-solid';
 import {VitePWA} from 'vite-plugin-pwa'
 
 export default defineConfig({
-  plugins: [solidPlugin(), VitePWA({
+  plugins: [solidPlugin(), 
+    VitePWA({
       includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Name of your app',
-        short_name: 'Short name of your app',
-        description: 'Description of your app',
+        name: 'Chief2',
+        short_name: 'Chief2 Scout',
+        description: 'Team 4099 Chief2 Scouting App',
         theme_color: '#ffffff',
         icons: [
           {
@@ -29,7 +30,9 @@ export default defineConfig({
           }
         ]
       }
-    })],
+    }
+    )
+  ],
   build: {
     target: 'esnext',
     polyfillDynamicImport: false,
