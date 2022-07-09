@@ -69,6 +69,8 @@ export const Endgame: Component = () => {
               setTime(0);
               clearInterval(timer);
               cleared = true;
+              needToStartTimer = true;
+              changeText("toggle-timer", "Start Timer");
             }}
           >
             Reset Timer
