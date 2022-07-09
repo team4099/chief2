@@ -148,6 +148,7 @@ export const Endgame: Component = () => {
             legend="Final Climb"
             group="finalClimb"
             options={["No Climb", "Low", "Mid", "High", "Traversal"]}
+
             getter={finalClimb}
             setter={setFinalClimb}
           />
