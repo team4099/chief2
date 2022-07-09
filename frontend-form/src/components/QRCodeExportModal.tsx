@@ -10,6 +10,25 @@ export const QRCodeExportModal: Component = () => {
   onMount(async () => {
     exportQR();
   });
+
+  // Solution retrieved from
+  // https://stackoverflow.com/a/35366681
+  function dataURItoBlob(dataURI) {
+    // convert base64/URLEncoded data component to raw binary data held in a string
+    var byteString;
+    if (dataURI.split(",")[0].indexOf("base64") >= 0)
+      byteString = atob(dataURI.split(",")[1]);
+    else byteString = unescape(dataURI.split(",")[1]);
+    // separate out the mime component
+    var mimeString = dataURI.split(",")[0].split(":")[1].split(";")[0];
+    // write the bytes of the string to a typed array
+    var ia = new Uint8Array(byteString.length);
+    for (var i = 0; i < byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([ia], { type: mimeString });
+  }
+
   return (
     <div class="fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex px-2">
       <div class="mx-auto relative p-4 bg-white w-full max-w-md my-auto flex flex-col rounded-xl">
@@ -20,16 +39,43 @@ export const QRCodeExportModal: Component = () => {
               const canvasResult = html2canvas(
                 document.getElementById("resultsComponent")
               )
-                .then((r) => {
+                .then((r: HTMLCanvasElement) => {
                   // setRenderCanvas(r);
-                  var link = document.createElement("a");
-                  link.download = "filename.png";
-                  link.href = r.toDataURL();
-                  link.click();
+                  let dataURL = r.toDataURL();
+                  let blob = dataURItoBlob(dataURL);
+                  let file = new File(
+                    [blob],
+                    `${teamNumber()}-${matchKey()}.png`
+                  );
+
+                  if (
+                    navigator.canShare &&
+                    navigator.canShare({ files: [file] })
+                  ) {
+                    navigator
+                      .share({
+                        files: [file],
+                        title: "Scouting Match Data",
+                        text: "M atch data",
+                      })
+                      .then(() => console.log("Share was successful."))
+                      .catch((error) => console.log("Sharing failed", error));
+                  } else {
+                    console.log(
+                      `Your system doesn't support sharing files, downloading image instead`
+                    );
+
+                    var link = document.createElement("a");
+                    link.download = "filename.png";
+                    link.href = r.toDataURL();
+                    link.click();
+                  }
                 })
-                .catch((e) => console.log("Errored when export image: ", e));
+                .catch((e) =>
+                  console.log("Errored when export image: ", e.toString())
+                );
             }}
-            class="text-white font-bold text-m bg-team-gold hover:bg-team-gold-hover p-2 transition-all rounded-xl mr-1"
+            class="text-white font-bold text-xs bg-team-gold hover:bg-team-gold-hover px-2 transition-all rounded-xl mr-1"
           >
             Download
           </button>
@@ -38,7 +84,7 @@ export const QRCodeExportModal: Component = () => {
             onClick={() => {
               hideQRModal(); //
             }}
-            class="text-white font-bold text-m bg-red-500 hover:bg-red-400 p-2 transition-all rounded-xl ml-1"
+            class="text-white font-bold text-xs bg-red-500 hover:bg-red-400 px-2 transition-all rounded-xl ml-1"
           >
             Close
           </button>
