@@ -12,10 +12,22 @@ import {
   scoutIDState,
   qrModalState,
   infoState,
+  autoState,
   matchKeyState,
+  autoShootingZones,
+  teleopState,
+  teleopShootingZones,
+  endgameState,
+  miscState
 } from "./util/globalstate";
 const { modalVisible } = modalState;
-const { matchKey, alliance, driverStation, teamNumber } = infoState;
+const { matchKey, setMatchKey, alliance, setAlliance, driverStation, setDriverStation, teamNumber, setTeamNumber } = infoState;
+const { setCargoPreload, setAutoLower, setAutoUpper, setAutoMissed, setTaxied, setAutoNotes } = autoState;
+const { setAutoFender, setAutoLaunchpad, setAutoElsewhere, setAutoTarmac, setAutoOpposingFender, setAutoTerminal, setAutoOpposingTarmac } = autoShootingZones
+const { setTeleopLower, setTeleopUpper, setTeleopMissed, setTeleopNotes } = teleopState;
+const { setTeleopFender, setTeleopLaunchpad, setTeleopElsewhere, setTeleopTarmac, setTeleopOpposingFender, setTeleopTerminal, setTeleopOpposingTarmac } = teleopShootingZones
+const { setAttemptedLow, setAttemptedMedium, setAttemptedHigh, setAttemptedTraversal, setFinalClimb, setFinalClimbTime } = endgameState
+const { setDefendedTime, setDefenseTime, setDefenseCounter, setDefensePlay, setDriverRating, setMiscNotes } = miscState
 const { loggedIn, scoutID } = scoutIDState;
 const { qrModal, showQRModal } = qrModalState;
 const {
@@ -143,6 +155,27 @@ const App: Component = () => {
         >
           Generate QR Code for {scoutID()}
         </button>
+        {/*
+        <button
+          class="text-white font-bold text-m bg-red-500 hover:bg-red-300 p-4 transition-all rounded-xl my-2 w-full"
+          onClick={() => {
+            console.log(alliance())
+            setMatchKey("");
+            setAlliance("Red");
+            setDriverStation();
+            setTeamNumber();
+
+            setCargoPreload();
+            setAutoLower(0);
+            setAutoUpper(0);
+            setAutoMissed(0);
+            setTaxied();
+          }}
+            
+        >
+          Clear Form
+        </button>
+        */}
       </div>
       {/* {showImageExport() && <ImageExportComponent />} */}
     </div>

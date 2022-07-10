@@ -81,21 +81,13 @@ export const Misc: Component = () => {
 
         <div class="mb-10"> */}
         <div class="m-4">
-          <p class="font-bold mb-2">How well do they drive?</p>
-          <select
-            id="alliance"
-            class="border-solid border rounded-l mr-1 w-full focus:border-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-amber-400"
-            onChange={(e) => {
-              console.log(`(Driver Rating) ${e.target.value}`);
-              setDriverRating(e.target.value);
-            }}
-          >
-            <option value="1">Very Poor</option>
-            <option value="2">Poor</option>
-            <option value="3" selected>Average</option>
-            <option value="4">Good</option>
-            <option value="5">Very Good</option>
-          </select>
+          <RadioWidget
+            legend="How well do they drive?"
+            group="driveCounter"
+            options={["1", "2", "3", "4", "5"]}
+            getter={driverRating}
+            setter={setDriverRating}
+          />
         </div>
 
         <div class="m-4">
