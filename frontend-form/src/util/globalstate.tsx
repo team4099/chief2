@@ -1,4 +1,4 @@
-import { createSignal, createMemo, createRoot } from "solid-js";
+import { createSignal, createRoot } from "solid-js";
 
 function createModalState() {
   const [modalVisible, setmodalVisible] = createSignal<boolean>(false);
@@ -14,6 +14,27 @@ function createScoutIDState() {
   return { scoutID, loggedIn, setScoutID };
 }
 export const scoutIDState = createRoot(createScoutIDState);
+
+function createMatchKeyState() {
+  const [matchType, setMatchType] = createSignal<"qm" | "qf" | "sf" | "f">(
+    "qm"
+  );
+  const [isFinals, setIsFinals] = createSignal<boolean>(false);
+  const [matchNumber, setMatchNumber] = createSignal<number>();
+  const [matchFinalNumber, setMatchFinalNumber] = createSignal<number>();
+
+  return {
+    matchType,
+    setMatchType,
+    isFinals,
+    setIsFinals,
+    matchNumber,
+    setMatchNumber,
+    matchFinalNumber,
+    setMatchFinalNumber,
+  };
+}
+export const matchKeyState = createRoot(createMatchKeyState);
 
 function createInfoState() {
   const [matchKey, setMatchKey] = createSignal<string>("");
@@ -55,7 +76,7 @@ function createAutoState() {
     autoHuman,
     setAutoHuman,
     autoNotes,
-    setAutoNotes
+    setAutoNotes,
   };
 }
 export const autoState = createRoot(createAutoState);
@@ -103,7 +124,7 @@ function createTeleopState() {
     teleopMissed,
     setTeleopMissed,
     teleopNotes,
-    setTeleopNotes
+    setTeleopNotes,
   };
 }
 export const teleopState = createRoot(createTeleopState);
@@ -172,7 +193,7 @@ function createMiscState() {
   const [defendedTime, setDefendedTime] = createSignal<Number>(0);
   const [defenseCounter, setDefenseCounter] = createSignal<Number>();
   const [driverRating, setDriverRating] = createSignal<Number>(3);
-  const [miscNotes, setMiscNotes] = createSignal<string>("")
+  const [miscNotes, setMiscNotes] = createSignal<string>("");
   return {
     defenseTime,
     setDefenseTime,
@@ -185,7 +206,7 @@ function createMiscState() {
     driverRating,
     setDriverRating,
     miscNotes,
-    setMiscNotes
+    setMiscNotes,
   };
 }
 export const miscState = createRoot(createMiscState);

@@ -1,6 +1,16 @@
 import { Accessor, Component, createSignal, Setter } from "solid-js";
-import { scoutIDState, infoState } from "../util/globalstate";
+import { scoutIDState, matchKeyState, infoState } from "../util/globalstate";
 const { scoutID } = scoutIDState;
+const {
+  matchType,
+  setMatchType,
+  isFinals,
+  setIsFinals,
+  matchNumber,
+  setMatchNumber,
+  matchFinalNumber,
+  setMatchFinalNumber,
+} = matchKeyState;
 const { matchKey, setMatchKey, setAlliance, setDriverStation, setTeamNumber } =
   infoState;
 
@@ -13,13 +23,6 @@ const MatchKeyField: Component = ({
   matchKeyGetter,
   matchKeySetter,
 }: MatchKeyFieldProps) => {
-  const [matchType, setMatchType] = createSignal<"qm" | "qf" | "sf" | "f">(
-    "qm"
-  );
-  const [isFinals, setIsFinals] = createSignal<boolean>(false);
-  const [matchNumber, setMatchNumber] = createSignal<number>();
-  const [matchFinalNumber, setMatchFinalNumber] = createSignal<number>();
-
   function updateMatchKey() {
     let k: string = `${matchType()}${matchNumber()}`;
     if (isFinals()) k += `m${matchFinalNumber()}`;
