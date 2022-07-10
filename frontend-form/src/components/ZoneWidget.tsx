@@ -53,7 +53,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoFender,
       teleopGetter: teleopFender,
       teleopSetter: setTeleopFender,
-      sizing:"2/5"
+      sizing:"basis-2/5"
     },
     {
       text: "Opp. Fender",
@@ -62,7 +62,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoOpposingFender,
       teleopGetter: teleopOpposingFender,
       teleopSetter: setTeleopOpposingFender,
-      sizing:"2/5"
+      sizing:"basis-2/5"
     },
     {
       text: "Own Tarmac",
@@ -71,7 +71,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoTarmac,
       teleopGetter: teleopTarmac,
       teleopSetter: setTeleopTarmac,
-      sizing:"2/5"
+      sizing:"basis-2/5"
     },
     {
       text: "Opp. Tarmac",
@@ -80,7 +80,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoOpposingTarmac,
       teleopGetter: teleopOpposingTarmac,
       teleopSetter: setTeleopOpposingTarmac,
-      sizing:"2/5"
+      sizing:"basis-2/5"
     },
     {
       text: "Launchpad",
@@ -89,7 +89,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoLaunchpad,
       teleopGetter: teleopLaunchpad,
       teleopSetter: setTeleopLaunchpad,
-      sizing:"2/5"
+      sizing:"basis-2/5"
     },
     {
       text: "Terminal",
@@ -98,7 +98,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoTerminal,
       teleopGetter: teleopTerminal,
       teleopSetter: setTeleopTerminal,
-      sizing:"2/5"
+      sizing:"basis-2/5"
     },
     {
       text: "Elsewhere",
@@ -107,7 +107,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
       autoSetter: setAutoElsewhere,
       teleopGetter: teleopElsewhere,
       teleopSetter: setTeleopElsewhere,
-      sizing:"full"
+      sizing:"w-full"
     },
   ];
 
@@ -115,7 +115,7 @@ export const ZoneWidget: Component = ({ stage }: ZoneWidgetProps) => {
     <div class="flex flex-wrap gap-2">
       <For each={zones}>
         {(zone, i) => (
-          <div class={`basis-${zone.sizing} mx-auto`}>
+          <div class={`${zone.sizing} mx-auto`}>
             <ToggleButton
               text={zone.text}
               id={zone.id}
