@@ -298,10 +298,16 @@ class DataVal:
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
-        defense_pct = float(submission["defense_pct"])
-        defense_rating = submission["defense_rating"]
-        counter_pct = float(submission["counter_defense_pct"])
-        counter_rating = submission["counter_defense_rating"]
+        try: 
+            defense_pct = float(submission["defense_pct"])
+            defense_rating = float(submission["defense_rating"])
+            counter_pct = float(submission["counter_defense_pct"])
+            counter_rating = float(submission["counter_defense_rating"])
+        except TypeError:
+            defense_pct = float(submission["defense_pct"])
+            defense_rating = submission["defense_rating"]
+            counter_pct = float(submission["counter_defense_pct"])
+            counter_rating = submission["counter_defense_rating"]
 
         #check for 0% defense pct but given rating
         if (pd.isna(defense_pct) or defense_pct == 0) and (pd.notna(defense_rating) and defense_rating != 0):
