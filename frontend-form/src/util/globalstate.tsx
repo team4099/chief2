@@ -9,7 +9,7 @@ function createModalState() {
 export const modalState = createRoot(createModalState);
 
 function createScoutIDState() {
-  const [scoutID, setScoutID] = createSignal<string>("saraansh");
+  const [scoutID, setScoutID] = createSignal<string>("");
   const loggedIn = () => scoutID() !== "none";
   return { scoutID, loggedIn, setScoutID };
 }
