@@ -35,6 +35,6 @@ class DataManager:
                 self.data_val.validate_submission(submission)
                 self.log.info("Validation succeeded for submission!")
             except Exception as e:
-                print(e)
                 self.log.critical("Validation failed.")
+                self.log.debug(e)
             self.data_writer.write_data(submission)

@@ -82,7 +82,7 @@ class DataVal:
         :return: None
         """
 
-        match_key = submission["match_key"].strip().lower()
+        match_key = str(submission["match_key"]).strip().lower()
 
         if self.debug_mode:
             self.logger.info(f"Starting MATCH KEY VALIDATION {submission['match_key']}")
