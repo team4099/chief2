@@ -1,7 +1,8 @@
 import { Component, createSignal, onMount } from "solid-js";
 import exportQR from "../util/export";
-import { infoState, qrModalState } from "../util/globalstate";
+import { infoState, qrModalState, scoutIDState } from "../util/globalstate";
 const { matchKey, teamNumber, alliance, driverStation } = infoState;
+const { scoutID } = scoutIDState;
 const { hideQRModal, qrData } = qrModalState;
 import Logo from "../../public/favicon.svg";
 import html2canvas from "html2canvas";
@@ -115,6 +116,8 @@ export const QRCodeExportModal: Component = () => {
               >
                 {alliance()} {driverStation()}
               </p>
+              <p class="mx-2">•</p>
+              <p class="font-bold">{scoutID()}</p>
             </div>
 
             {/* {renderCanvas()} */}
