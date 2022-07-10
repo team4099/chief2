@@ -239,7 +239,7 @@ class DataVal:
 
             else:
                 #check for correct driver station
-                scouted_driver_station = submission["driver_station"]
+                scouted_driver_station = int(submission["driver_station"])
                 schedule_driver_station = self.match_schedule[event_and_match_key][alliance.lower()].index(f"frc{team_number}") +1
                 if scouted_driver_station != schedule_driver_station:
                     self.logger.error(f"In {submission['match_key']}, frc{team_number} INCONSISTENT DRIVER STATION with schedule")
@@ -298,10 +298,16 @@ class DataVal:
         :param submission: One submission that is represented as a dictionary. Format of dictionary can be found here: https://www.notion.so/team4099/Inputs-and-Outputs-5bb9890784074aceb13c0b0f69c9ed47#815eccdac2904cb78f8bed5fbfe48d27
         :return: None
         """
-        defense_pct = float(submission["defense_pct"])
-        defense_rating = submission["defense_rating"]
-        counter_pct = float(submission["counter_defense_pct"])
-        counter_rating = submission["counter_defense_rating"]
+        try: 
+            defense_pct = float(submission["defense_pct"])
+            defense_rating = float(submission["defense_rating"])
+            counter_pct = float(submission["counter_defense_pct"])
+            counter_rating = float(submission["counter_defense_rating"])
+        except TypeError:
+            defense_pct = float(submission["defense_pct"])
+            defense_rating = submission["defense_rating"]
+            counter_pct = float(submission["counter_defense_pct"])
+            counter_rating = submission["counter_defense_rating"]
 
         #check for 0% defense pct but given rating
         if (pd.isna(defense_pct) or defense_pct == 0) and (pd.notna(defense_rating) and defense_rating != 0):
@@ -612,7 +618,7 @@ class DataVal:
         #opens config file and gets event key
         logger.info("Getting configuration variables from config.json")
         try:
-            with open("./config/config.json") as config:
+            with open("../config/config.json") as config:
                 config = json.load(config)
             event_key = config["YEAR"] + config["EVENT_KEY"]
 
@@ -633,7 +639,7 @@ class DataVal:
         logger.info("Opening match_schedule_sheet.csv")
 
         match_schedule_dict = {}
-        with open("./data/match_schedule_sheet.csv") as file:
+        with open("../data/match_schedule_sheet.csv") as file:
             header = next(file)
             match_schedule = csv.reader(file)
 
@@ -658,7 +664,7 @@ class DataVal:
 
         #converts to json and stores in data folder
         logger.info("Posting data to match_schedule.json located in the data folder.")
-        with open('./data/match_schedule.json', 'w', encoding='utf-8') as f:
+        with open('../data/match_schedule.json', 'w', encoding='utf-8') as f:
             json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)
 
         logger.info("Success!")
