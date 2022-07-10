@@ -1,33 +1,38 @@
 import { Component, createContext, createSignal, createEffect } from "solid-js";
 import { ChangeScoutModal, NavBar, QRCodeExportModal } from "./components";
 import { Info, Auto, Teleop, Misc, Endgame } from "./sections";
-import { modalState, scoutIDState, qrModalState, infoState } from "./util/globalstate";
+import {
+  modalState,
+  scoutIDState,
+  qrModalState,
+  infoState,
+} from "./util/globalstate";
 const { modalVisible } = modalState;
-const { matchKey, alliance, driverStation, teamNumber } = infoState
+const { matchKey, alliance, driverStation, teamNumber } = infoState;
 const { loggedIn, scoutID } = scoutIDState;
 const { qrModal, showQRModal } = qrModalState;
 
 const App: Component = () => {
-
-  var defaultCheck = [
-    [matchKey(), "", "Match Key"], 
-    [alliance(), "", "Alliance"], 
-    [driverStation(), undefined, "Driver Station"], 
-    [teamNumber(), undefined, "Team Number"]
-  ]
+  var defaultCheck;
+  // = [
+  //   [matchKey(), "", "Match Key"],
+  //   [alliance(), "", "Alliance"],
+  //   [driverStation(), undefined, "Driver Station"],
+  //   [teamNumber(), undefined, "Team Number"],
+  // ];
 
   createEffect(() => {
     defaultCheck = [
-      [matchKey(), "", "Match Key"], 
-      [alliance(), "", "Alliance"], 
-      [driverStation(), undefined, "Driver Station"], 
-      [teamNumber(), undefined, "Team Number"]
-    ]
-  })
+      [matchKey(), "", "Match Key"],
+      [alliance(), "", "Alliance"],
+      [driverStation(), undefined, "Driver Station"],
+      [teamNumber(), undefined, "Team Number"],
+    ];
+  });
 
-  const [missingStatement, setMissingStatement] = createSignal<string>("")
+  const [missingStatement, setMissingStatement] = createSignal<string>("");
 
-  var toggleQRCodeModal = true
+  var toggleQRCodeModal = true;
 
   return (
     <div>
@@ -49,13 +54,13 @@ const App: Component = () => {
             toggleQRCodeModal = true;
             defaultCheck.forEach(function (item, index) {
               console.log(item[0], item[1], item[0] == item[1]);
-              if (item[0] == item[1]){
+              if (item[0] == item[1]) {
                 setMissingStatement(`Please fill in the ${item[2]} to submit.`);
-                toggleQRCodeModal = false
+                toggleQRCodeModal = false;
               }
             });
 
-            if (toggleQRCodeModal){
+            if (toggleQRCodeModal) {
               setMissingStatement("");
               showQRModal();
             }
