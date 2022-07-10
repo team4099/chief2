@@ -22,10 +22,10 @@ class DataVal:
         if os.path.exists("data/match_schedule.json"):
             if self.wifi_connection:
                 self.logger.info("Wifi Connection Exists. Will cross check against TBA")
-                DataVal.get_match_schedule(self.logger)
+                # DataVal.get_match_schedule(self.logger)
             else:
                 self.logger.warn("Wifi Connection was not found. Will not check against TBA")
-                DataVal.convert_CSV_To_Match_Schedule(self.logger)
+                # DataVal.convert_CSV_To_Match_Schedule(self.logger)
         
         #load Match Schedule
 
@@ -612,7 +612,7 @@ class DataVal:
         #opens config file and gets event key
         logger.info("Getting configuration variables from config.json")
         try:
-            with open("../config/config.json") as config:
+            with open("./config/config.json") as config:
                 config = json.load(config)
             event_key = config["YEAR"] + config["EVENT_KEY"]
 
@@ -633,7 +633,7 @@ class DataVal:
         logger.info("Opening match_schedule_sheet.csv")
 
         match_schedule_dict = {}
-        with open("../data/match_schedule_sheet.csv") as file:
+        with open("./data/match_schedule_sheet.csv") as file:
             header = next(file)
             match_schedule = csv.reader(file)
 
@@ -658,7 +658,7 @@ class DataVal:
 
         #converts to json and stores in data folder
         logger.info("Posting data to match_schedule.json located in the data folder.")
-        with open('../data/match_schedule.json', 'w', encoding='utf-8') as f:
+        with open('./data/match_schedule.json', 'w', encoding='utf-8') as f:
             json.dump(match_schedule_dict, f, ensure_ascii=False, indent=4)
 
         logger.info("Success!")

@@ -15,11 +15,15 @@ class DataManager:
         self.log = Logger().log
 
     def check_internet_connection(self):
-        if requests.get("https://google.com").status_code == 401:
-            self.log.error("It seems that you have no internet connection.")
+        self.connected_to_internet = False
+        try:
+            if requests.get("https://google.com").status_code == 401:
+                self.log.error("It seems that you have no internet connection.")
+                self.connected_to_internet = False
+            else:
+                self.connected_to_internet = True
+        except Exception as e:
             self.connected_to_internet = False
-        else:
-            self.connected_to_internet = True
 
     def start_scan(self):
         # with open("data/data.json", "r") as data:
