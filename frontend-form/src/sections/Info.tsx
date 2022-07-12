@@ -106,7 +106,7 @@ export const Info: Component = () => {
             <label class="flex-1 bg-[#e5534b] ml-1 rounded-xl px-2 py-1 font-semibold transition-colors checked:bg-red-500 h-10">
               <div class="inline-block align-middle pt-1">
                 <input type="radio" id="red" name="alliance" value="Red" />
-                <label for="red" class="pl-2">Red</label>
+                <label for="red" class="pl-2">Red </label>
               </div>
             </label>
           </fieldset>
