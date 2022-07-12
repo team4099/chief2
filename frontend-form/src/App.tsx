@@ -98,12 +98,12 @@ const App: Component = () => {
   var toggleQRCodeModal = true;
 
   return (
-    <div>
+    <div class="bg-black text-white">
       {(!loggedIn() || modalVisible()) && <ChangeScoutModal />}
       {qrModal() && <QRCodeExportModal />}
       <NavBar />
       {/* <div class="relative mb"> */}
-      <div class="relative z-0 my-20" />
+      <div class="relative z-0 my-12" />
       <Info />
       <Auto />
       <Teleop />

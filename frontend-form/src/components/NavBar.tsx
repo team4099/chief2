@@ -7,20 +7,17 @@ export const NavBar: Component = () => {
   // const [scoutID] = useScoutID();
   console.log(`scoutID: ${scoutID()}`);
   return (
-    <div class="fixed top-0 left-0 right-0 bg-team-black w-full flex flex-row items-center py-2 px-4 z-10 shadow-xl">
-      <p class="text-white font-bold text-xl flex-1 ">Chief2</p>
+    <div class="fixed top-0 left-0 right-0 bg-[#21262e] w-full flex flex-row items-center py-2 px-4 z-10 shadow-xl">
+      <h2 class="text-white font-bold text-2xl flex-1">Chief2</h2>
       <button
         onClick={() => {
           showModal();
         }}
-        class={`text-white font-bold text-m ${
+        class={`text-black font-bold text-m ${
           scoutID() === "none"
             ? "bg-red-600 hover:bg-red-500"
-            : "bg-team-gold hover:bg-team-gold-hover"
+            : "bg-[#efae04] hover:bg-[#efae04]"
         } p-2 transition-all rounded-xl`}
-        style={{
-          "text-shadow": "4px 4px 12px rgba(0, 0, 0, 0.5)",
-        }}
       >
         {scoutID()}
       </button>

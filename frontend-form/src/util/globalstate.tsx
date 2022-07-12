@@ -55,8 +55,8 @@ function createInfoState() {
 export const infoState = createRoot(createInfoState);
 
 function createAutoState() {
-  const [cargoPreload, setCargoPreload] = createSignal<boolean>();
-  const [taxied, setTaxied] = createSignal<boolean>();
+  const [cargoPreload, setCargoPreload] = createSignal<boolean>(false);
+  const [taxied, setTaxied] = createSignal<boolean>(false);
   const [autoUpper, setAutoUpper] = createSignal<Number>(0);
   const [autoLower, setAutoLower] = createSignal<Number>(0);
   const [autoMissed, setAutoMissed] = createSignal<Number>(0);

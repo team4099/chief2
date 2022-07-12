@@ -9,7 +9,7 @@ export const ToggleButton: Component = (props) => {
     if (toggleState()) {
       setColor("rgb(239,174,4)");
     } else {
-      setColor("rgb(217,217,217)");
+      setColor("rgb(0,0,0)");
     }
   });
 
@@ -17,7 +17,7 @@ export const ToggleButton: Component = (props) => {
     <button
       type="button"
       {...others}
-      class="w-full mt-2 h-12 border-solid border-[#7b7b7b] border rounded-xl"
+      class="w-full mt-2 h-12 border-primary rounded-xl"
       style={{
         "background-color": toggleColor(),
       }}
