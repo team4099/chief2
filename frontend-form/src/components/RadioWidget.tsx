@@ -18,9 +18,10 @@ export const RadioWidget: Component = (props) => {
         <For each={local.options}>
           {(item: string, index) => {
             return (
-              <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+              <label class="flex-1 bg-black text-white border-primary mx-1 rounded-xl px-2 py-1">
                 <input
                   type="radio"
+                  class="bg-gray-300"
                   id={`${local.group}-${index()}`}
                   name={local.group}
                   value={item}
