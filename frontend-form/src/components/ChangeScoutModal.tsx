@@ -9,10 +9,30 @@ export const ChangeScoutModal: Component = () => {
   const [input, setInput] = createSignal("");
 
   const names = [
-    "pranav",
-    "varun",
+    "aran",
+    "aarav",
+    "chris",
+    "shashwat",
+    "rachel",
+    "crystal",
+    "shayaan",
+    "jay",
+    "sydney",
+    "trevor",
+    "arav",
+    "matthew",
+    "neel",
+    "julia",
+    "brandon",
     "saraansh",
-    "helix"
+    "sarah",
+    "ryan",
+    "pranav",
+    "aman",
+    "parth",
+    "helix",
+    "other",
+    "parent"
   ]
 
   return (
