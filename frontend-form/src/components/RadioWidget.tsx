@@ -1,46 +1,39 @@
-import { Accessor, Component, createSignal, For, Setter } from "solid-js";
+import { Accessor, Component, createSignal, For, Setter, createEffect, splitProps } from "solid-js";
+import { ChildProperties } from "solid-js/web";
 
-type RadioWidgetProps = {
-  legend: string;
-  group: string;
-  options: string[];
-  getter: Accessor<any>;
-  setter: Setter<any>;
-};
+export const RadioWidget: Component = (props) => {
 
-export const RadioWidget: Component = ({
-  legend,
-  group,
-  options,
-  getter,
-  setter,
-}: RadioWidgetProps) => {
+  const [local, others] = splitProps(props, ["legend", "group", "options", "getter", "setter", "checked"]);
+
   return (
-    <fieldset
-      class="flex flex-row"
-      onChange={(e) => {
-        console.log(`(${group}) ${e.target.value}`);
-        setter(e.target.value);
-      }}
-    >
-      <legend class="font-bold pb-1">{legend}</legend>
-      <For each={options}>
-        {(item: string, index) => {
-          return (
-            <label class="flex-1 border-primary bg-black mx-1 rounded-xl px-2 py-1">
-              <input
-                type="radio"
-                class=" bg-gray-200"
-                id={`${group}-${index()}`}
-                name={group}
-                value={item}
-              />
-              <label class="pl-1" for={`${group}-${index()}`}>{item}</label>
-            </label>
-          );
+    <>
+      <fieldset
+        class="flex flex-row"
+        onChange={(e) => {
+          console.log(`(${local.group}) ${e.target.value}`);
+          local.setter(e.target.value);
         }}
-      </For>
-    </fieldset>
+      >
+        <legend class="font-bold">{local.legend}</legend>
+        <For each={local.options}>
+          {(item: string, index) => {
+            return (
+              <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
+                <input
+                  type="radio"
+                  id={`${local.group}-${index()}`}
+                  name={local.group}
+                  value={item}
+                  checked={local.checked}
+                />
+                <label for={`${local.group}-${index()}`}>{item}</label>
+              </label>
+            );
+          }}
+        </For>
+      </fieldset>
+      <h1 {...others}></h1>
+    </>
   );
 };
 

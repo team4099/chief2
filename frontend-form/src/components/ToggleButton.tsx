@@ -6,6 +6,7 @@ export const ToggleButton: Component = (props) => {
   const [local, others] = splitProps(props, ["text"]);
 
   createEffect(() => {
+    setToggle(props.getter())
     if (toggleState()) {
       setColor("rgb(239,174,4)");
     } else {

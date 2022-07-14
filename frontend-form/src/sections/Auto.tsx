@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import { ToggleButton, ShotWidget, ZoneWidget } from "../components";
-import { autoState } from "../util/globalstate";
+import { autoState, resetState } from "../util/globalstate";
 const {
   cargoPreload,
   setCargoPreload,
@@ -17,6 +17,9 @@ const {
   autoNotes,
   setAutoNotes
 } = autoState;
+const {
+  autoNotesReset
+} = resetState
 
 export const Auto: Component = () => {
   return (
@@ -69,6 +72,7 @@ export const Auto: Component = () => {
             cols="20"
             class="w-full border-primary bg-black rounded-lg "
             onInput={(e) => setAutoNotes(e.target.value)}
+            value={autoNotesReset()}
           ></textarea>
         </div>
       </div>

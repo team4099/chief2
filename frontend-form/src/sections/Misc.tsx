@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import { SliderWidget } from "../components/SliderWidget";
 import { RadioWidget } from "../components";
-import { miscState } from "../util/globalstate";
+import { miscState, resetState } from "../util/globalstate";
 
 const {
   defenseTime,
@@ -17,6 +17,15 @@ const {
   miscNotes,
   setMiscNotes
 } = miscState;
+
+const {
+  pctDefenseReset,
+  defenseRatingReset,
+  pctCounterDefenseReset,
+  counterDefenseRatingReset,
+  driverRatingReset,
+  miscNotesReset
+} = resetState
 
 export const Misc: Component = () => {
   return (
@@ -37,6 +46,7 @@ export const Misc: Component = () => {
             options={["0.0", ".25", ".5", ".75", "1.0"]}
             getter={defenseTime}
             setter={setDefenseTime}
+            checked={pctDefenseReset()}
           />
         </div>
         {/* </div>
@@ -49,6 +59,7 @@ export const Misc: Component = () => {
             options={["0", "1", "2", "3", "4", "5"]}
             getter={defensePlay}
             setter={setDefensePlay}
+            checked={defenseRatingReset()}
           />
         </div>
         {/* </div>
@@ -65,15 +76,17 @@ export const Misc: Component = () => {
             options={["0.0", ".25", ".5", ".75", "1.0"]}
             getter={defendedTime}
             setter={setDefendedTime}
+            checked={pctCounterDefenseReset()}
           />
         </div>
         <div class="m-4">
           <RadioWidget
             legend="Counter Defense Rating"
-            group="defenseCounter"
+            group="defenseRating"
             options={["0", "1", "2", "3", "4", "5"]}
             getter={defenseCounter}
             setter={setDefenseCounter}
+            checked={counterDefenseRatingReset()}
           />
         </div>
         {/* </div>
@@ -81,21 +94,14 @@ export const Misc: Component = () => {
 
         <div class="mb-10"> */}
         <div class="m-4">
-          <p class="font-bold mb-2">How well do they drive?</p>
-          <select
-            id="alliance"
-            class="border-solid border-primary text-white bg-black rounded-lg mr-1 w-full focus:border-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-amber-400"
-            onChange={(e) => {
-              console.log(`(Driver Rating) ${e.target.value}`);
-              setDriverRating(e.target.value);
-            }}
-          >
-            <option value="1">Very Poor</option>
-            <option value="2">Poor</option>
-            <option value="3" selected>Average</option>
-            <option value="4">Good</option>
-            <option value="5">Very Good</option>
-          </select>
+        <RadioWidget
+            legend="How well do they drive?"
+            group="driveCounter"
+            options={["1", "2", "3", "4", "5"]}
+            getter={driverRating}
+            setter={setDriverRating}
+            checked={driverRatingReset()}
+          />
         </div>
 
         <div class="m-4">
@@ -107,6 +113,7 @@ export const Misc: Component = () => {
             cols="20"
             class="w-full rounded-md border-[#7b7b7b] focus:round-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-amber-400"
             onInput={(e) => setMiscNotes(e.target.value)}
+            value={miscNotesReset()}
           ></textarea>
         </div>
       </div>

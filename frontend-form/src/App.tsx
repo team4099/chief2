@@ -1,3 +1,4 @@
+import localforage from "localforage";
 import {
   Component,
   createContext,
@@ -12,11 +13,86 @@ import {
   scoutIDState,
   qrModalState,
   infoState,
+  autoState,
   matchKeyState,
+  autoShootingZones,
+  teleopState,
+  teleopShootingZones,
+  endgameState,
+  miscState,
+  resetState,
 } from "./util/globalstate";
 const { modalVisible } = modalState;
-const { matchKey, alliance, driverStation, teamNumber } = infoState;
-const { loggedIn, scoutID } = scoutIDState;
+const {
+  matchKey,
+  alliance,
+  driverStation,
+  teamNumber,
+  setMatchKey,
+  setAlliance,
+  setDriverStation,
+  setTeamNumber,
+} = infoState;
+const {
+  setMatchKeyReset,
+  setAllianceReset,
+  setAllianceRadioReset,
+  setDriverstationReset,
+  setDriverstationRadioReset,
+  setTeamNumberReset,
+  setAutoNotesReset,
+  autoNotesReset,
+  setTeleopNotesReset,
+  teleopNotesReset,
+  setClimbTimeReset,
+  setTotalClimbReset,
+  setFinalClimbRadioReset,
+  setPctDefenseReset,
+  setDefenseRatingReset,
+  setPctCounterDefenseReset,
+  setCounterDefenseRatingReset,
+  setDriverRatingReset,
+  setMiscNotesReset,
+  counterDefenseRatingReset,
+  miscNotesReset,
+} = resetState;
+const {
+  setCargoPreload,
+  setAutoUpper,
+  setAutoLower,
+  setAutoMissed,
+  setTaxied,
+  setAutoNotes,
+} = autoState;
+const {
+  setAutoFender,
+  setAutoTarmac,
+  setAutoLaunchpad,
+  setAutoOpposingFender,
+  setAutoOpposingTarmac,
+  setAutoTerminal,
+  setAutoElsewhere,
+} = autoShootingZones;
+const { setTeleopUpper, setTeleopLower, setTeleopMissed, setTeleopNotes } =
+  teleopState;
+const {
+  setTeleopFender,
+  setTeleopTarmac,
+  setTeleopLaunchpad,
+  setTeleopOpposingFender,
+  setTeleopOpposingTarmac,
+  setTeleopTerminal,
+  setTeleopElsewhere,
+} = teleopShootingZones;
+const {
+  setAttemptedLow,
+  setAttemptedMedium,
+  setAttemptedHigh,
+  setAttemptedTraversal,
+  setFinalClimbTime,
+  setFinalClimb,
+} = endgameState;
+const { loggedIn, scoutID, setScoutID } = scoutIDState;
 const { qrModal, showQRModal } = qrModalState;
 const {
   matchType,
@@ -28,6 +104,15 @@ const {
   matchFinalNumber,
   setMatchFinalNumber,
 } = matchKeyState;
+const {
+  setDefenseTime,
+  setDefensePlay,
+  setDefendedTime,
+  setDefenseCounter,
+  setDriverRating,
+  setMiscNotes,
+  miscNotes,
+} = miscState;
 
 const App: Component = () => {
   var defaultCheck;
@@ -49,6 +134,12 @@ const App: Component = () => {
   var submitConditions: SubmitConditions;
 
   createEffect(() => {
+    localforage.getItem("scoutID").then((s: string) => {
+      if (s !== null) {
+        setScoutID(s);
+      }
+    });
+
     defaultCheck = [
       [matchKey(), "", "Match Key"],
       [alliance(), "", "Alliance"],
@@ -142,6 +233,112 @@ const App: Component = () => {
           }}
         >
           Generate QR Code for {scoutID()}
+        </button>
+
+        <button
+          class="text-white font-bold text-m bg-red-500 hover:bg-red-300 p-4 transition-all rounded-xl my-2 w-full"
+          onClick={() => {
+            // Info
+            setMatchKeyReset(NaN);
+            setMatchKey();
+            setMatchNumber();
+            setMatchFinalNumber();
+
+            setAllianceReset("");
+            setAllianceRadioReset(false);
+            setAllianceRadioReset();
+            setAlliance("");
+
+            setDriverstationReset(NaN);
+            setDriverstationRadioReset(false);
+            setDriverstationRadioReset();
+            setDriverStation(NaN);
+
+            setTeamNumber();
+            setTeamNumberReset(NaN);
+
+            // Auto
+            setCargoPreload(false);
+
+            setAutoUpper(0);
+            setAutoLower(0);
+            setAutoMissed(0);
+
+            setTaxied(false);
+
+            setAutoFender(false);
+            setAutoTarmac(false);
+            setAutoLaunchpad(false);
+            setAutoOpposingFender(false);
+            setAutoOpposingTarmac(false);
+            setAutoTerminal(false);
+            setAutoElsewhere(false);
+
+            setAutoNotes(" ");
+            setAutoNotesReset(" ");
+            setAutoNotesReset("");
+
+            // Teleop
+            setTeleopUpper(0);
+            setTeleopLower(0);
+            setTeleopMissed(0);
+
+            setTeleopFender(false);
+            setTeleopTarmac(false);
+            setTeleopLaunchpad(false);
+            setTeleopOpposingFender(false);
+            setTeleopOpposingTarmac(false);
+            setTeleopTerminal(false);
+            setTeleopElsewhere(false);
+
+            setTeleopNotes(" ");
+            setTeleopNotesReset(" ");
+            setTeleopNotesReset("");
+
+            //Endgame
+            setClimbTimeReset(true);
+
+            setAttemptedLow(false);
+            setAttemptedMedium(false);
+            setAttemptedHigh(false);
+            setAttemptedTraversal(false);
+
+            setFinalClimbTime(0);
+            setTotalClimbReset(NaN);
+
+            setFinalClimbRadioReset(false);
+            setFinalClimbRadioReset();
+            setFinalClimb("No Climb");
+
+            //Misc
+            setPctDefenseReset(false);
+            setPctDefenseReset();
+            setDefenseTime(0.0);
+
+            setDefenseRatingReset(false);
+            setDefenseRatingReset();
+            setDefensePlay(0);
+
+            setPctCounterDefenseReset(false);
+            setPctCounterDefenseReset();
+            setDefendedTime(0.0);
+
+            setCounterDefenseRatingReset(true);
+            console.log(counterDefenseRatingReset());
+            setCounterDefenseRatingReset();
+            setDefenseCounter(0);
+
+            setDriverRatingReset(false);
+            setDriverRatingReset();
+            setDriverRating(1);
+
+            setMiscNotes(" ");
+            setMiscNotesReset(" ");
+            setMiscNotesReset("");
+            console.log(miscNotesReset());
+          }}
+        >
+          Clear Form
         </button>
       </div>
       {/* {showImageExport() && <ImageExportComponent />} */}
