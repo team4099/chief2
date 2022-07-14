@@ -32,7 +32,7 @@ export const QRCodeExportModal: Component = () => {
 
   return (
     <div class="fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex px-2">
-      <div class="mx-auto relative p-4 bg-white w-full max-w-md my-auto flex flex-col rounded-xl">
+      <div class="mx-auto relative p-4 bg-black w-full max-w-md my-auto flex flex-col rounded-xl">
         <div class="flex flex-row my-2">
           <p class="font-bold text-xl my-2 flex-1">QR Code Export</p>
           <button
@@ -76,7 +76,7 @@ export const QRCodeExportModal: Component = () => {
                   console.log("Errored when export image: ", e.toString())
                 );
             }}
-            class="text-white font-bold text-xs bg-team-gold hover:bg-team-gold-hover px-2 transition-all rounded-xl mr-1"
+            class="text-white font-bold text-xs bg-[#efae04] px-2 transition-all rounded-xl mr-1"
           >
             Download
           </button>
@@ -121,7 +121,7 @@ export const QRCodeExportModal: Component = () => {
             </div>
 
             {/* {renderCanvas()} */}
-            <div id="qrcode" class="mt-4" />
+            <div id="qrcode" class="bg-white mt-4 p-4 rounded-xl" />
           </div>
         </div>
       </div>
