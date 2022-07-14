@@ -7,9 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'team-gold': "#EFAE04",
+        'team-gold': "#eac55f",
         'team-gold-hover': "#FEBD13",
-        'team-black': "#363636",
+        'team-black': "#000000",
+        'hover': ""
       },
     },
   },

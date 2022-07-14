@@ -31,7 +31,7 @@ export const Misc: Component = () => {
   return (
     <div class="items-middle justify-center align-center">
       <div class="justify-center align-middle items-center shadow-2xl p-4 m-2 rounded-xl">
-        <p class="font-bold text-center text-2xl">Miscellaneous</p>
+        <p class="font-bold text-center text-3xl">Miscellaneous</p>
 
         {/* <div class="mb-10">
           <div class="m-4"> */}
@@ -94,7 +94,7 @@ export const Misc: Component = () => {
 
         <div class="mb-10"> */}
         <div class="m-4">
-          <RadioWidget
+        <RadioWidget
             legend="How well do they drive?"
             group="driveCounter"
             options={["1", "2", "3", "4", "5"]}
@@ -107,6 +107,7 @@ export const Misc: Component = () => {
         <div class="m-4">
           <p class="font-bold mb-2">Miscellaneous Notes</p>
           <textarea
+            class="text-white bg-black rounded-lg border-primary"
             id=""
             rows="5"
             cols="20"

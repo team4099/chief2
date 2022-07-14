@@ -79,7 +79,7 @@ export const Endgame: Component = () => {
         <div class="grid grid-cols-2 m-4">
           <button
             id="reset-timer"
-            class="inline col-span-1 h-12 bg-[#d9d9d9] mr-1"
+            class="inline col-span-1 h-14 bg-[#efae04] rounded-lg mr-1 text-lg"
             onClick={() => {
               setTime(0);
               clearInterval(timer);
@@ -92,7 +92,7 @@ export const Endgame: Component = () => {
           </button>
           <button
             id="toggle-timer"
-            class="inline col-span-1 h-12 bg-[#d9d9d9] ml-1"
+            class="inline col-span-1 h-14 bg-[#d9d9d9] ml-1 border-4 border-[#efae04] bg-yellow-600 rounded-lg text-lg"
             onClick={() => {
               if (needToStartTimer){
                 cleared = false;
@@ -122,7 +122,7 @@ export const Endgame: Component = () => {
         </div>
 
         <div class="m-4">
-          <p class="font-bold">Attempted Climb</p>
+          <p class="font-bold pb-1">Attempted Climb</p>
           <For each={rungs()}>
             {(rung, i) => (
               <ToggleButton
@@ -148,11 +148,11 @@ export const Endgame: Component = () => {
             />
           </div> */}
         <div class="m-4">
-          <p class="font-bold">Final Climb Time</p>
+          <p class="font-bold pb-1">Final Climb Time</p>
           <input
             type="number"
             id="finalClimbTime"
-            class="w-full border-solid border-[#7b7b7b] border rounded-xl p-1"
+            class="w-full border-solid border-[#7b7b7b] border-primary rounded-xl p-1 h-10 bg-black text-white"
             onInput={(e) => setFinalClimbTime(e.target.value)}
             value={totalClimbTimeReset()}
           />

@@ -189,12 +189,12 @@ const App: Component = () => {
   var toggleQRCodeModal = true;
 
   return (
-    <div>
+    <div class="bg-black text-white">
       {(!loggedIn() || modalVisible()) && <ChangeScoutModal />}
       {qrModal() && <QRCodeExportModal />}
       <NavBar />
       {/* <div class="relative mb"> */}
-      <div class="relative z-0 my-20" />
+      <div class="relative z-0 my-12" />
       <Info />
       <Auto />
       <Teleop />
@@ -205,7 +205,7 @@ const App: Component = () => {
           {missingStatement()}
         </h1>
         <button
-          class="text-white font-bold text-m bg-team-gold hover:bg-team-gold-hover p-4 transition-all rounded-xl my-2 w-full"
+          class="text-white font-bold text-m bg-[#efae04] p-4 transition-all rounded-xl my-2 w-full"
           onClick={() => {
             toggleQRCodeModal = true;
 
