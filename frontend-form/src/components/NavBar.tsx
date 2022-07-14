@@ -13,7 +13,7 @@ export const NavBar: Component = () => {
         onClick={() => {
           showModal();
         }}
-        class={`text-black font-bold text-m ${
+        class={`text-white font-bold text-m ${
           scoutID() === "none"
             ? "bg-red-600 hover:bg-red-500"
             : "bg-[#efae04] hover:bg-[#efae04]"

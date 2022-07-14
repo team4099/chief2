@@ -16,7 +16,7 @@ export const Teleop: Component = () => {
   return (
     <div class="items-middle justify-center align-center">
       <div class="justify-center align-middle items-center shadow-2xl p-4 m-2 rounded-xl">
-        <p class="mx-4 text-3xl font-bold">Teleop</p>
+        <p class="mx-4 text-3xl font-bold text-center">Teleop</p>
 
         <div class="m-4">
           <p class="font-bold pb-1">Teleop Upper Hub</p>
