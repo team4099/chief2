@@ -8,6 +8,13 @@ export const ChangeScoutModal: Component = () => {
   // const [scoutID] = useScoutID();
   const [input, setInput] = createSignal("");
 
+  const names = [
+    "pranav",
+    "varun",
+    "saraansh",
+    "helix"
+  ]
+
   return (
     <div class="text-white fixed pin z-50 w-full h-full overflow-auto bg-neutral-700/75 flex px-2">
       <div class="mx-auto relative p-4 bg-black w-full max-w-md my-auto flex flex-col rounded-xl">
@@ -31,6 +38,11 @@ export const ChangeScoutModal: Component = () => {
 
             if (input() === "") {
               alert("Please enter a scout ID");
+              e.preventDefault();
+              return;
+            }
+            else if (!names.includes(input())) {
+              alert("scout ID not found");
               e.preventDefault();
               return;
             }
