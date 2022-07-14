@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import { ShotWidget, ZoneWidget } from "../components";
-import { teleopState } from "../util/globalstate";
+import { teleopState, resetState } from "../util/globalstate";
 const {
   teleopUpper,
   setTeleopUpper,
@@ -11,6 +11,7 @@ const {
   teleopNotes,
   setTeleopNotes
 } = teleopState;
+const { teleopNotesReset } = resetState
 
 export const Teleop: Component = () => {
   return (
@@ -46,6 +47,7 @@ export const Teleop: Component = () => {
             cols="20"
             class="w-full border border-[#7b7b7b] rounded-lg"
             onInput={(e) => setTeleopNotes(e.target.value)}
+            value={teleopNotesReset()}
           ></textarea>
         </div>
       </div>

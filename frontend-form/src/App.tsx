@@ -18,16 +18,39 @@ import {
   teleopState,
   teleopShootingZones,
   endgameState,
-  miscState
+  miscState,
+  resetState
 } from "./util/globalstate";
 const { modalVisible } = modalState;
-const { matchKey, setMatchKey, alliance, setAlliance, driverStation, setDriverStation, teamNumber, setTeamNumber } = infoState;
-const { setCargoPreload, setAutoLower, setAutoUpper, setAutoMissed, setTaxied, setAutoNotes } = autoState;
-const { setAutoFender, setAutoLaunchpad, setAutoElsewhere, setAutoTarmac, setAutoOpposingFender, setAutoTerminal, setAutoOpposingTarmac } = autoShootingZones
-const { setTeleopLower, setTeleopUpper, setTeleopMissed, setTeleopNotes } = teleopState;
-const { setTeleopFender, setTeleopLaunchpad, setTeleopElsewhere, setTeleopTarmac, setTeleopOpposingFender, setTeleopTerminal, setTeleopOpposingTarmac } = teleopShootingZones
-const { setAttemptedLow, setAttemptedMedium, setAttemptedHigh, setAttemptedTraversal, setFinalClimb, setFinalClimbTime } = endgameState
-const { setDefendedTime, setDefenseTime, setDefenseCounter, setDefensePlay, setDriverRating, setMiscNotes } = miscState
+const { matchKey, alliance, driverStation, teamNumber, setMatchKey, setAlliance, setDriverStation, setTeamNumber } = infoState;
+const { 
+  setMatchKeyReset, 
+  setAllianceReset, 
+  setAllianceRadioReset,
+  setDriverstationReset,
+  setDriverstationRadioReset,
+  setTeamNumberReset,
+  setAutoNotesReset,
+  autoNotesReset,
+  setTeleopNotesReset,
+  teleopNotesReset,
+  setClimbTimeReset,
+  setTotalClimbReset,
+  setFinalClimbRadioReset,
+  setPctDefenseReset,
+  setDefenseRatingReset,
+  setPctCounterDefenseReset,
+  setCounterDefenseRatingReset,
+  setDriverRatingReset,
+  setMiscNotesReset,
+  counterDefenseRatingReset,
+  miscNotesReset
+} = resetState
+const { setCargoPreload, setAutoUpper, setAutoLower, setAutoMissed, setTaxied, setAutoNotes } = autoState
+const { setAutoFender, setAutoTarmac, setAutoLaunchpad, setAutoOpposingFender, setAutoOpposingTarmac, setAutoTerminal, setAutoElsewhere } = autoShootingZones
+const { setTeleopUpper, setTeleopLower, setTeleopMissed, setTeleopNotes } = teleopState
+const { setTeleopFender, setTeleopTarmac, setTeleopLaunchpad, setTeleopOpposingFender, setTeleopOpposingTarmac, setTeleopTerminal, setTeleopElsewhere } = teleopShootingZones
+const { setAttemptedLow, setAttemptedMedium, setAttemptedHigh, setAttemptedTraversal, setFinalClimbTime, setFinalClimb } = endgameState
 const { loggedIn, scoutID } = scoutIDState;
 const { qrModal, showQRModal } = qrModalState;
 const {
@@ -40,6 +63,15 @@ const {
   matchFinalNumber,
   setMatchFinalNumber,
 } = matchKeyState;
+const {
+  setDefenseTime,
+  setDefensePlay,
+  setDefendedTime,
+  setDefenseCounter,
+  setDriverRating,
+  setMiscNotes,
+  miscNotes
+} = miscState
 
 const App: Component = () => {
   var defaultCheck;
@@ -155,27 +187,116 @@ const App: Component = () => {
         >
           Generate QR Code for {scoutID()}
         </button>
-        {/*
+
         <button
           class="text-white font-bold text-m bg-red-500 hover:bg-red-300 p-4 transition-all rounded-xl my-2 w-full"
           onClick={() => {
-            console.log(alliance())
-            setMatchKey("");
-            setAlliance("Red");
-            setDriverStation();
-            setTeamNumber();
 
-            setCargoPreload();
-            setAutoLower(0);
-            setAutoUpper(0);
-            setAutoMissed(0);
-            setTaxied();
+            // Info
+            setMatchKeyReset(NaN)
+            setMatchKey()
+            setMatchNumber()
+            setMatchFinalNumber()
+
+            setAllianceReset("")
+            setAllianceRadioReset(false)
+            setAllianceRadioReset()
+            setAlliance("")
+
+            setDriverstationReset(NaN)
+            setDriverstationRadioReset(false)
+            setDriverstationRadioReset()
+            setDriverStation(NaN)
+
+            setTeamNumber()
+            setTeamNumberReset(NaN)
+
+            // Auto
+            setCargoPreload(false)
+
+            setAutoUpper(0)
+            setAutoLower(0)
+            setAutoMissed(0)
+
+            setTaxied(false)
+
+            setAutoFender(false)
+            setAutoTarmac(false)
+            setAutoLaunchpad(false)
+            setAutoOpposingFender(false)
+            setAutoOpposingTarmac(false)
+            setAutoTerminal(false)
+            setAutoElsewhere(false)
+
+            setAutoNotes(" ")
+            setAutoNotesReset(" ")
+            setAutoNotesReset("")
+
+            // Teleop
+            setTeleopUpper(0)
+            setTeleopLower(0)
+            setTeleopMissed(0)
+
+            setTeleopFender(false)
+            setTeleopTarmac(false)
+            setTeleopLaunchpad(false)
+            setTeleopOpposingFender(false)
+            setTeleopOpposingTarmac(false)
+            setTeleopTerminal(false)
+            setTeleopElsewhere(false)
+
+            setTeleopNotes(" ")
+            setTeleopNotesReset(" ")
+            setTeleopNotesReset("")
+
+            //Endgame
+            setClimbTimeReset(true)
+
+            setAttemptedLow(false)
+            setAttemptedMedium(false)
+            setAttemptedHigh(false)
+            setAttemptedTraversal(false)
+
+            setFinalClimbTime(0)
+            setTotalClimbReset(NaN)
+
+            setFinalClimbRadioReset(false)
+            setFinalClimbRadioReset()
+            setFinalClimb("No Climb")
+
+            //Misc
+            setPctDefenseReset(false)
+            setPctDefenseReset()
+            setDefenseTime(0.0)
+
+            setDefenseRatingReset(false)
+            setDefenseRatingReset()
+            setDefensePlay(0)
+
+            setPctCounterDefenseReset(false)
+            setPctCounterDefenseReset()
+            setDefendedTime(0.0)
+
+            setCounterDefenseRatingReset(true)
+            console.log(counterDefenseRatingReset())
+            setCounterDefenseRatingReset()
+            setDefenseCounter(0)
+
+            setDriverRatingReset(false)
+            setDriverRatingReset()
+            setDriverRating(1)
+
+            setMiscNotes(" ")
+            setMiscNotesReset(" ")
+            setMiscNotesReset("")
+            console.log(miscNotesReset())
+
           }}
             
         >
           Clear Form
         </button>
-        */}
+        
       </div>
       {/* {showImageExport() && <ImageExportComponent />} */}
     </div>

@@ -188,11 +188,11 @@ export const endgameState = createRoot(createEndgameState);
 
 function createMiscState() {
   // States for defenseTime, defensePlay, defendedTime, and defenseCounter
-  const [defenseTime, setDefenseTime] = createSignal<Number>(0);
-  const [defensePlay, setDefensePlay] = createSignal<Number>();
-  const [defendedTime, setDefendedTime] = createSignal<Number>(0);
-  const [defenseCounter, setDefenseCounter] = createSignal<Number>();
-  const [driverRating, setDriverRating] = createSignal<Number>(3);
+  const [defenseTime, setDefenseTime] = createSignal<number>(0);
+  const [defensePlay, setDefensePlay] = createSignal<number>();
+  const [defendedTime, setDefendedTime] = createSignal<number>(0);
+  const [defenseCounter, setDefenseCounter] = createSignal<number>();
+  const [driverRating, setDriverRating] = createSignal<number>(3);
   const [miscNotes, setMiscNotes] = createSignal<string>("");
   return {
     defenseTime,
@@ -210,6 +210,72 @@ function createMiscState() {
   };
 }
 export const miscState = createRoot(createMiscState);
+
+function createResetState() {
+  // States for defenseTime, defensePlay, defendedTime, and defenseCounter
+  const [matchKeyReset, setMatchKeyReset] = createSignal<number>();
+  const [allianceReset, setAllianceReset] = createSignal<string>();
+  const [allianceRadioReset, setAllianceRadioReset] = createSignal<boolean>();
+  const [driverstationReset, setDriverstationReset] = createSignal<number>();
+  const [driverstationRadioReset, setDriverstationRadioReset] = createSignal<boolean>();
+  const [teamNumberReset, setTeamNumberReset] = createSignal<number>();
+
+  const [autoNotesReset, setAutoNotesReset] = createSignal<string>("");
+
+  const [teleopNotesReset, setTeleopNotesReset] = createSignal<string>("");
+
+  const [climbTimeReset, setClimbTimeReset] = createSignal<boolean>(false);
+  const [totalClimbTimeReset, setTotalClimbReset] = createSignal<number>();
+  const [finalClimbRadioReset, setFinalClimbRadioReset] = createSignal<boolean>(false);
+
+  const [pctDefenseReset, setPctDefenseReset] = createSignal<boolean>(false);
+  const [defenseRatingReset, setDefenseRatingReset] = createSignal<boolean>(false);
+  const [pctCounterDefenseReset, setPctCounterDefenseReset] = createSignal<boolean>(false);
+  const [counterDefenseRatingReset, setCounterDefenseRatingReset] = createSignal<boolean>(false);
+  const [driverRatingReset, setDriverRatingReset] = createSignal<boolean>(false);
+  const [miscNotesReset, setMiscNotesReset] = createSignal<string>("");
+
+
+
+  return {
+    matchKeyReset,
+    setMatchKeyReset,
+    allianceReset,
+    setAllianceReset,
+    allianceRadioReset,
+    setAllianceRadioReset,
+    driverstationReset,
+    setDriverstationReset,
+    driverstationRadioReset,
+    setDriverstationRadioReset,
+    teamNumberReset,
+    setTeamNumberReset,
+    autoNotesReset,
+    setAutoNotesReset,
+    teleopNotesReset,
+    setTeleopNotesReset,
+    climbTimeReset,
+    setClimbTimeReset,
+    totalClimbTimeReset,
+    setTotalClimbReset,
+    finalClimbRadioReset,
+    setFinalClimbRadioReset,
+    pctDefenseReset,
+    setPctDefenseReset,
+    defenseRatingReset,
+    setDefenseRatingReset,
+    pctCounterDefenseReset,
+    setPctCounterDefenseReset,
+    counterDefenseRatingReset,
+    setCounterDefenseRatingReset,
+    driverRatingReset,
+    setDriverRatingReset,
+    miscNotesReset,
+    setMiscNotesReset
+  }
+
+}
+export const resetState = createRoot(createResetState);
 
 function createQRModalState() {
   const [qrModal, setQRModal] = createSignal<boolean>();

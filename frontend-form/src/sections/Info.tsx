@@ -1,5 +1,5 @@
 import { Accessor, Component, createSignal, Setter } from "solid-js";
-import { scoutIDState, matchKeyState, infoState } from "../util/globalstate";
+import { scoutIDState, matchKeyState, infoState, resetState } from "../util/globalstate";
 const { scoutID } = scoutIDState;
 const {
   matchType,
@@ -11,8 +11,17 @@ const {
   matchFinalNumber,
   setMatchFinalNumber,
 } = matchKeyState;
-const { matchKey, setMatchKey, setAlliance, setDriverStation, setTeamNumber } =
-  infoState;
+
+const {
+  matchKeyReset,
+  allianceReset,
+  allianceRadioReset,
+  driverstationReset,
+  driverstationRadioReset,
+  teamNumberReset
+} = resetState
+
+const { matchKey, setMatchKey, setAlliance, setDriverStation, setTeamNumber } = infoState;
 
 type MatchKeyFieldProps = {
   matchKeyGetter: Accessor<string>;
@@ -55,6 +64,7 @@ const MatchKeyField: Component = ({
           setMatchNumber(e.target.value);
           updateMatchKey();
         }}
+        value={matchKeyReset()}
         class="w-full border-solid border-[#7b7b7b] border rounded-r-xl ml-1 p-1"
       />
       {isFinals() && (
@@ -65,6 +75,7 @@ const MatchKeyField: Component = ({
             setMatchFinalNumber(e.target.value);
             updateMatchKey();
           }}
+          value={matchKeyReset()}
           class="w-full border-solid border-[#7b7b7b] border rounded-r-xl ml-1 p-1"
         />
       )}
@@ -93,16 +104,17 @@ export const Info: Component = () => {
           <fieldset
             class="flex flex-row"
             onChange={(e) => setAlliance(e.target.value)}
+            value={allianceReset()}
           >
             <legend class="font-bold">
               Alliance <span class="text-red-500">*</span>
             </legend>
             <label class="flex-1 bg-blue-300 mr-1 rounded-xl px-2 py-1 transition-colors checked:bg-blue-500">
-              <input type="radio" id="blue" name="alliance" value="Blue" />
+              <input type="radio" id="blue" name="alliance" value="Blue" checked={allianceRadioReset()}/>
               <label for="blue">Blue</label>
             </label>
             <label class="flex-1 bg-red-300 ml-1 rounded-xl px-2 py-1 transition-colors checked:bg-red-500">
-              <input type="radio" id="red" name="alliance" value="Red" />
+              <input type="radio" id="red" name="alliance" value="Red" checked={allianceRadioReset()}/>
               <label for="red">Red</label>
             </label>
           </fieldset>
@@ -112,20 +124,21 @@ export const Info: Component = () => {
           <fieldset
             class="flex flex-row"
             onChange={(e) => setDriverStation(e.target.value)}
+            value={driverstationReset()}
           >
             <legend class="font-bold">
               Driver Station <span class="text-red-500">*</span>
             </legend>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-1" name="station" value={1} />
+              <input type="radio" id="station-1" name="station" value={1} checked={driverstationRadioReset()}/>
               <label for="station-1">1</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-2" name="station" value={2} />
+              <input type="radio" id="station-2" name="station" value={2} checked={driverstationRadioReset()}/>
               <label for="station-2">2</label>
             </label>
             <label class="flex-1 bg-gray-200 mx-1 rounded-xl px-2 py-1">
-              <input type="radio" id="station-3" name="station" value={3} />
+              <input type="radio" id="station-3" name="station" value={3} checked={driverstationRadioReset()}/>
               <label for="station-3">3</label>
             </label>
           </fieldset>
@@ -140,6 +153,7 @@ export const Info: Component = () => {
             id="teamNumber"
             class="w-full border-solid border-[#7b7b7b] border rounded-xl p-1"
             onInput={(e) => setTeamNumber(e.target.value)}
+            value={teamNumberReset()}
           />
         </div>
       </div>
