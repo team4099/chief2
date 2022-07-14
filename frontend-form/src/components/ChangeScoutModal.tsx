@@ -1,3 +1,4 @@
+import localforage from "localforage";
 import { Component, createSignal } from "solid-js";
 import { modalState, scoutIDState } from "../util/globalstate";
 const { modalVisible, showModal, hideModal } = modalState;
@@ -35,6 +36,7 @@ export const ChangeScoutModal: Component = () => {
             }
 
             setScoutID(input());
+            localforage.setItem("scoutID", scoutID());
             hideModal();
           }}
         >
