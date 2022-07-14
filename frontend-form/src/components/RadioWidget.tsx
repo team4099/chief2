@@ -27,7 +27,7 @@ export const RadioWidget: Component = (props) => {
                   value={item}
                   checked={local.checked}
                 />
-                <label for={`${local.group}-${index()}`}>{item}</label>
+                <label class="pl-1" for={`${local.group}-${index()}`}>{item}</label>
               </label>
             );
           }}
