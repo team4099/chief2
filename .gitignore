@@ -1,4 +1,9 @@
 
+.src/
+.src/data
+.src/logs
+.src/logs/datalog.log
+
 **/node_modules/*
 
 **/.DS_Store
