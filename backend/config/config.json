@@ -1,6 +1,6 @@
 {
   "YEAR": "2022",
-  "EVENT_KEY": "chcmp",
+  "EVENT_KEY": "hop",
   "TBA_KEY": "oPvuWtX7QgdpPQmfKavrKeqjcgpxV4A0ayVe543hOaM9VFinQIcJzdQmX9OvYwuV",
   "DEFAULT_CAMERA_INDEX": 0,
   "HEADERS_CSV": ["Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,",

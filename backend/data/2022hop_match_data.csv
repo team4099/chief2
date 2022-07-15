@@ -1,0 +1,76 @@
+Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,Auto Misses,Taxied,Auto Shooting Zones,Teleop Lower Hub,Teleop Upper Hub,Teleop Misses,Teleop Shooting Zones,Low Attempted,Mid Attempted,High Attempted,Traversal Attempted,Climb Time,Final Climb Type,How much do they play defense?,Defense Rating,How much were they playing through defense?,Counter Defense Rating,Driver Rating
+Chris,qm2,4421,Red,3,1,0,0,2,1,Elsewhere,0,0,3,Elsewhere,1,1,1,1,20,Traversal,.75,3,0.0,0,3,Damn they SUCKKKK,,
+trevor,qm2,3512,Blue,3,0,0,0,0,,Fender;Opposing Fender;Tarmac,1,4,3,Tarmac;Elsewhere,0,1,1,1,20,Traversal,.25,2,.25,1,2,,,
+sarah,qm2,2992,Blue,1,1,0,4,0,1,Fender;Tarmac;Elsewhere,0,15,6,Tarmac;Opposing Tarmac;Elsewhere,,1,1,,8,Mid,0.0,0,.75,3,3,,,
+Jay,qm2,7153,Red,1,1,1,0,0,,,5,0,1,Fender;Opposing Fender,,,,1,22,Traversal,.75,5,.5,2,3,,,
+shayaan,qm2,4213,Red,2,1,0,2,0,1,Elsewhere,1,9,4,Tarmac;Opposing Tarmac;Elsewhere,,1,1,1,20,Traversal,0.0,1,.75,4,3,,,
+562753
+shashwat,qm2,4926,Blue,2,,0,2,0,1,Elsewhere,0,7,3,Tarmac;Elsewhere,,1,,1,23,Traversal,.25,2,.25,3,5,,,
+trevor,qm5,4499,Blue,3,1,0,2,1,1,Terminal;Elsewhere,0,15,2,Elsewhere,,1,1,1,15,Traversal,.25,3,.25,3,3,,,
+shayaan,qm5,8739,Red,2,1,0,0,1,1,Elsewhere,0,2,1,Opposing Tarmac;Elsewhere,,,,,,No Climb,0.0,0,.5,2,2,,,
+Chris,qm5,8822,Red,3,1,0,0,0,1,Elsewhere,0,0,0,,,,,,,No Climb,.75,0,0.0,0,1,,Theyre ass,Theyre ass
+sarah,qm5,2832,Blue,1,1,0,0,0,,,0,9,2,Elsewhere,1,,,,2,Low,.25,1,0.0,0,2,not moving,trouble intaking,
+shashwat,qm5,1574,Blue,2,1,0,2,0,1,Elsewhere,0,9,1,Elsewhere,,1,,1,18,Traversal,0.0,0,.5,4,3,,They picked up red balls twice,
+Jay,qm5,201,Red,1,1,0,1,3,,,0,13,1,,,,,1,12,Traversal,0.0,0,0.0,0,2,,,
+trevor,qm9,3128,Blue,3,1,0,1,0,1,Elsewhere,0,4,1,Elsewhere,,1,1,1,16,Traversal,1.0,2,0.0,0,2,,,
+shashwat,qm9,525,Blue,2,1,0,3,0,1,Elsewhere,0,5,1,Fender;Elsewhere,,,,,,No Climb,.25,2,.75,1,3,,,
+shayaan,qm9,1538,Red,2,1,0,2,0,1,Elsewhere,0,10,1,Tarmac;Opposing Tarmac;Elsewhere,,1,,,4,Mid,.25,2,.5,3,4,,,
+sarah,qm9,302,Blue,1,1,0,1,1,1,Tarmac,0,13,4,Tarmac;Opposing Tarmac;Elsewhere,,,,,,No Climb,0.0,0,0.0,0,2,,,jerky
+Chris,qm9,7848,Red,3,,0,2,0,,Elsewhere,0,0,0,,,1,,,5,Mid,1.0,2,0.0,0,2,,,
+Jay,qm9,829,Red,1,,0,2,0,,Tarmac,1,9,2,Tarmac;Opposing Tarmac,,,,1,12,Traversal,0.0,0,0.0,0,4,,,
+Chris,qm10,6998,Red,3,1,0,2,0,1,Elsewhere,0,0,0,,1,1,1,1,35,Traversal,1.0,2,0.0,0,2,,,
+shashwat,qm10,8159,Blue,2,1,0,0,1,,Tarmac,0,0,0,Fender,,,,,,No Climb,1.0,2,.25,1,2,,,Shooter seems to be broken 
+trevor,qm10,6420,Blue,3,1,0,2,0,1,Tarmac,0,7,2,Tarmac;Terminal,,1,1,1,15,Traversal,0.0,0,.25,3,3,,,
+sarah,qm10,2767,Blue,1,1,0,4,1,1,Tarmac;Terminal;Elsewhere,1,10,4,Launchpad;Elsewhere,,1,1,1,20,Traversal,0.0,0,1.0,3,4,,,
+shayaan,qm10,8745,Red,2,1,0,2,0,,Tarmac;Elsewhere,0,7,0,Tarmac;Elsewhere,,1,,,9,Mid,0.0,0,.5,1,2,,,
+Jay,qm10,2052,Red,1,1,0,3,0,1,,0,12,2,Fender;Tarmac;Opposing Tarmac,,,,1,8,High,0.0,0,.75,3,3,,,
+Chris,qm13,2905,Red,2,1,0,0,0,1,,0,0,0,,,,,,,No Climb,0.0,0,0.0,0,1,,,They broke and did nothing
+shayaan,qm13,180,Blue,3,,0,0,0,1,,0,11,1,Tarmac;Terminal;Elsewhere,,1,1,,6,High,.5,2,0.0,0,4,,,
+sarah,qm13,2839,Blue,2,1,0,1,0,1,Elsewhere,0,0,0,,,1,,,3,Mid,1.0,3,0.0,0,2,,defense bot,
+arav,qm13,1574,Blue,1,,0,4,0,1,,0,24,4,Tarmac;Opposing Tarmac;Elsewhere,,,,1,9,Traversal,0.0,0,0.0,0,5,,,
+rehan,qm13,2905,Red,3,1,0,0,0,1,,0,0,0,,,,,,,No Climb,0.0,0,0.0,0,1,Doodoo,Doodoo, bumper fell off
+Chris,qm15,4522,Red,1,1,0,1,1,1,Tarmac;Elsewhere,0,8,2,Opposing Tarmac;Terminal;Elsewhere,,1,1,1,20,Traversal,0.0,0,0.0,0,3,,,
+sarah,qm15,7153,Blue,2,1,1,0,0,1,Fender;Tarmac,2,3,4,Fender;Tarmac;Opposing Tarmac,1,,,,4,Low,.5,3,0.0,0,3,,,
+shayaan,qm15,5505,Blue,3,1,0,3,0,1,Elsewhere,0,6,2,Tarmac;Launchpad;Elsewhere,,1,1,,16,High,0.0,0,.5,1,3,,,
+Saragha,qm15,4522,Red,1,,0,0,0,1,,0,3,2,,,1,1,1,18,Traversal,.25,2,.5,2,2,,,No auto 
+arav,qm15,2771,Blue,1,,1,2,0,,Fender;Tarmac;Elsewhere,0,8,3,Fender;Tarmac;Elsewhere,,,,1,15,Traversal,0.0,0,.25,0,4,,,
+rehan,qm15,4499,Red,3,1,0,3,1,1,Fender;Tarmac;Elsewhere,0,19,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,,1,,,1,Mid,0.0,0,.25,4,4,,,
+arav,qm20,4213,Blue,1,,0,0,2,1,,0,9,6,Elsewhere,,,,1,13,Traversal,0.0,0,0.0,0,3,Very bad,,
+Chris,qm20,3794,Red,1,1,0,0,0,0,Elsewhere,0,2,4,Fender;Tarmac,,,1,,33,High,0.0,0,0.0,0,2,,,
+shayaan,qm20,7315,Blue,3,1,9,0,1,1,Fender,0,0,0,,,,,,,No Climb,0.0,0,.25,1,2,,,this team is really bad
+sarah,qm20,8745,Blue,2,1,0,1,1,1,Tarmac,0,2,4,Elsewhere,,1,,,4,Mid,0.0,0,0.0,0,1,,,they drive so slow
+Saragha,qm20,3794,Red,1,1,0,0,1,,,0,3,4,,,1,1,,36,High,0.0,0,.5,3,2,,,
+rehan,qm20,3322,Red,3,1,0,2,0,1,Tarmac;Elsewhere,0,7,0,Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,,1,1,,20,High,0.0,0,0.0,0,1,,Doodoo driving and intaking,
+shayaan,qm26,597,Blue,3,1,0,1,0,1,Elsewhere,0,4,2,Elsewhere,,1,,,8,Mid,0.0,0,.25,2,3,,,
+Chris,qm26,2614,Red,1,1,0,0,0,1,,0,9,4,Tarmac;Elsewhere,,1,,,3,Mid,0.0,0,0.0,,3,,,
+sarah,qm26,2767,Blue,2,1,0,3,1,1,Terminal;Elsewhere,0,10,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,,1,1,1,16,Traversal,0.0,0,0.0,0,4,,,
+arav,qm26,4421,Blue,1,,0,1,0,1,Elsewhere,0,5,3,Elsewhere,,,,1,16,Traversal,0.0,0,0.0,0,2,,,
+Saragha,qm26,2614,Red,1,,0,0,0,,,0,11,6,,,1,,,7,Mid,0.0,0,.25,2,2,,,Missed a lot of shots
+rehan,qm26,4499,Red,3,1,0,3,0,1,Tarmac;Elsewhere,0,15,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,,1,1,1,13,Traversal,0.0,0,.25,4,4,,,
+Chris,qm47,1111,Red,1,1,0,2,0,1,Elsewhere,0,11,4,Tarmac;Terminal;Elsewhere,,1,,,10,Mid,0.0,0,0.0,0,3,,,
+saraansh,qm47,201,Blue,3,1,0,2,1,1,Elsewhere,9,2,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Elsewhere,,1,1,1,15,Traversal,0.0,0,0.0,0,3,,,
+shashwat,qm47,8037,Blue,2,,0,0,0,,,0,5,1,Elsewhere,,,,,,No Climb,.25,3,.75,2,3,,,
+Matthew,qm47,1111,Red,3,1,0,2,0,1,Tarmac,0,9,3,,,1,1,,15,,0.0,0,.25,3,3,,,
+rehan,qm47,488,Red,2,0,0,0,0,1,Fender,0,1,0,Opposing Fender,,1,1,1,17,Traversal,1.0,4,0.0,0,3,,,
+Chris,qm49,5006,Red,1,1,0,1,0,1,Tarmac,0,0,0,,,,,,,No Climb,1.0,1,0.0,0,1,,,
+shashwat,qm49,2905,Blue,2,,0,0,0,,,0,0,0,,,1,,,6,Mid,1.0,3,.25,2,3,,,
+saraansh,qm49,1339,Blue,3,1,0,2,0,1,Fender,0,12,4,Fender;Opposing Fender,,1,1,1,16,Traversal,.25,3,0.0,0,4,push opp ball into hub,,
+Aran,qm49,2905,Blue,2,0,0,0,0,1,,0,0,0,,0,1,,,5,,1.0,2,.25,1,1,,,
+Matthew,qm49,4499,Red,3,1,0,2,1,1,Elsewhere,0,8,1,Tarmac;Terminal;Elsewhere,,1,1,,9,High,0.0,0,.5,3,4,,,
+rehan,qm49,2502,Red,2,1,0,1,0,1,Elsewhere,0,7,3,Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,,1,1,1,15,Traversal,0.0,0,0.0,0,3,,,
+427907
+137319
+Chris,qm52,180,Red,1,1,0,2,0,1,Elsewhere,0,13,6,Launchpad,,,,,,No Climb,0.0,0,0.0,0,3,,,
+shashwat,qm52,2443,Blue,2,1,0,1,0,1,Elsewhere,0,6,4,Elsewhere,,1,1,,23,,0.0,0,.25,4,4,,,
+515970
+saraansh,qm52,8159,Blue,3,1,0,0,1,1,Tarmac,0,0,0,,,1,1,,26,High,1.0,3,0.0,0,3,,defense,
+960442
+rehan,qm52,8701,Red,2,1,1,0,0,1,Fender,0,0,0,,,1,1,,10,High,1.0,2,0.0,0,2,,Defense bot,
+Aran,qm2443,2443,Blue,2,1,0,2,0,1,Launchpad;Elsewhere,0,5,1,Launchpad;Terminal;Elsewhere,,1,1,,24,High,0.0,0,.25,1,3,,,
+Neel,qm52,6036,Blue,1,1,0,5,0,1,Tarmac,0,13,3,Elsewhere,,,,,,No Climb,.25,3,.25,4,5,,,
+Matthew,qm52,2202,Red,3,1,0,0,0,1,,0,0,0,,,,,,,No Climb,.75,3,0.0,0,4,,,
+saraansh,qm53,7153,Blue,3,1,0,1,0,1,Fender,0,6,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac,,1,,,6,Mid,.25,3,0.0,0,3,,,
+Neel,qm53,148,Blue,1,,0,5,0,1,Tarmac,0,19,0,Elsewhere,,1,1,1,13,Traversal,0.0,0,0.0,5,5,,,
+shashwat,qm53,2767,Blue,2,,0,1,0,,Elsewhere,0,9,1,Elsewhere,,,,,,,0.0,0,.5,1,4,,Got flipped,
+rehan,qm63,2136,Red,2,1,0,3,0,1,Tarmac;Elsewhere,0,4,2,Tarmac,,1,1,,40,No Climb,0.0,0,0.0,0,1,,,
+Matthew,qm53,6132,Red,3,1,0,2,0,1,Opposing Fender;Tarmac;Launchpad;Terminal;Elsewhere,0,4,0,Fender;Elsewhere,,1,,,5,Mid,.5,3,0.0,0,4,,,

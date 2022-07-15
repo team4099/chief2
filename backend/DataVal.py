@@ -22,10 +22,10 @@ class DataVal:
         if os.path.exists("data/match_schedule.json"):
             if self.wifi_connection:
                 self.logger.info("Wifi Connection Exists. Will cross check against TBA")
-                DataVal.get_match_schedule(self.logger)
+                # DataVal.get_match_schedule(self.logger)
             else:
                 self.logger.warn("Wifi Connection was not found. Will not check against TBA")
-                DataVal.convert_CSV_To_Match_Schedule(self.logger)
+                # DataVal.convert_CSV_To_Match_Schedule(self.logger)
         
         #load Match Schedule
 
@@ -82,7 +82,7 @@ class DataVal:
         :return: None
         """
 
-        match_key = submission["match_key"].strip().lower()
+        match_key = str(submission["match_key"]).strip().lower()
 
         if self.debug_mode:
             self.logger.info(f"Starting MATCH KEY VALIDATION {submission['match_key']}")
@@ -239,7 +239,7 @@ class DataVal:
 
             else:
                 #check for correct driver station
-                scouted_driver_station = submission["driver_station"]
+                scouted_driver_station = int(submission["driver_station"])
                 schedule_driver_station = self.match_schedule[event_and_match_key][alliance.lower()].index(f"frc{team_number}") +1
                 if scouted_driver_station != schedule_driver_station:
                     self.logger.error(f"In {submission['match_key']}, frc{team_number} INCONSISTENT DRIVER STATION with schedule")
