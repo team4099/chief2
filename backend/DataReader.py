@@ -91,7 +91,10 @@ class DataReader:
             if result not in qrcodes and result:
                 #self.logger.info(result)
                 qrcodes.append(result)
-                scouts_recieved[result["alliance"]][int(result["driver_station"])] = result["scout_id"]
+                try:
+                    scouts_recieved[result["alliance"]][int(result["driver_station"])] = result["scout_id"]
+                except KeyError as e:
+                    print(e)
                 self.logger.debug("Scanned Successfully!")
             elif result in qrcodes and result != previous_result:
                 self.logger.warn("Already Scanned")
