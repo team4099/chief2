@@ -10,9 +10,16 @@ export const ChangeScoutModal: Component = () => {
 
   const names = [
     "aran",
+    "arav",
     "aarav",
+    "aidan",
+    "arjun",
+    "jason",
     "chris",
     "shashwat",
+    "katherine",
+    "rehan",
+    "sanjay",
     "rachel",
     "crystal",
     "shayaan",
@@ -32,7 +39,9 @@ export const ChangeScoutModal: Component = () => {
     "parth",
     "helix",
     "other",
-    "parent"
+    "parent",
+    "zac",
+
   ]
 
   return (
