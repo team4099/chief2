@@ -54,7 +54,7 @@ class DataReader:
             cv2.polylines(image, [pts], True, (0, 255, 0), 3)
 
             qrcode_data = obj.data.decode("utf-8")
-            print("qrcode_data", qrcode_data)
+            #print("qrcode_data", qrcode_data)
 
             formatted_data = [None if i=="" else i for i in qrcode_data.split(",")]
             formatted_data = {header:data for header, data in zip(self._HEADERS_JSON.split(","), formatted_data)}
@@ -92,7 +92,6 @@ class DataReader:
                 self.logger.info(result)
                 qrcodes.append(result)
                 scouts_recieved[result["alliance"]][int(result["driver_station"])] = result["scout_id"]
-                print(scouts_recieved)
                 self.logger.debug("Scanned Successfully!")
             elif result in qrcodes and result != previous_result:
                 self.logger.warn("Already Scanned")
