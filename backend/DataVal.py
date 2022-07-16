@@ -22,10 +22,10 @@ class DataVal:
         if os.path.exists("data/match_schedule.json"):
             if self.wifi_connection:
                 self.logger.info("Wifi Connection Exists. Will cross check against TBA")
-                # DataVal.get_match_schedule(self.logger)
+                #DataVal.get_match_schedule(self.logger)
             else:
                 self.logger.warn("Wifi Connection was not found. Will not check against TBA")
-                # DataVal.convert_CSV_To_Match_Schedule(self.logger)
+                #DataVal.convert_CSV_To_Match_Schedule(self.logger)
         
         #load Match Schedule
 
