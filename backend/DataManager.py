@@ -3,6 +3,7 @@ from DataReader import DataReader
 from DataVal import DataVal
 from DataWriter import DataWriter
 import requests
+import sys
 # import json
 
 
@@ -31,10 +32,6 @@ class DataManager:
 
         qrcodes = self.data_reader.read_qrcode()
         for submission in qrcodes:
-            try:
-                self.data_val.validate_submission(submission)
-                self.log.info("Validation succeeded for submission!")
-            except Exception as e:
-                self.log.critical("Validation failed.")
-                self.log.debug(e)
+            self.data_val.validate_submission(submission)
+            self.log.info("Validation succeeded for submission!")
             self.data_writer.write_data(submission)

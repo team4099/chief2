@@ -374,27 +374,26 @@ class DataVal:
         submission_key = submission["match_key"].strip().lower()
         match_key = f"{self.event_key}_{submission_key}"
         score_info = self.tba_match_data[match_key]["score_breakdown"]
+        if score_info:
+            alliance = submission["alliance"].lower()
+            driver_station = int(submission["driver_station"])
 
+            tba_taxi = score_info[alliance][f"taxiRobot{driver_station}"]
+            tba_climb = score_info[alliance][f"endgameRobot{driver_station}"]
 
-        alliance = submission["alliance"].lower()
-        driver_station = int(submission["driver_station"])
+            submission_taxi = submission["taxied"]
+            submission_climb = submission["final_climb_type"]
+            if submission_climb == "No Climb":
+                submission_climb = "None"
 
-        tba_taxi = score_info[alliance][f"taxiRobot{driver_station}"]
-        tba_climb = score_info[alliance][f"endgameRobot{driver_station}"]
+            #check for inconsistent taxi
+            if (tba_taxi == "No" and (pd.notna(submission_taxi) and submission_taxi)) or (tba_taxi == "Yes" and (pd.isna(submission_taxi) or not submission_taxi)):
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT TAXI according to TBA")
 
-        submission_taxi = submission["taxied"]
-        submission_climb = submission["final_climb_type"]
-        if submission_climb == "No Climb":
-            submission_climb = "None"
-
-        #check for inconsistent taxi
-        if (tba_taxi == "No" and (pd.notna(submission_taxi) and submission_taxi)) or (tba_taxi == "Yes" and (pd.isna(submission_taxi) or not submission_taxi)):
-            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT TAXI according to TBA")
-
-        #check for inconsistent climb type
-        if tba_climb != submission_climb:
-            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA")
-        
+            #check for inconsistent climb type
+            if tba_climb != submission_climb:
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA")
+            
         
 
 
