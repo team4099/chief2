@@ -1,0 +1,20 @@
+sanjay,qm1,2539,Blue,3,0,0,1,0,1,Elsewhere,0,0,0,,,1,1,,11,High,1.0,3,0.0,0,4,,,
+aran,qm1,3538,Red,1,1,0,3,0,1,Fender;Tarmac;Elsewhere,0,9,5,Tarmac;Terminal;Elsewhere,,1,,,0,No Climb,0.0,0,.25,2,4,,,
+aarav,qm1,2614,Red,1,0,0,0,0,1,,0,4,1,Fender;Opposing Tarmac,,,,,,No Climb,.25,1,0.0,0,2,,tends to hit things and misses intaking balls ,
+jay,qm1,1987,Red,2,1,0,0,0,0,Fender,0,9,0,Fender;Tarmac,,1,,,,No Climb,.5,5,.75,4,4,,did not shoot,some jerking but overall good driving and meanuvering
+shayaan,qm1,1339,Red,3,1,0,2,0,1,Elsewhere,0,13,4,Fender;Tarmac;Opposing Tarmac,,1,1,1,16,Traversal,0.0,0,.5,1,3,,,
+arav,qm1,3357,Blue,2,1,0,4,0,1,Fender;Tarmac;Elsewhere,0,8,7,Fender;Tarmac;Opposing Tarmac;Launchpad;Elsewhere,,,,1,13,High,0.0,0,.5,0,3,,,
+sanjay,qm1,4143,Blue,3,1,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,12,6,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,15,High,0.0,0,0.0,0,4, , , 
+aran,qm2,180,Red,1,1,0,0,1,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,18,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,0,0,0,No Climb,0.0,0,.25,3,4, , , 
+jay,qm2,67,Red,2,0,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,13,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,9,Traversal,.25,3,.75,3,1, , ,Double intake worked well but some jerkiness in driving even when slow 
+aarav,qm2,325,Blue,1,1,0,2,0,1,Tarmac,0,1,1,Tarmac,,,,,,No Climb,.25,1,0.0,0,3,,,
+shayaan,qm2,33,Red,3,1,0,1,1,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,3,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,13,Traversal,.25,2,.5,2,2, , ,quite clumsy when it came to driving
+arav,qm2,4028,Blue,2,1,0,4,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,19,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,0,0,30,Mid,0.0,0,.25,4,4, , ,Climber messed up on first attempt.
+sanjay,qm3,4099,Blue,3,1,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,2,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,0,0,No Climb,1.0,3,0.0,0,4, , , 
+arav,qm3,5712,Blue,2,0,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,10,Traversal,0.0,0,0.0,0,2, , , 
+aarav,qm3,2468,Blue,1,1,0,2,1,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,10,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,20,Traversal,.25,1,.25,1,4, , , 
+jay,qm3,195,Red,2,1,0,1,0,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,6,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,18,Traversal,1.0,5,.25,0,1, , ,shot blue balls behind into corner which made it harder for blue
+
+not as accurate of shot (turret)
+aran,qm3,4499,Red,1,1,0,1,0,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,10,Traversal,0.0,0,.25,1,3, , , 
+shayaan,qm3,624,Red,3,1,0,4,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,12,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,0,0,10,Mid,0.0,0,1.0,3,4, , , 

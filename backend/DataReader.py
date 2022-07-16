@@ -89,7 +89,7 @@ class DataReader:
             cv2.imshow('Image', frame)
             
             if result not in qrcodes and result:
-                self.logger.info(result)
+                #self.logger.info(result)
                 qrcodes.append(result)
                 scouts_recieved[result["alliance"]][int(result["driver_station"])] = result["scout_id"]
                 self.logger.debug("Scanned Successfully!")
