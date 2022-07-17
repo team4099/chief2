@@ -53,7 +53,7 @@ class DataReader:
             pts = pts.reshape((-1, 1, 2))
             cv2.polylines(image, [pts], True, (0, 255, 0), 3)
 
-            qrcode_data = obj.data.decode("utf-8")
+            qrcode_data = obj.data.decode("latin-1")
             #print("qrcode_data", qrcode_data)
 
             formatted_data = [None if i=="" else i for i in qrcode_data.split(",")]

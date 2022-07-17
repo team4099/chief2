@@ -155,6 +155,7 @@ class DataVal:
         #sort data into groups by match_key, updating self.data_by_match_key
         # format {"match_key": {"red": ["list of submissions for given key on red alliance"], "blue": ["list of submissions for given key on blue alliance"]}}
         for submission in scouting_data:
+            print(submission.keys())
             alliance = submission["alliance"].lower()
             if pd.notna(submission["match_key"]):
                 match_key = submission["match_key"].strip().lower()
@@ -275,9 +276,12 @@ class DataVal:
         :return: None
         """
         final_climb_type = submission["final_climb_type"]
+        if pd.isna(final_climb_type):
+            final_climb_type = "No Climb"
         if final_climb_type != "No Climb" and final_climb_type:
             #check if attempted climb for corresponding final climb type is false
             attempted_climb = submission[f"attempted_{final_climb_type.lower()}"]
+            
             if (pd.isna(attempted_climb)) or attempted_climb == 0:
                 self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING ATTEMPTED {final_climb_type.upper()}")
 
@@ -454,9 +458,9 @@ class DataVal:
                     auto_lower_scouting_total = int(auto_lower_scouting_total)
 
                     auto_lower_tba_total = score_info["autoCargoLowerNear"] + score_info["autoCargoLowerFar"] + score_info["autoCargoLowerRed"] + score_info["autoCargoLowerBlue"]
-
-                    if auto_lower_scouting_total != auto_lower_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO LOWER TOTAL according to TBA, Scouts:{auto_lower_scouting_total}, TBA:{auto_lower_tba_total}")
+                    if auto_lower_tba_total != 0:
+                        if abs(auto_lower_scouting_total/auto_lower_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO LOWER TOTAL according to TBA, Scouts:{auto_lower_scouting_total}, TBA:{auto_lower_tba_total}")
 
 
                     #check total auto upper hub
@@ -469,8 +473,9 @@ class DataVal:
                     
                     auto_upper_tba_total = score_info["autoCargoUpperNear"] + score_info["autoCargoUpperFar"] + score_info["autoCargoUpperRed"] + score_info["autoCargoUpperBlue"]
 
-                    if auto_upper_scouting_total != auto_upper_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO UPPER TOTAL according to TBA, Scouts:{auto_upper_scouting_total}, TBA:{auto_upper_tba_total}")
+                    if auto_upper_tba_total != 0:
+                        if abs(auto_upper_scouting_total/auto_upper_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO UPPER TOTAL according to TBA, Scouts:{auto_upper_scouting_total}, TBA:{auto_upper_tba_total}")
 
                     #check total teleop lower hub
                     teleop_lower_scouting_total = 0
@@ -482,8 +487,9 @@ class DataVal:
 
                     teleop_lower_tba_total = score_info["teleopCargoLowerNear"] + score_info["teleopCargoLowerFar"] + score_info["teleopCargoLowerRed"] + score_info["teleopCargoLowerBlue"]
 
-                    if teleop_lower_scouting_total != teleop_lower_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP LOWER TOTAL according to TBA, Scouts:{teleop_lower_scouting_total}, TBA:{teleop_lower_tba_total}")
+                    if teleop_lower_tba_total != 0:
+                        if abs(teleop_lower_scouting_total/teleop_lower_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP LOWER TOTAL according to TBA, Scouts:{teleop_lower_scouting_total}, TBA:{teleop_lower_tba_total}")
 
 
                     #check total telleop lower hub
@@ -496,8 +502,9 @@ class DataVal:
                     
                     teleop_upper_tba_total = score_info["teleopCargoUpperNear"] + score_info["teleopCargoUpperFar"] + score_info["teleopCargoUpperRed"] + score_info["teleopCargoUpperBlue"]
 
-                    if teleop_upper_scouting_total != teleop_upper_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP UPPER TOTAL according to TBA, Scouts:{teleop_upper_scouting_total}, TBA:{teleop_upper_tba_total}")
+                    if teleop_upper_tba_total != 0:
+                        if abs(teleop_upper_scouting_total/teleop_upper_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP UPPER TOTAL according to TBA, Scouts:{teleop_upper_scouting_total}, TBA:{teleop_upper_tba_total}")
 
 
     def check_for_outliers(
@@ -668,4 +675,5 @@ class DataVal:
 
         logger.info("Success!")
 
-#DataVal(wifi_connection=True, match_schedule_JSON="data/match_schedule.json").validate_data(filepath="data/dcmp_data.csv")
+if __name__ == "__main__":
+    DataVal(wifi_connection=True).validate_data(filepath="data/2022iri_match_data.csv")

@@ -1,4 +1,4 @@
-Socut ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,Auto Misses,Taxied,Auto Shooting Zones,Teleop Lower Hub,Teleop Upper Hub,Teleop Misses,Teleop Shooting Zones,Low Attempted,Mid Attempted,High Attempted,Traversal Attempted,Climb Time,Final Climb Type,How much do they play defense?,Defense Rating,How much were they playing through defense?,Counter Defense Rating,Driver Rating
+scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating,auto_notes,teleop_notes,misc_notes
 sanjay,qm1,2539,Blue,3,0,0,1,0,1,Elsewhere,0,0,0,,,1,1,,11,High,1.0,3,0.0,0,4,,,
 aran,qm1,3538,Red,1,1,0,3,0,1,Fender;Tarmac;Elsewhere,0,9,5,Tarmac;Terminal;Elsewhere,,1,,,0,No Climb,0.0,0,.25,2,4,,,
 aarav,qm1,2614,Red,1,0,0,0,0,1,,0,4,1,Fender;Opposing Tarmac,,,,,,No Climb,.25,1,0.0,0,2,,tends to hit things and misses intaking balls ,
@@ -15,8 +15,6 @@ sanjay,qm3,4099,Blue,3,1,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;L
 arav,qm3,5712,Blue,2,0,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,10,Traversal,0.0,0,0.0,0,2, , , 
 aarav,qm3,2468,Blue,1,1,0,2,1,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,10,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,20,Traversal,.25,1,.25,1,4, , , 
 jay,qm3,195,Red,2,1,0,1,0,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,6,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,18,Traversal,1.0,5,.25,0,1, , ,shot blue balls behind into corner which made it harder for blue
-
-not as accurate of shot (turret)
 aran,qm3,4499,Red,1,1,0,1,0,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,10,Traversal,0.0,0,.25,1,3, , , 
 shayaan,qm3,624,Red,3,1,0,4,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,12,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,0,0,10,Mid,0.0,0,1.0,3,4, , , 
 aran,qm4,4265,Red,1,1,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,12,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,0,0,No Climb,0.0,0,.25,4,5, , , 
@@ -239,7 +237,6 @@ aran,qm42,694,Red,1,1,0,3,2,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Laun
 shayaan,qm42,4099,Red,2,1,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,0,0,No Climb,1.0,5,.25,4,5, , , 
 neel,qm42,1533,Blue,3,0,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,6,3,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,0,0,0,No Climb,0.0,0,0.0,0,3, , , 
 arav,qm43,234,Blue,2,1,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,0,0,1,30,Traversal,1.0,5,0.0,0,5, , , 
-253863
 aran,qm43,2468,Red,1,1,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,3,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,20,Traversal,0.0,0,.5,3,3, , , 
 trevor,qm43,1339,Blue,1,0,0,4,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,13,4,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,16,Traversal,0.0,0,0.0,0,3, , , 
 aidan,qm43,7457,Red,3,1,0,1,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,1,5,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,0,0,10,Mid,0.0,0,.5,2,3, , ,browned out about last minute after i think pushing match
@@ -352,7 +349,6 @@ sydney,qm60,5484,Red,2,1,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;L
 sydney,qm59,1533,Red,2,1,0,3,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,5,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,16,Traversal,0.0,0,0.0,0,3, ,Delayed start, 
 sydney,qm58,5712,Red,2,1,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,13,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,17,Traversal,0.0,0,.25,3,3, , , 
 sydney,qm57,118,Red,2,1,0,2,0,1,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,8,2,Fender;Opposing Fender;Tarmac;Opposing Tarmac;Launchpad;Terminal;Elsewhere,0,1,1,1,9,Traversal,0.0,0,.5,2,3, , , 
-
 sanjay,qm12,5484,Blue,1,1,0,1,0,1,Tarmac,0,0,0,,,1,1,1,15,Traversal,1.0,3,0.0,0,3,,,
 shayaan,qm12,2767,Red,2,1,0,2,0,1,Tarmac;Elsewhere,0,15,0,Tarmac;Opposing Tarmac;Elsewhere,,1,1,1,13,Traversal,0.0,0,.25,2,4,,,
 jay,qm12,4499,Red,1,0,0,1,0,0,Tarmac,0,10,1,Tarmac;Opposing Tarmac,1,1,1,1,22,Traversal,.75,4,.25,3,4,,,
