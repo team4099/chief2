@@ -2,7 +2,7 @@ import { Component, createEffect, createSignal, splitProps } from "solid-js";
 
 export const ToggleButton: Component = (props) => {
   const [toggleState, setToggle] = createSignal(false);
-  const [toggleColor, setColor] = createSignal("rgb(23,23,32)");
+  const [toggleColor, setColor] = createSignal("#21262d");
   const [local, others] = splitProps(props, ["text"]);
 
   createEffect(() => {
@@ -10,7 +10,7 @@ export const ToggleButton: Component = (props) => {
     if (toggleState()) {
       setColor("rgb(239,174,4)");
     } else {
-      setColor("rgb(0,0,0)");
+      setColor("#21262d");
     }
   });
 
