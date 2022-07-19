@@ -24,7 +24,7 @@ class DataVal:
                 self.logger.info("Wifi Connection Exists. Will cross check against TBA")
                 #DataVal.get_match_schedule(self.logger)
             else:
-                self.logger.warn("Wifi Connection was not found. Will not check against TBA")
+                self.logger.warning("Wifi Connection was not found. Will not check against TBA")
                 #DataVal.convert_CSV_To_Match_Schedule(self.logger)
         
         #load Match Schedule
@@ -70,6 +70,12 @@ class DataVal:
             for match in event_matches:
                 match_dictionary[match["key"]] = match
             self.tba_match_data = match_dictionary
+
+        self.HEADERS_JSON = ["scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,",
+    "auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,",
+    "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,",
+    "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating,auto_notes,teleop_notes,misc_notes"
+  ]
 
 
     def validate_submission(
@@ -148,15 +154,24 @@ class DataVal:
         :return: None
         """
         self.logger.info("Reading data from CSV")
-        scoutingdf = pd.read_csv(filepath)
+
+        json_header_data = f"data/{self.event_key}_match_validation_data.csv"
+
+        with open(json_header_data, "w") as data_copy:
+            with open(filepath, "r") as data:
+                text = data.readlines()
+                text[0] = "".join(self.HEADERS_JSON) + "/n"
+                data_copy.write("".join(text))
+
+
+        scoutingdf = pd.read_csv(json_header_data)
         self.logger.info("Success! CSV data has been read.")
         scouting_data = scoutingdf.to_dict(orient='records')
 
         #sort data into groups by match_key, updating self.data_by_match_key
         # format {"match_key": {"red": ["list of submissions for given key on red alliance"], "blue": ["list of submissions for given key on blue alliance"]}}
         for submission in scouting_data:
-            print(submission.keys())
-            alliance = submission["alliance"].lower()
+            alliance = str(submission["alliance"]).lower()
             if pd.notna(submission["match_key"]):
                 match_key = submission["match_key"].strip().lower()
                 if match_key in self.data_by_match_key:
@@ -361,7 +376,7 @@ class DataVal:
         balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
         taxi = submission["taxied"]
         if balls_shot_in_auto > 1 and (pd.isna(taxi) or not taxi):
-            self.logger.warn(f"In {submission['match_key']}, {submission['team_number']} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
+            self.logger.warning(f"In {submission['match_key']}, {submission['team_number']} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
 
 
     def check_submission_with_tba(
@@ -396,7 +411,7 @@ class DataVal:
 
             #check for inconsistent climb type
             if tba_climb != submission_climb:
-                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA")
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA, should be {tba_climb}")
             
         
 
@@ -535,9 +550,9 @@ class DataVal:
                 for submission in self.data_by_teams[team]:
                     value = submission[field]
                     if DataVal.z_score_outlier(value, mean, std, Z_THRESSHOLD):
-                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was Z-SCORE OUTLIER")
+                        self.logger.warning(f"In {submission['match_key']}, frc{team} {field} performance was Z-SCORE OUTLIER")
                     if DataVal.IQR_outlier(value, q1, q3):
-                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was IQR OUTLIER")
+                        self.logger.warning(f"In {submission['match_key']}, frc{team} {field} performance was IQR OUTLIER")
 
 
     @staticmethod

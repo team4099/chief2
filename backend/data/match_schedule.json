@@ -958,5 +958,276 @@
             "frc4028",
             "frc27"
         ]
+    },
+    "2022iri_qm81": {
+        "red": [
+            "frc2363",
+            "frc587",
+            "frc4926"
+        ],
+        "blue": [
+            "frc325",
+            "frc7457",
+            "frc4099"
+        ]
+    },
+
+    "2022iri_qf1m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf1m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf1m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+
+    "2022iri_qf2m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf2m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf2m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+
+    "2022iri_qf3m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf3m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf3m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+
+    "2022iri_qf4m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf4m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_qf4m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+
+    "2022iri_sf1m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_sf1m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_sf1m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+
+    "2022iri_sf2m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_sf2m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_sf2m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+
+    "2022iri_f1m1": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_f1m2": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
+    },
+    "2022iri_f1m3": {
+        "red": [
+            "frc",
+            "frc",
+            "frc"
+        ],
+        "blue": [
+            "frc",
+            "frc",
+            "frc"
+        ]
     }
 }
