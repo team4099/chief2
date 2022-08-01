@@ -1,6 +1,6 @@
 {
   "YEAR": "2022",
-  "EVENT_KEY": "hop",
+  "EVENT_KEY": "iri",
   "TBA_KEY": "oPvuWtX7QgdpPQmfKavrKeqjcgpxV4A0ayVe543hOaM9VFinQIcJzdQmX9OvYwuV",
   "DEFAULT_CAMERA_INDEX": 0,
   "HEADERS_CSV": ["Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,",
@@ -14,5 +14,5 @@
     "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,",
     "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating,auto_notes,teleop_notes,misc_notes"
   ],
-  "DEBUG": true
+  "DEBUG": false
 }

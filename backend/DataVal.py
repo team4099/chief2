@@ -22,10 +22,10 @@ class DataVal:
         if os.path.exists("data/match_schedule.json"):
             if self.wifi_connection:
                 self.logger.info("Wifi Connection Exists. Will cross check against TBA")
-                # DataVal.get_match_schedule(self.logger)
+                #DataVal.get_match_schedule(self.logger)
             else:
-                self.logger.warn("Wifi Connection was not found. Will not check against TBA")
-                # DataVal.convert_CSV_To_Match_Schedule(self.logger)
+                self.logger.warning("Wifi Connection was not found. Will not check against TBA")
+                #DataVal.convert_CSV_To_Match_Schedule(self.logger)
         
         #load Match Schedule
 
@@ -70,6 +70,12 @@ class DataVal:
             for match in event_matches:
                 match_dictionary[match["key"]] = match
             self.tba_match_data = match_dictionary
+
+        self.HEADERS_JSON = ["scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,",
+    "auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,",
+    "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,",
+    "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating,auto_notes,teleop_notes,misc_notes"
+  ]
 
 
     def validate_submission(
@@ -148,14 +154,24 @@ class DataVal:
         :return: None
         """
         self.logger.info("Reading data from CSV")
-        scoutingdf = pd.read_csv(filepath)
+
+        json_header_data = f"data/{self.event_key}_match_validation_data.csv"
+
+        with open(json_header_data, "w") as data_copy:
+            with open(filepath, "r") as data:
+                text = data.readlines()
+                text[0] = "".join(self.HEADERS_JSON) + "/n"
+                data_copy.write("".join(text))
+
+
+        scoutingdf = pd.read_csv(json_header_data)
         self.logger.info("Success! CSV data has been read.")
         scouting_data = scoutingdf.to_dict(orient='records')
 
         #sort data into groups by match_key, updating self.data_by_match_key
         # format {"match_key": {"red": ["list of submissions for given key on red alliance"], "blue": ["list of submissions for given key on blue alliance"]}}
         for submission in scouting_data:
-            alliance = submission["alliance"].lower()
+            alliance = str(submission["alliance"]).lower()
             if pd.notna(submission["match_key"]):
                 match_key = submission["match_key"].strip().lower()
                 if match_key in self.data_by_match_key:
@@ -275,9 +291,12 @@ class DataVal:
         :return: None
         """
         final_climb_type = submission["final_climb_type"]
+        if pd.isna(final_climb_type):
+            final_climb_type = "No Climb"
         if final_climb_type != "No Climb" and final_climb_type:
             #check if attempted climb for corresponding final climb type is false
             attempted_climb = submission[f"attempted_{final_climb_type.lower()}"]
+            
             if (pd.isna(attempted_climb)) or attempted_climb == 0:
                 self.logger.error(f"In {submission['match_key']}, {submission['team_number']} MISSING ATTEMPTED {final_climb_type.upper()}")
 
@@ -357,7 +376,7 @@ class DataVal:
         balls_shot_in_auto = float(submission["auto_lower_hub"]) + float(submission["auto_upper_hub"]) + float(submission["auto_misses"])
         taxi = submission["taxied"]
         if balls_shot_in_auto > 1 and (pd.isna(taxi) or not taxi):
-            self.logger.warn(f"In {submission['match_key']}, {submission['team_number']} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
+            self.logger.warning(f"In {submission['match_key']}, {submission['team_number']} shot {int(balls_shot_in_auto)} balls in Autonomous but DIDN'T TAXI.")
 
 
     def check_submission_with_tba(
@@ -374,27 +393,26 @@ class DataVal:
         submission_key = submission["match_key"].strip().lower()
         match_key = f"{self.event_key}_{submission_key}"
         score_info = self.tba_match_data[match_key]["score_breakdown"]
+        if score_info:
+            alliance = submission["alliance"].lower()
+            driver_station = int(submission["driver_station"])
 
+            tba_taxi = score_info[alliance][f"taxiRobot{driver_station}"]
+            tba_climb = score_info[alliance][f"endgameRobot{driver_station}"]
 
-        alliance = submission["alliance"].lower()
-        driver_station = int(submission["driver_station"])
+            submission_taxi = submission["taxied"]
+            submission_climb = submission["final_climb_type"]
+            if submission_climb == "No Climb":
+                submission_climb = "None"
 
-        tba_taxi = score_info[alliance][f"taxiRobot{driver_station}"]
-        tba_climb = score_info[alliance][f"endgameRobot{driver_station}"]
+            #check for inconsistent taxi
+            if (tba_taxi == "No" and (pd.notna(submission_taxi) and submission_taxi)) or (tba_taxi == "Yes" and (pd.isna(submission_taxi) or not submission_taxi)):
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT TAXI according to TBA")
 
-        submission_taxi = submission["taxied"]
-        submission_climb = submission["final_climb_type"]
-        if submission_climb == "No Climb":
-            submission_climb = "None"
-
-        #check for inconsistent taxi
-        if (tba_taxi == "No" and (pd.notna(submission_taxi) and submission_taxi)) or (tba_taxi == "Yes" and (pd.isna(submission_taxi) or not submission_taxi)):
-            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT TAXI according to TBA")
-
-        #check for inconsistent climb type
-        if tba_climb != submission_climb:
-            self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA")
-        
+            #check for inconsistent climb type
+            if tba_climb != submission_climb:
+                self.logger.error(f"In {submission['match_key']}, {submission['team_number']} INCORRECT ClIMB TYPE according to TBA, should be {tba_climb}")
+            
         
 
 
@@ -455,9 +473,9 @@ class DataVal:
                     auto_lower_scouting_total = int(auto_lower_scouting_total)
 
                     auto_lower_tba_total = score_info["autoCargoLowerNear"] + score_info["autoCargoLowerFar"] + score_info["autoCargoLowerRed"] + score_info["autoCargoLowerBlue"]
-
-                    if auto_lower_scouting_total != auto_lower_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO LOWER TOTAL according to TBA, Scouts:{auto_lower_scouting_total}, TBA:{auto_lower_tba_total}")
+                    if auto_lower_tba_total != 0:
+                        if abs(auto_lower_scouting_total/auto_lower_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO LOWER TOTAL according to TBA, Scouts:{auto_lower_scouting_total}, TBA:{auto_lower_tba_total}")
 
 
                     #check total auto upper hub
@@ -470,8 +488,9 @@ class DataVal:
                     
                     auto_upper_tba_total = score_info["autoCargoUpperNear"] + score_info["autoCargoUpperFar"] + score_info["autoCargoUpperRed"] + score_info["autoCargoUpperBlue"]
 
-                    if auto_upper_scouting_total != auto_upper_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO UPPER TOTAL according to TBA, Scouts:{auto_upper_scouting_total}, TBA:{auto_upper_tba_total}")
+                    if auto_upper_tba_total != 0:
+                        if abs(auto_upper_scouting_total/auto_upper_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT AUTO UPPER TOTAL according to TBA, Scouts:{auto_upper_scouting_total}, TBA:{auto_upper_tba_total}")
 
                     #check total teleop lower hub
                     teleop_lower_scouting_total = 0
@@ -483,8 +502,9 @@ class DataVal:
 
                     teleop_lower_tba_total = score_info["teleopCargoLowerNear"] + score_info["teleopCargoLowerFar"] + score_info["teleopCargoLowerRed"] + score_info["teleopCargoLowerBlue"]
 
-                    if teleop_lower_scouting_total != teleop_lower_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP LOWER TOTAL according to TBA, Scouts:{teleop_lower_scouting_total}, TBA:{teleop_lower_tba_total}")
+                    if teleop_lower_tba_total != 0:
+                        if abs(teleop_lower_scouting_total/teleop_lower_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP LOWER TOTAL according to TBA, Scouts:{teleop_lower_scouting_total}, TBA:{teleop_lower_tba_total}")
 
 
                     #check total telleop lower hub
@@ -497,8 +517,9 @@ class DataVal:
                     
                     teleop_upper_tba_total = score_info["teleopCargoUpperNear"] + score_info["teleopCargoUpperFar"] + score_info["teleopCargoUpperRed"] + score_info["teleopCargoUpperBlue"]
 
-                    if teleop_upper_scouting_total != teleop_upper_tba_total:
-                        self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP UPPER TOTAL according to TBA, Scouts:{teleop_upper_scouting_total}, TBA:{teleop_upper_tba_total}")
+                    if teleop_upper_tba_total != 0:
+                        if abs(teleop_upper_scouting_total/teleop_upper_tba_total-1) > 0.3:
+                            self.logger.error(f"In {match_key}, {alliance} alliance, INCORRECT TELEOP UPPER TOTAL according to TBA, Scouts:{teleop_upper_scouting_total}, TBA:{teleop_upper_tba_total}")
 
 
     def check_for_outliers(
@@ -529,9 +550,9 @@ class DataVal:
                 for submission in self.data_by_teams[team]:
                     value = submission[field]
                     if DataVal.z_score_outlier(value, mean, std, Z_THRESSHOLD):
-                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was Z-SCORE OUTLIER")
+                        self.logger.warning(f"In {submission['match_key']}, frc{team} {field} performance was Z-SCORE OUTLIER")
                     if DataVal.IQR_outlier(value, q1, q3):
-                        self.logger.warn(f"In {submission['match_key']}, frc{team} {field} performance was IQR OUTLIER")
+                        self.logger.warning(f"In {submission['match_key']}, frc{team} {field} performance was IQR OUTLIER")
 
 
     @staticmethod
@@ -669,4 +690,5 @@ class DataVal:
 
         logger.info("Success!")
 
-#DataVal(wifi_connection=True, match_schedule_JSON="data/match_schedule.json").validate_data(filepath="data/dcmp_data.csv")
+if __name__ == "__main__":
+    DataVal(wifi_connection=True).validate_data(filepath="data/2022iri_match_data.csv")

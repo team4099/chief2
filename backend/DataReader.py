@@ -11,6 +11,11 @@ class DataReader:
     def __init__(self, cam):
         self.cap = cv2.VideoCapture(cam)
         self.logger = Logger().log
+        self.screen_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        self.screen_height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        self.box_width = 400
+        self.box_height = 100
+        self.padding = 25
 
         try:
             with open("config/config.json") as config:
@@ -48,8 +53,8 @@ class DataReader:
             pts = pts.reshape((-1, 1, 2))
             cv2.polylines(image, [pts], True, (0, 255, 0), 3)
 
-            qrcode_data = obj.data.decode("utf-8")
-            print("qrcode_data", qrcode_data)
+            qrcode_data = obj.data.decode("latin-1")
+            #print("qrcode_data", qrcode_data)
 
             formatted_data = [None if i=="" else i for i in qrcode_data.split(",")]
             formatted_data = {header:data for header, data in zip(self._HEADERS_JSON.split(","), formatted_data)}
@@ -64,14 +69,32 @@ class DataReader:
         
         qrcodes = []
         previous_result = None
+        scouts_recieved = {"Red": {1: "", 2: "", 3: ""}, "Blue": {1: "", 2: "", 3: ""}}
+
         while True:
             _, frame = self.cap.read()
             result = self._decoder(frame)
+
+            cv2.rectangle(frame,(self.screen_width-self.box_width,0),(self.screen_width, self.box_height),(0,200,200),-1)
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            curser_pos = [self.screen_width - self.box_width + self.padding, self.padding]
+            for alliance in scouts_recieved:
+                for driver_station in scouts_recieved[alliance]:
+                    text = f"{alliance} {str(driver_station)}: {scouts_recieved[alliance][driver_station]}"
+                    cv2.putText(frame,text,curser_pos, font, 0.5,(0,0,0),1,cv2.LINE_AA)
+                    curser_pos[1] += 30
+                curser_pos[0] += int((self.box_width - 2*self.padding)/2)
+                curser_pos[1] = self.padding
+            
             cv2.imshow('Image', frame)
             
             if result not in qrcodes and result:
-                self.logger.info(result)
+                #self.logger.info(result)
                 qrcodes.append(result)
+                try:
+                    scouts_recieved[result["alliance"]][int(result["driver_station"])] = result["scout_id"]
+                except KeyError as e:
+                    print(e)
                 self.logger.debug("Scanned Successfully!")
             elif result in qrcodes and result != previous_result:
                 self.logger.warn("Already Scanned")
