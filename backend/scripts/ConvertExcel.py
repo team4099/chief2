@@ -3,7 +3,7 @@ import json
 import openpyxl
 
 def convertCSV():
-    with open("config/config.json") as config:
+    with open("../config/config.json") as config:
         config = json.load(config)
         event_key = config["YEAR"] + config["EVENT_KEY"]
 
