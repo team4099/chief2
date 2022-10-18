@@ -8,6 +8,7 @@ import os
 import csv
 
 class DataVal:
+
     def __init__(
             self,
             wifi_connection: bool
@@ -97,6 +98,9 @@ class DataVal:
         else:
             valid_match_key = DataVal.valid_match_key(match_key)
 
+        if self.wifi_connection:
+            valid_match_key = valid_match_key and (match_key in self.tba_match_data.keys())
+
         if self.match_schedule:
             if self.debug_mode:
                 self.logger.info(f"Starting MATCH SCHEDULE VALIDATION {submission['match_key']}")
@@ -155,13 +159,17 @@ class DataVal:
         """
         self.logger.info("Reading data from CSV")
 
-        json_header_data = f"data/{self.event_key}_match_validation_data.csv"
+        json_header_data = filepath
+
+        """
 
         with open(json_header_data, "w") as data_copy:
             with open(filepath, "r") as data:
                 text = data.readlines()
-                text[0] = "".join(self.HEADERS_JSON) + "/n"
+                text[0] = "".join(self.HEADERS_JSON) + "\n"
                 data_copy.write("".join(text))
+
+        """
 
 
         scoutingdf = pd.read_csv(json_header_data)
@@ -459,7 +467,7 @@ class DataVal:
         :return: None
         """
         for match_key in self.data_by_match_key:
-            if DataVal.valid_match_key(match_key):
+            if (match_key in self.tba_match_data.keys()):
                 for alliance in self.data_by_match_key[match_key]:
                     submissions = self.data_by_match_key[match_key][alliance]
                     score_info = self.tba_match_data[f"{self.event_key}_{match_key}"]["score_breakdown"][alliance]
