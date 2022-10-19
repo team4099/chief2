@@ -11000,3 +11000,224 @@
 [1;33m2022-10-18 19:31:24.548 | WARNING  |  [DataVal.py:561] In qm20, frc118 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
 [1;33m2022-10-18 19:31:24.548 | WARNING  |  [DataVal.py:563] In qm20, frc118 teleop_upper_hub performance was IQR OUTLIER[0m
 [1;33m2022-10-18 19:31:24.548 | WARNING  |  [DataVal.py:563] In qm48, frc5010 auto_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-18 22:24:47.586 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-18 22:24:47.588 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-18 22:24:47.588 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-18 22:24:47.588 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-18 22:24:47.589 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-18 22:24:47.589 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-18 22:24:47.790 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-18 22:24:47.791 | INFO     |  [DataWriter.py:13] Getting configuration variables from config.json[0m
+[37m2022-10-18 22:24:47.791 | INFO     |  [DataWriter.py:27] Successfully retrieved configuration variables.[0m
+[32m2022-10-18 22:25:49.969 | DEBUG    |  [DataReader.py:98] Scanned Successfully![0m
+[1;33m2022-10-18 22:25:50.388 | WARNING  |  [DataReader.py:100] Already Scanned[0m
+[37m2022-10-18 22:25:53.309 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-18 22:32:42.663 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-18 22:32:42.663 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-18 22:32:42.663 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-18 22:32:42.664 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-18 22:32:42.664 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-18 22:32:42.664 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-18 22:32:44.188 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-18 22:32:44.189 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-10-18 22:32:44.189 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m
+[32m2022-10-18 22:32:59.825 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-18 22:33:03.907 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-18 22:33:27.885 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-18 22:33:27.886 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-18 22:33:27.886 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-18 22:33:27.886 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-18 22:33:27.887 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-18 22:33:27.887 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-18 22:33:28.35 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-18 22:33:28.36 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-10-18 22:33:28.36 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m
+[32m2022-10-18 22:33:33.332 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-18 22:33:34.414 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-18 22:33:34.833 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-18 22:33:35.78 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-18 22:33:35.339 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-18 22:36:29.847 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-18 22:36:29.847 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-18 22:36:29.847 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-18 22:36:29.847 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-18 22:36:29.847 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-18 22:36:29.848 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-18 22:36:30.554 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-18 22:36:30.554 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-18 22:36:30.561 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[1;31m2022-10-18 22:36:30.568 | ERROR    |  [DataVal.py:357] In qm1, 1987 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-18 22:36:30.568 | ERROR    |  [DataVal.py:309] In qm1, 3357 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-18 22:36:30.568 | ERROR    |  [DataVal.py:353] In qm1, 3357 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-18 22:36:30.569 | ERROR    |  [DataVal.py:353] In qm3, 195 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-18 22:36:30.569 | ERROR    |  [DataVal.py:357] In qm3, 195 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;33m2022-10-18 22:36:30.569 | WARNING  |  [DataVal.py:387] In qm5, 1720 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.569 | WARNING  |  [DataVal.py:387] In qm6, 2056 shot 5 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.569 | WARNING  |  [DataVal.py:387] In qm7, 1024 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.570 | ERROR    |  [DataVal.py:349] In qm7, 829 rated for counter defense but NO COUNTER DEFENSE PCT[0m
+[1;33m2022-10-18 22:36:30.570 | WARNING  |  [DataVal.py:387] In qm7, 694 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.570 | ERROR    |  [DataVal.py:314] In qm8, 340 MISSING CLIMB TIME[0m
+[1;31m2022-10-18 22:36:30.570 | ERROR    |  [DataVal.py:349] In qm8, 340 rated for counter defense but NO COUNTER DEFENSE PCT[0m
+[1;33m2022-10-18 22:36:30.570 | WARNING  |  [DataVal.py:387] In qm8, 4635 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.570 | ERROR    |  [DataVal.py:357] In qm9, 4099 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-18 22:36:30.570 | ERROR    |  [DataVal.py:357] In qm10, 325 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;33m2022-10-18 22:36:30.570 | WARNING  |  [DataVal.py:387] In qm11, 4926 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.571 | ERROR    |  [DataVal.py:309] In qm11, 4926 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-18 22:36:30.571 | ERROR    |  [DataVal.py:309] In qm11, 4143 MISSING ATTEMPTED MID[0m
+[1;31m2022-10-18 22:36:30.571 | ERROR    |  [DataVal.py:309] In qm14, 4635 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-18 22:36:30.571 | ERROR    |  [DataVal.py:357] In qm16, 5010 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;33m2022-10-18 22:36:30.571 | WARNING  |  [DataVal.py:387] In qm17, 4143 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.572 | WARNING  |  [DataVal.py:387] In qm18, 27 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.572 | WARNING  |  [DataVal.py:387] In qm20, 118 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.572 | WARNING  |  [DataVal.py:387] In qm21, 384 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.572 | ERROR    |  [DataVal.py:357] In qm21, 1024 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;33m2022-10-18 22:36:30.572 | WARNING  |  [DataVal.py:387] In qm22, 1720 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.572 | WARNING  |  [DataVal.py:387] In qm22, 4499 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.572 | WARNING  |  [DataVal.py:387] In qm22, 1706 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.573 | WARNING  |  [DataVal.py:387] In qm22, 1706 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.573 | ERROR    |  [DataVal.py:289] In qm23, 2538 MISSING TELEOP SHOOTING ZONES[0m
+[1;33m2022-10-18 22:36:30.573 | WARNING  |  [DataVal.py:387] In qm23, 503 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.573 | ERROR    |  [DataVal.py:357] In qm23, 234 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-18 22:36:30.573 | ERROR    |  [DataVal.py:314] In qm24, 3176 MISSING CLIMB TIME[0m
+[1;31m2022-10-18 22:36:30.573 | ERROR    |  [DataVal.py:309] In qm24, 2338 MISSING ATTEMPTED TRAVERSAL[0m
+[1;31m2022-10-18 22:36:30.574 | ERROR    |  [DataVal.py:314] In qm27, 2363 MISSING CLIMB TIME[0m
+[1;31m2022-10-18 22:36:30.574 | ERROR    |  [DataVal.py:357] In qm28, 2056 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-18 22:36:30.574 | ERROR    |  [DataVal.py:357] In qm29, 180 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-18 22:36:30.574 | ERROR    |  [DataVal.py:314] In qm29, 503 MISSING CLIMB TIME[0m
+[1;33m2022-10-18 22:36:30.574 | WARNING  |  [DataVal.py:387] In qm30, 195 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.574 | WARNING  |  [DataVal.py:387] In qm30, 33 shot 5 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.574 | WARNING  |  [DataVal.py:387] In qm32, 4499 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.574 | WARNING  |  [DataVal.py:387] In qm32, 1730 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.575 | ERROR    |  [DataVal.py:357] In qm32, 3176 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;33m2022-10-18 22:36:30.575 | WARNING  |  [DataVal.py:387] In qm34, 624 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.575 | WARNING  |  [DataVal.py:387] In qm34, 2363 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.575 | ERROR    |  [DataVal.py:314] In qm35, 1533 MISSING CLIMB TIME[0m
+[1;31m2022-10-18 22:36:30.575 | ERROR    |  [DataVal.py:309] In qm35, 3940 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-18 22:36:30.575 | ERROR    |  [DataVal.py:341] In qm35, 1023 rated for defense but NO DEFENSE PCT[0m
+[1;33m2022-10-18 22:36:30.575 | WARNING  |  [DataVal.py:387] In qm36, 7457 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.575 | WARNING  |  [DataVal.py:387] In qm36, 694 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.576 | ERROR    |  [DataVal.py:341] In qm36, 1720 rated for defense but NO DEFENSE PCT[0m
+[1;31m2022-10-18 22:36:30.576 | ERROR    |  [DataVal.py:349] In qm36, 1720 rated for counter defense but NO COUNTER DEFENSE PCT[0m
+[1;33m2022-10-18 22:36:30.576 | WARNING  |  [DataVal.py:387] In qm38, 195 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.576 | WARNING  |  [DataVal.py:387] In qm38, 27 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.576 | WARNING  |  [DataVal.py:387] In qm40, 4499 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.576 | WARNING  |  [DataVal.py:387] In qm42, 3357 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-18 22:36:30.576 | ERROR    |  [DataVal.py:353] In qm42, 3357 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-18 22:36:30.577 | ERROR    |  [DataVal.py:357] In qm42, 4099 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;33m2022-10-18 22:36:30.577 | WARNING  |  [DataVal.py:387] In qm49, 3536 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.577 | WARNING  |  [DataVal.py:387] In qm52, 4499 shot 5 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.577 | WARNING  |  [DataVal.py:387] In qm54, 2468 shot 5 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.578 | WARNING  |  [DataVal.py:387] In qm55, 4635 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.578 | WARNING  |  [DataVal.py:387] In qm56, 2338 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.578 | WARNING  |  [DataVal.py:387] In qm60, 67 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.578 | WARNING  |  [DataVal.py:387] In qm58, 694 shot 5 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-18 22:36:30.580 | WARNING  |  [DataVal.py:563] In qm9, frc2539 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.581 | WARNING  |  [DataVal.py:561] In qm37, frc2614 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.581 | WARNING  |  [DataVal.py:563] In qm37, frc2614 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.582 | WARNING  |  [DataVal.py:561] In qm53, frc2614 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.582 | WARNING  |  [DataVal.py:563] In qm53, frc2614 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.582 | WARNING  |  [DataVal.py:561] In qm1, frc1987 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.582 | WARNING  |  [DataVal.py:563] In qm1, frc1987 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.582 | WARNING  |  [DataVal.py:563] In qm9, frc1987 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.583 | WARNING  |  [DataVal.py:561] In qm36, frc1987 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.583 | WARNING  |  [DataVal.py:561] In qm43, frc1339 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.583 | WARNING  |  [DataVal.py:563] In qm43, frc1339 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.584 | WARNING  |  [DataVal.py:561] In qm27, frc1339 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.584 | WARNING  |  [DataVal.py:563] In qm27, frc1339 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.584 | WARNING  |  [DataVal.py:561] In qm1, frc3357 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.584 | WARNING  |  [DataVal.py:563] In qm1, frc3357 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.585 | WARNING  |  [DataVal.py:561] In qm49, frc4143 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.585 | WARNING  |  [DataVal.py:563] In qm49, frc4143 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.585 | WARNING  |  [DataVal.py:561] In qm57, frc4143 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.585 | WARNING  |  [DataVal.py:563] In qm57, frc4143 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.586 | WARNING  |  [DataVal.py:563] In qm24, frc180 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.587 | WARNING  |  [DataVal.py:561] In qm46, frc67 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.587 | WARNING  |  [DataVal.py:563] In qm2, frc325 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.587 | WARNING  |  [DataVal.py:563] In qm56, frc325 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.588 | WARNING  |  [DataVal.py:561] In qm44, frc4028 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.588 | WARNING  |  [DataVal.py:563] In qm44, frc4028 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.589 | WARNING  |  [DataVal.py:561] In qm3, frc4099 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.589 | WARNING  |  [DataVal.py:563] In qm3, frc4099 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.590 | WARNING  |  [DataVal.py:561] In qm27, frc5712 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.590 | WARNING  |  [DataVal.py:563] In qm27, frc5712 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.591 | WARNING  |  [DataVal.py:561] In qm43, frc2468 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.591 | WARNING  |  [DataVal.py:563] In qm30, frc195 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.591 | WARNING  |  [DataVal.py:563] In qm44, frc195 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.591 | WARNING  |  [DataVal.py:561] In qm38, frc195 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.592 | WARNING  |  [DataVal.py:563] In qm38, frc195 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.592 | WARNING  |  [DataVal.py:561] In qm59, frc4499 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.593 | WARNING  |  [DataVal.py:561] In qm10, frc624 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.593 | WARNING  |  [DataVal.py:563] In qm10, frc624 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.593 | WARNING  |  [DataVal.py:561] In qm24, frc624 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:563] In qm39, frc4265 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:563] In qm56, frc4265 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:561] In qm4, frc27 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:563] In qm4, frc27 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:563] In qm9, frc27 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:563] In qm18, frc27 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.594 | WARNING  |  [DataVal.py:563] In qm50, frc27 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.595 | WARNING  |  [DataVal.py:561] In qm18, frc27 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.595 | WARNING  |  [DataVal.py:561] In qm60, frc3176 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.595 | WARNING  |  [DataVal.py:563] In qm60, frc3176 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.596 | WARNING  |  [DataVal.py:561] In qm23, frc1732 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.597 | WARNING  |  [DataVal.py:563] In qm15, frc3940 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.597 | WARNING  |  [DataVal.py:563] In qm30, frc3940 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.597 | WARNING  |  [DataVal.py:563] In qm51, frc3940 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.597 | WARNING  |  [DataVal.py:561] In qm34, frc4926 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.598 | WARNING  |  [DataVal.py:561] In qm5, frc587 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.598 | WARNING  |  [DataVal.py:563] In qm5, frc587 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.598 | WARNING  |  [DataVal.py:561] In qm32, frc1730 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.599 | WARNING  |  [DataVal.py:563] In qm32, frc1730 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.599 | WARNING  |  [DataVal.py:561] In qm5, frc1023 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.600 | WARNING  |  [DataVal.py:561] In qm36, frc1720 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.600 | WARNING  |  [DataVal.py:563] In qm36, frc1720 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.600 | WARNING  |  [DataVal.py:561] In qm40, frc2338 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.601 | WARNING  |  [DataVal.py:563] In qm40, frc2338 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.601 | WARNING  |  [DataVal.py:561] In qm56, frc2338 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.601 | WARNING  |  [DataVal.py:563] In qm56, frc2338 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.602 | WARNING  |  [DataVal.py:561] In qm54, frc1533 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.602 | WARNING  |  [DataVal.py:563] In qm54, frc1533 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.602 | WARNING  |  [DataVal.py:563] In qm6, frc1533 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.602 | WARNING  |  [DataVal.py:563] In qm17, frc1533 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.603 | WARNING  |  [DataVal.py:561] In qm14, frc2056 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.603 | WARNING  |  [DataVal.py:561] In qm44, frc2056 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.604 | WARNING  |  [DataVal.py:563] In qm44, frc2056 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.604 | WARNING  |  [DataVal.py:561] In qm40, frc503 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.604 | WARNING  |  [DataVal.py:563] In qm40, frc503 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.605 | WARNING  |  [DataVal.py:561] In qm16, frc1024 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.605 | WARNING  |  [DataVal.py:563] In qm16, frc1024 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.605 | WARNING  |  [DataVal.py:561] In qm20, frc829 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.606 | WARNING  |  [DataVal.py:561] In qm47, frc829 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.606 | WARNING  |  [DataVal.py:563] In qm47, frc829 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.606 | WARNING  |  [DataVal.py:561] In qm7, frc234 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.606 | WARNING  |  [DataVal.py:563] In qm7, frc234 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.607 | WARNING  |  [DataVal.py:561] In qm23, frc234 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.607 | WARNING  |  [DataVal.py:563] In qm23, frc234 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.607 | WARNING  |  [DataVal.py:561] In qm50, frc2075 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.607 | WARNING  |  [DataVal.py:563] In qm50, frc2075 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.608 | WARNING  |  [DataVal.py:561] In qm31, frc694 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.609 | WARNING  |  [DataVal.py:561] In qm58, frc340 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.609 | WARNING  |  [DataVal.py:563] In qm58, frc340 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.609 | WARNING  |  [DataVal.py:563] In qm8, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.610 | WARNING  |  [DataVal.py:561] In qm52, frc118 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.610 | WARNING  |  [DataVal.py:563] In qm52, frc118 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.610 | WARNING  |  [DataVal.py:561] In qm20, frc118 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-18 22:36:30.610 | WARNING  |  [DataVal.py:563] In qm20, frc118 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-18 22:36:30.610 | WARNING  |  [DataVal.py:563] In qm48, frc5010 auto_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-18 22:41:15.406 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-18 22:41:15.406 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-18 22:41:15.406 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-18 22:41:15.406 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-18 22:41:15.406 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-18 22:41:15.406 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-18 22:41:15.608 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-18 22:41:15.608 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-18 22:42:33.486 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-18 22:42:33.487 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-18 22:42:33.487 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-18 22:42:33.487 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-18 22:42:33.487 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-18 22:42:33.488 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-18 22:42:33.983 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-18 22:42:33.983 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-18 22:42:33.988 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m

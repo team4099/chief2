@@ -7,7 +7,8 @@ class DataWriter:
                 "scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,"
                 "auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,"
                 "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,"
-                "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating"
+                "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating,"
+                "auto_notes,teleop_notes,misc_notes"
             )
         self.logger = Logger().log
         self.logger.info("Getting configuration variables from config.json")

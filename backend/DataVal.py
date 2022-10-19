@@ -699,4 +699,7 @@ class DataVal:
         logger.info("Success!")
 
 if __name__ == "__main__":
-    DataVal(wifi_connection=True).validate_data(filepath="data/2022iri_match_data.csv")
+    with open("config/config.json") as config:
+        config = json.load(config)
+        event_key = config['EVENT_KEY']
+        DataVal(wifi_connection=True).validate_data(filepath=f"data/2022{event_key}_match_data.csv")
