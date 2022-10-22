@@ -8,7 +8,7 @@ type ShotWidgetProps = {
 export const ShotWidget: Component = ({ getter, setter }: ShotWidgetProps) => {
   // const [shotCounter, setCounter] = createSignal(0);
 
-  const minSwipeDist = 150;
+  const minSwipeDist = 100;
 
   const [swipeStartX, setSwipeStartX] = createSignal(0);
   const [swipeEndX, setSwipeEndX] = createSignal(0);
@@ -16,7 +16,9 @@ export const ShotWidget: Component = ({ getter, setter }: ShotWidgetProps) => {
   function checkDirection() {
     if (swipeStartX() < swipeEndX() && Math.abs(swipeStartX() - swipeEndX()) > minSwipeDist){
       console.log("left")
-      setter(getter() - 1);
+      if (getter() > 0){
+        setter(getter() - 1);
+      }
     }
     else if (swipeStartX() > swipeEndX() && Math.abs(swipeStartX() - swipeEndX()) > minSwipeDist){
       console.log("right")
