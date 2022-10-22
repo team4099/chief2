@@ -38,13 +38,15 @@ export const ChangeScoutModal: Component = () => {
     "sanvika",
     "niyanth",
     "clara",
-    "ben",
+    "blen",
     "amogh",
     "rachel",
     "sayan",
     "ryan",
     "aanshi",
     "helix",
+    "nikhil",
+    "adrian",
     "other",
     "parent"
   ]
