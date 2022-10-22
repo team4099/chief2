@@ -11672,3 +11672,41 @@
 [37m2022-10-21 22:27:15.532 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
 [37m2022-10-21 22:27:15.532 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
 [37m2022-10-21 22:27:15.540 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[37m2022-10-21 22:29:44.792 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:29:44.793 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:29:44.793 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:29:44.793 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:29:44.793 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:29:44.793 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:29:44.954 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:29:44.955 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 22:29:44.964 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[37m2022-10-21 22:30:03.641 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:30:03.642 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:30:03.642 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:30:03.642 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:30:03.643 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:30:03.643 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:30:03.734 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:30:03.734 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:30:03.735 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:30:07.452 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-21 22:30:08.994 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:30:18.245 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:30:18.245 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:30:18.245 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:30:18.246 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:30:18.246 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:30:18.246 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:30:18.375 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:30:18.376 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:30:18.376 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[37m2022-10-21 22:30:38.815 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:30:38.815 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:30:38.815 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:30:38.815 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:30:38.815 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:30:38.815 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:30:38.916 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:30:38.916 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 22:30:38.920 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m

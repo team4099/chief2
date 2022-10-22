@@ -161,9 +161,9 @@ class DataVal:
 
         with open("config/config.json") as config:
             config = json.load(config)
-            event_key = config['EVENT_KEY']
+            event_key = config['YEAR'] + config['EVENT_KEY']
 
-        json_header_data = f"data/2022{event_key}_dataval_match_data.csv"
+        json_header_data = f"data/{event_key}_dataval_match_data.csv"
 
         
         
@@ -705,5 +705,5 @@ class DataVal:
 if __name__ == "__main__":
     with open("config/config.json") as config:
         config = json.load(config)
-        event_key = config['EVENT_KEY']
-        DataVal(wifi_connection=True).validate_data(filepath=f"data/2022{event_key}_match_data.csv")
+        event_key = config['YEAR'] + config['EVENT_KEY']
+        DataVal(wifi_connection=True).validate_data(filepath=f"data/{event_key}_match_data.csv")
