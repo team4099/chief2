@@ -27,7 +27,7 @@ export const ShotWidget: Component = ({ getter, setter }: ShotWidgetProps) => {
   }
 
   return (
-    <div class="h-14"
+    <div class="h-32"
       onTouchStart={(e) => {
         setSwipeStartX(e.changedTouches[0].screenX);
       }}
