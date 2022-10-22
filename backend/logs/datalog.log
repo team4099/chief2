@@ -11221,3 +11221,454 @@
 [37m2022-10-18 22:42:33.983 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
 [37m2022-10-18 22:42:33.983 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
 [37m2022-10-18 22:42:33.988 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-19 11:30:15.107 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-19 11:30:15.108 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-19 11:30:15.108 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-19 11:30:15.108 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-19 11:30:15.109 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-19 11:30:15.109 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-19 11:30:15.353 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-19 11:30:15.354 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-10-19 11:30:15.354 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m
+[37m2022-10-19 11:33:16.854 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-19 11:33:16.856 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-19 11:33:16.856 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-19 11:33:16.856 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-19 11:33:16.857 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-19 11:33:16.857 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-19 11:33:19.795 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-19 11:33:19.796 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-10-19 11:33:19.797 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m
+[37m2022-10-19 11:34:13.267 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-19 11:34:13.267 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-19 11:34:13.267 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-19 11:34:13.268 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-19 11:34:13.269 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-19 11:34:13.269 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-19 11:34:13.417 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-19 11:34:13.418 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-10-19 11:34:13.418 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m
+[37m2022-10-19 16:15:58.266 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-19 16:15:58.267 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-19 16:15:58.268 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-19 16:15:58.268 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-19 16:15:58.268 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-19 16:15:58.269 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-19 16:15:58.597 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-19 16:15:58.598 | INFO     |  [DataWriter.py:14] Getting configuration variables from config.json[0m
+[37m2022-10-19 16:15:58.599 | INFO     |  [DataWriter.py:28] Successfully retrieved configuration variables.[0m
+[32m2022-10-19 16:16:11.313 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:16:11.641 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:12.108 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:12.579 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:13.443 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:13.576 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:14.638 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:14.914 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:15.43 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:15.311 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:15.708 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-19 16:16:24.40 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:16:24.575 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:16:24.840 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-19 16:16:52.157 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:16:52.629 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-19 16:17:05.389 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:17:05.723 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:17:05.856 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:17:06.187 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:17:06.920 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-19 16:17:20.584 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:17:20.915 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:17:21.181 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-19 16:17:34.247 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:17:34.449 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-19 16:17:36.175 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-19 16:17:44.443 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-19 16:17:45.42 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-19 16:17:51.516 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-19 16:17:51.516 | ERROR    |  [DataVal.py:284] In qm50, 7457 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:314] In qm50, 7457 MISSING CLIMB TIME[0m
+[37m2022-10-19 16:17:51.517 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:284] In qm50, 340 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:289] In qm50, 340 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:341] In qm50, 340 rated for defense but NO DEFENSE PCT[0m
+[37m2022-10-19 16:17:51.517 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-19 16:17:51.517 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:353] In qm50, 1730 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-19 16:17:51.517 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:309] In qm50, 2075 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-19 16:17:51.517 | ERROR    |  [DataVal.py:314] In qm50, 2075 MISSING CLIMB TIME[0m
+[37m2022-10-19 16:17:51.518 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;33m2022-10-19 16:17:51.518 | WARNING  |  [DataVal.py:372] In qm50, 180 shot 8 balls in Autonomous.[0m
+[1;31m2022-10-19 16:17:51.518 | ERROR    |  [DataVal.py:289] In qm50, 180 MISSING TELEOP SHOOTING ZONES[0m
+[37m2022-10-19 16:17:51.518 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-19 16:18:27.435 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-19 16:18:27.435 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-19 16:18:27.435 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-19 16:18:27.435 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-19 16:18:27.435 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-19 16:18:27.435 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-19 16:18:28.693 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-19 16:18:28.693 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-19 16:18:28.703 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[1;33m2022-10-19 16:18:28.706 | WARNING  |  [DataVal.py:387] In qm50, 7457 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-19 16:18:28.707 | ERROR    |  [DataVal.py:284] In qm50, 7457 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-19 16:18:28.707 | ERROR    |  [DataVal.py:314] In qm50, 7457 MISSING CLIMB TIME[0m
+[1;33m2022-10-19 16:18:28.707 | WARNING  |  [DataVal.py:387] In qm50, 340 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-19 16:18:28.707 | ERROR    |  [DataVal.py:284] In qm50, 340 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-19 16:18:28.707 | ERROR    |  [DataVal.py:289] In qm50, 340 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-19 16:18:28.708 | ERROR    |  [DataVal.py:353] In qm50, 1730 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-19 16:18:28.708 | ERROR    |  [DataVal.py:309] In qm50, 2075 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-19 16:18:28.708 | ERROR    |  [DataVal.py:314] In qm50, 2075 MISSING CLIMB TIME[0m
+[1;33m2022-10-19 16:18:28.708 | WARNING  |  [DataVal.py:372] In qm50, 180 shot 8 balls in Autonomous.[0m
+[1;33m2022-10-19 16:18:28.711 | WARNING  |  [DataVal.py:387] In qm50, 180 shot 8 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-19 16:18:28.712 | ERROR    |  [DataVal.py:289] In qm50, 180 MISSING TELEOP SHOOTING ZONES[0m
+[1;33m2022-10-19 16:18:28.714 | WARNING  |  [DataVal.py:563] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.714 | WARNING  |  [DataVal.py:563] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.715 | WARNING  |  [DataVal.py:563] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.715 | WARNING  |  [DataVal.py:563] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.716 | WARNING  |  [DataVal.py:563] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.716 | WARNING  |  [DataVal.py:563] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.717 | WARNING  |  [DataVal.py:563] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-19 16:18:28.717 | WARNING  |  [DataVal.py:563] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-21 21:26:17.374 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:26:17.375 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:26:17.375 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:26:17.375 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:26:17.375 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:26:17.375 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:26:17.686 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:26:17.686 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:26:17.693 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[1;33m2022-10-21 21:26:17.696 | WARNING  |  [DataVal.py:387] In qm50, 7457 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:26:17.696 | ERROR    |  [DataVal.py:284] In qm50, 7457 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-21 21:26:17.696 | ERROR    |  [DataVal.py:314] In qm50, 7457 MISSING CLIMB TIME[0m
+[1;33m2022-10-21 21:26:17.697 | WARNING  |  [DataVal.py:387] In qm50, 340 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:26:17.697 | ERROR    |  [DataVal.py:284] In qm50, 340 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-21 21:26:17.697 | ERROR    |  [DataVal.py:289] In qm50, 340 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-21 21:26:17.697 | ERROR    |  [DataVal.py:353] In qm50, 1730 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-21 21:26:17.697 | ERROR    |  [DataVal.py:309] In qm50, 2075 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-21 21:26:17.697 | ERROR    |  [DataVal.py:314] In qm50, 2075 MISSING CLIMB TIME[0m
+[1;33m2022-10-21 21:26:17.698 | WARNING  |  [DataVal.py:372] In qm50, 180 shot 8 balls in Autonomous.[0m
+[1;33m2022-10-21 21:26:17.698 | WARNING  |  [DataVal.py:387] In qm50, 180 shot 8 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:26:17.698 | ERROR    |  [DataVal.py:289] In qm50, 180 MISSING TELEOP SHOOTING ZONES[0m
+[1;33m2022-10-21 21:26:17.701 | WARNING  |  [DataVal.py:563] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.701 | WARNING  |  [DataVal.py:563] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.702 | WARNING  |  [DataVal.py:563] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.703 | WARNING  |  [DataVal.py:563] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.704 | WARNING  |  [DataVal.py:563] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.704 | WARNING  |  [DataVal.py:563] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.705 | WARNING  |  [DataVal.py:563] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:26:17.705 | WARNING  |  [DataVal.py:563] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-21 21:26:51.563 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:26:51.563 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:26:51.564 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:26:51.564 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:26:51.564 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:26:51.564 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:26:51.719 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:26:51.720 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:28:38.526 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:28:38.526 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:28:38.526 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:28:38.527 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:28:38.527 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:28:38.527 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:28:38.689 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:28:38.689 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:28:38.695 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:29:09.329 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:29:09.329 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:29:09.329 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:29:09.329 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:29:09.330 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:29:09.330 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:29:09.416 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:29:09.417 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:29:09.422 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:29:48.694 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:29:48.694 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:29:48.694 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:29:48.694 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:29:48.695 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:29:48.695 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:29:48.849 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:29:48.849 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:30:28.102 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:30:28.102 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:30:28.102 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:30:28.102 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:30:28.102 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:30:28.103 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:30:28.518 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:30:28.518 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:30:28.528 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:32:41.709 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:32:41.709 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:32:41.709 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:32:41.710 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:32:41.710 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:32:41.710 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:32:41.968 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:32:41.969 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:32:41.979 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:33:22.840 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:33:22.840 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:33:22.841 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:33:22.841 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:33:22.841 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:33:22.841 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:33:22.986 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:33:22.987 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:33:22.990 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:34:28.804 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:34:28.804 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:34:28.804 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:34:28.804 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:34:28.804 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:34:28.804 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:34:28.967 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:34:28.967 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:35:46.414 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:35:46.414 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:35:46.414 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:35:46.414 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:35:46.414 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:35:46.415 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:35:46.595 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:35:46.596 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:35:46.604 | INFO     |  [DataVal.py:177] Success! CSV data has been read.[0m
+[37m2022-10-21 21:36:09.550 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:36:09.550 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:36:09.551 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:36:09.551 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:36:09.551 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:36:09.551 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:36:09.716 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:36:09.717 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:37:29.361 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:37:29.361 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:37:29.361 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:37:29.361 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:37:29.361 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:37:29.361 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:37:29.965 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:37:29.966 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:38:21.516 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:38:21.516 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:38:21.517 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:38:21.517 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:38:21.518 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:38:21.518 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:38:21.684 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:38:21.684 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:38:21.688 | INFO     |  [DataVal.py:178] Success! CSV data has been read.[0m
+[37m2022-10-21 21:38:31.398 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:38:31.398 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:38:31.398 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:38:31.398 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:38:31.398 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:38:31.398 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:38:31.530 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:38:31.530 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:38:31.533 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:38:40.971 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:38:40.971 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:38:40.971 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:38:40.971 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:38:40.971 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:38:40.971 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:38:41.56 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:38:41.57 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:38:41.59 | INFO     |  [DataVal.py:176] Success! CSV data has been read.[0m
+[37m2022-10-21 21:41:22.31 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:41:22.31 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:41:22.31 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:41:22.31 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:41:22.31 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:41:22.31 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:41:22.204 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:41:22.204 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:41:22.208 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[37m2022-10-21 21:41:36.194 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:41:36.195 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:41:36.195 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:41:36.195 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:41:36.195 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:41:36.195 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:41:37.423 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:41:37.430 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:41:37.434 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[1;33m2022-10-21 21:41:37.435 | WARNING  |  [DataVal.py:391] In qm50, 7457 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:41:37.435 | ERROR    |  [DataVal.py:288] In qm50, 7457 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:318] In qm50, 7457 MISSING CLIMB TIME[0m
+[1;33m2022-10-21 21:41:37.436 | WARNING  |  [DataVal.py:391] In qm50, 340 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:288] In qm50, 340 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:293] In qm50, 340 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:357] In qm50, 1730 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:313] In qm50, 2075 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:318] In qm50, 2075 MISSING CLIMB TIME[0m
+[1;33m2022-10-21 21:41:37.436 | WARNING  |  [DataVal.py:376] In qm50, 180 shot 8 balls in Autonomous.[0m
+[1;33m2022-10-21 21:41:37.436 | WARNING  |  [DataVal.py:391] In qm50, 180 shot 8 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:41:37.436 | ERROR    |  [DataVal.py:293] In qm50, 180 MISSING TELEOP SHOOTING ZONES[0m
+[1;33m2022-10-21 21:41:37.439 | WARNING  |  [DataVal.py:567] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.439 | WARNING  |  [DataVal.py:567] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.440 | WARNING  |  [DataVal.py:567] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.440 | WARNING  |  [DataVal.py:567] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.440 | WARNING  |  [DataVal.py:567] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.440 | WARNING  |  [DataVal.py:567] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.440 | WARNING  |  [DataVal.py:567] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:41:37.440 | WARNING  |  [DataVal.py:567] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-21 21:44:02.73 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:44:02.73 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:44:02.73 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:44:02.73 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:44:02.74 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:44:02.74 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:44:02.249 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:44:02.249 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 21:44:02.252 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[1;33m2022-10-21 21:44:02.253 | WARNING  |  [DataVal.py:391] In qm50, 7457 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:44:02.253 | ERROR    |  [DataVal.py:288] In qm50, 7457 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-21 21:44:02.253 | ERROR    |  [DataVal.py:318] In qm50, 7457 MISSING CLIMB TIME[0m
+[1;33m2022-10-21 21:44:02.253 | WARNING  |  [DataVal.py:391] In qm50, 340 shot 4 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:44:02.253 | ERROR    |  [DataVal.py:288] In qm50, 340 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-21 21:44:02.253 | ERROR    |  [DataVal.py:293] In qm50, 340 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-21 21:44:02.253 | ERROR    |  [DataVal.py:357] In qm50, 1730 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-21 21:44:02.254 | ERROR    |  [DataVal.py:313] In qm50, 2075 MISSING ATTEMPTED HIGH[0m
+[1;31m2022-10-21 21:44:02.254 | ERROR    |  [DataVal.py:318] In qm50, 2075 MISSING CLIMB TIME[0m
+[1;33m2022-10-21 21:44:02.254 | WARNING  |  [DataVal.py:376] In qm50, 180 shot 8 balls in Autonomous.[0m
+[1;33m2022-10-21 21:44:02.254 | WARNING  |  [DataVal.py:391] In qm50, 180 shot 8 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-21 21:44:02.254 | ERROR    |  [DataVal.py:293] In qm50, 180 MISSING TELEOP SHOOTING ZONES[0m
+[1;33m2022-10-21 21:44:02.255 | WARNING  |  [DataVal.py:567] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.255 | WARNING  |  [DataVal.py:567] In qm50, frc340 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.256 | WARNING  |  [DataVal.py:567] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.256 | WARNING  |  [DataVal.py:567] In qm50, frc340 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.256 | WARNING  |  [DataVal.py:567] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.256 | WARNING  |  [DataVal.py:567] In qm50, frc7457 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.257 | WARNING  |  [DataVal.py:567] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-21 21:44:02.257 | WARNING  |  [DataVal.py:567] In qm50, frc7457 teleop_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-21 21:48:49.840 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:48:49.841 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:48:49.841 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:48:49.841 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:48:49.842 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:48:49.842 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:49:05.682 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:49:05.685 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 21:49:05.686 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 21:49:09.522 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 21:49:09.654 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 21:49:09.786 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 21:49:09.918 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 21:49:10.120 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 21:49:10.253 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 21:49:14.522 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 21:49:42.612 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 21:49:42.613 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 21:49:42.614 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 21:49:42.614 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 21:49:42.614 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 21:49:42.615 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 21:49:42.734 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 21:49:42.734 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 21:49:42.734 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 21:49:49.431 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 21:49:49.565 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 21:49:55.500 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:08:51.474 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:08:51.475 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:08:51.475 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:08:51.476 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:08:51.476 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:08:51.477 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:08:51.652 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:08:51.652 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:08:51.653 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:09:00.59 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-21 22:09:02.932 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:09:51.438 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:09:51.439 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:09:51.439 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:09:51.439 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:09:51.439 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:09:51.440 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:09:51.529 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:09:51.529 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:09:51.529 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:10:00.646 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 22:10:01.103 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 22:10:03.914 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:11:19.567 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:11:19.568 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:11:19.568 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:11:19.568 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:11:19.569 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:11:19.569 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:11:19.709 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:11:19.710 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:11:19.710 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:11:26.52 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 22:11:26.246 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 22:11:26.449 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 22:11:26.715 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 22:11:35.50 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:13:31.180 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:13:31.181 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:13:31.182 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:13:31.182 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:13:31.182 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:13:31.182 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:13:31.324 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:13:31.324 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:13:31.324 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:13:34.305 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 22:13:34.568 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 22:13:34.831 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 22:13:45.428 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:14:20.14 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:14:20.14 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:14:20.15 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:14:20.15 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:14:20.16 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:14:20.16 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:14:20.107 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:14:20.107 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:14:20.108 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:14:26.222 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 22:14:26.891 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 22:14:28.563 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:15:36.3 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:15:36.3 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:15:36.4 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:15:36.4 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:15:36.4 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:15:36.4 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:15:36.186 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:15:36.187 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:15:36.187 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:15:38.506 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-21 22:15:38.640 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-21 22:15:38.907 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-21 22:15:40.444 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:15:58.562 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:15:58.562 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:15:58.562 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:15:58.563 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:15:58.563 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:15:58.564 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:15:58.649 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:15:58.650 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-21 22:15:58.650 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-21 22:16:17.156 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-21 22:16:22.822 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-21 22:27:15.306 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-21 22:27:15.306 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-21 22:27:15.306 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-21 22:27:15.306 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-21 22:27:15.307 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-21 22:27:15.307 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-21 22:27:15.532 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-21 22:27:15.532 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-21 22:27:15.540 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m

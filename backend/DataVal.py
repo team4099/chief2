@@ -159,17 +159,21 @@ class DataVal:
         """
         self.logger.info("Reading data from CSV")
 
-        json_header_data = filepath
+        with open("config/config.json") as config:
+            config = json.load(config)
+            event_key = config['EVENT_KEY']
 
-        """
+        json_header_data = f"data/2022{event_key}_dataval_match_data.csv"
 
-        with open(json_header_data, "w") as data_copy:
-            with open(filepath, "r") as data:
-                text = data.readlines()
-                text[0] = "".join(self.HEADERS_JSON) + "\n"
+        
+        
+        with open(filepath, "r") as data:
+            text = data.readlines()
+            text[0] = "".join(self.HEADERS_JSON) + "\n"
+            with open(json_header_data, "w") as data_copy:
                 data_copy.write("".join(text))
+        
 
-        """
 
 
         scoutingdf = pd.read_csv(json_header_data)
