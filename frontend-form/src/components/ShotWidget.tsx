@@ -16,13 +16,17 @@ export const ShotWidget: Component = ({ getter, setter }: ShotWidgetProps) => {
   function checkDirection() {
     if (swipeStartX() < swipeEndX() && Math.abs(swipeStartX() - swipeEndX()) > minSwipeDist){
       console.log("left")
-      if (getter() > 0){
-        setter(getter() - 1);
-      }
+      
+      window.navigator.vibrate(300);
+      setter(getter() + 1);
     }
     else if (swipeStartX() > swipeEndX() && Math.abs(swipeStartX() - swipeEndX()) > minSwipeDist){
       console.log("right")
-      setter(getter() + 1);
+      window.navigator.vibrate(300);
+
+      if (getter() > 0){
+        setter(getter() - 1);
+      }
     }
   }
 
