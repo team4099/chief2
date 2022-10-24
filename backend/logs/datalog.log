@@ -14878,3 +14878,129 @@
 [1;33m2022-10-24 11:51:28.996 | WARNING  |  [DataVal.py:572] In qm9, frc1389 auto_upper_hub performance was IQR OUTLIER[0m
 [1;33m2022-10-24 11:51:28.996 | WARNING  |  [DataVal.py:570] In qm10, frc2199 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
 [1;33m2022-10-24 11:51:28.996 | WARNING  |  [DataVal.py:572] In qm10, frc2199 teleop_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-24 12:20:43.607 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-24 12:20:43.607 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-24 12:20:43.608 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-24 12:20:43.608 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-24 12:20:43.608 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-24 12:20:43.608 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-24 12:20:44.258 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-24 12:20:44.258 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-24 12:20:44.263 | INFO     |  [DataVal.py:178] Success! CSV data has been read.[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:291] In qm1, 1727 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:276] In qm1, frc2186 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:276] In qm1, frc7770 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:276] In qm1, frc1727 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:321] In qm2, 4099 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:276] In qm2, frc1629 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.269 | ERROR    |  [DataVal.py:276] In qm3, frc888 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:316] In qm3, 888 MISSING ATTEMPTED HIGH[0m
+[1;33m2022-10-24 12:20:44.270 | WARNING  |  [DataVal.py:394] In qm3, 623 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:276] In qm4, frc8197 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:321] In qm4, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:316] In qm4, 1389 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:321] In qm4, 1389 MISSING CLIMB TIME[0m
+[1;33m2022-10-24 12:20:44.270 | WARNING  |  [DataVal.py:394] In qm4, 2199 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:364] In qm4, 2199 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:321] In qm5, 623 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:321] In qm5, 5830 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:276] In qm5, frc4099 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.270 | ERROR    |  [DataVal.py:269] frc3748 was NOT IN MATCH qm6, on the Red alliance[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:321] In qm6, 686 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:276] In qm6, frc1915 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:321] In qm6, 1727 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:276] In qm7, frc1389 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:321] In qm7, 2199 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:360] In qm8, 5587 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:291] In qm8, 4099 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:321] In qm8, 4099 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:316] In qm8, 686 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:321] In qm8, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.271 | ERROR    |  [DataVal.py:276] In qm8, frc620 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:276] In qm9, frc2186 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:360] In qm9, 6239 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:276] In qm10, frc2199 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:364] In qm10, 5587 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:269] frc5830 was NOT IN MATCH qm11, on the Red alliance[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:269] frc620 was NOT IN MATCH qm11, on the Blue alliance[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:269] frc1719 was NOT IN MATCH qm11, on the Red alliance[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:269] frc8726 was NOT IN MATCH qm11, on the Blue alliance[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:269] frc623 was NOT IN MATCH qm11, on the Blue alliance[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:291] In qm11, 623 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:296] In qm11, 623 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-24 12:20:44.272 | ERROR    |  [DataVal.py:269] frc8592 was NOT IN MATCH qm11, on the Red alliance[0m
+[1;33m2022-10-24 12:20:44.273 | WARNING  |  [DataVal.py:394] In qm12, 888 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-24 12:20:44.273 | WARNING  |  [DataVal.py:394] In qm13, 686 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:364] In qm13, 686 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:360] In qm13, 2199 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:360] In qm13, 5830 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:364] In qm14, 8726 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:321] In qm14, 623 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:360] In qm15, 1719 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:321] In qm15, 4505 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:269] frc3748 was NOT IN MATCH qm15, on the Blue alliance[0m
+[1;31m2022-10-24 12:20:44.273 | ERROR    |  [DataVal.py:360] In qm16, 5587 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:269] frc8592 was NOT IN MATCH qm16, on the Blue alliance[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:352] In qm17, 8197 MISSING DEFENSE RATING[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:364] In qm17, 8197 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:316] In qm17, 4099 MISSING ATTEMPTED MID[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:321] In qm17, 888 MISSING CLIMB TIME[0m
+[1;33m2022-10-24 12:20:44.274 | WARNING  |  [DataVal.py:394] In qm17, 1719 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:321] In qm17, 1719 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:321] In qm18, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:276] In qm19, frc3748 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:465] In qm1, frc6239 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:465] In qm2, frc8592 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.274 | ERROR    |  [DataVal.py:465] In qm3, frc2914 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm4, frc1915 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm5, frc2914 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm5, frc2186 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm6, frc3758 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm6, frc8592 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm7, frc7770 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm8, frc1727 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm9, frc3748 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm10, frc1915 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm11, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm11, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm11, 5frc830 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm11, 623 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.275 | ERROR    |  [DataVal.py:465] In qm11, 620 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.276 | ERROR    |  [DataVal.py:465] In qm11, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.276 | ERROR    |  [DataVal.py:465] In qm16, frc8frc592 was NOT SCOUTED[0m
+[1;31m2022-10-24 12:20:44.276 | ERROR    |  [DataVal.py:465] In qm19, frc4505 was NOT SCOUTED[0m
+[1;33m2022-10-24 12:20:44.278 | WARNING  |  [DataVal.py:570] In qm1, frc2186 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.278 | WARNING  |  [DataVal.py:570] In qm16, frc2186 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.278 | WARNING  |  [DataVal.py:568] In qm12, frc2186 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.278 | WARNING  |  [DataVal.py:570] In qm12, frc2186 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.279 | WARNING  |  [DataVal.py:568] In qm1, frc8197 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.279 | WARNING  |  [DataVal.py:570] In qm1, frc8197 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.279 | WARNING  |  [DataVal.py:568] In qm7, frc1719 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.279 | WARNING  |  [DataVal.py:570] In qm7, frc1719 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.280 | WARNING  |  [DataVal.py:568] In qm17, frc1719 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.280 | WARNING  |  [DataVal.py:570] In qm17, frc1719 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.280 | WARNING  |  [DataVal.py:568] In qm4, frc4505 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.280 | WARNING  |  [DataVal.py:570] In qm4, frc4505 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.280 | WARNING  |  [DataVal.py:568] In qm12, frc4505 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.280 | WARNING  |  [DataVal.py:570] In qm12, frc4505 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.281 | WARNING  |  [DataVal.py:570] In qm8, frc4099 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.281 | WARNING  |  [DataVal.py:570] In qm14, frc4099 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.282 | WARNING  |  [DataVal.py:568] In qm2, frc4099 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.282 | WARNING  |  [DataVal.py:570] In qm2, frc4099 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.282 | WARNING  |  [DataVal.py:568] In qm5, frc5830 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.282 | WARNING  |  [DataVal.py:570] In qm5, frc5830 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.282 | WARNING  |  [DataVal.py:570] In qm2, frc5830 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.283 | WARNING  |  [DataVal.py:568] In qm5, frc5830 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.283 | WARNING  |  [DataVal.py:570] In qm5, frc5830 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.283 | WARNING  |  [DataVal.py:568] In qm8, frc5587 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.283 | WARNING  |  [DataVal.py:570] In qm8, frc5587 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.284 | WARNING  |  [DataVal.py:568] In qm5, frc623 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.284 | WARNING  |  [DataVal.py:570] In qm5, frc623 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.285 | WARNING  |  [DataVal.py:568] In qm15, frc620 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.285 | WARNING  |  [DataVal.py:570] In qm15, frc620 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.286 | WARNING  |  [DataVal.py:568] In qm4, frc1389 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.286 | WARNING  |  [DataVal.py:570] In qm4, frc1389 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.286 | WARNING  |  [DataVal.py:568] In qm9, frc1389 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.286 | WARNING  |  [DataVal.py:570] In qm9, frc1389 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 12:20:44.287 | WARNING  |  [DataVal.py:568] In qm10, frc2199 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 12:20:44.287 | WARNING  |  [DataVal.py:570] In qm10, frc2199 teleop_upper_hub performance was IQR OUTLIER[0m
