@@ -162,11 +162,9 @@ class DataVal:
         with open("config/config.json") as config:
             config = json.load(config)
             event_key = config['YEAR'] + config['EVENT_KEY']
-
+        
         json_header_data = f"data/{event_key}_dataval_match_data.csv"
-
-        
-        
+               
         with open(filepath, "r") as data:
             text = data.readlines()
             text[0] = "".join(self.HEADERS_JSON) + "\n"
