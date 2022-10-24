@@ -267,16 +267,13 @@ class DataVal:
             #check if robot was in match
             team_number = int(submission["team_number"][3:]) if str(submission["team_number"])[:3] == "frc" else int(submission["team_number"])
             alliance = submission["alliance"]
-            if f"{team_number}" not in self.match_schedule[f"{self.event_key}_{match_key}"][alliance.lower()]:
-                print(team_number)
-                print(alliance)
-                print(self.match_schedule)
+            if f"frc{team_number}" not in self.match_schedule[f"{self.event_key}_{match_key}"][alliance.lower()]:
                 self.logger.error(f"frc{int(team_number)} was NOT IN MATCH {submission['match_key']}, on the {alliance} alliance")
 
             else:
                 #check for correct driver station
                 scouted_driver_station = int(submission["driver_station"])
-                schedule_driver_station = self.match_schedule[event_and_match_key][alliance.lower()].index(f"{team_number}") +1
+                schedule_driver_station = self.match_schedule[event_and_match_key][alliance.lower()].index(f"frc{team_number}") +1
                 if scouted_driver_station != schedule_driver_station:
                     self.logger.error(f"In {submission['match_key']}, frc{team_number} INCONSISTENT DRIVER STATION with schedule")
             

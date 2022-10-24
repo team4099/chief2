@@ -13987,3 +13987,894 @@
 [32m2022-10-22 09:40:32.750 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
 [1;33m2022-10-22 09:40:33.16 | WARNING  |  [DataReader.py:102] Already Scanned[0m
 [37m2022-10-22 09:40:34.482 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:46:03.389 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 09:46:03.390 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 09:46:03.390 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 09:46:03.390 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 09:46:03.391 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 09:46:03.391 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 09:46:03.598 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 09:46:03.598 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-22 09:46:03.604 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[1;31m2022-10-22 09:46:03.606 | ERROR    |  [DataVal.py:296] In qm1, 1727 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:281] In qm1, frc1727 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:470] In qm1, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:470] In qm1, 7770 was NOT SCOUTED[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:470] In qm1, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:470] In qm1, 1727 was NOT SCOUTED[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:470] In qm1, 8197 was NOT SCOUTED[0m
+[1;31m2022-10-22 09:46:03.607 | ERROR    |  [DataVal.py:470] In qm1, 6239 was NOT SCOUTED[0m
+[1;33m2022-10-22 09:46:03.608 | WARNING  |  [DataVal.py:575] In qm1, frc1727 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-22 09:46:03.609 | WARNING  |  [DataVal.py:575] In qm1, frc1727 auto_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-22 09:46:18.564 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 09:46:18.564 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 09:46:18.565 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 09:46:18.565 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 09:46:18.565 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 09:46:18.565 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 09:46:18.726 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 09:46:18.727 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 09:46:18.727 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 09:46:27.87 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:46:27.491 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:46:57.866 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 09:47:10.664 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 09:47:14.531 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 09:47:27.658 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:47:27.789 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 09:47:28.325 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:48:27.166 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:48:27.564 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 09:48:39.562 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:48:39.563 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:48:39.563 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 09:48:39.563 | ERROR    |  [DataVal.py:326] In qm2, 4099 MISSING CLIMB TIME[0m
+[37m2022-10-22 09:48:39.563 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 09:48:39.564 | ERROR    |  [DataVal.py:281] In qm2, frc1629 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 09:48:39.564 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:48:39.564 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:56:38.749 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 09:56:38.751 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 09:56:38.751 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 09:56:38.751 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 09:56:38.751 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 09:56:38.751 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 09:56:38.916 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 09:56:38.916 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 09:56:38.916 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 09:57:02.885 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:57:03.153 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:57:10.820 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:57:11.89 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:57:31.811 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:57:32.73 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:57:35.480 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:57:35.879 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:57:50.136 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 09:57:50.270 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 09:57:50.675 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 09:58:00.467 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 09:58:05.7 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 09:58:05.7 | ERROR    |  [DataVal.py:281] In qm3, frc888 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 09:58:05.7 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:58:05.8 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:58:05.8 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:58:05.8 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 09:58:05.8 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:07:58.449 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 10:07:58.450 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 10:07:58.450 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 10:07:58.450 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 10:07:58.451 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 10:07:58.451 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 10:07:58.636 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 10:07:58.637 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 10:07:58.637 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 10:08:17.600 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:08:41.729 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:08:55.187 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:08:55.454 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 10:08:55.655 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:09:01.51 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:09:01.517 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:09:19.983 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:10:15.490 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:10:28.19 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:10:28.488 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;35m2022-10-22 10:10:54.774 | CRITICAL |  [DataManager.py:38] Validation failed.[0m
+[32m2022-10-22 10:10:54.774 | DEBUG    |  [DataManager.py:39] 'match_key'[0m
+[1;31m2022-10-22 10:10:54.774 | ERROR    |  [DataVal.py:281] In qm4, frc8197 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 10:10:54.775 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:10:54.775 | ERROR    |  [DataVal.py:326] In qm4, 620 MISSING CLIMB TIME[0m
+[37m2022-10-22 10:10:54.775 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:10:54.775 | ERROR    |  [DataVal.py:321] In qm4, 1389 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-22 10:10:54.775 | ERROR    |  [DataVal.py:326] In qm4, 1389 MISSING CLIMB TIME[0m
+[37m2022-10-22 10:10:54.775 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:10:54.775 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:10:54.776 | ERROR    |  [DataVal.py:369] In qm4, 2199 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[37m2022-10-22 10:10:54.776 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:10:54.776 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:17:29.820 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 10:17:29.821 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 10:17:29.821 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 10:17:29.821 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 10:17:29.821 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 10:17:29.821 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 10:17:29.970 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 10:17:29.970 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 10:17:29.970 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 10:18:54.429 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:18:54.629 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 10:18:54.893 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:18:55.495 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:19:27.344 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:19:27.678 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:19:34.213 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:19:34.546 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:19:41.405 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:19:42.804 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:19:43.136 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:19:56.599 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 10:21:09.235 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;35m2022-10-22 10:21:09.235 | CRITICAL |  [DataManager.py:38] Validation failed.[0m
+[32m2022-10-22 10:21:09.235 | DEBUG    |  [DataManager.py:39] 'match_key'[0m
+[37m2022-10-22 10:21:09.236 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:21:09.236 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;35m2022-10-22 10:21:09.236 | CRITICAL |  [DataManager.py:38] Validation failed.[0m
+[32m2022-10-22 10:21:09.236 | DEBUG    |  [DataManager.py:39] 'match_key'[0m
+[1;31m2022-10-22 10:21:09.236 | ERROR    |  [DataVal.py:326] In qm5, 5830 MISSING CLIMB TIME[0m
+[37m2022-10-22 10:21:09.236 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:21:09.236 | ERROR    |  [DataVal.py:281] In qm5, frc4099 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 10:21:09.236 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:27:59.14 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 10:27:59.16 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 10:27:59.16 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 10:27:59.16 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 10:27:59.16 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 10:27:59.17 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 10:27:59.197 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 10:27:59.197 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 10:27:59.197 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 10:28:03.811 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:28:06.743 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:28:07.13 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:28:25.342 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:28:25.675 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:28:38.427 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:28:43.766 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:29:08.223 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:29:08.488 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;31m2022-10-22 10:29:13.694 | ERROR    |  [DataVal.py:274] frc3748 was NOT IN MATCH qm6, on the Red alliance[0m
+[37m2022-10-22 10:29:13.694 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:29:13.695 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:29:13.695 | ERROR    |  [DataVal.py:281] In qm6, frc1915 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 10:29:13.695 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:29:13.695 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:29:13.695 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:29:13.696 | ERROR    |  [DataVal.py:326] In qm6, 1727 MISSING CLIMB TIME[0m
+[37m2022-10-22 10:29:13.696 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:36:14.77 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 10:36:14.78 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 10:36:14.78 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 10:36:14.78 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 10:36:14.78 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 10:36:14.78 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 10:36:14.261 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 10:36:14.262 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 10:36:14.262 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 10:36:38.549 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:36:45.748 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:36:46.216 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:36:54.278 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:36:54.550 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:37:03.379 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:37:03.707 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:37:16.38 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:37:16.372 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 10:37:16.504 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:37:24.99 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:37:24.293 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 10:37:24.496 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;31m2022-10-22 10:37:28.702 | ERROR    |  [DataVal.py:281] In qm7, frc1389 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 10:37:28.703 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:37:28.703 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:37:28.703 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:37:28.703 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:37:28.704 | ERROR    |  [DataVal.py:326] In qm7, 2199 MISSING CLIMB TIME[0m
+[37m2022-10-22 10:37:28.704 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:37:28.704 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:47:33.627 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 10:47:33.628 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 10:47:33.629 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 10:47:33.629 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 10:47:33.629 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 10:47:33.629 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 10:47:33.780 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 10:47:33.780 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 10:47:33.780 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 10:48:09.190 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:48:16.220 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:48:16.617 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:48:31.678 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:48:31.881 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:48:38.478 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:48:38.946 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 10:48:46.81 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 10:49:15.290 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 10:49:15.560 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 10:49:15.692 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;31m2022-10-22 10:49:41.921 | ERROR    |  [DataVal.py:365] In qm8, 5587 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-22 10:49:41.921 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:49:41.921 | ERROR    |  [DataVal.py:296] In qm8, 4099 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-22 10:49:41.921 | ERROR    |  [DataVal.py:326] In qm8, 4099 MISSING CLIMB TIME[0m
+[37m2022-10-22 10:49:41.921 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:49:41.922 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:49:41.922 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 10:49:41.922 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 10:49:41.922 | ERROR    |  [DataVal.py:281] In qm8, frc620 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 10:49:41.922 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:00:13.858 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 11:00:13.858 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 11:00:13.858 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 11:00:13.858 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 11:00:13.858 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 11:00:13.859 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 11:00:17.536 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 11:00:17.536 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 11:00:17.536 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 11:00:22.853 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:00:34.881 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:00:35.13 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:00:35.146 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:00:39.812 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:00:40.210 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:00:47.813 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:00:48.274 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:01:03.468 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:01:03.936 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:01:10.999 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 11:01:15.68 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:01:15.68 | ERROR    |  [DataVal.py:281] In qm9, frc2186 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 11:01:15.68 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:01:15.69 | ERROR    |  [DataVal.py:365] In qm9, 6239 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-22 11:01:15.69 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:01:15.69 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:01:15.69 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:01:15.69 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:09:47.158 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 11:09:47.159 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 11:09:47.159 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 11:09:47.159 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 11:09:47.159 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 11:09:47.159 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 11:09:47.313 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 11:09:47.314 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 11:09:47.314 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 11:10:34.228 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:10:34.828 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:10:44.551 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:10:44.683 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:10:45.19 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:10:53.752 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:10:54.17 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:10:54.154 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:10:59.478 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:11:13.347 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:11:13.873 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:11:32.732 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 11:11:42.987 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:11:42.989 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:11:42.989 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:11:42.989 | ERROR    |  [DataVal.py:281] In qm10, frc2199 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 11:11:42.989 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:11:42.989 | ERROR    |  [DataVal.py:369] In qm10, 5587 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[37m2022-10-22 11:11:42.989 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:11:42.989 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:22:34.981 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 11:22:34.981 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 11:22:34.981 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 11:22:34.981 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 11:22:34.982 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 11:22:34.982 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 11:22:35.144 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 11:22:35.144 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 11:22:35.144 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 11:22:51.122 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:22:51.520 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:23:01.349 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:23:01.613 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:23:23.537 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:23:23.677 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:23:23.872 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:23:26.670 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:23:27.206 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:23:46.723 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:23:47.58 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:23:47.321 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:24:02.595 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:24:03.124 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 11:24:10.117 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:24:10.118 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:24:10.118 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:24:10.118 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:24:10.118 | ERROR    |  [DataVal.py:296] In qm11, 623 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-22 11:24:10.118 | ERROR    |  [DataVal.py:301] In qm11, 623 MISSING TELEOP SHOOTING ZONES[0m
+[37m2022-10-22 11:24:10.119 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:24:10.119 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:35:33.87 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 11:35:33.88 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 11:35:33.88 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 11:35:33.88 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 11:35:33.89 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 11:35:33.89 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 11:35:35.967 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 11:35:35.968 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 11:35:35.968 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 11:35:47.428 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:35:47.624 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:35:53.962 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:35:54.357 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:35:58.488 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:36:06.16 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:36:16.150 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:36:16.547 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:36:16.751 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:36:38.476 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 11:36:42.672 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:36:42.673 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:36:42.673 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:36:42.674 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:36:42.674 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:36:42.674 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:44:17.532 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 11:44:17.533 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 11:44:17.533 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 11:44:17.533 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 11:44:17.533 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 11:44:17.533 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 11:44:19.823 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 11:44:19.824 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 11:44:19.824 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 11:44:25.854 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:44:32.649 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:44:57.706 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:44:57.976 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:45:02.844 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:45:03.39 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:45:03.240 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:45:03.372 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:45:12.837 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:45:20.34 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:45:20.235 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:45:20.432 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 11:45:23.769 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:45:23.769 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:45:23.770 | ERROR    |  [DataVal.py:369] In qm13, 686 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[37m2022-10-22 11:45:23.770 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:45:23.770 | ERROR    |  [DataVal.py:365] In qm13, 2199 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-22 11:45:23.770 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:45:23.770 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:45:23.770 | ERROR    |  [DataVal.py:365] In qm13, 5830 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-22 11:45:23.770 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:54:44.812 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 11:54:44.812 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 11:54:44.813 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 11:54:44.813 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 11:54:44.813 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 11:54:44.813 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 11:54:45.21 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 11:54:45.21 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 11:54:45.22 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 11:55:05.873 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 11:55:19.539 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:55:19.778 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:55:19.946 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:55:25.67 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:55:25.199 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:55:40.721 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:55:41.55 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 11:55:41.260 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:55:55.255 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:55:55.653 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 11:56:12.113 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 11:56:12.642 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 11:56:22.901 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:56:22.902 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:56:22.902 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 11:56:22.902 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:56:22.902 | ERROR    |  [DataVal.py:369] In qm14, 8726 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[37m2022-10-22 11:56:22.902 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 11:56:22.902 | ERROR    |  [DataVal.py:326] In qm14, 623 MISSING CLIMB TIME[0m
+[37m2022-10-22 11:56:22.903 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:03:10.805 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:03:10.806 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:03:10.806 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:03:10.806 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:03:10.806 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:03:10.806 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:03:11.293 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:03:11.294 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:03:11.294 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 12:03:18.213 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:03:18.545 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:04:04.291 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:04:04.625 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:04:04.959 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:04:27.424 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:04:27.890 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:04:28.290 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:04:31.155 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:04:47.476 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:05:03.670 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:05:04.3 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 12:06:30.636 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:06:30.637 | ERROR    |  [DataVal.py:365] In qm15, 1719 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-22 12:06:30.637 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:06:30.637 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:06:30.637 | ERROR    |  [DataVal.py:326] In qm15, 4505 MISSING CLIMB TIME[0m
+[37m2022-10-22 12:06:30.637 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:06:30.637 | ERROR    |  [DataVal.py:274] frc3748 was NOT IN MATCH qm15, on the Blue alliance[0m
+[37m2022-10-22 12:06:30.637 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:06:30.638 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:13:47.857 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:13:47.859 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:13:47.859 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:13:47.859 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:13:47.859 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:13:47.859 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:13:48.145 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:13:48.145 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:13:48.145 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 12:13:55.610 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:14:05.467 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:14:06.3 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:14:15.526 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:14:15.929 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:14:21.463 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:14:44.457 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 12:14:46.585 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:14:46.586 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:14:46.586 | ERROR    |  [DataVal.py:362] In qm16, 5587 MISSING COUNTER DEFENSE RATING[0m
+[37m2022-10-22 12:14:46.586 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:14:46.586 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:14:46.586 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:15:21.275 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:15:21.275 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:15:21.276 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:15:21.276 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:15:21.276 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:15:21.276 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:15:22.105 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:15:22.105 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:15:22.106 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 12:15:27.80 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:15:27.345 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 12:15:29.472 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:26:02.350 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:26:02.352 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:26:02.352 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:26:02.352 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:26:02.352 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:26:02.352 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:26:02.742 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:26:02.743 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:26:02.743 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 12:26:45.176 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:26:45.578 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:27:01.298 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:27:11.163 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:27:11.559 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:27:14.564 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:27:27.552 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:27:38.414 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:27:38.544 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;31m2022-10-22 12:27:44.545 | ERROR    |  [DataVal.py:354] In qm17, 8197 MISSING DEFENSE RATING[0m
+[1;31m2022-10-22 12:27:44.545 | ERROR    |  [DataVal.py:366] In qm17, 8197 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[37m2022-10-22 12:27:44.545 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:27:44.546 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:27:44.546 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:27:44.546 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:27:44.546 | ERROR    |  [DataVal.py:323] In qm17, 888 MISSING CLIMB TIME[0m
+[37m2022-10-22 12:27:44.546 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:27:44.547 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:28:05.869 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:28:05.869 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:28:05.870 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:28:05.870 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:28:05.870 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:28:05.870 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:28:06.435 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:28:06.436 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:28:06.436 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[37m2022-10-22 12:35:14.75 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:35:14.76 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:35:14.77 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:35:14.77 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:35:14.77 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:35:14.77 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:35:14.259 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:35:14.259 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:35:14.259 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 12:36:19.238 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:37:19.952 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:37:42.677 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:37:44.874 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:37:45.75 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:37:53.341 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:37:54.1 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:37:54.274 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:37:54.582 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:37:55.110 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:37:55.234 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:37:59.307 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:38:10.696 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[37m2022-10-22 12:41:14.96 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:41:14.97 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:41:14.97 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:41:14.97 | ERROR    |  [DataVal.py:323] In qm18, 620 MISSING CLIMB TIME[0m
+[37m2022-10-22 12:41:14.97 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:41:14.98 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:41:14.98 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:44:20.168 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-22 12:44:20.169 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-22 12:44:20.169 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-22 12:44:20.169 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-22 12:44:20.169 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-22 12:44:20.169 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-22 12:44:20.916 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-22 12:44:20.917 | INFO     |  [DataWriter.py:15] Getting configuration variables from config.json[0m
+[37m2022-10-22 12:44:20.917 | INFO     |  [DataWriter.py:29] Successfully retrieved configuration variables.[0m
+[32m2022-10-22 12:44:51.539 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:44:54.540 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:44:58.539 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:44:58.804 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[1;33m2022-10-22 12:44:59.3 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:45:28.457 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[32m2022-10-22 12:45:38.654 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:45:39.57 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[32m2022-10-22 12:46:13.904 | DEBUG    |  [DataReader.py:100] Scanned Successfully![0m
+[1;33m2022-10-22 12:46:14.103 | WARNING  |  [DataReader.py:102] Already Scanned[0m
+[37m2022-10-22 12:46:19.839 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:46:19.839 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:46:19.839 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:46:19.839 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-22 12:46:19.839 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[1;31m2022-10-22 12:46:19.840 | ERROR    |  [DataVal.py:278] In qm19, frc3748 INCONSISTENT DRIVER STATION with schedule[0m
+[37m2022-10-22 12:46:19.840 | INFO     |  [DataManager.py:36] Validation succeeded for submission![0m
+[37m2022-10-23 14:40:07.269 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-23 14:40:07.270 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-23 14:40:07.270 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-23 14:40:07.270 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-23 14:40:07.270 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-23 14:40:07.271 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-23 14:40:07.459 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-23 14:40:07.459 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-23 14:40:07.464 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:293] In qm1, 1727 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:278] In qm1, frc1727 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:323] In qm2, 4099 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:278] In qm2, frc1629 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:278] In qm3, frc888 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:318] In qm3, 888 MISSING ATTEMPTED HIGH[0m
+[1;33m2022-10-23 14:40:07.471 | WARNING  |  [DataVal.py:396] In qm3, 623 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-23 14:40:07.471 | ERROR    |  [DataVal.py:278] In qm4, frc8197 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:323] In qm4, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:318] In qm4, 1389 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:323] In qm4, 1389 MISSING CLIMB TIME[0m
+[1;33m2022-10-23 14:40:07.472 | WARNING  |  [DataVal.py:396] In qm4, 2199 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:366] In qm4, 2199 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:323] In qm5, 623 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:323] In qm5, 5830 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:278] In qm5, frc4099 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:271] frc3748 was NOT IN MATCH qm6, on the Red alliance[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:323] In qm6, 686 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.472 | ERROR    |  [DataVal.py:278] In qm6, frc1915 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:323] In qm6, 1727 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:278] In qm7, frc1389 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:323] In qm7, 2199 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:362] In qm8, 5587 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:293] In qm8, 4099 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:323] In qm8, 4099 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:318] In qm8, 686 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:323] In qm8, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:278] In qm8, frc620 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:278] In qm9, frc2186 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:362] In qm9, 6239 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.473 | ERROR    |  [DataVal.py:278] In qm10, frc2199 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:366] In qm10, 5587 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:293] In qm11, 623 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:298] In qm11, 623 MISSING TELEOP SHOOTING ZONES[0m
+[1;33m2022-10-23 14:40:07.474 | WARNING  |  [DataVal.py:396] In qm12, 888 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-23 14:40:07.474 | WARNING  |  [DataVal.py:396] In qm13, 686 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:366] In qm13, 686 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:362] In qm13, 2199 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:362] In qm13, 5830 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:366] In qm14, 8726 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-23 14:40:07.474 | ERROR    |  [DataVal.py:323] In qm14, 623 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:362] In qm15, 1719 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:323] In qm15, 4505 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:271] frc3748 was NOT IN MATCH qm15, on the Blue alliance[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:362] In qm16, 5587 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:354] In qm17, 8197 MISSING DEFENSE RATING[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:366] In qm17, 8197 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:318] In qm17, 4099 MISSING ATTEMPTED MID[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:323] In qm17, 888 MISSING CLIMB TIME[0m
+[1;33m2022-10-23 14:40:07.475 | WARNING  |  [DataVal.py:396] In qm17, 1719 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-23 14:40:07.475 | ERROR    |  [DataVal.py:323] In qm17, 1719 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:323] In qm18, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:278] In qm19, frc3748 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm1, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm1, 7770 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm1, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm1, 1727 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm1, 8197 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm1, 6239 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm2, 4505 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm2, 5830 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm2, 4099 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.476 | ERROR    |  [DataVal.py:467] In qm2, 1629 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm2, 3748 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm2, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm3, 623 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm3, 5587 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm3, 686 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm3, 888 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm3, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm3, 2914 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm4, 2199 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm4, 1389 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm4, 4505 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm4, 8197 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm4, 620 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.477 | ERROR    |  [DataVal.py:467] In qm4, 1915 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm5, 2914 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm5, 5830 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm5, 623 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm5, 4099 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm5, 6239 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm5, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm6, 3758 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm6, 888 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm6, 686 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm6, 1915 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm6, 1727 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm6, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm7, 2199 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.478 | ERROR    |  [DataVal.py:467] In qm7, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm7, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm7, 1389 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm7, 1629 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm7, 7770 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm8, 5587 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm8, 4099 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm8, 8197 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm8, 620 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm8, 686 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm8, 1727 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm9, 6239 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm9, 4505 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm9, 888 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.479 | ERROR    |  [DataVal.py:467] In qm9, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm9, 1389 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm9, 3748 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm10, 5587 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm10, 2914 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm10, 1629 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm10, 2199 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm10, 7770 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm10, 1915 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm11, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm11, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm11, 5830 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm11, 623 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm11, 620 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.480 | ERROR    |  [DataVal.py:467] In qm11, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm12, 888 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm12, 1727 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm12, 5587 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm12, 1629 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm12, 4505 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm12, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm13, 7770 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm13, 6239 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm13, 5830 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm13, 686 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm13, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm13, 2199 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm14, 4099 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm14, 1915 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.481 | ERROR    |  [DataVal.py:467] In qm14, 623 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm14, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm14, 8197 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm14, 1389 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm15, 2914 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm15, 3748 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm15, 7770 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm15, 620 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm15, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm15, 4505 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm16, 1915 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm16, 686 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm16, 1389 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm16, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.482 | ERROR    |  [DataVal.py:467] In qm16, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm16, 5587 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm17, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm17, 4099 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm17, 888 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm17, 5830 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm17, 2199 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm17, 8197 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm18, 6239 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm18, 2914 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm18, 620 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm18, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm18, 1629 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm18, 1727 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.483 | ERROR    |  [DataVal.py:467] In qm19, 5587 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.484 | ERROR    |  [DataVal.py:467] In qm19, 4505 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.484 | ERROR    |  [DataVal.py:467] In qm19, 3748 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.484 | ERROR    |  [DataVal.py:467] In qm19, 2186 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.484 | ERROR    |  [DataVal.py:467] In qm19, 623 was NOT SCOUTED[0m
+[1;31m2022-10-23 14:40:07.484 | ERROR    |  [DataVal.py:467] In qm19, 2199 was NOT SCOUTED[0m
+[1;33m2022-10-23 14:40:07.485 | WARNING  |  [DataVal.py:572] In qm1, frc2186 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.486 | WARNING  |  [DataVal.py:572] In qm16, frc2186 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.486 | WARNING  |  [DataVal.py:570] In qm12, frc2186 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.486 | WARNING  |  [DataVal.py:572] In qm12, frc2186 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.487 | WARNING  |  [DataVal.py:570] In qm1, frc8197 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.487 | WARNING  |  [DataVal.py:572] In qm1, frc8197 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.487 | WARNING  |  [DataVal.py:570] In qm7, frc1719 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.487 | WARNING  |  [DataVal.py:572] In qm7, frc1719 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.487 | WARNING  |  [DataVal.py:570] In qm17, frc1719 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.488 | WARNING  |  [DataVal.py:572] In qm17, frc1719 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.488 | WARNING  |  [DataVal.py:570] In qm4, frc4505 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.488 | WARNING  |  [DataVal.py:572] In qm4, frc4505 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.488 | WARNING  |  [DataVal.py:570] In qm12, frc4505 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.488 | WARNING  |  [DataVal.py:572] In qm12, frc4505 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.489 | WARNING  |  [DataVal.py:572] In qm8, frc4099 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.489 | WARNING  |  [DataVal.py:572] In qm14, frc4099 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.490 | WARNING  |  [DataVal.py:570] In qm2, frc4099 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.490 | WARNING  |  [DataVal.py:572] In qm2, frc4099 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.490 | WARNING  |  [DataVal.py:570] In qm5, frc5830 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.490 | WARNING  |  [DataVal.py:572] In qm5, frc5830 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.490 | WARNING  |  [DataVal.py:572] In qm2, frc5830 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.491 | WARNING  |  [DataVal.py:570] In qm5, frc5830 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.491 | WARNING  |  [DataVal.py:572] In qm5, frc5830 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.491 | WARNING  |  [DataVal.py:570] In qm8, frc5587 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.491 | WARNING  |  [DataVal.py:572] In qm8, frc5587 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.492 | WARNING  |  [DataVal.py:570] In qm5, frc623 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.492 | WARNING  |  [DataVal.py:572] In qm5, frc623 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.493 | WARNING  |  [DataVal.py:570] In qm15, frc620 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.493 | WARNING  |  [DataVal.py:572] In qm15, frc620 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.494 | WARNING  |  [DataVal.py:570] In qm4, frc1389 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.494 | WARNING  |  [DataVal.py:572] In qm4, frc1389 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.494 | WARNING  |  [DataVal.py:570] In qm9, frc1389 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.494 | WARNING  |  [DataVal.py:572] In qm9, frc1389 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-23 14:40:07.495 | WARNING  |  [DataVal.py:570] In qm10, frc2199 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-23 14:40:07.495 | WARNING  |  [DataVal.py:572] In qm10, frc2199 teleop_upper_hub performance was IQR OUTLIER[0m
+[37m2022-10-24 11:51:28.450 | INFO     |  [DataVal.py:18] Logging started[0m
+[37m2022-10-24 11:51:28.450 | INFO     |  [DataVal.py:21] Starting Validation Process[0m
+[37m2022-10-24 11:51:28.450 | INFO     |  [DataVal.py:25] Wifi Connection Exists. Will cross check against TBA[0m
+[37m2022-10-24 11:51:28.450 | INFO     |  [DataVal.py:35] Reading match schedule JSON[0m
+[37m2022-10-24 11:51:28.451 | INFO     |  [DataVal.py:38] Success! JSON match schdeule has been read.[0m
+[37m2022-10-24 11:51:28.451 | INFO     |  [DataVal.py:62] Requesting TBA data[0m
+[37m2022-10-24 11:51:28.961 | INFO     |  [DataVal.py:67] TBA data successfully retrieved[0m
+[37m2022-10-24 11:51:28.962 | INFO     |  [DataVal.py:160] Reading data from CSV[0m
+[37m2022-10-24 11:51:28.969 | INFO     |  [DataVal.py:180] Success! CSV data has been read.[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:293] In qm1, 1727 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:278] In qm1, frc2186 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:278] In qm1, frc7770 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:278] In qm1, frc1727 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:323] In qm2, 4099 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:278] In qm2, frc1629 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.975 | ERROR    |  [DataVal.py:278] In qm3, frc888 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:318] In qm3, 888 MISSING ATTEMPTED HIGH[0m
+[1;33m2022-10-24 11:51:28.976 | WARNING  |  [DataVal.py:396] In qm3, 623 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:278] In qm4, frc8197 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:323] In qm4, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:318] In qm4, 1389 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:323] In qm4, 1389 MISSING CLIMB TIME[0m
+[1;33m2022-10-24 11:51:28.976 | WARNING  |  [DataVal.py:396] In qm4, 2199 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:366] In qm4, 2199 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:323] In qm5, 623 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:323] In qm5, 5830 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:278] In qm5, frc4099 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.976 | ERROR    |  [DataVal.py:271] frc3748 was NOT IN MATCH qm6, on the Red alliance[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:323] In qm6, 686 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:278] In qm6, frc1915 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:323] In qm6, 1727 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:278] In qm7, frc1389 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:323] In qm7, 2199 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:362] In qm8, 5587 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:293] In qm8, 4099 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:323] In qm8, 4099 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:318] In qm8, 686 MISSING ATTEMPTED LOW[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:323] In qm8, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.977 | ERROR    |  [DataVal.py:278] In qm8, frc620 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:278] In qm9, frc2186 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:362] In qm9, 6239 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:278] In qm10, frc2199 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:366] In qm10, 5587 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:271] frc5830 was NOT IN MATCH qm11, on the Red alliance[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:271] frc620 was NOT IN MATCH qm11, on the Blue alliance[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:271] frc1719 was NOT IN MATCH qm11, on the Red alliance[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:271] frc8726 was NOT IN MATCH qm11, on the Blue alliance[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:271] frc623 was NOT IN MATCH qm11, on the Blue alliance[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:293] In qm11, 623 MISSING AUTO SHOOTING ZONES[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:298] In qm11, 623 MISSING TELEOP SHOOTING ZONES[0m
+[1;31m2022-10-24 11:51:28.978 | ERROR    |  [DataVal.py:271] frc8592 was NOT IN MATCH qm11, on the Red alliance[0m
+[1;33m2022-10-24 11:51:28.979 | WARNING  |  [DataVal.py:396] In qm12, 888 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;33m2022-10-24 11:51:28.979 | WARNING  |  [DataVal.py:396] In qm13, 686 shot 3 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:366] In qm13, 686 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:362] In qm13, 2199 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:362] In qm13, 5830 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:366] In qm14, 8726 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:323] In qm14, 623 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:362] In qm15, 1719 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:323] In qm15, 4505 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:271] frc3748 was NOT IN MATCH qm15, on the Blue alliance[0m
+[1;31m2022-10-24 11:51:28.979 | ERROR    |  [DataVal.py:362] In qm16, 5587 MISSING COUNTER DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:271] frc8592 was NOT IN MATCH qm16, on the Blue alliance[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:354] In qm17, 8197 MISSING DEFENSE RATING[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:366] In qm17, 8197 DEFENSE AND COUNTER DEFENSE PCT TOO HIGH[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:318] In qm17, 4099 MISSING ATTEMPTED MID[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:323] In qm17, 888 MISSING CLIMB TIME[0m
+[1;33m2022-10-24 11:51:28.980 | WARNING  |  [DataVal.py:396] In qm17, 1719 shot 2 balls in Autonomous but DIDN'T TAXI.[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:323] In qm17, 1719 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:323] In qm18, 620 MISSING CLIMB TIME[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:278] In qm19, frc3748 INCONSISTENT DRIVER STATION with schedule[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:467] In qm1, frc6239 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.980 | ERROR    |  [DataVal.py:467] In qm2, frc8592 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm3, frc2914 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm4, frc1915 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm5, frc2914 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm5, frc2186 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm6, frc3758 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm6, frc8592 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm7, frc7770 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm8, frc1727 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm9, frc3748 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm10, frc1915 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm11, 1719 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm11, 8592 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm11, 5frc830 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.981 | ERROR    |  [DataVal.py:467] In qm11, 623 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.982 | ERROR    |  [DataVal.py:467] In qm11, 620 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.982 | ERROR    |  [DataVal.py:467] In qm11, 8726 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.982 | ERROR    |  [DataVal.py:467] In qm16, frc8frc592 was NOT SCOUTED[0m
+[1;31m2022-10-24 11:51:28.982 | ERROR    |  [DataVal.py:467] In qm19, frc4505 was NOT SCOUTED[0m
+[1;33m2022-10-24 11:51:28.984 | WARNING  |  [DataVal.py:572] In qm1, frc2186 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.984 | WARNING  |  [DataVal.py:572] In qm16, frc2186 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.985 | WARNING  |  [DataVal.py:570] In qm12, frc2186 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.985 | WARNING  |  [DataVal.py:572] In qm12, frc2186 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.985 | WARNING  |  [DataVal.py:570] In qm1, frc8197 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.985 | WARNING  |  [DataVal.py:572] In qm1, frc8197 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.986 | WARNING  |  [DataVal.py:570] In qm7, frc1719 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.986 | WARNING  |  [DataVal.py:572] In qm7, frc1719 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.986 | WARNING  |  [DataVal.py:570] In qm17, frc1719 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.986 | WARNING  |  [DataVal.py:572] In qm17, frc1719 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.987 | WARNING  |  [DataVal.py:570] In qm4, frc4505 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.987 | WARNING  |  [DataVal.py:572] In qm4, frc4505 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.989 | WARNING  |  [DataVal.py:570] In qm12, frc4505 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.989 | WARNING  |  [DataVal.py:572] In qm12, frc4505 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.990 | WARNING  |  [DataVal.py:572] In qm8, frc4099 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.990 | WARNING  |  [DataVal.py:572] In qm14, frc4099 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.990 | WARNING  |  [DataVal.py:570] In qm2, frc4099 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.991 | WARNING  |  [DataVal.py:572] In qm2, frc4099 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.991 | WARNING  |  [DataVal.py:570] In qm5, frc5830 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.991 | WARNING  |  [DataVal.py:572] In qm5, frc5830 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.991 | WARNING  |  [DataVal.py:572] In qm2, frc5830 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.991 | WARNING  |  [DataVal.py:570] In qm5, frc5830 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.991 | WARNING  |  [DataVal.py:572] In qm5, frc5830 teleop_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.992 | WARNING  |  [DataVal.py:570] In qm8, frc5587 teleop_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.992 | WARNING  |  [DataVal.py:572] In qm8, frc5587 teleop_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.993 | WARNING  |  [DataVal.py:570] In qm5, frc623 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.993 | WARNING  |  [DataVal.py:572] In qm5, frc623 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.995 | WARNING  |  [DataVal.py:570] In qm15, frc620 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.995 | WARNING  |  [DataVal.py:572] In qm15, frc620 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.995 | WARNING  |  [DataVal.py:570] In qm4, frc1389 auto_lower_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.995 | WARNING  |  [DataVal.py:572] In qm4, frc1389 auto_lower_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.995 | WARNING  |  [DataVal.py:570] In qm9, frc1389 auto_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.996 | WARNING  |  [DataVal.py:572] In qm9, frc1389 auto_upper_hub performance was IQR OUTLIER[0m
+[1;33m2022-10-24 11:51:28.996 | WARNING  |  [DataVal.py:570] In qm10, frc2199 teleop_upper_hub performance was Z-SCORE OUTLIER[0m
+[1;33m2022-10-24 11:51:28.996 | WARNING  |  [DataVal.py:572] In qm10, frc2199 teleop_upper_hub performance was IQR OUTLIER[0m
