@@ -159,18 +159,19 @@ class DataVal:
         """
         self.logger.info("Reading data from CSV")
 
-        json_header_data = filepath
-
-
-        """
-
-        with open(json_header_data, "w") as data_copy:
-            with open(filepath, "r") as data:
-                text = data.readlines()
-                text[0] = "".join(self.HEADERS_JSON) + "\n"
+        with open("config/config.json") as config:
+            config = json.load(config)
+            event_key = config['YEAR'] + config['EVENT_KEY']
+        
+        json_header_data = f"data/{event_key}_dataval_match_data.csv"
+               
+        with open(filepath, "r") as data:
+            text = data.readlines()
+            text[0] = "".join(self.HEADERS_JSON) + "\n"
+            with open(json_header_data, "w") as data_copy:
                 data_copy.write("".join(text))
+        
 
-        """
 
 
         scoutingdf = pd.read_csv(json_header_data)
@@ -200,6 +201,11 @@ class DataVal:
                 self.data_by_teams[team].append(submission)
             else:
                 self.data_by_teams[team] = [submission]
+
+        
+        with open(f"data/{self.event_key}_data.json", "w") as jsonData:
+            json.dump(self.data_by_teams, jsonData)
+
 
         #individual submission checks called from validate_submission method
         for submission in scouting_data:
@@ -700,4 +706,7 @@ class DataVal:
         logger.info("Success!")
 
 if __name__ == "__main__":
-    DataVal(wifi_connection=True).validate_data(filepath="data/2022iri_match_data.csv")
+    with open("config/config.json") as config:
+        config = json.load(config)
+        event_key = config['YEAR'] + config['EVENT_KEY']
+        DataVal(wifi_connection=True).validate_data(filepath=f"data/{event_key}_match_data.csv")

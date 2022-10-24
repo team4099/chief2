@@ -3,12 +3,14 @@ import json
 
 class DataWriter:
     def __init__(self):
-        self._HEADERS_JSON = (
-                "scout_id,match_key,team_number,alliance,driver_station,preloaded_cargo,auto_lower_hub,auto_upper_hub,"
-                "auto_misses,taxied,auto_shooting_zones,teleop_lower_hub,teleop_upper_hub,teleop_misses,"
-                "teleop_shooting_zones,attempted_low,attempted_mid,attempted_high,attempted_traversal,climb_time,"
-                "final_climb_type,defense_pct,defense_rating,counter_defense_pct,counter_defense_rating,driver_rating"
-            )
+        self._HEADERS_CSV = (
+            "Scout ID,Match Key,Team Number,Alliance,Driver Station,Preloaded Cargo,Auto Lower Hub,Auto Upper Hub,"
+            "Auto Misses,Taxied,Auto Shooting Zones,Teleop Lower Hub,Teleop Upper Hub,Teleop Misses,Teleop Shooting Zones,"
+            "Low Attempted,Mid Attempted,High Attempted,Traversal Attempted,Climb Time,Final Climb Type,"
+            "How much do they play defense?,Defense Rating,"
+            "How much were they playing through defense?,Counter Defense Rating,Driver Rating"
+        )
+
         self.logger = Logger().log
         self.logger.info("Getting configuration variables from config.json")
         try:
@@ -45,5 +47,5 @@ class DataWriter:
                     file.write(csv_formatted + "\n")
         except FileNotFoundError:
             with open(f"data/{self.event_key}_match_data.csv", "w") as file:
-                file.write(self._HEADERS_JSON + "\n")
+                file.write(self._HEADERS_CSV + "\n")
                 file.write(csv_formatted + "\n")
